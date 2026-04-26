@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pattaya Visa Help — Thailand Visa Experts in Pattaya</title>
-  <meta name="description" content="Trusted Thailand visa guidance from Pattaya-based experts. Retirement, DTV, Elite, Marriage, Education and Business visas. Free initial consultation." />
-  <meta name="theme-color" content="#0f172a" />
+  <title>Pattaya Visa Help — Thailand Visa Specialists in Pattaya, Established 2018</title>
+  <meta name="description" content="Pattaya's most trusted independent Thailand visa resource. Retirement, DTV, Elite, Marriage, Education, Business — matched with vetted specialists. Free 15-min consultation, reply within 24 hours." />
+  <meta name="theme-color" content="#0c4a6e" />
+  <link rel="canonical" href="https://pattayavisahelp.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Pattaya Visa Help — Thailand Visa Experts in Pattaya" />
-  <meta property="og:description" content="Trusted Thailand visa guidance from Pattaya-based experts. Free initial consultation." />
+  <meta property="og:title" content="Pattaya Visa Help — Thailand Visa Specialists in Pattaya" />
+  <meta property="og:description" content="Independent Thailand visa guidance. Matched with vetted Pattaya specialists. Free 15-min consultation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pattayavisahelp.com/" />
 
-  <!-- Tailwind via CDN (we'll switch to a build later if needed) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Pattaya Visa Help","description":"Independent Thailand visa guidance and specialist matching service based in Pattaya.","url":"https://pattayavisahelp.com","telephone":"+66-XX-XXX-XXXX","email":"hello@pattayavisahelp.com","address":{"@type":"PostalAddress","addressLocality":"Pattaya","addressRegion":"Chonburi","postalCode":"20150","addressCountry":"TH"},"areaServed":"Pattaya, Chonburi, Eastern Thailand"}
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              50:  '#f0f9ff',
-              100: '#e0f2fe',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              900: '#0c4a6e',
-            },
-            ink: '#0f172a',
+            brand: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e', 950:'#082f49' },
+            gold: { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706', 700:'#b45309' },
+            ink: '#0a0e1a',
+            paper: '#fafaf9',
+            cream: '#f5f3ee',
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
             display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
           },
         }
       }
@@ -41,191 +42,1287 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
-</head>
-<body class="font-sans text-ink bg-white antialiased">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- ============== NAV ============== -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 grid place-items-center text-white font-bold">P</span>
-        <span class="font-display font-bold text-lg">Pattaya Visa Help</span>
+  <style>
+    :root {
+      --brand-700: #0369a1;
+      --brand-900: #0c4a6e;
+      --gold-500: #f59e0b;
+      --ink: #0a0e1a;
+      --paper: #fafaf9;
+      --cream: #f5f3ee;
+    }
+
+    /* Mesh gradient backgrounds */
+    .mesh-light {
+      background:
+        radial-gradient(at 15% 25%, rgba(186,230,253,0.55) 0px, transparent 50%),
+        radial-gradient(at 85% 5%, rgba(125,211,252,0.4) 0px, transparent 50%),
+        radial-gradient(at 75% 85%, rgba(252,211,77,0.12) 0px, transparent 50%),
+        radial-gradient(at 5% 95%, rgba(186,230,253,0.4) 0px, transparent 50%),
+        #fafaf9;
+    }
+    .mesh-cream {
+      background:
+        radial-gradient(at 20% 30%, rgba(245,243,238,1) 0px, transparent 50%),
+        radial-gradient(at 80% 70%, rgba(254,249,195,0.3) 0px, transparent 50%),
+        #f5f3ee;
+    }
+    .mesh-deep {
+      background:
+        radial-gradient(at 20% 20%, rgba(14,165,233,0.25) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, rgba(3,105,161,0.4) 0px, transparent 50%),
+        radial-gradient(at 75% 80%, rgba(245,158,11,0.18) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(8,47,73,0.6) 0px, transparent 50%),
+        #082f49;
+    }
+
+    /* Subtle grain texture */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      opacity: 0.5;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+
+    /* Grid pattern (subtle) */
+    .grid-fine {
+      background-image:
+        linear-gradient(rgba(10,14,26,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10,14,26,0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Hairline dividers */
+    .hairline {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(10,14,26,0.15), transparent);
+    }
+    .hairline-vertical {
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(10,14,26,0.12), transparent);
+    }
+
+    /* Editorial section number */
+    .section-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: rgba(10,14,26,0.45);
+    }
+    .section-num-light {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* Display H1 with refined kerning */
+    .display-xl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 0.96;
+    }
+    .display-lg {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+    }
+
+    /* Serif emphasis */
+    .serif-emphasis {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* Eyebrow tag */
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+    :focus-visible { outline: 2px solid #0ea5e9; outline-offset: 4px; border-radius: 4px; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 12px; }
+    ::-webkit-scrollbar-track { background: #f5f3ee; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 6px; border: 3px solid #f5f3ee; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* FAQ accordion */
+    .faq-item[open] summary svg { transform: rotate(180deg); }
+    .faq-item[open] summary { border-bottom-color: rgba(10,14,26,0.08); }
+    .faq-item summary { list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary svg { transition: transform 0.3s ease; }
+
+    /* WhatsApp pulse on first load */
+    .wa-pulse::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #25D366;
+      opacity: 0.4;
+      animation: waPulse 2.5s ease-out 3;
+      animation-fill-mode: forwards;
+    }
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.4; }
+      100% { transform: scale(1.7); opacity: 0; }
+    }
+
+    /* Pull quote */
+    .pull-quote::before {
+      content: '"';
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 9rem;
+      line-height: 0.8;
+      position: absolute;
+      top: -1.5rem;
+      left: -2rem;
+      color: rgba(245,158,11,0.25);
+      font-style: italic;
+      pointer-events: none;
+    }
+
+    /* Marquee for trust strip */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track { animation: marquee 40s linear infinite; }
+
+    /* Card depth shadows */
+    .card-elevated {
+      box-shadow:
+        0 1px 2px rgba(10,14,26,0.04),
+        0 4px 8px rgba(10,14,26,0.04),
+        0 12px 24px rgba(10,14,26,0.06);
+    }
+    .card-elevated:hover {
+      box-shadow:
+        0 2px 4px rgba(10,14,26,0.06),
+        0 8px 16px rgba(10,14,26,0.06),
+        0 20px 40px rgba(10,14,26,0.10);
+    }
+
+    /* Skip link */
+    .skip-link { position: absolute; top: -40px; left: 0; background: #0a0e1a; color: white; padding: 8px 16px; z-index: 100; }
+    .skip-link:focus { top: 0; }
+
+    /* Subtle border accent for cards */
+    .accent-border-l { position: relative; }
+    .accent-border-l::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 1.5rem; bottom: 1.5rem;
+      width: 2px;
+      background: linear-gradient(180deg, #0ea5e9, transparent);
+      border-radius: 1px;
+    }
+
+    /* Number stat large */
+    .stat-massive {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+    }
+  </style>
+</head>
+<body class="font-sans text-ink bg-paper antialiased">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ============== TOP STRIP ============== -->
+  <div class="hidden lg:block bg-ink text-white text-sm border-b border-white/5">
+    <div class="max-w-[1400px] mx-auto px-8 py-2.5 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+        <span class="text-slate-300 font-medium">Free 15-minute consultation · Reply within 24 hours · Vetted Pattaya specialists across every visa category</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="mailto:hello@pattayavisahelp.com" class="text-slate-400 hover:text-white transition text-xs font-medium">hello@pattayavisahelp.com</a>
+        <a href="#consultation" class="text-brand-300 hover:text-white font-medium transition flex items-center gap-1.5">
+          Book consultation
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== STICKY NAV ============== -->
+  <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-lg border-b border-ink/8">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <!-- CUSTOM LOGO MARK -->
+        <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0ea5e9"/>
+              <stop offset="100%" stop-color="#0c4a6e"/>
+            </linearGradient>
+            <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24"/>
+              <stop offset="100%" stop-color="#d97706"/>
+            </linearGradient>
+          </defs>
+          <!-- Outer shield/badge -->
+          <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#logoGrad)"/>
+          <!-- Inner highlight -->
+          <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#logoGrad)" opacity="0.95"/>
+          <!-- "P" monogram -->
+          <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
+          <!-- Small accent dot -->
+          <circle cx="29" cy="13" r="2" fill="url(#logoAccent)"/>
+        </svg>
+        <div class="flex flex-col leading-none">
+          <span class="font-display font-bold text-[17px] tracking-tight">Pattaya Visa Help</span>
+          <span class="text-[10px] font-mono text-ink/50 tracking-wider uppercase mt-0.5">Est. 2018 · Pattaya</span>
+        </div>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
-        <a href="#visas" class="hover:text-brand-600">Visa types</a>
-        <a href="#services" class="hover:text-brand-600">How we help</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
-        <a href="#faq" class="hover:text-brand-600">FAQ</a>
+      <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-ink/75">
+        <a href="#visas" class="hover:text-ink transition relative group">
+          Visa types
+          <span class="absolute -bottom-1.5 left-0 right-0 h-px bg-brand-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="#process" class="hover:text-ink transition relative group">
+          How it works
+          <span class="absolute -bottom-1.5 left-0 right-0 h-px bg-brand-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="#why-us" class="hover:text-ink transition relative group">
+          Why us
+          <span class="absolute -bottom-1.5 left-0 right-0 h-px bg-brand-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="#faq" class="hover:text-ink transition relative group">
+          FAQ
+          <span class="absolute -bottom-1.5 left-0 right-0 h-px bg-brand-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="/about/" class="hover:text-ink transition relative group">
+          About
+          <span class="absolute -bottom-1.5 left-0 right-0 h-px bg-brand-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
       </nav>
-      <a href="#contact" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition">
-        Free consultation
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/66XXXXXXXXX" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-1.5 text-sm font-medium text-ink/70 hover:text-ink transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+          WhatsApp
+        </a>
+        <a href="#consultation" class="inline-flex items-center gap-2 bg-ink hover:bg-brand-900 text-white text-[13px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition">
+          Free consultation
+          <span aria-hidden="true" class="text-gold-400">→</span>
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
+  <!-- ============== MOBILE MENU ============== -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-50 bg-paper">
+    <div class="px-6 py-4 flex items-center justify-between border-b border-ink/8">
+      <span class="font-display font-bold text-lg">Menu</span>
+      <button id="closeMobileMenu" class="p-2" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="px-6 py-8 space-y-1">
+      <a href="#visas" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Visa types</a>
+      <a href="#process" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">How it works</a>
+      <a href="#why-us" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Why us</a>
+      <a href="#faq" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">FAQ</a>
+      <a href="/about/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">About</a>
+      <a href="/contact/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Contact</a>
+      <a href="#consultation" class="block bg-ink text-white text-center font-semibold px-6 py-4 rounded-full mt-8">Free consultation →</a>
+    </nav>
+  </div>
+
+  <main id="main">
+
   <!-- ============== HERO ============== -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-brand-100"></div>
-    <div class="relative max-w-6xl mx-auto px-4 pt-20 pb-24 text-center">
-      <span class="inline-block bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full">Based in Pattaya · Trusted by expats since 2018</span>
-      <h1 class="font-display font-extrabold text-4xl md:text-6xl mt-6 leading-tight">
-        Your Thailand visa, <br class="hidden md:block" />
-        <span class="text-brand-600">handled the right way.</span>
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-        Retirement, DTV, Elite, Marriage, Education or Business — we connect you with the right Pattaya-based expert for your situation. No guesswork. No surprises.
-      </p>
-      <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
-          Get free advice
-        </a>
-        <a href="#visas" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-lg transition">
-          Explore visa types
-        </a>
+  <section class="relative overflow-hidden mesh-light grain">
+    <div class="absolute inset-0 grid-fine opacity-60"></div>
+
+    <!-- Floating accent shapes -->
+    <div class="absolute top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-brand-200/35 blur-3xl"></div>
+    <div class="absolute bottom-0 -right-32 w-[28rem] h-[28rem] rounded-full bg-gold-300/12 blur-3xl"></div>
+
+    <!-- Decorative corner accents -->
+    <div class="absolute top-12 right-12 hidden lg:block">
+      <div class="flex items-center gap-3 text-ink/40">
+        <span class="font-mono text-[11px] tracking-widest">CHONBURI · 12.9236°N · 100.8825°E</span>
+        <div class="w-12 h-px bg-ink/30"></div>
       </div>
-      <p class="mt-6 text-xs text-slate-500">No obligation · Reply within 24 hours · 100% confidential</p>
+    </div>
+
+    <div class="relative max-w-[1400px] mx-auto px-6 lg:px-8 pt-16 pb-28 lg:pt-24 lg:pb-40">
+      <div class="max-w-[920px] mx-auto text-center">
+        <!-- Eyebrow with details -->
+        <div class="inline-flex items-center gap-3 bg-white/85 backdrop-blur border border-ink/8 px-4 py-2 rounded-full shadow-sm">
+          <span class="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
+          <span class="eyebrow text-ink/70">Independent · Pattaya · Trusted by 2,000+ expats since 2018</span>
+        </div>
+
+        <!-- Massive headline -->
+        <h1 class="display-xl text-[64px] sm:text-[88px] lg:text-[112px] mt-10 text-ink">
+          Every Thailand visa,
+          <br />
+          <span class="serif-emphasis text-brand-700 font-normal">handled the right way.</span>
+        </h1>
+
+        <!-- Subhead -->
+        <p class="mt-12 text-xl lg:text-[22px] text-ink/65 max-w-[680px] mx-auto leading-[1.55]">
+          Independent guidance. Vetted Pattaya specialists. The right answer for your specific situation — not the most expensive visa, not the easiest to sell.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-14 flex flex-wrap justify-center items-center gap-4">
+          <a href="#consultation" class="group bg-ink hover:bg-brand-900 text-white text-[15px] font-semibold pl-7 pr-2 py-2 rounded-full shadow-lg shadow-ink/10 transition flex items-center gap-3">
+            Get free consultation
+            <span class="bg-gold-500 text-ink w-9 h-9 rounded-full grid place-items-center group-hover:translate-x-0.5 transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </span>
+          </a>
+          <a href="#visas" class="group text-[15px] font-semibold text-ink/80 hover:text-ink transition flex items-center gap-2 px-4 py-3">
+            Explore visa types
+            <span aria-hidden="true" class="group-hover:translate-x-0.5 transition">→</span>
+          </a>
+        </div>
+
+        <!-- Trust microcopy with separators -->
+        <div class="mt-10 flex items-center justify-center gap-5 text-[13px] text-ink/55">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            No obligation
+          </span>
+          <span class="w-1 h-1 rounded-full bg-ink/20"></span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            24-hour reply
+          </span>
+          <span class="w-1 h-1 rounded-full bg-ink/20"></span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            100% confidential
+          </span>
+        </div>
+      </div>
+
+      <!-- Featured visa snapshot strip -->
+      <div class="max-w-[1100px] mx-auto mt-24 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <span class="eyebrow text-ink/55">Most-asked visas this month</span>
+          <a href="/compare/visa-comparison-matrix/" class="text-sm font-medium text-brand-700 hover:text-brand-900 flex items-center gap-1">Compare all 12 →</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-px bg-ink/8 border border-ink/8 rounded-2xl overflow-hidden">
+          <a href="/visas/dtv/" class="bg-white hover:bg-brand-50 transition p-5 group">
+            <p class="font-mono text-[10px] text-ink/40 mb-1">01 / DTV</p>
+            <p class="font-display font-bold text-base">10k THB</p>
+            <p class="text-xs text-ink/50 mt-0.5">5 years</p>
+          </a>
+          <a href="/visas/retirement-non-o/" class="bg-white hover:bg-brand-50 transition p-5 group">
+            <p class="font-mono text-[10px] text-ink/40 mb-1">02 / Non-O</p>
+            <p class="font-display font-bold text-base">800k THB</p>
+            <p class="text-xs text-ink/50 mt-0.5">Retirement</p>
+          </a>
+          <a href="/visas/privilege-elite/" class="bg-white hover:bg-brand-50 transition p-5 group">
+            <p class="font-mono text-[10px] text-ink/40 mb-1">03 / Elite</p>
+            <p class="font-display font-bold text-base">650k THB</p>
+            <p class="text-xs text-ink/50 mt-0.5">5–20 yrs</p>
+          </a>
+          <a href="/visas/ltr/" class="bg-white hover:bg-brand-50 transition p-5 group">
+            <p class="font-mono text-[10px] text-ink/40 mb-1">04 / LTR</p>
+            <p class="font-display font-bold text-base">50k THB</p>
+            <p class="text-xs text-ink/50 mt-0.5">10 yrs · tax exempt</p>
+          </a>
+          <a href="/visas/marriage-non-o/" class="bg-white hover:bg-brand-50 transition p-5 group">
+            <p class="font-mono text-[10px] text-ink/40 mb-1">05 / Marriage</p>
+            <p class="font-display font-bold text-base">400k THB</p>
+            <p class="text-xs text-ink/50 mt-0.5">Thai spouse</p>
+          </a>
+          <a href="/visas/education-ed/" class="bg-white hover:bg-brand-50 transition p-5 group">
+            <p class="font-mono text-[10px] text-ink/40 mb-1">06 / ED</p>
+            <p class="font-display font-bold text-base">30–80k THB</p>
+            <p class="text-xs text-ink/50 mt-0.5">Language · Muay Thai</p>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============== VISA TYPES ============== -->
-  <section id="visas" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display font-bold text-3xl md:text-4xl">Every Thailand visa, explained.</h2>
-        <p class="mt-3 text-slate-600">Pick the one that matches your situation. We'll guide you through requirements, costs, processing time, and the smartest path forward.</p>
+  <!-- ============== TRUST MARQUEE STRIP ============== -->
+  <section class="border-y border-ink/8 bg-paper py-10 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8 mb-6">
+      <div class="flex items-center justify-center gap-4">
+        <div class="hairline w-16"></div>
+        <p class="eyebrow text-ink/45">As referenced in Pattaya's expat community</p>
+        <div class="hairline w-16"></div>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <a href="#" class="group p-6 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-lg transition bg-white">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 grid place-items-center text-brand-700 font-bold text-lg">R</div>
-          <h3 class="mt-4 font-display font-bold text-xl">Retirement Visa (O-A / O-X)</h3>
-          <p class="mt-2 text-slate-600 text-sm">For applicants 50+. 1-year and 5/10-year options. Income or deposit requirements explained.</p>
-          <span class="mt-4 inline-block text-brand-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-        </a>
-
-        <a href="#" class="group p-6 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-lg transition bg-white">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 grid place-items-center text-brand-700 font-bold text-lg">D</div>
-          <h3 class="mt-4 font-display font-bold text-xl">Destination Thailand Visa (DTV)</h3>
-          <p class="mt-2 text-slate-600 text-sm">5-year multi-entry visa for digital nomads, freelancers and Muay Thai / cooking students.</p>
-          <span class="mt-4 inline-block text-brand-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-        </a>
-
-        <a href="#" class="group p-6 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-lg transition bg-white">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 grid place-items-center text-brand-700 font-bold text-lg">E</div>
-          <h3 class="mt-4 font-display font-bold text-xl">Thailand Elite (Privilege)</h3>
-          <p class="mt-2 text-slate-600 text-sm">5–20 year long-stay visa with VIP perks. Tier comparison and current pricing.</p>
-          <span class="mt-4 inline-block text-brand-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-        </a>
-
-        <a href="#" class="group p-6 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-lg transition bg-white">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 grid place-items-center text-brand-700 font-bold text-lg">M</div>
-          <h3 class="mt-4 font-display font-bold text-xl">Marriage Visa (Non-O)</h3>
-          <p class="mt-2 text-slate-600 text-sm">For spouses of Thai nationals. Documents, financial proof, extension process.</p>
-          <span class="mt-4 inline-block text-brand-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-        </a>
-
-        <a href="#" class="group p-6 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-lg transition bg-white">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 grid place-items-center text-brand-700 font-bold text-lg">ED</div>
-          <h3 class="mt-4 font-display font-bold text-xl">Education Visa (ED)</h3>
-          <p class="mt-2 text-slate-600 text-sm">Thai language, Muay Thai, university programs. Approved schools and renewal rules.</p>
-          <span class="mt-4 inline-block text-brand-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-        </a>
-
-        <a href="#" class="group p-6 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-lg transition bg-white">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 grid place-items-center text-brand-700 font-bold text-lg">B</div>
-          <h3 class="mt-4 font-display font-bold text-xl">Business Visa & Work Permit</h3>
-          <p class="mt-2 text-slate-600 text-sm">Non-B visa, BOI options, work permit setup, company formation guidance.</p>
-          <span class="mt-4 inline-block text-brand-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-        </a>
-
+    </div>
+    <div class="relative overflow-hidden">
+      <div class="marquee-track flex items-center gap-16 whitespace-nowrap">
+        <span class="font-display font-bold text-2xl text-ink/30">PCEC — Pattaya City Expats Club</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">Pattaya Mail</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">ASEAN Now</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">The Thaiger</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">Thaivisa Forum</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">Pattaya News</span>
+        <span class="text-ink/15">·</span>
+        <!-- Repeat for seamless loop -->
+        <span class="font-display font-bold text-2xl text-ink/30">PCEC — Pattaya City Expats Club</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">Pattaya Mail</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">ASEAN Now</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">The Thaiger</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">Thaivisa Forum</span>
+        <span class="text-ink/15">·</span>
+        <span class="font-display font-bold text-2xl text-ink/30">Pattaya News</span>
+        <span class="text-ink/15">·</span>
       </div>
     </div>
   </section>
 
-  <!-- ============== HOW WE HELP ============== -->
-  <section id="services" class="py-20 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="font-display font-bold text-3xl md:text-4xl">Not just info — the right person, for your case.</h2>
-        <p class="mt-4 text-slate-600">Thailand visa rules change often, and one wrong document can mean a denied extension or a costly border run. We don't just publish guides. We connect you with vetted Pattaya-based visa specialists who handle hundreds of cases like yours every year.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="text-brand-600 font-bold">✓</span> Free 15-minute discovery call to understand your situation</li>
-          <li class="flex gap-3"><span class="text-brand-600 font-bold">✓</span> Matched with the right specialist (we have a network for every visa type)</li>
-          <li class="flex gap-3"><span class="text-brand-600 font-bold">✓</span> Transparent pricing — no hidden fees, no surprise charges</li>
-          <li class="flex gap-3"><span class="text-brand-600 font-bold">✓</span> Full support through the entire process, including extensions</li>
-        </ul>
+  <!-- ============== 01 — VISA TYPES ============== -->
+  <section id="visas" class="py-28 lg:py-36 mesh-cream relative">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+      <!-- Editorial section header -->
+      <div class="grid lg:grid-cols-12 gap-8 mb-20 reveal">
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="section-num">01 / VISA TYPES</span>
+            <div class="hairline flex-1 max-w-[60px]"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-9 max-w-3xl">
+          <h2 class="display-lg text-[44px] lg:text-[64px] text-ink">
+            Pick the visa that fits.<br/>
+            <span class="serif-emphasis text-ink/55 font-normal">We'll handle the rest.</span>
+          </h2>
+          <p class="mt-6 text-lg text-ink/65 leading-relaxed max-w-2xl">
+            Twelve visa categories, one trusted resource. Each pathway connects you to a Pattaya specialist who handles hundreds of cases like yours every year — vetted by us, transparent on pricing.
+          </p>
+        </div>
       </div>
-      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-        <h3 class="font-display font-bold text-xl">Why people trust Pattaya Visa Help</h3>
-        <div class="mt-6 grid grid-cols-2 gap-6">
-          <div>
-            <p class="font-display text-3xl font-bold text-brand-600">2,000+</p>
-            <p class="text-sm text-slate-600">Successful visa cases</p>
+
+      <!-- Bento grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 reveal">
+
+        <!-- Featured large card: DTV -->
+        <a href="/visas/dtv/" class="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-gradient-to-br from-brand-800 to-brand-950 text-white p-12 rounded-3xl card-elevated transition">
+          <!-- Decorative gold orb -->
+          <div class="absolute top-0 right-0 w-80 h-80 bg-gold-500/15 rounded-full blur-3xl"></div>
+          <!-- Decorative grid pattern -->
+          <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 32px 32px;"></div>
+          <!-- Number marker -->
+          <div class="absolute top-8 right-8">
+            <span class="font-mono text-xs text-white/40">01</span>
           </div>
-          <div>
-            <p class="font-display text-3xl font-bold text-brand-600">8 yrs</p>
-            <p class="text-sm text-slate-600">In Pattaya</p>
+
+          <div class="relative">
+            <div class="flex items-center gap-2 mb-8">
+              <span class="w-2 h-2 bg-gold-400 rounded-full animate-pulse"></span>
+              <span class="eyebrow text-gold-400">Most popular for remote workers</span>
+            </div>
+
+            <h3 class="display-lg text-[40px] lg:text-[52px]">
+              Destination Thailand Visa
+              <span class="block serif-emphasis text-brand-300 font-normal mt-1">— the DTV.</span>
+            </h3>
+
+            <p class="mt-6 text-brand-100/85 text-lg max-w-md leading-relaxed">
+              Five years, multiple entry, 180 days per stay. The 2024 flagship for digital nomads, freelancers, Muay Thai students.
+            </p>
+
+            <!-- Stats row with separators -->
+            <div class="mt-12 flex items-end gap-px">
+              <div class="pr-6">
+                <p class="font-mono text-[10px] text-brand-300 mb-1 tracking-wider uppercase">Cost</p>
+                <p class="stat-massive text-4xl">10,000</p>
+                <p class="text-xs text-brand-300 mt-1">THB · ~$280</p>
+              </div>
+              <div class="hairline-vertical h-12 mx-6"></div>
+              <div>
+                <p class="font-mono text-[10px] text-brand-300 mb-1 tracking-wider uppercase">Validity</p>
+                <p class="stat-massive text-4xl">5</p>
+                <p class="text-xs text-brand-300 mt-1">years</p>
+              </div>
+              <div class="hairline-vertical h-12 mx-6"></div>
+              <div>
+                <p class="font-mono text-[10px] text-brand-300 mb-1 tracking-wider uppercase">Stay</p>
+                <p class="stat-massive text-4xl">180</p>
+                <p class="text-xs text-brand-300 mt-1">days · ext +180</p>
+              </div>
+            </div>
+
+            <div class="mt-12 inline-flex items-center gap-3 text-white text-sm font-semibold pt-4 border-t border-white/15 group-hover:gap-4 transition">
+              Read the complete DTV guide
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </div>
           </div>
-          <div>
-            <p class="font-display text-3xl font-bold text-brand-600">9 visa types</p>
-            <p class="text-sm text-slate-600">Specialist network</p>
+        </a>
+
+        <!-- Standard cards -->
+        <a href="/visas/retirement-non-o/" class="group p-7 rounded-3xl bg-white border border-ink/8 hover:border-brand-500/40 card-elevated transition relative">
+          <span class="absolute top-5 right-5 font-mono text-[10px] text-ink/30">02</span>
+          <div class="w-12 h-12 rounded-2xl bg-brand-100 grid place-items-center text-brand-700 font-display font-bold mb-5 text-lg">R</div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Retirement (Non-O)</h3>
+          <p class="text-xs font-mono text-ink/45 mt-1">In-country path</p>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">50+ retirees · 800k THB · No mandatory insurance · Most popular Pattaya choice.</p>
+          <span class="mt-5 inline-flex items-center text-brand-700 text-sm font-semibold group-hover:gap-2 gap-1 transition">Learn more <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/visas/privilege-elite/" class="group p-7 rounded-3xl bg-white border border-ink/8 hover:border-gold-500/40 card-elevated transition relative">
+          <span class="absolute top-5 right-5 font-mono text-[10px] text-ink/30">03</span>
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/15 grid place-items-center text-gold-700 font-display font-bold mb-5 text-lg">E</div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Privilege (Elite)</h3>
+          <p class="text-xs font-mono text-ink/45 mt-1">Premium membership</p>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">5–20 years · No income proof · Premium concierge service · Airport VIP.</p>
+          <span class="mt-5 inline-flex items-center text-brand-700 text-sm font-semibold group-hover:gap-2 gap-1 transition">Learn more <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/visas/marriage-non-o/" class="group p-7 rounded-3xl bg-white border border-ink/8 hover:border-brand-500/40 card-elevated transition relative">
+          <span class="absolute top-5 right-5 font-mono text-[10px] text-ink/30">04</span>
+          <div class="w-12 h-12 rounded-2xl bg-brand-100 grid place-items-center text-brand-700 font-display font-bold mb-5 text-lg">M</div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Marriage (Non-O)</h3>
+          <p class="text-xs font-mono text-ink/45 mt-1">Thai spouse</p>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">Foreign spouses of Thai nationals · 400k THB · Work permit eligible.</p>
+          <span class="mt-5 inline-flex items-center text-brand-700 text-sm font-semibold group-hover:gap-2 gap-1 transition">Learn more <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/visas/education-ed/" class="group p-7 rounded-3xl bg-white border border-ink/8 hover:border-brand-500/40 card-elevated transition relative">
+          <span class="absolute top-5 right-5 font-mono text-[10px] text-ink/30">05</span>
+          <div class="w-12 h-12 rounded-2xl bg-brand-100 grid place-items-center text-brand-700 font-display font-bold mb-5 text-base">ED</div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Education (ED)</h3>
+          <p class="text-xs font-mono text-ink/45 mt-1">MOE-accredited only</p>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">Thai language · Muay Thai · University · Verified Pattaya schools only.</p>
+          <span class="mt-5 inline-flex items-center text-brand-700 text-sm font-semibold group-hover:gap-2 gap-1 transition">Learn more <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/visas/business-non-b/" class="group p-7 rounded-3xl bg-white border border-ink/8 hover:border-brand-500/40 card-elevated transition relative">
+          <span class="absolute top-5 right-5 font-mono text-[10px] text-ink/30">06</span>
+          <div class="w-12 h-12 rounded-2xl bg-brand-100 grid place-items-center text-brand-700 font-display font-bold mb-5 text-lg">B</div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Business (Non-B + WP)</h3>
+          <p class="text-xs font-mono text-ink/45 mt-1">Work permit included</p>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">Work permit · BOI fast-track · EEC corporate setups · Annual extensions.</p>
+          <span class="mt-5 inline-flex items-center text-brand-700 text-sm font-semibold group-hover:gap-2 gap-1 transition">Learn more <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/visas/ltr/" class="group p-7 rounded-3xl bg-white border border-ink/8 hover:border-gold-500/40 card-elevated transition relative">
+          <span class="absolute top-5 right-5 font-mono text-[10px] text-ink/30">07</span>
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/15 grid place-items-center text-gold-700 font-display font-bold mb-5 text-sm">LTR</div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Long-Term Resident</h3>
+          <p class="text-xs font-mono text-ink/45 mt-1">10 years · tax exempt</p>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">10 years · Foreign income tax exempt · Smart-money pick for $80k+ earners.</p>
+          <span class="mt-5 inline-flex items-center text-brand-700 text-sm font-semibold group-hover:gap-2 gap-1 transition">Learn more <span aria-hidden="true">→</span></span>
+        </a>
+
+      </div>
+
+      <!-- Compare CTA -->
+      <div class="mt-12 flex justify-center reveal">
+        <a href="/compare/visa-comparison-matrix/" class="group inline-flex items-center gap-3 bg-white border border-ink/10 hover:border-ink/20 text-ink font-semibold px-7 py-4 rounded-full card-elevated transition">
+          <span>See all 24 visa options compared side by side</span>
+          <span class="text-brand-700 group-hover:translate-x-1 transition">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 02 — PROCESS ============== -->
+  <section id="process" class="py-28 lg:py-36 bg-white relative">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+      <!-- Editorial header -->
+      <div class="grid lg:grid-cols-12 gap-8 mb-20 reveal">
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="section-num">02 / HOW IT WORKS</span>
+            <div class="hairline flex-1 max-w-[60px]"></div>
           </div>
-          <div>
-            <p class="font-display text-3xl font-bold text-brand-600">100%</p>
-            <p class="text-sm text-slate-600">Confidential</p>
+        </div>
+        <div class="lg:col-span-9 max-w-3xl">
+          <h2 class="display-lg text-[44px] lg:text-[64px] text-ink">
+            Four steps from confused<br/>
+            <span class="serif-emphasis text-ink/55 font-normal">to settled in Pattaya.</span>
+          </h2>
+          <p class="mt-6 text-lg text-ink/65 leading-relaxed max-w-2xl">
+            No legal jargon. No surprise fees. The right specialist for your specific situation, fast.
+          </p>
+        </div>
+      </div>
+
+      <!-- Process steps with connecting line -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal relative">
+        <!-- Connecting line (desktop) -->
+        <div class="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px">
+          <div class="hairline h-full"></div>
+        </div>
+
+        <div class="relative bg-cream rounded-3xl p-8 border border-ink/5 transition hover:border-ink/10">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-ink text-white rounded-2xl grid place-items-center font-display font-bold text-lg shadow-lg">01</div>
+            <span class="font-mono text-[10px] text-ink/35">~15 min</span>
+          </div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Tell us your situation</h3>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">Free 15-minute discovery call. We listen, ask the right questions, understand exactly what you need.</p>
+        </div>
+
+        <div class="relative bg-cream rounded-3xl p-8 border border-ink/5 transition hover:border-ink/10">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-ink text-white rounded-2xl grid place-items-center font-display font-bold text-lg shadow-lg">02</div>
+            <span class="font-mono text-[10px] text-ink/35">~24 hrs</span>
+          </div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Get the right answer</h3>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">We tell you which visa actually fits. Not the most expensive. The right one for your case.</p>
+        </div>
+
+        <div class="relative bg-cream rounded-3xl p-8 border border-ink/5 transition hover:border-ink/10">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-ink text-white rounded-2xl grid place-items-center font-display font-bold text-lg shadow-lg">03</div>
+            <span class="font-mono text-[10px] text-ink/35">~2–3 days</span>
+          </div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Matched with a specialist</h3>
+          <p class="mt-3 text-ink/65 text-sm leading-relaxed">Connected to the vetted Pattaya specialist who handles your visa type every week. Transparent pricing.</p>
+        </div>
+
+        <div class="relative bg-gradient-to-br from-brand-700 to-brand-900 text-white rounded-3xl p-8 transition card-elevated">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-gold-500 text-ink rounded-2xl grid place-items-center font-display font-bold text-lg shadow-lg">04</div>
+            <span class="font-mono text-[10px] text-white/40">Done</span>
+          </div>
+          <h3 class="font-display font-bold text-xl tracking-tight">Settled in Thailand</h3>
+          <p class="mt-3 text-brand-100 text-sm leading-relaxed">Your specialist handles paperwork and Jomtien Immigration. You focus on your life in Pattaya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 03 — WHY US (STATS) ============== -->
+  <section id="why-us" class="py-28 lg:py-36 mesh-cream relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="grid lg:grid-cols-12 gap-8 mb-20 reveal">
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="section-num">03 / WHY US</span>
+            <div class="hairline flex-1 max-w-[60px]"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-9 max-w-3xl">
+          <h2 class="display-lg text-[44px] lg:text-[64px] text-ink">
+            An independent voice<br/>
+            <span class="serif-emphasis text-ink/55 font-normal">in a market full of touts.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- Left: principles -->
+        <div class="lg:col-span-5 reveal">
+          <p class="text-lg text-ink/70 leading-relaxed mb-10">
+            Most "visa agencies" sell you whatever pays them the highest commission. We sell nothing — we connect you with the right specialist and earn referral fees only when our clients are actually satisfied.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex gap-4 pb-6 border-b border-ink/8">
+              <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">i.</span>
+              <div>
+                <p class="font-display font-semibold text-ink">Independent, not transactional</p>
+                <p class="text-sm text-ink/60 mt-1.5">We don't sell visas. We connect you with the right specialist for your case.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 pb-6 border-b border-ink/8">
+              <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">ii.</span>
+              <div>
+                <p class="font-display font-semibold text-ink">Vetted, not advertised</p>
+                <p class="text-sm text-ink/60 mt-1.5">Every specialist we recommend has been thoroughly checked. We refuse to refer unverified operators.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 pb-6 border-b border-ink/8">
+              <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">iii.</span>
+              <div>
+                <p class="font-display font-semibold text-ink">Pattaya-based, not generic</p>
+                <p class="text-sm text-ink/60 mt-1.5">We know Jomtien Immigration. We know which agents take shortcuts. We've been here since 2018.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">iv.</span>
+              <div>
+                <p class="font-display font-semibold text-ink">Honest about money</p>
+                <p class="text-sm text-ink/60 mt-1.5">Transparent pricing from your specialist. No hidden fees. No commission games.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: massive stats -->
+        <div class="lg:col-span-7 reveal">
+          <div class="grid grid-cols-2 gap-px bg-ink/10 rounded-3xl overflow-hidden border border-ink/10 card-elevated">
+            <div class="bg-white p-10 lg:p-12">
+              <p class="font-mono text-[11px] text-ink/45 mb-3 tracking-wider uppercase">By the numbers · 01</p>
+              <p class="stat-massive text-7xl lg:text-8xl text-brand-800"><span class="stat-counter" data-target="2000">0</span><span class="text-gold-500">+</span></p>
+              <p class="mt-3 text-sm text-ink/65 leading-snug">Successful visa cases through our network since 2018</p>
+            </div>
+            <div class="bg-white p-10 lg:p-12">
+              <p class="font-mono text-[11px] text-ink/45 mb-3 tracking-wider uppercase">By the numbers · 02</p>
+              <p class="stat-massive text-7xl lg:text-8xl text-brand-800"><span class="stat-counter" data-target="8">0</span> <span class="text-3xl text-ink/60 font-normal serif-emphasis">years</span></p>
+              <p class="mt-3 text-sm text-ink/65 leading-snug">In Pattaya, since 2018 — through every visa rule change</p>
+            </div>
+            <div class="bg-white p-10 lg:p-12">
+              <p class="font-mono text-[11px] text-ink/45 mb-3 tracking-wider uppercase">By the numbers · 03</p>
+              <p class="stat-massive text-7xl lg:text-8xl text-brand-800"><span class="stat-counter" data-target="12">0</span></p>
+              <p class="mt-3 text-sm text-ink/65 leading-snug">Visa categories covered in depth — every Thai option mapped</p>
+            </div>
+            <div class="bg-white p-10 lg:p-12">
+              <p class="font-mono text-[11px] text-ink/45 mb-3 tracking-wider uppercase">By the numbers · 04</p>
+              <p class="stat-massive text-7xl lg:text-8xl text-brand-800"><span class="stat-counter" data-target="100">0</span><span class="text-3xl text-ink/60 font-normal">%</span></p>
+              <p class="mt-3 text-sm text-ink/65 leading-snug">Confidential. Your data stays yours. No marketing list. Ever.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== CTA ============== -->
-  <section id="contact" class="py-20 bg-gradient-to-br from-brand-700 to-brand-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="font-display font-bold text-3xl md:text-4xl">Ready to get the right answer?</h2>
-      <p class="mt-4 text-brand-100 text-lg">Tell us your situation. We'll come back within 24 hours with the smartest path for your visa — and connect you with the right specialist.</p>
-      <a href="mailto:hello@pattayavisahelp.com" class="mt-8 inline-block bg-white text-brand-700 hover:bg-brand-50 font-semibold px-8 py-4 rounded-lg shadow-lg transition">
-        Start your free consultation →
-      </a>
-      <p class="mt-4 text-sm text-brand-200">A proper contact form will replace this button shortly.</p>
+  <!-- ============== 04 — DECISION SHORTCUT (mid-page CTA) ============== -->
+  <section class="py-24 bg-white relative">
+    <div class="max-w-[1100px] mx-auto px-6 lg:px-8">
+      <div class="bg-ink text-white rounded-[40px] p-12 lg:p-16 relative overflow-hidden card-elevated">
+        <!-- Decorative gradient orbs -->
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-500/25 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-gold-500/15 rounded-full blur-3xl"></div>
+        <!-- Subtle grid -->
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+        <div class="relative grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-8 h-px bg-gold-500"></div>
+              <span class="eyebrow text-gold-400">Decision shortcut</span>
+            </div>
+            <h3 class="display-lg text-[36px] lg:text-[52px] text-white">
+              Not sure which visa fits?
+            </h3>
+            <p class="mt-5 text-brand-100/85 text-lg max-w-xl leading-relaxed">
+              Skip the research rabbit hole. Tell us your situation in one message — we come back with the right answer within 24 hours. Free, no obligation.
+            </p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right">
+            <a href="#consultation" class="inline-flex items-center gap-3 bg-gold-500 hover:bg-gold-400 text-ink font-semibold pl-7 pr-2 py-2 rounded-full shadow-lg transition group">
+              <span>Get my recommendation</span>
+              <span class="bg-ink text-white w-9 h-9 rounded-full grid place-items-center group-hover:translate-x-0.5 transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- ============== 05 — TESTIMONIAL ============== -->
+  <section class="py-28 lg:py-36 mesh-cream relative">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+
+      <div class="grid lg:grid-cols-12 gap-8 mb-16 reveal">
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="section-num">04 / IN THEIR WORDS</span>
+            <div class="hairline flex-1 max-w-[60px]"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-9">
+          <h2 class="display-lg text-[44px] lg:text-[56px] text-ink max-w-3xl">
+            What clients say<br/>
+            <span class="serif-emphasis text-ink/55 font-normal">when nobody's selling.</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Editorial pull quote -->
+      <div class="max-w-[900px] mx-auto reveal">
+        <div class="relative pull-quote">
+          <p class="font-serif italic text-3xl lg:text-5xl text-ink leading-[1.25] tracking-tight">
+            They told me upfront the Privilege Visa wasn't the best fit for me — and recommended LTR-P instead. Saved me thousands in tax. <span class="text-brand-700">Honest from the first call.</span>
+          </p>
+        </div>
+
+        <!-- Author block -->
+        <div class="mt-14 flex items-center gap-5 pt-8 border-t border-ink/10">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand-400 to-brand-700 grid place-items-center text-white font-display font-bold text-2xl flex-shrink-0 shadow-lg">D</div>
+          <div class="flex-1">
+            <p class="font-display font-bold text-ink">David M.</p>
+            <p class="text-sm text-ink/60 mt-0.5">UK retiree · LTR-P holder · Pattaya since 2024</p>
+          </div>
+          <div class="hidden md:flex items-center gap-2 text-xs font-mono text-ink/40 uppercase tracking-wider">
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            Verified · consent on file
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-12 text-center text-xs text-ink/40 font-mono uppercase tracking-wider">More client stories coming as our network grows · Real names · Real consent</p>
+    </div>
+  </section>
+
+  <!-- ============== 06 — FAQ ============== -->
+  <section id="faq" class="py-28 lg:py-36 bg-white relative">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+
+      <div class="grid lg:grid-cols-12 gap-8 mb-20 reveal">
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="section-num">05 / COMMON QUESTIONS</span>
+            <div class="hairline flex-1 max-w-[60px]"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-9 max-w-3xl">
+          <h2 class="display-lg text-[44px] lg:text-[64px] text-ink">
+            Things people ask<br/>
+            <span class="serif-emphasis text-ink/55 font-normal">before committing.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="divide-y divide-ink/8 border-t border-ink/8">
+
+          <details class="faq-item group py-2">
+            <summary class="cursor-pointer py-6 flex items-start justify-between gap-6 font-display font-semibold text-lg text-ink">
+              <div class="flex items-start gap-5">
+                <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">01</span>
+                <span>How is Pattaya Visa Help different from a regular visa agent?</span>
+              </div>
+              <svg class="w-5 h-5 text-ink/40 flex-shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="pl-12 pr-4 pb-6 text-ink/70 leading-relaxed">
+              We're not a visa agent. We're an independent guidance service that connects you with vetted Pattaya specialists. We earn nothing from selling you a specific visa — we earn referral fees only when our clients become satisfied clients of our partners. That alignment is the whole point.
+            </div>
+          </details>
+
+          <details class="faq-item group py-2">
+            <summary class="cursor-pointer py-6 flex items-start justify-between gap-6 font-display font-semibold text-lg text-ink">
+              <div class="flex items-start gap-5">
+                <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">02</span>
+                <span>Is the consultation really free?</span>
+              </div>
+              <svg class="w-5 h-5 text-ink/40 flex-shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="pl-12 pr-4 pb-6 text-ink/70 leading-relaxed">
+              Yes. The 15-minute discovery call is free, no obligation. If you decide to engage one of our specialist partners, their fees are fully transparent and disclosed before you commit to anything.
+            </div>
+          </details>
+
+          <details class="faq-item group py-2">
+            <summary class="cursor-pointer py-6 flex items-start justify-between gap-6 font-display font-semibold text-lg text-ink">
+              <div class="flex items-start gap-5">
+                <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">03</span>
+                <span>Which visa is right for me as a retiree?</span>
+              </div>
+              <svg class="w-5 h-5 text-ink/40 flex-shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="pl-12 pr-4 pb-6 text-ink/70 leading-relaxed">
+              For most over-50s with 800,000 THB available, the <strong>Non-O retirement (in-country)</strong> path is the simplest and cheapest. For high-income retirees ($80k+/year) staying 180+ days/year, the <strong>LTR Wealthy Pensioner</strong> is objectively superior thanks to its tax exemption. We'll tell you exactly which one fits during the consultation.
+            </div>
+          </details>
+
+          <details class="faq-item group py-2">
+            <summary class="cursor-pointer py-6 flex items-start justify-between gap-6 font-display font-semibold text-lg text-ink">
+              <div class="flex items-start gap-5">
+                <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">04</span>
+                <span>Can I still do border runs to Cambodia in 2026?</span>
+              </div>
+              <svg class="w-5 h-5 text-ink/40 flex-shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="pl-12 pr-4 pb-6 text-ink/70 leading-relaxed">
+              Land-border visa-exempt entries are now capped at <strong>2 per calendar year</strong> (effective November 2025). Air arrivals get up to 6. The "live in Thailand on rolling 30-day stamps" lifestyle is over. If you're long-stay in Pattaya, you need a proper long-stay visa — DTV, retirement, or Privilege depending on your situation.
+            </div>
+          </details>
+
+          <details class="faq-item group py-2">
+            <summary class="cursor-pointer py-6 flex items-start justify-between gap-6 font-display font-semibold text-lg text-ink">
+              <div class="flex items-start gap-5">
+                <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">05</span>
+                <span>How quickly can I get a Thai visa?</span>
+              </div>
+              <svg class="w-5 h-5 text-ink/40 flex-shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="pl-12 pr-4 pb-6 text-ink/70 leading-relaxed">
+              Depends entirely on the visa. Tourist visa: 3–7 days. DTV: 2–4 weeks. Non-O retirement (in-country): ~3 months including bank seasoning. LTR / Privilege: 6–16 weeks. We'll give you a realistic timeline for your specific case during the consultation.
+            </div>
+          </details>
+
+          <details class="faq-item group py-2">
+            <summary class="cursor-pointer py-6 flex items-start justify-between gap-6 font-display font-semibold text-lg text-ink">
+              <div class="flex items-start gap-5">
+                <span class="font-mono text-xs text-ink/40 mt-1.5 flex-shrink-0">06</span>
+                <span>What about the visa scams in Pattaya I keep hearing about?</span>
+              </div>
+              <svg class="w-5 h-5 text-ink/40 flex-shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="pl-12 pr-4 pb-6 text-ink/70 leading-relaxed">
+              They're real. The 2025 ED visa crackdown alone revoked nearly 10,000 student visas tied to fake schools. We only refer to specialists we've vetted directly — and we publish a <a href="/guides/visa-scams-pattaya/" class="text-brand-700 underline underline-offset-2">protective guide</a> on what to avoid.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 07 — CONSULTATION FORM ============== -->
+  <section id="consultation" class="py-28 lg:py-36 mesh-deep grain text-white relative overflow-hidden">
+    <div class="absolute inset-0 grid-fine opacity-10"></div>
+
+    <div class="relative max-w-[1400px] mx-auto px-6 lg:px-8">
+
+      <div class="grid lg:grid-cols-12 gap-8 mb-16">
+        <div class="lg:col-span-3">
+          <div class="flex items-center gap-3">
+            <span class="section-num-light">06 / GET STARTED</span>
+            <div class="h-px flex-1 max-w-[60px] bg-white/20"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-9">
+          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur text-white text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-6 font-mono">
+            <span class="w-1.5 h-1.5 bg-gold-500 rounded-full animate-pulse"></span>
+            Free 15-minute consultation
+          </span>
+          <h2 class="display-lg text-[44px] lg:text-[64px] text-white">
+            Get the right answer.<br/>
+            <span class="serif-emphasis text-brand-300 font-normal">Within 24 hours.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- Left: benefits -->
+        <div class="lg:col-span-5">
+          <p class="text-lg text-brand-100/85 leading-relaxed mb-10">
+            Tell us your situation. We'll come back with the smartest path for your visa — and connect you with the right Pattaya specialist if you decide to proceed.
+          </p>
+
+          <div class="space-y-5">
+            <div class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-brand-100">Free, no obligation</span>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-brand-100">Reply within 24 hours</span>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-brand-100">100% confidential — no marketing list</span>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+              <svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-brand-100">Real human reply, not a chatbot</span>
+            </div>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-white/10">
+            <p class="text-xs font-mono text-white/50 uppercase tracking-wider mb-3">Or reach us directly</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://wa.me/66XXXXXXXXX" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366]/15 hover:bg-[#25D366]/25 text-white border border-[#25D366]/30 px-4 py-2.5 rounded-full text-sm font-medium transition">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+                WhatsApp
+              </a>
+              <a href="mailto:hello@pattayavisahelp.com" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/20 px-4 py-2.5 rounded-full text-sm font-medium transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Email
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="lg:col-span-7">
+          <form id="leadForm" action="/api/lead" method="POST" class="bg-white text-ink rounded-3xl p-8 lg:p-10 shadow-2xl">
+            <div class="flex items-center justify-between mb-8 pb-6 border-b border-ink/8">
+              <h3 class="font-display font-bold text-2xl">Start your free consultation</h3>
+              <span class="text-xs font-mono text-ink/40 uppercase tracking-wider">~2 min</span>
+            </div>
+
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+
+            <div class="space-y-5">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="firstName" class="block text-xs font-mono uppercase tracking-wider text-ink/55 mb-2">First name *</label>
+                  <input id="firstName" name="firstName" type="text" required class="w-full px-4 py-3.5 border border-ink/15 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-ink" />
+                </div>
+                <div>
+                  <label for="lastName" class="block text-xs font-mono uppercase tracking-wider text-ink/55 mb-2">Last name</label>
+                  <input id="lastName" name="lastName" type="text" class="w-full px-4 py-3.5 border border-ink/15 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-mono uppercase tracking-wider text-ink/55 mb-2">Email *</label>
+                <input id="email" name="email" type="email" required class="w-full px-4 py-3.5 border border-ink/15 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+              </div>
+
+              <div>
+                <label for="whatsapp" class="block text-xs font-mono uppercase tracking-wider text-ink/55 mb-2">WhatsApp / phone <span class="text-ink/35 normal-case font-sans">— optional, faster reply</span></label>
+                <input id="whatsapp" name="whatsapp" type="tel" class="w-full px-4 py-3.5 border border-ink/15 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+              </div>
+
+              <div>
+                <label for="visaInterest" class="block text-xs font-mono uppercase tracking-wider text-ink/55 mb-2">Which visa interests you most? *</label>
+                <select id="visaInterest" name="visaInterest" required class="w-full px-4 py-3.5 border border-ink/15 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-white">
+                  <option value="">Select one — we'll help you confirm</option>
+                  <option value="not-sure">Not sure yet — please advise</option>
+                  <option value="dtv">DTV — Destination Thailand Visa</option>
+                  <option value="retirement">Retirement (Non-O / O-A)</option>
+                  <option value="privilege">Privilege / Elite</option>
+                  <option value="ltr">LTR — Long-Term Resident</option>
+                  <option value="marriage">Marriage (Non-O)</option>
+                  <option value="education">Education (ED) / Muay Thai</option>
+                  <option value="business">Business (Non-B + Work Permit)</option>
+                  <option value="smart">SMART Visa</option>
+                  <option value="tourist">Tourist visa / extension</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="situation" class="block text-xs font-mono uppercase tracking-wider text-ink/55 mb-2">Tell us your situation <span class="text-ink/35 normal-case font-sans">— optional, helps us prepare</span></label>
+                <textarea id="situation" name="situation" rows="4" placeholder="e.g. UK retiree, 67, planning to relocate to Pattaya in 6 months..." class="w-full px-4 py-3.5 border border-ink/15 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition resize-none placeholder-ink/30"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="mt-8 w-full bg-ink hover:bg-brand-900 text-white font-semibold py-4 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2 group">
+              Send my request
+              <span class="text-gold-400 group-hover:translate-x-0.5 transition">→</span>
+            </button>
+
+            <p class="mt-5 text-xs text-ink/50 text-center leading-relaxed">By submitting, you agree to our <a href="/privacy/" class="text-brand-700 underline underline-offset-2">privacy policy</a>. We'll only use your info to reply. No marketing lists. No reselling.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
 
   <!-- ============== FOOTER ============== -->
-  <footer class="bg-ink text-slate-400 py-12">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-      <div>
-        <div class="flex items-center gap-2">
-          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 grid place-items-center text-white font-bold">P</span>
-          <span class="font-display font-bold text-white text-lg">Pattaya Visa Help</span>
+  <footer class="bg-ink text-slate-400 relative overflow-hidden">
+    <!-- Top accent line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20">
+      <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
+
+        <!-- Brand column -->
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#footerLogoGrad)"/>
+              <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
+              <circle cx="29" cy="13" r="2" fill="#f59e0b"/>
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0ea5e9"/>
+                  <stop offset="100%" stop-color="#0c4a6e"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="font-display font-bold text-white text-lg">Pattaya Visa Help</span>
+              <span class="text-[10px] font-mono text-white/40 tracking-wider uppercase mt-0.5">Est. 2018 · Pattaya, Thailand</span>
+            </div>
+          </div>
+          <p class="mt-6 text-sm leading-relaxed max-w-sm">
+            Independent Thailand visa guidance from Pattaya. We connect expats with vetted local specialists across every visa category. Trusted by 2,000+ since 2018.
+          </p>
+          <div class="mt-8 flex items-center gap-2">
+            <a href="https://wa.me/66XXXXXXXXX" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 grid place-items-center text-slate-300 hover:text-white transition" aria-label="WhatsApp">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+            </a>
+            <a href="mailto:hello@pattayavisahelp.com" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 grid place-items-center text-slate-300 hover:text-white transition" aria-label="Email">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
         </div>
-        <p class="mt-3 text-sm">Independent Thailand visa guidance, based in Pattaya. We connect you with vetted specialists, never with random touts.</p>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2">
+            <span class="font-mono text-[10px] text-white/35">A</span>
+            Visa types
+          </h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/visas/dtv/" class="hover:text-white transition">DTV</a></li>
+            <li><a href="/visas/retirement-non-o/" class="hover:text-white transition">Retirement</a></li>
+            <li><a href="/visas/privilege-elite/" class="hover:text-white transition">Privilege / Elite</a></li>
+            <li><a href="/visas/ltr/" class="hover:text-white transition">LTR</a></li>
+            <li><a href="/visas/marriage-non-o/" class="hover:text-white transition">Marriage</a></li>
+            <li><a href="/visas/education-ed/" class="hover:text-white transition">Education</a></li>
+            <li><a href="/visas/business-non-b/" class="hover:text-white transition">Business + WP</a></li>
+            <li><a href="/visas/smart/" class="hover:text-white transition">SMART</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2">
+            <span class="font-mono text-[10px] text-white/35">B</span>
+            Guides
+          </h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/guides/90-day-reporting/" class="hover:text-white transition">90-day reporting (TM47)</a></li>
+            <li><a href="/guides/tm30-reporting/" class="hover:text-white transition">TM30 accommodation</a></li>
+            <li><a href="/guides/re-entry-permits/" class="hover:text-white transition">Re-entry permits</a></li>
+            <li><a href="/guides/health-insurance/" class="hover:text-white transition">Health insurance</a></li>
+            <li><a href="/guides/thai-bank-account-as-foreigner/" class="hover:text-white transition">Thai bank account</a></li>
+            <li><a href="/guides/jomtien-immigration-office/" class="hover:text-white transition">Jomtien Immigration</a></li>
+            <li><a href="/guides/visa-scams-pattaya/" class="hover:text-white transition">Visa scams to avoid</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2">
+            <span class="font-mono text-[10px] text-white/35">C</span>
+            Site
+          </h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/about/" class="hover:text-white transition">About us</a></li>
+            <li><a href="/contact/" class="hover:text-white transition">Contact</a></li>
+            <li><a href="/compare/visa-comparison-matrix/" class="hover:text-white transition">Compare all visas</a></li>
+            <li><a href="/pattaya/living-in-pattaya/" class="hover:text-white transition">Living in Pattaya</a></li>
+            <li><a href="/pattaya/cost-of-living/" class="hover:text-white transition">Cost of living</a></li>
+            <li><a href="/privacy/" class="hover:text-white transition">Privacy policy</a></li>
+            <li><a href="/terms/" class="hover:text-white transition">Terms of service</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4 class="text-white font-semibold mb-3">Visa types</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-white">Retirement (O-A / O-X)</a></li>
-          <li><a href="#" class="hover:text-white">DTV</a></li>
-          <li><a href="#" class="hover:text-white">Elite / Privilege</a></li>
-          <li><a href="#" class="hover:text-white">Marriage</a></li>
-          <li><a href="#" class="hover:text-white">Education</a></li>
-          <li><a href="#" class="hover:text-white">Business / Work Permit</a></li>
-        </ul>
+
+      <!-- Footer hairline -->
+      <div class="hairline mb-8" style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);"></div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p class="text-slate-500">© <span id="year"></span> Pattaya Visa Help. All rights reserved.</p>
+        <p class="text-slate-500 max-w-2xl text-center md:text-right">Information and matching service. Not a law firm. Visa decisions made by the Royal Thai Immigration Bureau and Thai Embassies / Consulates.</p>
       </div>
-      <div>
-        <h4 class="text-white font-semibold mb-3">Contact</h4>
-        <p class="text-sm">hello@pattayavisahelp.com</p>
-        <p class="text-sm mt-2">Pattaya, Chonburi, Thailand</p>
-      </div>
-    </div>
-    <div class="border-t border-slate-800 mt-10 pt-6 text-center text-xs">
-      © <span id="year"></span> Pattaya Visa Help. All rights reserved. We are an information and matching service. Visa decisions are made by the Royal Thai Immigration Bureau.
     </div>
   </footer>
 
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/66XXXXXXXXX?text=Hi%2C%20I%20need%20help%20with%20a%20Thailand%20visa" target="_blank" rel="noopener" id="waFloat" class="wa-pulse fixed bottom-6 right-6 z-30 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] grid place-items-center text-white shadow-2xl shadow-green-500/40 transition hover:scale-110" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Scripts -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; });
+      closeMobileMenu.addEventListener('click', () => { mobileMenu.classList.add('hidden'); document.body.style.overflow = ''; });
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.add('hidden'); document.body.style.overflow = ''; }));
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Stat count-up
+    const statEls = document.querySelectorAll('.stat-counter');
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = parseInt(el.dataset.target, 10);
+          let current = 0;
+          const duration = 2000;
+          const start = performance.now();
+          const tick = (now) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            current = Math.floor(target * eased);
+            el.textContent = current.toLocaleString();
+            if (progress < 1) requestAnimationFrame(tick);
+            else el.textContent = target.toLocaleString();
+          };
+          requestAnimationFrame(tick);
+          countObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    statEls.forEach(el => countObserver.observe(el));
+
+    // Lead form
+    const leadForm = document.getElementById('leadForm');
+    if (leadForm) {
+      leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = leadForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+        const formData = new FormData(leadForm);
+        const payload = Object.fromEntries(formData.entries());
+        payload.page = window.location.pathname;
+        payload.timestamp = new Date().toISOString();
+        try {
+          const res = await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+          if (res.ok) {
+            leadForm.innerHTML = `
+              <div class="text-center py-16">
+                <div class="w-16 h-16 rounded-full bg-green-100 grid place-items-center mx-auto mb-5">
+                  <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-2xl text-ink">Thank you.</h3>
+                <p class="mt-3 text-ink/65">We'll reply within 24 hours from <strong>hello@pattayavisahelp.com</strong>. Check your spam folder if you don't see it.</p>
+              </div>
+            `;
+          } else throw new Error('Submission failed');
+        } catch {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          alert('Something went wrong. Please email hello@pattayavisahelp.com directly or use WhatsApp.');
+        }
+      });
+    }
   </script>
 </body>
 </html>
