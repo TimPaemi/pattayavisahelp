@@ -61,7 +61,7 @@ export async function onRequestPost(context) {
       firstName: sanitize(data.firstName, 100),
       lastName: sanitize(data.lastName, 100),
       email: sanitize(data.email, 200),
-      whatsapp: sanitize(data.whatsapp, 50),
+      phone: sanitize(data.phone, 50),
       visaInterest: sanitize(data.visaInterest, 50),
       situation: sanitize(data.situation, 2000),
       page: sanitize(data.page, 200),
@@ -95,7 +95,7 @@ export async function onRequestPost(context) {
         <div style="background:#f8fafc;padding:20px;border-radius:12px;margin:16px 0;">
           <p style="margin:0 0 8px;"><strong>Name:</strong> ${lead.firstName} ${lead.lastName}</p>
           <p style="margin:0 0 8px;"><strong>Email:</strong> <a href="mailto:${lead.email}" style="color:#0369a1;">${lead.email}</a></p>
-          ${lead.whatsapp ? `<p style="margin:0 0 8px;"><strong>WhatsApp / phone:</strong> ${lead.whatsapp}</p>` : ''}
+          ${lead.phone ? `<p style="margin:0 0 8px;"><strong>Phone:</strong> ${lead.phone}</p>` : ''}
           <p style="margin:0 0 8px;"><strong>Visa interest:</strong> ${visaLabel}</p>
           <p style="margin:0 0 8px;"><strong>Country (by IP):</strong> ${lead.ipCountry}</p>
           <p style="margin:0;"><strong>Submitted:</strong> ${lead.timestamp}</p>
@@ -114,8 +114,7 @@ export async function onRequestPost(context) {
         </div>
 
         <div style="margin-top:24px;display:flex;gap:8px;">
-          <a href="mailto:${lead.email}?subject=Re:%20Your%20Thailand%20visa%20enquiry" style="background:#0c4a6e;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply</a>
-          ${lead.whatsapp ? `<a href="https://wa.me/${lead.whatsapp.replace(/\D/g, '')}" style="background:#25D366;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">WhatsApp</a>` : ''}
+          <a href="mailto:${lead.email}?subject=Re:%20Your%20Thailand%20visa%20enquiry" style="background:#0c4a6e;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply by email</a>
         </div>
       </div>
     `;
@@ -133,7 +132,7 @@ export async function onRequestPost(context) {
           <li><a href="https://pattayavisahelp.com/guides/visa-scams-pattaya/" style="color:#0369a1;">Visa scams to avoid in Pattaya</a></li>
           <li><a href="https://pattayavisahelp.com/pattaya/living-in-pattaya/" style="color:#0369a1;">Living in Pattaya — full expat guide</a></li>
         </ul>
-        <p style="font-size:16px;line-height:1.6;">If your situation is urgent, message us directly on <a href="https://wa.me/66XXXXXXXXX" style="color:#25D366;font-weight:600;">WhatsApp</a> for the fastest reply.</p>
+        <p style="font-size:16px;line-height:1.6;">If your situation is urgent, just reply directly to this email — it goes straight to our inbox.</p>
         <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
         <p style="font-size:14px;color:#64748b;">Pattaya Visa Help<br>Independent Thailand visa guidance from Pattaya<br><a href="https://pattayavisahelp.com" style="color:#0369a1;">pattayavisahelp.com</a></p>
       </div>
@@ -142,7 +141,7 @@ export async function onRequestPost(context) {
     // Send via Resend (only if API key configured)
     if (env.RESEND_API_KEY) {
       const senderEmail = env.SENDER_EMAIL || 'leads@pattayavisahelp.com';
-      const notificationEmail = env.NOTIFICATION_EMAIL || 'hello@pattayavisahelp.com';
+      const notificationEmail = env.NOTIFICATION_EMAIL || 'info@pattayavisahelp.com';
 
       // Internal notification
       await fetch('https://api.resend.com/emails', {
@@ -196,7 +195,7 @@ export async function onRequestPost(context) {
   } catch (err) {
     console.error('Lead handler error:', err);
     return new Response(
-      JSON.stringify({ error: 'Server error. Please email hello@pattayavisahelp.com directly.' }),
+      JSON.stringify({ error: 'Server error. Please email info@pattayavisahelp.com directly.' }),
       { status: 500, headers }
     );
   }
@@ -214,3 +213,4 @@ export async function onRequestOptions() {
     },
   });
 }
+      

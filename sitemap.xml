@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pattayavisahelp.com/</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/about/</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/contact/</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -34,7 +34,7 @@
   <url><loc>https://pattayavisahelp.com/visas/media-non-m/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Cross-cutting guides -->
-  <url><loc>https://pattayavisahelp.com/guides/90-day-reporting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pattayavisahelp.com/guides/90-day-reporting/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://pattayavisahelp.com/guides/tm30-reporting/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pattayavisahelp.com/guides/re-entry-permits/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pattayavisahelp.com/guides/visa-runs-vs-extensions/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -53,6 +53,8 @@
   <url><loc>https://pattayavisahelp.com/guides/money-transfer-thailand/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Comparison pages -->
+  <url><loc>https://pattayavisahelp.com/compare/dtv-vs-ltr/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://pattayavisahelp.com/compare/privilege-vs-ltr/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://pattayavisahelp.com/compare/dtv-vs-elite/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pattayavisahelp.com/compare/elite-vs-ltr/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pattayavisahelp.com/compare/retirement-o-a-vs-non-o/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
