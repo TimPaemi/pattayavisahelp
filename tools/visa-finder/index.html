@@ -99,35 +99,404 @@ html { scroll-behavior:smooth; scroll-padding-top:6rem; }
 .prose-custom .x-list li::before { content: '✕'; position: absolute; left: 0; top: 0; color: #dc2626; font-weight: 700; font-size: 1.1rem; }
 
 
+/* === Mobile-first: prevent horizontal overflow globally === */
+html, body { 
+  color-scheme: light only; 
+  background-color: #fafaf9; 
+  color: #0a0e1a; 
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+* { max-width: 100%; }
+img, video, iframe { max-width: 100%; height: auto; }
+pre, code { white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; }
+.prose-custom a, .prose-custom p, .prose-custom li, h1, h2, h3, h4 { 
+  word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;
+}
+
+/* All tables get a horizontal-scroll wrapper on mobile */
+.prose-custom table, .cmp-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+.prose-custom table thead, .cmp-table thead { white-space: nowrap; }
+.prose-custom table tbody, .cmp-table tbody { white-space: normal; }
+
+/* Add bottom padding so sticky CTA doesn't overlap content */
+@media (max-width: 1023px) {
+  body { padding-bottom: 76px; }
+}
+
 /* === Mobile readability + tap targets === */
 @media (max-width: 768px) {
   body { font-size: 16px; }
-  h1 { font-size: 2.25rem !important; line-height: 1.1 !important; }
-  .prose-custom h2 { font-size: 1.625rem !important; margin-top: 2.5rem !important; }
-  .prose-custom h3 { font-size: 1.25rem !important; margin-top: 1.75rem !important; }
-  .prose-custom p { font-size: 1rem; line-height: 1.7; }
-  .prose-custom table { font-size: .85rem; }
-  .prose-custom th, .prose-custom td { padding: .6rem .75rem !important; }
-  .cmp-table th, .cmp-table td { padding: .65rem .85rem !important; font-size: .85rem !important; }
-  .cmp-table .row-label { width: auto !important; min-width: 7rem; }
-  /* Tap targets — buttons + form fields min 44px */
-  button, a.bg-ink, a.bg-brand-700, a.bg-white, .faq-item summary { min-height: 44px; }
-  input, textarea, select { min-height: 44px; font-size: 16px !important; /* prevent iOS zoom */ }
-  /* Reduce hero padding on mobile */
-  section.py-16 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  section.py-20 { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  
+  /* Headings — graduated by size */
+  h1 { font-size: 2rem !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
+  h2 { font-size: 1.625rem !important; line-height: 1.2 !important; }
+  h3 { font-size: 1.25rem !important; line-height: 1.3 !important; }
+  .prose-custom h2 { font-size: 1.5rem !important; margin-top: 2rem !important; margin-bottom: .75rem !important; }
+  .prose-custom h3 { font-size: 1.2rem !important; margin-top: 1.5rem !important; margin-bottom: .5rem !important; }
+  
+  /* Tailwind utility overrides for mobile */
+  .text-4xl { font-size: 1.75rem !important; }
+  .text-5xl { font-size: 2rem !important; line-height: 1.15 !important; }
+  .text-6xl { font-size: 2.25rem !important; line-height: 1.1 !important; }
+  .text-7xl { font-size: 2.5rem !important; line-height: 1.1 !important; }
+  .lg\:text-4xl, .lg\:text-5xl, .lg\:text-6xl, .lg\:text-7xl { font-size: inherit !important; }
+  
+  /* Body text */
+  .prose-custom p { font-size: 1rem !important; line-height: 1.65 !important; margin-bottom: 1rem !important; }
+  .prose-custom ul, .prose-custom ol { padding-left: 1.25rem !important; }
+  .prose-custom li { font-size: 1rem !important; line-height: 1.65 !important; }
+  
+  /* Tables — readable cells when scrolled */
+  .prose-custom table, .cmp-table { font-size: .8125rem !important; }
+  .prose-custom th, .prose-custom td { padding: .55rem .65rem !important; min-width: 7rem; }
+  .cmp-table th, .cmp-table td { padding: .55rem .65rem !important; font-size: .8125rem !important; min-width: 7rem; }
+  .cmp-table .row-label { min-width: 8rem !important; }
+  
+  /* Tap targets — minimum 44x44 */
+  button, a.bg-ink, a.bg-brand-700, a.bg-white, a.bg-gold-500, .faq-item summary,
+  a[class*="rounded-full"], a[class*="rounded-xl"], button[class*="rounded"] { 
+    min-height: 44px !important; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  /* Form fields — 44px min, 16px text to prevent iOS zoom */
+  input, textarea, select { 
+    min-height: 44px !important; 
+    font-size: 16px !important; 
+    padding: .65rem .85rem !important;
+  }
+  textarea { min-height: 88px !important; }
+  
+  /* Reduce hero padding aggressively on mobile */
+  section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  section.py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  section.py-24, section.py-28 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  
+  /* Container padding */
+  .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: 1rem !important; padding-right: 1rem !important;
+  }
+  
   /* Stat grid stays readable */
-  .key-fact-value { font-size: 1.25rem !important; }
+  .key-fact { padding: .75rem .85rem !important; min-width: 6rem !important; }
+  .key-fact-value { font-size: 1.1rem !important; }
+  .key-fact-label { font-size: .55rem !important; }
+  
   /* Callouts breathe on mobile */
-  .callout { padding: 1.15rem 1.25rem !important; margin: 1.5rem 0 !important; }
+  .callout { padding: 1rem 1.15rem !important; margin: 1.25rem 0 !important; border-radius: .75rem !important; }
+  .callout-key p { font-size: 1.05rem !important; }
+  
+  /* Cards in grids stack with proper spacing */
+  .grid { gap: .85rem !important; }
+  
+  /* FAQ accordion summary */
+  .faq-item summary { padding: 1rem 1rem !important; }
+  .faq-item summary span { font-size: .95rem !important; padding-right: .5rem !important; }
+  .faq-item div { padding: 0 1rem 1.25rem !important; font-size: .95rem !important; line-height: 1.6 !important; }
+  
+  /* Eyebrow text smaller */
+  .eyebrow { font-size: .65rem !important; }
+  
+  /* Breadcrumb scrolls if too long */
+  nav[aria-label="Breadcrumb"], nav.text-sm.text-slate-500 { 
+    overflow-x: auto !important; 
+    white-space: nowrap !important; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: .25rem !important;
+  }
+  nav[aria-label="Breadcrumb"]::-webkit-scrollbar, nav.text-sm.text-slate-500::-webkit-scrollbar { display: none; }
+  
+  /* Header — tighter on mobile */
+  header { height: 60px !important; }
+  header .h-\[72px\] { height: 60px !important; }
+  
+  /* Footer columns stack cleanly */
+  footer .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  
+  /* Buttons in CTAs full-width on mobile */
+  .flex.flex-col.sm\:flex-row a { width: 100%; text-align: center; }
+  
+  /* Sticky mobile CTA polish */
+  #stickyMobileCta { box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+  #stickyMobileCta .text-sm { font-size: .8rem !important; }
+  
+  /* Fix overflow on visa cards */
+  a[class*="grid"] > a, .grid > a { overflow: hidden; }
+  
+  /* Prose links break long URLs */
+  .prose-custom a[href^="http"] { word-break: break-all; }
 }
+
 @media (max-width: 480px) {
-  h1 { font-size: 1.875rem !important; }
-  .prose-custom h2 { font-size: 1.4rem !important; }
+  /* Even tighter on small phones */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.4rem !important; }
+  .prose-custom h2 { font-size: 1.35rem !important; }
+  .text-4xl { font-size: 1.625rem !important; }
+  .text-5xl { font-size: 1.75rem !important; }
+  .text-6xl { font-size: 2rem !important; }
+  
+  /* Even tighter container padding */
+  .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: .85rem !important; padding-right: .85rem !important;
+  }
+  
+  /* Quiz/calc card breathing room */
+  #quizCard { padding: 1.25rem !important; }
+  
+  /* Stat grids 2-col on smallest */
+  .grid.md\:grid-cols-3, .grid.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  
+  /* Country flag grid 2-col on smallest */
+  .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; gap: .65rem !important; }
 }
 
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  body { 
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  @media (max-width: 1023px) {
+    body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  }
+}
 
-html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a; }
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* === Breadcrumb upgrade === */
+nav[aria-label="Breadcrumb"], nav.breadcrumb-nav {
+  background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+  border-bottom: 1px solid rgba(10,14,26,0.06);
+  padding: .75rem 0;
+  margin-bottom: 0;
+}
+nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8125rem;
+  flex-wrap: wrap;
+}
+nav[aria-label="Breadcrumb"] a, nav.breadcrumb-nav a {
+  color: #475569;
+  font-weight: 500;
+  text-decoration: none;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  transition: all .15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+nav[aria-label="Breadcrumb"] a:hover, nav.breadcrumb-nav a:hover {
+  background: rgba(3,105,161,0.08);
+  color: #0369a1;
+}
+nav[aria-label="Breadcrumb"] a:first-child::before, nav.breadcrumb-nav a:first-child::before {
+  content: '⌂';
+  font-size: 0.95em;
+  margin-right: .15em;
+  opacity: 0.7;
+}
+nav[aria-label="Breadcrumb"] .breadcrumb-sep, nav.breadcrumb-nav .breadcrumb-sep {
+  color: #cbd5e1;
+  font-weight: 400;
+}
+nav[aria-label="Breadcrumb"] > span:last-child, nav.breadcrumb-nav > span:last-child,
+nav[aria-label="Breadcrumb"] .breadcrumb-current, nav.breadcrumb-nav .breadcrumb-current {
+  color: #0a0e1a;
+  font-weight: 600;
+  padding: .25rem .65rem;
+  background: rgba(245,158,11,0.10);
+  border-radius: 999px;
+}
+@media (max-width: 768px) {
+  nav[aria-label="Breadcrumb"], nav.breadcrumb-nav { padding: .55rem 0; }
+  nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div { font-size: .7rem; flex-wrap: nowrap; overflow-x: auto; }
+}
+
+/* === Visual polish pass === */
+
+/* Better Baht symbol rendering — Inter and Plus Jakarta have it, but force tabular for prices */
+.font-mono, .key-fact-value, [class*="font-display"] { 
+  font-feature-settings: 'tnum' on, 'lnum' on; 
+}
+
+/* Smoother card hovers */
+a[class*="rounded-xl"], a[class*="rounded-2xl"], 
+.bg-white.border, .bg-paper.border {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+/* FAQ accordion polish */
+.faq-item {
+  transition: all .25s ease;
+}
+.faq-item:hover {
+  border-color: rgba(3,105,161,0.25) !important;
+  box-shadow: 0 4px 16px -4px rgba(3,105,161,0.08);
+}
+.faq-item[open] {
+  border-color: rgba(3,105,161,0.35) !important;
+  background: linear-gradient(to bottom, rgba(240,249,255,0.4), white) !important;
+}
+.faq-item summary {
+  cursor: pointer;
+  user-select: none;
+}
+.faq-item summary:hover {
+  background: rgba(240,249,255,0.5);
+}
+.faq-item[open] summary svg {
+  transform: rotate(180deg);
+  color: #0369a1;
+}
+
+/* Callout polish */
+.callout {
+  position: relative;
+  transition: transform .2s ease;
+}
+.callout-key {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+.callout-key::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(245,158,11,0.15), transparent 70%);
+  pointer-events: none;
+}
+
+/* Better buttons */
+button[class*="bg-ink"], a[class*="bg-ink"], 
+button[class*="bg-brand-700"], a[class*="bg-brand-700"],
+button[class*="bg-gold-500"], a[class*="bg-gold-500"] {
+  transition: all .2s ease;
+  position: relative;
+  overflow: hidden;
+}
+button[class*="bg-ink"]:hover, a[class*="bg-ink"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(10,14,26,0.5);
+}
+button[class*="bg-gold-500"]:hover, a[class*="bg-gold-500"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(245,158,11,0.5);
+}
+
+/* Top consultation strip — better */
+.bg-ink.text-white.text-sm.border-b {
+  background: linear-gradient(to right, #0a0e1a, #0f1729 50%, #0a0e1a) !important;
+}
+
+/* Header polish */
+header.sticky {
+  transition: background-color .2s ease, backdrop-filter .2s ease;
+}
+
+/* Footer separator polish */
+footer .bg-gradient-to-r {
+  height: 2px !important;
+}
+
+/* Section dividers more visible */
+section.border-y, section.border-t, section.border-b {
+  border-color: rgba(10,14,26,0.06) !important;
+}
+
+/* Eyebrow text consistency */
+.eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0369a1;
+}
+
+/* Better focus visibility */
+:focus-visible {
+  outline: 2px solid #0ea5e9 !important;
+  outline-offset: 4px !important;
+  border-radius: 4px;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline-offset: 2px !important;
+}
+
+/* Smooth scroll padding for fixed header */
+html { scroll-padding-top: 80px; }
+
+/* Form fields polish */
+input, select, textarea {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0ea5e9 !important;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(245,158,11,0.3);
+  color: #0a0e1a;
+}
+
+/* Better link underline */
+.prose-custom a {
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color .15s ease;
+}
+.prose-custom a:hover {
+  text-decoration-color: #f59e0b;
+}
+
+/* Quiz card animation on load */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#quizCard, .bg-white.border.rounded-3xl {
+  animation: slideUpFade .6s ease-out;
+}
+
+/* Progress bar pulse */
+@keyframes progressPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(14,165,233,0); }
+}
+
+/* Better scrollbars where they exist */
+.cmp-table, .prose-custom table { scrollbar-width: thin; scrollbar-color: #cbd5e1 #f1f5f9; }
+.cmp-table::-webkit-scrollbar, .prose-custom table::-webkit-scrollbar { height: 8px; }
+.cmp-table::-webkit-scrollbar-track, .prose-custom table::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+.cmp-table::-webkit-scrollbar-thumb, .prose-custom table::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.cmp-table::-webkit-scrollbar-thumb:hover, .prose-custom table::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
 </style>
 <meta property="og:image" content="https://pattayavisahelp.com/og-default.png" />
 <meta property="og:image:width" content="1200" />
@@ -157,85 +526,202 @@ html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a
   <nav class="px-6 py-8 space-y-1"><a href="/#visas" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Visa types</a><a href="/#guides" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Guides</a><a href="/about/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">About</a><a href="/contact/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Contact</a><a href="#consultation" class="block bg-ink text-white text-center font-semibold px-6 py-4 rounded-full mt-8">Free consultation →</a></nav>
 </div>
 
-<nav class="max-w-7xl mx-auto px-6 pt-4 text-sm text-slate-500"><a href="/" class="hover:text-brand-700">Home</a> › <a href="/#tools" class="hover:text-brand-700">Tools</a> › <span class="text-ink font-medium">Visa Finder</span></nav>
+<nav class="breadcrumb-nav" aria-label="Breadcrumb"><div class="max-w-[1400px] mx-auto px-6 lg:px-8"><a href="/" class="hover:text-brand-700">Home</a><span class="breadcrumb-sep">›</span><a href="/#guides" class="hover:text-brand-700">Guides</a><span class="breadcrumb-sep">›</span><span class="text-ink font-medium">Setting up a Thai company</span></div></nav>
 
 <main id="main">
 
-<!-- Hero -->
-<section class="relative overflow-hidden mesh-light py-16 lg:py-20">
+<!-- Hero with visual elements -->
+<section class="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-brand-100/40 pt-12 pb-8 lg:pt-20 lg:pb-12">
+  <!-- Decorative SVG blobs -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-40 -right-32 w-96 h-96 bg-gradient-to-br from-brand-300/30 to-brand-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-20 w-72 h-72 bg-gradient-to-tr from-gold-300/30 to-gold-500/15 rounded-full blur-3xl"></div>
+  </div>
+  
   <div class="relative max-w-4xl mx-auto px-6 text-center">
-    <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-brand-200 text-brand-800 text-xs font-mono uppercase tracking-widest px-4 py-1.5 rounded-full">
-      <span class="w-1.5 h-1.5 rounded-full bg-brand-600 animate-pulse"></span> Free interactive tool
+    <span class="inline-flex items-center gap-2 bg-white/90 backdrop-blur border border-brand-200 text-brand-800 text-xs font-mono uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+      <span class="relative flex w-2 h-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
+      </span>
+      Free interactive tool · No signup
     </span>
-    <h1 class="font-display font-bold text-4xl lg:text-6xl tracking-tight mt-6 leading-tight">
-      Which Thailand visa <span class="serif-emphasis text-brand-700">do you actually need?</span>
+    <h1 class="font-display font-bold text-4xl lg:text-6xl tracking-tight mt-6 leading-[1.1]">
+      Which Thailand visa<br><span class="serif-emphasis text-brand-700">do you actually need?</span>
     </h1>
     <p class="mt-6 text-lg lg:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-      Five quick questions. We narrow 12 visa options down to your best 1–3 fits — based on age, plans, budget, and family. No email required to see results.
+      Five quick questions narrow 12 visa options to your top 1–3 fits. Based on age, plans, budget, and family. No email required.
     </p>
+    
+    <!-- Trust strip -->
+    <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500">
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 60 seconds</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 12 visas covered</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 2026 rules</span>
+    </div>
   </div>
 </section>
 
-<!-- Quiz container -->
-<section class="py-8 lg:py-12">
+<!-- Quiz container with elevated visual -->
+<section class="py-8 lg:py-16 -mt-4 relative">
   <div class="max-w-3xl mx-auto px-6">
-    <div id="quizCard" class="bg-white border border-ink/10 rounded-2xl shadow-xl shadow-ink/5 p-8 lg:p-12">
-      <!-- Progress bar -->
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-mono uppercase tracking-widest text-slate-500" id="progressLabel">Question 1 of 5</span>
-        <span class="text-xs font-mono uppercase tracking-widest text-brand-700" id="progressPct">20%</span>
-      </div>
-      <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden mb-8">
-        <div id="progressBar" class="h-full bg-gradient-to-r from-brand-500 to-brand-700 transition-all duration-500" style="width:20%"></div>
-      </div>
+    <div id="quizCard" class="relative bg-white border border-ink/8 rounded-3xl shadow-[0_30px_80px_-20px_rgba(3,105,161,0.18)] overflow-hidden">
+      
+      <!-- Top accent bar -->
+      <div class="h-1 bg-gradient-to-r from-brand-500 via-brand-700 to-gold-500"></div>
+      
+      <div class="p-7 lg:p-12">
+        <!-- Progress bar -->
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center">
+              <span id="progressNum" class="font-display font-bold text-brand-700 text-sm">1</span>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-widest text-slate-500" id="progressLabel">of 5 questions</span>
+          </div>
+          <span class="text-xs font-mono uppercase tracking-widest text-brand-700 font-semibold" id="progressPct">20%</span>
+        </div>
+        <div class="h-2 bg-slate-100 rounded-full overflow-hidden mb-10 relative">
+          <div id="progressBar" class="absolute inset-y-0 left-0 bg-gradient-to-r from-brand-500 to-brand-700 transition-all duration-500 ease-out rounded-full" style="width:20%"></div>
+        </div>
 
-      <div id="quizContent"></div>
+        <div id="quizContent"></div>
 
-      <div class="flex justify-between items-center mt-10 pt-6 border-t border-ink/10">
-        <button id="backBtn" class="text-sm font-medium text-slate-500 hover:text-ink transition disabled:opacity-30 disabled:cursor-not-allowed" disabled>← Back</button>
-        <button id="nextBtn" class="bg-ink text-white font-semibold px-6 py-3 rounded-full hover:bg-brand-700 transition disabled:opacity-30 disabled:cursor-not-allowed" disabled>Next →</button>
+        <div class="flex justify-between items-center mt-12 pt-6 border-t border-ink/8">
+          <button id="backBtn" class="text-sm font-medium text-slate-500 hover:text-ink transition disabled:opacity-30 disabled:cursor-not-allowed inline-flex items-center gap-2 px-3 py-2 rounded-lg" disabled>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Back
+          </button>
+          <button id="nextBtn" class="bg-ink text-white font-semibold px-7 py-3 rounded-full hover:bg-brand-700 hover:scale-[1.02] active:scale-100 transition disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 inline-flex items-center gap-2 shadow-lg shadow-ink/10" disabled>
+            Next
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- What you get section -->
-<section class="py-16 bg-slate-50/50">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-xl border border-ink/8">
-        <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand-700 font-bold mb-3">1</div>
-        <h3 class="font-display font-bold mb-2">Best-fit visa</h3>
-        <p class="text-sm text-slate-600">We rank your top match plus 1–2 alternates with reasoning.</p>
+<!-- Visual feature grid replacing plain bulleted list -->
+<section class="py-16 lg:py-24 bg-gradient-to-b from-white to-slate-50/50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow text-brand-700">What you get</span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2">Three concrete outputs</h2>
+      <p class="mt-3 text-slate-600">Every quiz result gives you these — no fluff, no gated content, no follow-up email required.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="group bg-white rounded-2xl border border-ink/8 p-7 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-display font-bold text-lg shadow-lg shadow-brand-500/30 mb-4 group-hover:scale-110 transition">1</div>
+        <h3 class="font-display font-bold text-xl text-ink mb-2">Best-fit visa</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Top match plus 1–2 alternates. With reasoning, not just a name. Ranked by realistic fit, not commission.</p>
       </div>
-      <div class="bg-white p-6 rounded-xl border border-ink/8">
-        <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand-700 font-bold mb-3">2</div>
-        <h3 class="font-display font-bold mb-2">Real costs</h3>
-        <p class="text-sm text-slate-600">Annual cost estimate including extensions, insurance, fees.</p>
+      <div class="group bg-white rounded-2xl border border-ink/8 p-7 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white font-display font-bold text-lg shadow-lg shadow-gold-500/30 mb-4 group-hover:scale-110 transition">2</div>
+        <h3 class="font-display font-bold text-xl text-ink mb-2">Real costs</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Annual cost estimate including extensions, insurance, agent fees, re-entry permits — not just the visa fee.</p>
       </div>
-      <div class="bg-white p-6 rounded-xl border border-ink/8">
-        <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand-700 font-bold mb-3">3</div>
-        <h3 class="font-display font-bold mb-2">Next steps</h3>
-        <p class="text-sm text-slate-600">Direct link to that visa's full page + book a free consult.</p>
+      <div class="group bg-white rounded-2xl border border-ink/8 p-7 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-ink to-brand-900 flex items-center justify-center text-white font-display font-bold text-lg shadow-lg shadow-ink/30 mb-4 group-hover:scale-110 transition">3</div>
+        <h3 class="font-display font-bold text-xl text-ink mb-2">Next steps</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Direct link to that visa's full guide, plus the option to book a free consultation if your situation is borderline.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Can/Can't visual cards (replaces bulleted list) -->
+<section class="py-16 lg:py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow text-brand-700">Honesty about scope</span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2">What this quiz can and can't do</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Can -->
+      <div class="bg-gradient-to-br from-brand-50 to-white border border-brand-200 rounded-2xl p-7">
+        <div class="inline-flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <span class="font-display font-bold text-brand-800">It can</span>
+        </div>
+        <ul class="space-y-3.5">
+          <li class="flex gap-3">
+            <span class="text-brand-600 font-bold mt-0.5">✓</span>
+            <span class="text-slate-700">Narrow 12 options to your top 1–3 fits in 60 seconds</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-600 font-bold mt-0.5">✓</span>
+            <span class="text-slate-700">Show realistic costs and forward paths for each match</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-600 font-bold mt-0.5">✓</span>
+            <span class="text-slate-700">Link directly to detailed visa pages for the top match</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-600 font-bold mt-0.5">✓</span>
+            <span class="text-slate-700">Pre-fill the consultation form with your context</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Can't -->
+      <div class="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-7">
+        <div class="inline-flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/></svg>
+          </div>
+          <span class="font-display font-bold text-slate-700">It can't</span>
+        </div>
+        <ul class="space-y-3.5">
+          <li class="flex gap-3">
+            <span class="text-slate-400 font-bold mt-0.5">✕</span>
+            <span class="text-slate-700">Guarantee approval — final decision is the embassy's</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-slate-400 font-bold mt-0.5">✕</span>
+            <span class="text-slate-700">Assess prior overstays, criminal records, or atypical income</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-slate-400 font-bold mt-0.5">✕</span>
+            <span class="text-slate-700">Replace a real consultation for borderline cases</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-slate-400 font-bold mt-0.5">✕</span>
+            <span class="text-slate-700">Handle multi-jurisdiction tax structuring</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA strip -->
+<section class="py-16 bg-gradient-to-br from-ink via-brand-900 to-ink text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 30% 50%, #f59e0b 0px, transparent 50%), radial-gradient(circle at 70% 50%, #0ea5e9 0px, transparent 50%);" aria-hidden="true"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight">Quiz says it's complicated?</h2>
+    <p class="mt-4 text-lg text-brand-100">Some situations the quiz can't capture. We've seen them all. Free 15-minute consultation, real human reply within 24 hours.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="/#consultation" class="inline-flex items-center justify-center gap-2 bg-white text-ink font-semibold px-8 py-4 rounded-full hover:bg-gold-300 transition shadow-lg">
+        Book free consult
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+      <a href="/tools/cost-calculator/" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition">
+        Run cost calculator
+      </a>
     </div>
   </div>
 </section>
 
 <script>
-// ============ QUIZ DATA ============
 const QUESTIONS = [
-  {
-    id: 'age',
-    q: 'How old are you?',
-    options: [
-      { v: 'under50', l: 'Under 50' },
-      { v: '50plus', l: '50 or older' }
-    ]
-  },
-  {
-    id: 'goal',
-    q: 'What\'s the main reason you want to be in Thailand?',
+  { id: 'age', q: 'How old are you?', icon: '👤',
+    options: [{ v: 'under50', l: 'Under 50' }, { v: '50plus', l: '50 or older' }] },
+  { id: 'goal', q: "What's your main reason for being in Thailand?", icon: '🎯',
     options: [
       { v: 'retire', l: 'Retire / live without working' },
       { v: 'remote', l: 'Work remotely for non-Thai company' },
@@ -243,91 +729,63 @@ const QUESTIONS = [
       { v: 'study', l: 'Study Thai or another subject' },
       { v: 'family', l: 'Be with my Thai spouse / child' },
       { v: 'invest', l: 'Premium lifestyle / private membership' }
-    ]
-  },
-  {
-    id: 'duration',
-    q: 'How long do you want to stay (per visa cycle)?',
+    ]},
+  { id: 'duration', q: 'How long do you want to stay (per visa cycle)?', icon: '📅',
     options: [
       { v: 'short', l: 'Up to 6 months' },
       { v: 'year', l: 'About a year, then extend' },
       { v: 'multi', l: '5+ years on one visa' }
-    ]
-  },
-  {
-    id: 'budget',
-    q: 'What\'s your annual budget for visa-related costs?',
+    ]},
+  { id: 'budget', q: 'Annual budget for visa-related costs?', icon: '฿',
     options: [
       { v: 'tight', l: 'Under ฿20,000 / yr' },
       { v: 'mid', l: '฿20,000–฿100,000 / yr' },
       { v: 'high', l: '฿100,000–฿500,000 / yr' },
       { v: 'premium', l: '฿500,000+ / yr (one-time membership OK)' }
-    ]
-  },
-  {
-    id: 'family',
-    q: 'Bringing dependents?',
+    ]},
+  { id: 'family', q: 'Bringing dependents?', icon: '👨‍👩‍👧',
     options: [
       { v: 'solo', l: 'Just me' },
       { v: 'spouse', l: 'Spouse / partner' },
       { v: 'kids', l: 'Spouse + kids' }
-    ]
-  }
+    ]}
 ];
 
-// ============ VISA RANKING LOGIC ============
 function score(answers) {
   const s = { dtv: 0, ltr: 0, privilege: 0, retirement_o: 0, retirement_oa: 0, retirement_ox: 0, marriage: 0, education: 0, business: 0, smart: 0, tourist: 0 };
-  
-  // Age
-  if (answers.age === '50plus') {
-    s.retirement_o += 5; s.retirement_oa += 4; s.retirement_ox += 3;
-  } else {
-    s.retirement_o -= 99; s.retirement_oa -= 99; s.retirement_ox -= 99; // hard exclude
-  }
-  
-  // Goal
+  if (answers.age === '50plus') { s.retirement_o += 5; s.retirement_oa += 4; s.retirement_ox += 3; }
+  else { s.retirement_o -= 99; s.retirement_oa -= 99; s.retirement_ox -= 99; }
   if (answers.goal === 'retire') { s.retirement_o += 4; s.retirement_oa += 3; s.privilege += 2; s.ltr += 2; }
   if (answers.goal === 'remote') { s.dtv += 6; s.ltr += 2; s.privilege += 1; }
   if (answers.goal === 'work_thai') { s.business += 6; s.smart += 3; s.ltr += 2; }
   if (answers.goal === 'study') { s.education += 6; s.dtv += 1; }
   if (answers.goal === 'family') { s.marriage += 6; s.retirement_o += 1; }
   if (answers.goal === 'invest') { s.privilege += 6; s.ltr += 4; }
-  
-  // Duration
   if (answers.duration === 'short') { s.tourist += 4; s.dtv += 1; }
   if (answers.duration === 'year') { s.dtv += 2; s.retirement_o += 2; s.marriage += 2; s.business += 2; s.education += 2; }
   if (answers.duration === 'multi') { s.ltr += 4; s.privilege += 4; s.retirement_ox += 2; s.dtv += 2; }
-  
-  // Budget
   if (answers.budget === 'tight') { s.tourist += 3; s.education += 1; s.retirement_o += 1; }
   if (answers.budget === 'mid') { s.dtv += 2; s.retirement_o += 2; s.marriage += 2; s.business += 1; s.education += 2; }
   if (answers.budget === 'high') { s.retirement_oa += 1; s.business += 2; s.smart += 1; s.dtv += 1; }
   if (answers.budget === 'premium') { s.privilege += 5; s.ltr += 3; s.retirement_ox += 2; }
-  
-  // Family
-  if (answers.family === 'spouse' || answers.family === 'kids') {
-    s.dtv += 1; s.ltr += 1; s.privilege += 1; s.marriage += 2;
-  }
-  
+  if (answers.family === 'spouse' || answers.family === 'kids') { s.dtv += 1; s.ltr += 1; s.privilege += 1; s.marriage += 2; }
   return s;
 }
 
 const VISA_INFO = {
-  dtv: { name: 'DTV (Destination Thailand Visa)', tagline: '5-year visa, 180 days per entry, ฿10,000 fee', url: '/visas/dtv/', cost: '฿10,000 one-time + extension fee' },
-  ltr: { name: 'LTR Long-Term Resident', tagline: '10-year residency, tax exemption, 4 categories', url: '/visas/ltr/', cost: '฿50,000 + qualifying income/wealth' },
-  privilege: { name: 'Privilege (Elite) Visa', tagline: 'Membership 5–20 years, 4 tiers, premium service', url: '/visas/privilege-elite/', cost: '฿650,000–฿2.5M one-time' },
-  retirement_o: { name: 'Retirement Non-O', tagline: '50+, ฿800k or ฿65k/month, annual extensions', url: '/visas/retirement-non-o/', cost: '~฿2,000/yr extension' },
-  retirement_oa: { name: 'Retirement O-A', tagline: '50+ from home country, mandatory health insurance', url: '/visas/retirement-o-a/', cost: '~฿5,000 + insurance' },
-  retirement_ox: { name: 'Retirement O-X', tagline: '50+, 10-year visa, ฿3M financial requirement', url: '/visas/retirement-o-x/', cost: '~฿10,000 + ฿3M proof' },
-  marriage: { name: 'Marriage Non-O', tagline: 'Married to Thai, ฿400k or ฿40k/month', url: '/visas/marriage-non-o/', cost: '~฿2,000/yr extension' },
-  education: { name: 'Education ED', tagline: 'Thai language or accredited study program', url: '/visas/education-ed/', cost: '฿15,000–฿50,000/yr school + visa' },
-  business: { name: 'Business Non-B', tagline: 'For Thai employers, leads to work permit', url: '/visas/business-non-b/', cost: 'Employer-sponsored; varies' },
-  smart: { name: 'SMART Visa (S-track)', tagline: 'High-skilled professionals — only SMART-S since Feb 2025', url: '/visas/smart/', cost: 'Free; ฿100k/month income required' },
-  tourist: { name: 'Tourist TR e-Visa', tagline: 'Up to 60 days, online apply, single or multiple entry', url: '/visas/tourist-tr-evisa/', cost: '~฿1,200/entry' }
+  dtv: { name: 'DTV', subtitle: 'Destination Thailand Visa', tagline: '5-year visa, 180 days per entry', url: '/visas/dtv/', cost: '฿10,000', costNote: 'one-time fee', emoji: '✈️' },
+  ltr: { name: 'LTR', subtitle: 'Long-Term Resident', tagline: '10-year residency + tax exemption', url: '/visas/ltr/', cost: '฿50,000', costNote: 'every 5 years', emoji: '🌟' },
+  privilege: { name: 'Privilege Visa', subtitle: 'Membership program', tagline: '5–20 years, fast-track airport, concierge', url: '/visas/privilege-elite/', cost: '฿900k+', costNote: 'one-time, by tier', emoji: '💎' },
+  retirement_o: { name: 'Retirement Non-O', subtitle: 'Annual extension', tagline: '50+, ฿800k bank or ฿65k/month income', url: '/visas/retirement-non-o/', cost: '~฿2,000', costNote: '/year extension', emoji: '🌴' },
+  retirement_oa: { name: 'Retirement O-A', subtitle: 'From your home country', tagline: '50+, mandatory health insurance', url: '/visas/retirement-o-a/', cost: '~฿5,000', costNote: '+ insurance', emoji: '🏖️' },
+  retirement_ox: { name: 'Retirement O-X', subtitle: '10-year retirement', tagline: '50+, ฿3M Thai bank requirement', url: '/visas/retirement-o-x/', cost: '~฿10,000', costNote: '+ ฿3M deposit', emoji: '⏳' },
+  marriage: { name: 'Marriage Non-O', subtitle: 'For spouses of Thai nationals', tagline: '฿400k bank or ฿40k/month income', url: '/visas/marriage-non-o/', cost: '~฿2,000', costNote: '/year extension', emoji: '💍' },
+  education: { name: 'Education ED', subtitle: 'Thai language or accredited study', tagline: 'School-attached long-stay', url: '/visas/education-ed/', cost: '฿15,000–฿50,000', costNote: '/yr school + visa', emoji: '📚' },
+  business: { name: 'Non-B Business', subtitle: 'For Thai-employer-sponsored work', tagline: 'Leads to work permit', url: '/visas/business-non-b/', cost: 'Sponsor-paid', costNote: 'varies', emoji: '💼' },
+  smart: { name: 'SMART-S Visa', subtitle: 'High-skilled BOI sectors', tagline: 'Only S-track since Feb 2025', url: '/visas/smart/', cost: 'Free', costNote: '฿100k/mo income', emoji: '🚀' },
+  tourist: { name: 'Tourist TR e-Visa', subtitle: 'Up to 60 days', tagline: 'Online apply, single or multiple entry', url: '/visas/tourist-tr-evisa/', cost: '~฿1,200', costNote: 'per entry', emoji: '🧳' }
 };
 
-// ============ STATE ============
 let currentQ = 0;
 const answers = {};
 
@@ -336,6 +794,7 @@ const contentEl = document.getElementById('quizContent');
 const progressBar = document.getElementById('progressBar');
 const progressLabel = document.getElementById('progressLabel');
 const progressPct = document.getElementById('progressPct');
+const progressNum = document.getElementById('progressNum');
 const backBtn = document.getElementById('backBtn');
 const nextBtn = document.getElementById('nextBtn');
 
@@ -345,12 +804,16 @@ function renderQuestion() {
   const sel = answers[Q.id];
   
   contentEl.innerHTML = `
-    <h2 class="font-display font-bold text-2xl lg:text-3xl mb-6 text-ink">${Q.q}</h2>
-    <div class="space-y-3">
+    <div class="text-4xl mb-3">${Q.icon}</div>
+    <h2 class="font-display font-bold text-2xl lg:text-3xl mb-7 text-ink leading-tight">${Q.q}</h2>
+    <div class="space-y-2.5">
       ${Q.options.map(o => `
-        <label class="flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition ${sel===o.v ? 'border-brand-600 bg-brand-50' : 'border-ink/10 hover:border-brand-300 hover:bg-brand-50/30'}">
-          <input type="radio" name="q" value="${o.v}" ${sel===o.v ? 'checked' : ''} class="w-5 h-5 text-brand-600">
-          <span class="font-medium text-ink">${o.l}</span>
+        <label class="flex items-center gap-4 p-4 lg:p-5 border-2 rounded-xl cursor-pointer transition-all duration-200 ${sel===o.v ? 'border-brand-600 bg-brand-50 shadow-md shadow-brand-500/10' : 'border-ink/10 hover:border-brand-300 hover:bg-brand-50/30 hover:translate-x-1'}">
+          <input type="radio" name="q" value="${o.v}" ${sel===o.v ? 'checked' : ''} class="sr-only">
+          <span class="flex-shrink-0 w-5 h-5 rounded-full border-2 ${sel===o.v ? 'border-brand-600 bg-brand-600' : 'border-slate-300'} flex items-center justify-center transition">
+            ${sel===o.v ? '<span class="w-2 h-2 rounded-full bg-white"></span>' : ''}
+          </span>
+          <span class="font-medium text-ink flex-1">${o.l}</span>
         </label>
       `).join('')}
     </div>
@@ -360,25 +823,27 @@ function renderQuestion() {
     input.addEventListener('change', () => {
       answers[Q.id] = input.value;
       nextBtn.disabled = false;
-      // Update visual selection
-      contentEl.querySelectorAll('label').forEach(l => {
-        l.classList.remove('border-brand-600', 'bg-brand-50');
-        l.classList.add('border-ink/10');
-      });
-      input.closest('label').classList.remove('border-ink/10');
-      input.closest('label').classList.add('border-brand-600', 'bg-brand-50');
+      renderQuestion();
+    });
+  });
+  contentEl.querySelectorAll('label').forEach(lbl => {
+    lbl.addEventListener('click', (e) => {
+      const inp = lbl.querySelector('input');
+      if (inp && !inp.checked) { inp.checked = true; inp.dispatchEvent(new Event('change')); }
     });
   });
   
-  // Progress
   const pct = Math.round(((currentQ+1) / QUESTIONS.length) * 100);
   progressBar.style.width = pct + '%';
-  progressLabel.textContent = `Question ${currentQ+1} of ${QUESTIONS.length}`;
+  progressLabel.textContent = `of ${QUESTIONS.length} questions`;
+  progressNum.textContent = currentQ + 1;
   progressPct.textContent = pct + '%';
   
   backBtn.disabled = currentQ === 0;
   nextBtn.disabled = !answers[Q.id];
-  nextBtn.textContent = currentQ === QUESTIONS.length-1 ? 'See results →' : 'Next →';
+  nextBtn.innerHTML = currentQ === QUESTIONS.length-1 
+    ? `See my results <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>`
+    : `Next <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>`;
 }
 
 function showResults() {
@@ -388,8 +853,10 @@ function showResults() {
   if (ranked.length === 0) {
     contentEl.innerHTML = `
       <div class="text-center py-8">
-        <h2 class="font-display font-bold text-2xl mb-3">Hmm, your situation is unusual.</h2>
+        <div class="text-5xl mb-4">🤔</div>
+        <h2 class="font-display font-bold text-2xl mb-3">Your situation is unusual</h2>
         <p class="text-slate-600 mb-6">Best to talk it through directly. Free 15-minute consult below.</p>
+        <a href="/#consultation" class="inline-flex bg-ink text-white font-semibold px-6 py-3 rounded-full hover:bg-brand-700 transition">Book consultation →</a>
       </div>
     `;
   } else {
@@ -398,30 +865,53 @@ function showResults() {
     const others = ranked.slice(1);
     
     contentEl.innerHTML = `
-      <div class="text-center mb-8">
-        <span class="inline-block bg-gold-500/20 text-gold-700 text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-full">Your best match</span>
-        <h2 class="font-display font-bold text-3xl lg:text-4xl mt-4 text-ink">${topInfo.name}</h2>
-        <p class="text-slate-600 mt-3">${topInfo.tagline}</p>
-        <div class="mt-4 inline-flex items-center gap-2 bg-slate-50 border border-ink/10 rounded-full px-4 py-2">
-          <span class="text-xs font-mono uppercase tracking-widest text-slate-500">Cost:</span>
-          <span class="font-semibold text-ink">${topInfo.cost}</span>
+      <div class="text-center mb-2 -mt-2">
+        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-gold-300/30 to-gold-500/20 border border-gold-400/40 text-gold-800 text-xs font-mono uppercase tracking-widest px-4 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          Your best match
         </div>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="${topInfo.url}" class="bg-ink text-white font-semibold px-6 py-3 rounded-full hover:bg-brand-700 transition">Read full ${topInfo.name.split(' ')[0]} guide →</a>
-          <a href="/#consultation?visa=${top[0]}" class="bg-white border-2 border-ink text-ink font-semibold px-6 py-3 rounded-full hover:bg-ink hover:text-white transition">Book free 15-min consult</a>
+      </div>
+      
+      <div class="mt-6 bg-gradient-to-br from-brand-50 via-white to-brand-100/30 border-2 border-brand-200 rounded-2xl p-6 lg:p-8 relative overflow-hidden">
+        <div class="absolute top-3 right-3 text-5xl opacity-20">${topInfo.emoji}</div>
+        <div class="relative">
+          <h2 class="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">${topInfo.name}</h2>
+          <p class="text-sm font-mono uppercase tracking-widest text-brand-700 mt-1">${topInfo.subtitle}</p>
+          <p class="text-slate-600 mt-3 text-base lg:text-lg">${topInfo.tagline}</p>
+          
+          <div class="mt-5 inline-flex items-center gap-3 bg-white border border-brand-200 rounded-2xl px-5 py-3 shadow-sm">
+            <span class="text-xs font-mono uppercase tracking-widest text-slate-500">Cost</span>
+            <span class="w-px h-6 bg-slate-200"></span>
+            <span class="font-display font-bold text-2xl text-ink">${topInfo.cost}</span>
+            <span class="text-sm text-slate-500">${topInfo.costNote}</span>
+          </div>
+          
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="${topInfo.url}" class="inline-flex items-center justify-center gap-2 bg-ink text-white font-semibold px-6 py-3 rounded-full hover:bg-brand-700 transition shadow-lg shadow-ink/10">
+              Read full guide
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="/#consultation" class="inline-flex items-center justify-center gap-2 bg-white border-2 border-ink text-ink font-semibold px-6 py-3 rounded-full hover:bg-ink hover:text-white transition">
+              Book free 15-min consult
+            </a>
+          </div>
         </div>
       </div>
       
       ${others.length ? `
-        <div class="mt-8 pt-8 border-t border-ink/10">
-          <h3 class="font-display font-bold text-lg mb-4 text-slate-600">Also worth considering:</h3>
-          <div class="grid md:grid-cols-2 gap-3">
+        <div class="mt-8 pt-7 border-t border-ink/8">
+          <h3 class="font-display font-bold text-base text-slate-500 uppercase tracking-widest text-xs mb-4">Also worth considering</h3>
+          <div class="space-y-2.5">
             ${others.map(([k,_]) => {
               const v = VISA_INFO[k];
               return `
-                <a href="${v.url}" class="block p-4 bg-slate-50 hover:bg-brand-50 border border-ink/10 hover:border-brand-300 rounded-xl transition">
-                  <div class="font-semibold text-ink">${v.name}</div>
-                  <div class="text-sm text-slate-600 mt-1">${v.tagline}</div>
+                <a href="${v.url}" class="flex items-center gap-4 p-4 bg-white hover:bg-brand-50/50 border border-ink/10 hover:border-brand-300 rounded-xl transition group">
+                  <span class="text-2xl">${v.emoji}</span>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-display font-bold text-ink">${v.name}</div>
+                    <div class="text-sm text-slate-600 mt-0.5 truncate">${v.tagline}</div>
+                  </div>
+                  <span class="text-brand-700 group-hover:translate-x-1 transition">→</span>
                 </a>
               `;
             }).join('')}
@@ -431,15 +921,21 @@ function showResults() {
     `;
   }
   
-  // Hide nav buttons
   backBtn.style.display = 'none';
-  nextBtn.textContent = 'Restart quiz';
+  nextBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg> Restart quiz`;
   nextBtn.disabled = false;
-  nextBtn.onclick = () => { currentQ = 0; Object.keys(answers).forEach(k => delete answers[k]); backBtn.style.display = ''; nextBtn.onclick = handleNext; renderQuestion(); };
+  nextBtn.onclick = () => { 
+    currentQ = 0; 
+    Object.keys(answers).forEach(k => delete answers[k]); 
+    backBtn.style.display = ''; 
+    nextBtn.onclick = handleNext; 
+    renderQuestion(); 
+  };
   
   progressBar.style.width = '100%';
   progressLabel.textContent = 'Results';
-  progressPct.textContent = '100%';
+  progressNum.innerHTML = '<svg class="w-4 h-4 text-brand-700" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a2 2 0 002 2h4a2 2 0 002-2V3a2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>';
+  progressPct.textContent = '✓ Done';
 }
 
 function handleNext() {
@@ -449,51 +945,9 @@ function handleNext() {
 
 backBtn.addEventListener('click', () => { if (currentQ > 0) { currentQ--; renderQuestion(); } });
 nextBtn.onclick = handleNext;
-
 renderQuestion();
 </script>
 
-
-<section class="py-16 lg:py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-6 prose-custom">
-    <span class="eyebrow text-brand-700">How to use this quiz</span>
-    <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2 mb-6">Why a visa quiz, and how it complements the comparison matrix</h2>
-    
-<p>Thailand has 12 main long-stay visa categories, each with different requirements, costs, and use cases. The Thai government's official documentation is fragmented across BOI, Immigration Bureau, Ministry of Foreign Affairs, and individual embassy websites. Even immigration lawyers in Pattaya don't always agree on which visa is best for a given situation.</p>
-
-<p>Our visa-finder quiz cuts through this. Five questions about your age, intent, duration, budget, and family situation surface the 1–3 visas that are realistic fits — out of the 12 possibilities. The ranking reflects actual practice in Pattaya: which visas immigration officers process smoothly for people in your situation, which agents recommend for which profiles, and which visas Pattaya residents actually use.</p>
-
-<h3>What the quiz can and can't do</h3>
-<ul class="check-list">
-  <li><strong>Can:</strong> narrow 12 options to your top 1–3 fits in 60 seconds</li>
-  <li><strong>Can:</strong> show realistic costs and forward paths for each match</li>
-  <li><strong>Can:</strong> link directly to detailed visa pages for the top match</li>
-</ul>
-<ul class="x-list">
-  <li><strong>Can't:</strong> guarantee approval — final decision is the embassy/immigration's</li>
-  <li><strong>Can't:</strong> assess specific complications (prior overstays, criminal record, atypical income)</li>
-  <li><strong>Can't:</strong> replace a real consultation for borderline cases</li>
-</ul>
-
-<h3>For complex situations</h3>
-<p>If your situation involves any of these, the quiz is a starting point but not a complete answer:</p>
-<ul>
-  <li>Prior Thai visa refusal or overstay</li>
-  <li>Criminal record (any country)</li>
-  <li>Working multiple roles (some Thai-source, some foreign)</li>
-  <li>Pre-existing health conditions affecting O-A insurance qualification</li>
-  <li>Family with dependents from multiple nationalities</li>
-  <li>Tax structures involving multiple countries</li>
-</ul>
-<p>For these, <a href="/#consultation">book a free 15-minute consultation</a> after taking the quiz.</p>
-
-<h3>What the underlying logic does</h3>
-<p>Each visa has a score that responds to the 5 quiz inputs. Scoring weights real-world fit: heavy weight to hard requirements (50+ for retirement visas, Thai marriage for Marriage Non-O, BOI sector for SMART), medium weight to budget and duration fit, lighter weight to family and lifestyle preferences. Negative scores knock out impossible visas (e.g., Retirement scores -99 for under-50 applicants).</p>
-
-<p>The quiz's answers reflect what we'd actually recommend in a 15-minute consultation. They're consistent with the full visa pages on this site and with what agents in Pattaya recommend for clean profiles.</p>
-
-  </div>
-</section>
 </main>
 
 <footer class="bg-ink text-slate-400 relative overflow-hidden mt-20">

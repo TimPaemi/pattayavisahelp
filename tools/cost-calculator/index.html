@@ -99,35 +99,404 @@ html { scroll-behavior:smooth; scroll-padding-top:6rem; }
 .prose-custom .x-list li::before { content: '✕'; position: absolute; left: 0; top: 0; color: #dc2626; font-weight: 700; font-size: 1.1rem; }
 
 
+/* === Mobile-first: prevent horizontal overflow globally === */
+html, body { 
+  color-scheme: light only; 
+  background-color: #fafaf9; 
+  color: #0a0e1a; 
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+* { max-width: 100%; }
+img, video, iframe { max-width: 100%; height: auto; }
+pre, code { white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; }
+.prose-custom a, .prose-custom p, .prose-custom li, h1, h2, h3, h4 { 
+  word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;
+}
+
+/* All tables get a horizontal-scroll wrapper on mobile */
+.prose-custom table, .cmp-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+.prose-custom table thead, .cmp-table thead { white-space: nowrap; }
+.prose-custom table tbody, .cmp-table tbody { white-space: normal; }
+
+/* Add bottom padding so sticky CTA doesn't overlap content */
+@media (max-width: 1023px) {
+  body { padding-bottom: 76px; }
+}
+
 /* === Mobile readability + tap targets === */
 @media (max-width: 768px) {
   body { font-size: 16px; }
-  h1 { font-size: 2.25rem !important; line-height: 1.1 !important; }
-  .prose-custom h2 { font-size: 1.625rem !important; margin-top: 2.5rem !important; }
-  .prose-custom h3 { font-size: 1.25rem !important; margin-top: 1.75rem !important; }
-  .prose-custom p { font-size: 1rem; line-height: 1.7; }
-  .prose-custom table { font-size: .85rem; }
-  .prose-custom th, .prose-custom td { padding: .6rem .75rem !important; }
-  .cmp-table th, .cmp-table td { padding: .65rem .85rem !important; font-size: .85rem !important; }
-  .cmp-table .row-label { width: auto !important; min-width: 7rem; }
-  /* Tap targets — buttons + form fields min 44px */
-  button, a.bg-ink, a.bg-brand-700, a.bg-white, .faq-item summary { min-height: 44px; }
-  input, textarea, select { min-height: 44px; font-size: 16px !important; /* prevent iOS zoom */ }
-  /* Reduce hero padding on mobile */
-  section.py-16 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  section.py-20 { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  
+  /* Headings — graduated by size */
+  h1 { font-size: 2rem !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
+  h2 { font-size: 1.625rem !important; line-height: 1.2 !important; }
+  h3 { font-size: 1.25rem !important; line-height: 1.3 !important; }
+  .prose-custom h2 { font-size: 1.5rem !important; margin-top: 2rem !important; margin-bottom: .75rem !important; }
+  .prose-custom h3 { font-size: 1.2rem !important; margin-top: 1.5rem !important; margin-bottom: .5rem !important; }
+  
+  /* Tailwind utility overrides for mobile */
+  .text-4xl { font-size: 1.75rem !important; }
+  .text-5xl { font-size: 2rem !important; line-height: 1.15 !important; }
+  .text-6xl { font-size: 2.25rem !important; line-height: 1.1 !important; }
+  .text-7xl { font-size: 2.5rem !important; line-height: 1.1 !important; }
+  .lg\:text-4xl, .lg\:text-5xl, .lg\:text-6xl, .lg\:text-7xl { font-size: inherit !important; }
+  
+  /* Body text */
+  .prose-custom p { font-size: 1rem !important; line-height: 1.65 !important; margin-bottom: 1rem !important; }
+  .prose-custom ul, .prose-custom ol { padding-left: 1.25rem !important; }
+  .prose-custom li { font-size: 1rem !important; line-height: 1.65 !important; }
+  
+  /* Tables — readable cells when scrolled */
+  .prose-custom table, .cmp-table { font-size: .8125rem !important; }
+  .prose-custom th, .prose-custom td { padding: .55rem .65rem !important; min-width: 7rem; }
+  .cmp-table th, .cmp-table td { padding: .55rem .65rem !important; font-size: .8125rem !important; min-width: 7rem; }
+  .cmp-table .row-label { min-width: 8rem !important; }
+  
+  /* Tap targets — minimum 44x44 */
+  button, a.bg-ink, a.bg-brand-700, a.bg-white, a.bg-gold-500, .faq-item summary,
+  a[class*="rounded-full"], a[class*="rounded-xl"], button[class*="rounded"] { 
+    min-height: 44px !important; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  /* Form fields — 44px min, 16px text to prevent iOS zoom */
+  input, textarea, select { 
+    min-height: 44px !important; 
+    font-size: 16px !important; 
+    padding: .65rem .85rem !important;
+  }
+  textarea { min-height: 88px !important; }
+  
+  /* Reduce hero padding aggressively on mobile */
+  section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  section.py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  section.py-24, section.py-28 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  
+  /* Container padding */
+  .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: 1rem !important; padding-right: 1rem !important;
+  }
+  
   /* Stat grid stays readable */
-  .key-fact-value { font-size: 1.25rem !important; }
+  .key-fact { padding: .75rem .85rem !important; min-width: 6rem !important; }
+  .key-fact-value { font-size: 1.1rem !important; }
+  .key-fact-label { font-size: .55rem !important; }
+  
   /* Callouts breathe on mobile */
-  .callout { padding: 1.15rem 1.25rem !important; margin: 1.5rem 0 !important; }
+  .callout { padding: 1rem 1.15rem !important; margin: 1.25rem 0 !important; border-radius: .75rem !important; }
+  .callout-key p { font-size: 1.05rem !important; }
+  
+  /* Cards in grids stack with proper spacing */
+  .grid { gap: .85rem !important; }
+  
+  /* FAQ accordion summary */
+  .faq-item summary { padding: 1rem 1rem !important; }
+  .faq-item summary span { font-size: .95rem !important; padding-right: .5rem !important; }
+  .faq-item div { padding: 0 1rem 1.25rem !important; font-size: .95rem !important; line-height: 1.6 !important; }
+  
+  /* Eyebrow text smaller */
+  .eyebrow { font-size: .65rem !important; }
+  
+  /* Breadcrumb scrolls if too long */
+  nav[aria-label="Breadcrumb"], nav.text-sm.text-slate-500 { 
+    overflow-x: auto !important; 
+    white-space: nowrap !important; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: .25rem !important;
+  }
+  nav[aria-label="Breadcrumb"]::-webkit-scrollbar, nav.text-sm.text-slate-500::-webkit-scrollbar { display: none; }
+  
+  /* Header — tighter on mobile */
+  header { height: 60px !important; }
+  header .h-\[72px\] { height: 60px !important; }
+  
+  /* Footer columns stack cleanly */
+  footer .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  
+  /* Buttons in CTAs full-width on mobile */
+  .flex.flex-col.sm\:flex-row a { width: 100%; text-align: center; }
+  
+  /* Sticky mobile CTA polish */
+  #stickyMobileCta { box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+  #stickyMobileCta .text-sm { font-size: .8rem !important; }
+  
+  /* Fix overflow on visa cards */
+  a[class*="grid"] > a, .grid > a { overflow: hidden; }
+  
+  /* Prose links break long URLs */
+  .prose-custom a[href^="http"] { word-break: break-all; }
 }
+
 @media (max-width: 480px) {
-  h1 { font-size: 1.875rem !important; }
-  .prose-custom h2 { font-size: 1.4rem !important; }
+  /* Even tighter on small phones */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.4rem !important; }
+  .prose-custom h2 { font-size: 1.35rem !important; }
+  .text-4xl { font-size: 1.625rem !important; }
+  .text-5xl { font-size: 1.75rem !important; }
+  .text-6xl { font-size: 2rem !important; }
+  
+  /* Even tighter container padding */
+  .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: .85rem !important; padding-right: .85rem !important;
+  }
+  
+  /* Quiz/calc card breathing room */
+  #quizCard { padding: 1.25rem !important; }
+  
+  /* Stat grids 2-col on smallest */
+  .grid.md\:grid-cols-3, .grid.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  
+  /* Country flag grid 2-col on smallest */
+  .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; gap: .65rem !important; }
 }
 
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  body { 
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  @media (max-width: 1023px) {
+    body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  }
+}
 
-html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a; }
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* === Breadcrumb upgrade === */
+nav[aria-label="Breadcrumb"], nav.breadcrumb-nav {
+  background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+  border-bottom: 1px solid rgba(10,14,26,0.06);
+  padding: .75rem 0;
+  margin-bottom: 0;
+}
+nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8125rem;
+  flex-wrap: wrap;
+}
+nav[aria-label="Breadcrumb"] a, nav.breadcrumb-nav a {
+  color: #475569;
+  font-weight: 500;
+  text-decoration: none;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  transition: all .15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+nav[aria-label="Breadcrumb"] a:hover, nav.breadcrumb-nav a:hover {
+  background: rgba(3,105,161,0.08);
+  color: #0369a1;
+}
+nav[aria-label="Breadcrumb"] a:first-child::before, nav.breadcrumb-nav a:first-child::before {
+  content: '⌂';
+  font-size: 0.95em;
+  margin-right: .15em;
+  opacity: 0.7;
+}
+nav[aria-label="Breadcrumb"] .breadcrumb-sep, nav.breadcrumb-nav .breadcrumb-sep {
+  color: #cbd5e1;
+  font-weight: 400;
+}
+nav[aria-label="Breadcrumb"] > span:last-child, nav.breadcrumb-nav > span:last-child,
+nav[aria-label="Breadcrumb"] .breadcrumb-current, nav.breadcrumb-nav .breadcrumb-current {
+  color: #0a0e1a;
+  font-weight: 600;
+  padding: .25rem .65rem;
+  background: rgba(245,158,11,0.10);
+  border-radius: 999px;
+}
+@media (max-width: 768px) {
+  nav[aria-label="Breadcrumb"], nav.breadcrumb-nav { padding: .55rem 0; }
+  nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div { font-size: .7rem; flex-wrap: nowrap; overflow-x: auto; }
+}
+
+/* === Visual polish pass === */
+
+/* Better Baht symbol rendering — Inter and Plus Jakarta have it, but force tabular for prices */
+.font-mono, .key-fact-value, [class*="font-display"] { 
+  font-feature-settings: 'tnum' on, 'lnum' on; 
+}
+
+/* Smoother card hovers */
+a[class*="rounded-xl"], a[class*="rounded-2xl"], 
+.bg-white.border, .bg-paper.border {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+/* FAQ accordion polish */
+.faq-item {
+  transition: all .25s ease;
+}
+.faq-item:hover {
+  border-color: rgba(3,105,161,0.25) !important;
+  box-shadow: 0 4px 16px -4px rgba(3,105,161,0.08);
+}
+.faq-item[open] {
+  border-color: rgba(3,105,161,0.35) !important;
+  background: linear-gradient(to bottom, rgba(240,249,255,0.4), white) !important;
+}
+.faq-item summary {
+  cursor: pointer;
+  user-select: none;
+}
+.faq-item summary:hover {
+  background: rgba(240,249,255,0.5);
+}
+.faq-item[open] summary svg {
+  transform: rotate(180deg);
+  color: #0369a1;
+}
+
+/* Callout polish */
+.callout {
+  position: relative;
+  transition: transform .2s ease;
+}
+.callout-key {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+.callout-key::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(245,158,11,0.15), transparent 70%);
+  pointer-events: none;
+}
+
+/* Better buttons */
+button[class*="bg-ink"], a[class*="bg-ink"], 
+button[class*="bg-brand-700"], a[class*="bg-brand-700"],
+button[class*="bg-gold-500"], a[class*="bg-gold-500"] {
+  transition: all .2s ease;
+  position: relative;
+  overflow: hidden;
+}
+button[class*="bg-ink"]:hover, a[class*="bg-ink"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(10,14,26,0.5);
+}
+button[class*="bg-gold-500"]:hover, a[class*="bg-gold-500"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(245,158,11,0.5);
+}
+
+/* Top consultation strip — better */
+.bg-ink.text-white.text-sm.border-b {
+  background: linear-gradient(to right, #0a0e1a, #0f1729 50%, #0a0e1a) !important;
+}
+
+/* Header polish */
+header.sticky {
+  transition: background-color .2s ease, backdrop-filter .2s ease;
+}
+
+/* Footer separator polish */
+footer .bg-gradient-to-r {
+  height: 2px !important;
+}
+
+/* Section dividers more visible */
+section.border-y, section.border-t, section.border-b {
+  border-color: rgba(10,14,26,0.06) !important;
+}
+
+/* Eyebrow text consistency */
+.eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0369a1;
+}
+
+/* Better focus visibility */
+:focus-visible {
+  outline: 2px solid #0ea5e9 !important;
+  outline-offset: 4px !important;
+  border-radius: 4px;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline-offset: 2px !important;
+}
+
+/* Smooth scroll padding for fixed header */
+html { scroll-padding-top: 80px; }
+
+/* Form fields polish */
+input, select, textarea {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0ea5e9 !important;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(245,158,11,0.3);
+  color: #0a0e1a;
+}
+
+/* Better link underline */
+.prose-custom a {
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color .15s ease;
+}
+.prose-custom a:hover {
+  text-decoration-color: #f59e0b;
+}
+
+/* Quiz card animation on load */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#quizCard, .bg-white.border.rounded-3xl {
+  animation: slideUpFade .6s ease-out;
+}
+
+/* Progress bar pulse */
+@keyframes progressPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(14,165,233,0); }
+}
+
+/* Better scrollbars where they exist */
+.cmp-table, .prose-custom table { scrollbar-width: thin; scrollbar-color: #cbd5e1 #f1f5f9; }
+.cmp-table::-webkit-scrollbar, .prose-custom table::-webkit-scrollbar { height: 8px; }
+.cmp-table::-webkit-scrollbar-track, .prose-custom table::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+.cmp-table::-webkit-scrollbar-thumb, .prose-custom table::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.cmp-table::-webkit-scrollbar-thumb:hover, .prose-custom table::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
 </style>
 <meta property="og:image" content="https://pattayavisahelp.com/og-default.png" />
 <meta property="og:image:width" content="1200" />
@@ -157,46 +526,62 @@ html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a
   <nav class="px-6 py-8 space-y-1"><a href="/#visas" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Visa types</a><a href="/#guides" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Guides</a><a href="/about/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">About</a><a href="/contact/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Contact</a><a href="#consultation" class="block bg-ink text-white text-center font-semibold px-6 py-4 rounded-full mt-8">Free consultation →</a></nav>
 </div>
 
-<nav class="max-w-7xl mx-auto px-6 pt-4 text-sm text-slate-500"><a href="/" class="hover:text-brand-700">Home</a> › <a href="/#tools" class="hover:text-brand-700">Tools</a> › <span class="text-ink font-medium">Cost calculator</span></nav>
+<nav class="breadcrumb-nav" aria-label="Breadcrumb"><div class="max-w-[1400px] mx-auto px-6 lg:px-8"><a href="/" class="hover:text-brand-700">Home</a><span class="breadcrumb-sep">›</span><a href="/#guides" class="hover:text-brand-700">Guides</a><span class="breadcrumb-sep">›</span><span class="text-ink font-medium">Setting up a Thai company</span></div></nav>
 
 <main id="main">
 
-<section class="relative overflow-hidden mesh-light py-16 lg:py-20">
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-br from-gold-100/50 via-white to-brand-50/40 pt-12 pb-8 lg:pt-20 lg:pb-12">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-40 -right-32 w-96 h-96 bg-gradient-to-br from-gold-300/40 to-gold-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-20 w-72 h-72 bg-gradient-to-tr from-brand-300/30 to-brand-500/15 rounded-full blur-3xl"></div>
+  </div>
+  
   <div class="relative max-w-4xl mx-auto px-6 text-center">
-    <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-brand-200 text-brand-800 text-xs font-mono uppercase tracking-widest px-4 py-1.5 rounded-full">
-      <span class="w-1.5 h-1.5 rounded-full bg-brand-600 animate-pulse"></span> Free interactive tool
+    <span class="inline-flex items-center gap-2 bg-white/90 backdrop-blur border border-gold-300 text-gold-800 text-xs font-mono uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-gold-500"></span>
+      Real numbers · 2026 rates
     </span>
-    <h1 class="font-display font-bold text-4xl lg:text-6xl tracking-tight mt-6 leading-tight">
-      Thailand visa <span class="serif-emphasis text-brand-700">cost calculator</span>
+    <h1 class="font-display font-bold text-4xl lg:text-6xl tracking-tight mt-6 leading-[1.1]">
+      Thailand visa<br><span class="serif-emphasis text-gold-700">cost calculator</span>
     </h1>
     <p class="mt-6 text-lg lg:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-      Plug in your visa type and lifestyle. We add up government fees, extensions, insurance, 90-day reporting, agent fees, and re-entry permits — annual and 5-year totals.
+      Pick your visa, lifestyle, and trip pattern. We add up government fees, extensions, insurance, agent fees, and re-entry permits — annual + 5-year totals.
     </p>
   </div>
 </section>
 
-<section class="py-8 lg:py-12">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="bg-white border border-ink/10 rounded-2xl shadow-xl shadow-ink/5 p-6 lg:p-10">
+<!-- Calculator widget -->
+<section class="py-8 lg:py-16 -mt-4 relative">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="bg-white border border-ink/8 rounded-3xl shadow-[0_30px_80px_-20px_rgba(245,158,11,0.18)] overflow-hidden">
+      <div class="h-1 bg-gradient-to-r from-gold-500 via-brand-500 to-brand-700"></div>
       
-      <div class="grid lg:grid-cols-2 gap-8">
+      <div class="grid lg:grid-cols-5 gap-0">
         <!-- Inputs -->
-        <div>
-          <h2 class="font-display font-bold text-xl mb-6 text-ink">Your situation</h2>
+        <div class="lg:col-span-3 p-7 lg:p-10">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 rounded-xl bg-gold-100 border border-gold-300 flex items-center justify-center">
+              <svg class="w-5 h-5 text-gold-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            </div>
+            <h2 class="font-display font-bold text-xl text-ink">Your situation</h2>
+          </div>
           
-          <div class="space-y-5">
+          <div class="space-y-6">
             <div>
-              <label class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">Visa type</label>
-              <select id="visaType" class="w-full p-3 border-2 border-ink/10 rounded-xl font-medium focus:border-brand-600 focus:outline-none">
+              <label for="visaType" class="flex items-center justify-between mb-2">
+                <span class="text-sm font-mono uppercase tracking-widest text-slate-500">Visa type</span>
+              </label>
+              <select id="visaType" class="w-full p-3.5 border-2 border-ink/10 rounded-xl font-medium focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 focus:outline-none transition bg-white">
                 <option value="dtv">DTV (Destination Thailand Visa)</option>
                 <option value="ltr">LTR (Long-Term Resident)</option>
-                <option value="privilege_gold">Privilege Gold (Bronze ended)</option>
-                <option value="privilege_platinum">Privilege Platinum</option>
-                <option value="privilege_diamond">Privilege Diamond</option>
-                <option value="privilege_reserve">Privilege Reserve</option>
+                <option value="privilege_gold">Privilege Gold (5 yr)</option>
+                <option value="privilege_platinum">Privilege Platinum (10 yr)</option>
+                <option value="privilege_diamond">Privilege Diamond (15 yr)</option>
+                <option value="privilege_reserve">Privilege Reserve (20 yr)</option>
                 <option value="retirement_o">Retirement Non-O (annual)</option>
-                <option value="retirement_oa">Retirement O-A (1-year)</option>
-                <option value="retirement_ox">Retirement O-X (10-year)</option>
+                <option value="retirement_oa">Retirement O-A</option>
+                <option value="retirement_ox">Retirement O-X (10 yr)</option>
                 <option value="marriage">Marriage Non-O</option>
                 <option value="education">Education ED</option>
                 <option value="business">Business Non-B + work permit</option>
@@ -206,93 +591,240 @@ html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a
             </div>
             
             <div>
-              <label class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">Use agent? <span class="text-xs normal-case text-slate-400">(saves time, costs more)</span></label>
-              <div class="flex gap-3">
-                <button data-agent="0" class="agent-btn flex-1 p-3 border-2 border-brand-600 bg-brand-50 rounded-xl font-medium">No</button>
-                <button data-agent="15000" class="agent-btn flex-1 p-3 border-2 border-ink/10 rounded-xl font-medium">Yes (~฿15k)</button>
+              <label class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">
+                Use an agent? <span class="normal-case text-xs text-slate-400">(optional)</span>
+              </label>
+              <div class="grid grid-cols-2 gap-2.5">
+                <button data-agent="0" class="agent-btn p-3.5 border-2 border-gold-500 bg-gold-50 rounded-xl font-medium transition flex items-center gap-2 justify-center">
+                  <span class="text-xl">🛠️</span> DIY (free)
+                </button>
+                <button data-agent="15000" class="agent-btn p-3.5 border-2 border-ink/10 rounded-xl font-medium transition flex items-center gap-2 justify-center hover:border-ink/20">
+                  <span class="text-xl">👔</span> Agent (~฿15k)
+                </button>
               </div>
             </div>
             
             <div>
-              <label class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">Health insurance / yr</label>
-              <select id="insurance" class="w-full p-3 border-2 border-ink/10 rounded-xl font-medium focus:border-brand-600 focus:outline-none">
+              <label for="insurance" class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">Health insurance / yr</label>
+              <select id="insurance" class="w-full p-3.5 border-2 border-ink/10 rounded-xl font-medium focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 focus:outline-none transition bg-white">
                 <option value="0">None (where allowed)</option>
-                <option value="20000" selected>Basic ฿20k/yr</option>
-                <option value="50000">Mid ฿50k/yr</option>
-                <option value="100000">Premium ฿100k/yr</option>
-                <option value="200000">Comprehensive ฿200k/yr</option>
+                <option value="20000" selected>Basic — ฿20k/yr</option>
+                <option value="50000">Mid — ฿50k/yr</option>
+                <option value="100000">Premium — ฿100k/yr</option>
+                <option value="200000">Comprehensive — ฿200k/yr</option>
               </select>
             </div>
             
             <div>
-              <label class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">Re-entry trips per year</label>
-              <input type="number" id="reentry" min="0" max="20" value="2" class="w-full p-3 border-2 border-ink/10 rounded-xl font-medium focus:border-brand-600 focus:outline-none">
-              <p class="text-xs text-slate-500 mt-1">Each trip out needs a re-entry permit: ฿1,000 single / ฿3,800 multi.</p>
+              <label for="reentry" class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">
+                Re-entry trips per year
+              </label>
+              <input type="number" id="reentry" min="0" max="20" value="2" class="w-full p-3.5 border-2 border-ink/10 rounded-xl font-medium focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 focus:outline-none transition" />
+              <p class="text-xs text-slate-500 mt-1.5">Single re-entry: ฿1,000. Multi-entry permit: ฿3,800.</p>
             </div>
             
             <div>
-              <label class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">90-day reporting <span class="text-xs normal-case text-slate-400">(applies to most visas)</span></label>
-              <select id="reporting" class="w-full p-3 border-2 border-ink/10 rounded-xl font-medium focus:border-brand-600 focus:outline-none">
-                <option value="0">Self at Jomtien (free)</option>
-                <option value="500">Online (free, but ฿500 backup agent)</option>
-                <option value="3000" selected>Agent does it all (~฿3k/yr)</option>
+              <label for="reporting" class="block text-sm font-mono uppercase tracking-widest text-slate-500 mb-2">90-day reporting</label>
+              <select id="reporting" class="w-full p-3.5 border-2 border-ink/10 rounded-xl font-medium focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 focus:outline-none transition bg-white">
+                <option value="0">DIY at Jomtien (free)</option>
+                <option value="500">Online + ฿500 backup agent</option>
+                <option value="3000" selected>Agent handles (฿3k/yr)</option>
               </select>
             </div>
           </div>
         </div>
         
-        <!-- Results -->
-        <div class="bg-gradient-to-br from-brand-900 to-ink rounded-2xl p-6 lg:p-8 text-white">
-          <div class="text-xs font-mono uppercase tracking-widest text-brand-300">Estimated cost</div>
-          <div class="mt-2 mb-1">
-            <div class="text-xs text-slate-400">Year 1 total</div>
-            <div id="year1" class="font-display font-bold text-4xl lg:text-5xl">฿0</div>
-          </div>
+        <!-- Results panel -->
+        <div class="lg:col-span-2 bg-gradient-to-br from-brand-900 via-ink to-brand-900 text-white p-7 lg:p-10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl -translate-y-32 translate-x-20" aria-hidden="true"></div>
           
-          <div class="mt-6 pt-6 border-t border-white/10 space-y-3 text-sm" id="breakdown"></div>
-          
-          <div class="mt-6 pt-6 border-t border-white/10">
-            <div class="flex justify-between mb-2">
-              <span class="text-slate-300">5-year total</span>
-              <span id="year5" class="font-bold text-xl">฿0</span>
+          <div class="relative">
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-gold-300 mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+              Live estimate
             </div>
-            <div class="flex justify-between text-sm text-slate-400">
-              <span>Avg per month</span>
-              <span id="monthly">฿0</span>
+            <div class="text-sm text-slate-400 mb-1">Year 1 total</div>
+            <div id="year1" class="font-display font-bold text-5xl lg:text-6xl leading-none tracking-tight">฿0</div>
+            
+            <div class="mt-7 pt-6 border-t border-white/10 space-y-3 text-sm" id="breakdown"></div>
+            
+            <div class="mt-7 pt-6 border-t border-white/10 space-y-2">
+              <div class="flex justify-between items-baseline">
+                <span class="text-slate-300 text-sm">5-year total</span>
+                <span id="year5" class="font-display font-bold text-2xl">฿0</span>
+              </div>
+              <div class="flex justify-between items-baseline text-sm">
+                <span class="text-slate-400">Avg per month</span>
+                <span id="monthly" class="text-slate-200 font-mono">฿0</span>
+              </div>
+              <div class="flex justify-between items-baseline text-sm">
+                <span class="text-slate-400">Per day</span>
+                <span id="daily" class="text-slate-200 font-mono">฿0</span>
+              </div>
             </div>
-          </div>
-          
-          <div class="mt-6">
-            <a href="/#consultation" class="block bg-white text-ink font-semibold text-center py-3 rounded-full hover:bg-gold-300 transition">Get a real quote — free 15-min consult</a>
+            
+            <a href="/#consultation" class="mt-7 inline-flex items-center justify-center gap-2 w-full bg-gold-500 hover:bg-gold-400 text-ink font-semibold py-3.5 rounded-full transition shadow-lg shadow-gold-500/30">
+              Get a real quote
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <p class="mt-3 text-xs text-slate-400 text-center">Free 15-min consult, no email signup</p>
           </div>
         </div>
       </div>
       
-      <div class="mt-8 callout callout-info">
-        <div class="callout-title">How accurate is this</div>
-        <div class="callout-body text-sm">Government fees are exact (current 2026). Insurance and agent costs are typical Pattaya market rates — yours may be lower or higher depending on age, conditions, and provider. Premium membership prices for Privilege are one-time, prorated below.</div>
+      <!-- Footer note -->
+      <div class="border-t border-ink/8 px-7 lg:px-10 py-5 bg-slate-50/50">
+        <div class="flex items-start gap-3 text-sm text-slate-600">
+          <svg class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p>Government fees are exact (current 2026). Insurance and agent costs are typical Pattaya market rates — yours may vary by age, condition, and provider.</p>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- What's included / not included as visual cards -->
+<section class="py-16 lg:py-24 bg-gradient-to-b from-white to-slate-50/50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow text-gold-700">Calculator scope</span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2">What's covered, what's not</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Included -->
+      <div class="bg-gradient-to-br from-gold-50 to-white border border-gold-200 rounded-2xl p-7">
+        <div class="inline-flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <span class="font-display font-bold text-gold-800">Included in calculation</span>
+        </div>
+        <ul class="space-y-3.5 text-slate-700">
+          <li class="flex gap-3"><span class="text-gold-600 mt-0.5">✓</span> <span>Initial visa fee at embassy or airport</span></li>
+          <li class="flex gap-3"><span class="text-gold-600 mt-0.5">✓</span> <span>Privilege one-time membership (full upfront)</span></li>
+          <li class="flex gap-3"><span class="text-gold-600 mt-0.5">✓</span> <span>Annual insurance premium for chosen tier</span></li>
+          <li class="flex gap-3"><span class="text-gold-600 mt-0.5">✓</span> <span>Re-entry permits (auto-applies multi-entry rate at 2+ trips)</span></li>
+          <li class="flex gap-3"><span class="text-gold-600 mt-0.5">✓</span> <span>90-day reporting cost based on chosen method</span></li>
+          <li class="flex gap-3"><span class="text-gold-600 mt-0.5">✓</span> <span>Optional agent fee for visa extension</span></li>
+        </ul>
+      </div>
+      
+      <!-- Not included -->
+      <div class="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-7">
+        <div class="inline-flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/></svg>
+          </div>
+          <span class="font-display font-bold text-slate-700">Not included</span>
+        </div>
+        <ul class="space-y-3.5 text-slate-700">
+          <li class="flex gap-3"><span class="text-slate-400 mt-0.5">✕</span> <span>Travel costs to Thai embassy abroad</span></li>
+          <li class="flex gap-3"><span class="text-slate-400 mt-0.5">✕</span> <span>Document translation, notarization, apostille ($100–$500)</span></li>
+          <li class="flex gap-3"><span class="text-slate-400 mt-0.5">✕</span> <span>Bank deposit for retirement visa (you keep it — not a cost)</span></li>
+          <li class="flex gap-3"><span class="text-slate-400 mt-0.5">✕</span> <span>Healthcare costs above insurance limit</span></li>
+          <li class="flex gap-3"><span class="text-slate-400 mt-0.5">✕</span> <span>LTR's tax exemption value (significant but not modeled)</span></li>
+          <li class="flex gap-3"><span class="text-slate-400 mt-0.5">✕</span> <span>Family-member visa fees (estimate per-person separately)</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sample comparison cards (replaces table) -->
+<section class="py-16 lg:py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow text-brand-700">Why 5-year totals matter</span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2">Same retiree, four visa choices</h2>
+      <p class="mt-3 text-slate-600">50-year-old retiree, ฿50k/year insurance, full agent. The 5-year-total reveals what your year-1 number doesn't.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white border border-ink/8 rounded-2xl p-6 hover:border-brand-300 hover:shadow-lg transition">
+        <div class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-3">Non-O Retirement</div>
+        <div class="text-3xl font-display font-bold text-ink">฿82,400</div>
+        <div class="text-xs text-slate-500 mb-4">year 1</div>
+        <div class="pt-4 border-t border-ink/8 space-y-1.5 text-sm">
+          <div class="flex justify-between"><span class="text-slate-500">5-year</span><span class="font-mono font-semibold">฿326,300</span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Per month</span><span class="font-mono font-semibold">฿5,438</span></div>
+        </div>
+      </div>
+      
+      <div class="bg-white border border-ink/8 rounded-2xl p-6 hover:border-brand-300 hover:shadow-lg transition">
+        <div class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-3">O-A Retirement</div>
+        <div class="text-3xl font-display font-bold text-ink">฿86,000</div>
+        <div class="text-xs text-slate-500 mb-4">year 1</div>
+        <div class="pt-4 border-t border-ink/8 space-y-1.5 text-sm">
+          <div class="flex justify-between"><span class="text-slate-500">5-year</span><span class="font-mono font-semibold">฿340,300</span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Per month</span><span class="font-mono font-semibold">฿5,672</span></div>
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-gold-50 to-white border-2 border-gold-300 rounded-2xl p-6 hover:shadow-xl transition relative">
+        <div class="absolute -top-2.5 left-4 bg-gold-500 text-white text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full">Front-loaded</div>
+        <div class="text-xs font-mono uppercase tracking-widest text-gold-700 mb-3">Privilege Gold</div>
+        <div class="text-3xl font-display font-bold text-ink">฿1,000,000</div>
+        <div class="text-xs text-slate-500 mb-4">year 1</div>
+        <div class="pt-4 border-t border-gold-200 space-y-1.5 text-sm">
+          <div class="flex justify-between"><span class="text-slate-500">5-year</span><span class="font-mono font-semibold">฿1,180,000</span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Per month</span><span class="font-mono font-semibold">฿19,667</span></div>
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-brand-50 to-white border-2 border-brand-300 rounded-2xl p-6 hover:shadow-xl transition relative">
+        <div class="absolute -top-2.5 left-4 bg-brand-700 text-white text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full">Tax-exempt</div>
+        <div class="text-xs font-mono uppercase tracking-widest text-brand-700 mb-3">LTR Pensioner</div>
+        <div class="text-3xl font-display font-bold text-ink">฿155,000</div>
+        <div class="text-xs text-slate-500 mb-4">year 1</div>
+        <div class="pt-4 border-t border-brand-200 space-y-1.5 text-sm">
+          <div class="flex justify-between"><span class="text-slate-500">5-year</span><span class="font-mono font-semibold">฿485,000</span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Per month</span><span class="font-mono font-semibold">฿8,083</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 callout callout-tip">
+      <div class="callout-title">The insight most miss</div>
+      <div class="callout-body">Privilege Gold's per-month figure looks scary, but at year 6 the original ฿900k membership is paid off — your ongoing cost drops dramatically. LTR's tax exemption (under Royal Decree 743) on foreign income remitted to Thailand can save retirees ฿100k+/year for high-income profiles, which the calculator doesn't model.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA strip -->
+<section class="py-16 bg-gradient-to-br from-ink via-brand-900 to-ink text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 30% 50%, #f59e0b 0px, transparent 50%), radial-gradient(circle at 70% 50%, #0ea5e9 0px, transparent 50%);" aria-hidden="true"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight">Real number for your real situation</h2>
+    <p class="mt-4 text-lg text-brand-100">The calculator gets you 80% there. The last 20% — your specific complications, family situation, and timeline — needs a conversation.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="/#consultation" class="inline-flex items-center justify-center gap-2 bg-white text-ink font-semibold px-8 py-4 rounded-full hover:bg-gold-300 transition shadow-lg">
+        Book free consult
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+      <a href="/tools/visa-finder/" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition">
+        Take the visa quiz
+      </a>
     </div>
   </div>
 </section>
 
 <script>
 const VISA_COSTS = {
-  // [base_y1, annual_after, multi_year_one_time]
-  dtv:               { y1: 10000, annual: 1900, oneTime: 0, label: 'DTV ฿10k visa fee', insReq: false },
-  ltr:               { y1: 50000, annual: 0,    oneTime: 0, label: 'LTR ฿50k visa fee', insReq: false },
-  privilege_gold:    { y1: 0,     annual: 0,    oneTime: 900000, term: 5, label: 'Privilege Gold ฿900k / 5yr', insReq: false },
-  privilege_platinum:{ y1: 0,     annual: 0,    oneTime: 1500000, term: 10, label: 'Privilege Platinum ฿1.5M / 10yr', insReq: false },
-  privilege_diamond: { y1: 0,     annual: 0,    oneTime: 2500000, term: 15, label: 'Privilege Diamond ฿2.5M / 15yr', insReq: false },
-  privilege_reserve: { y1: 0,     annual: 0,    oneTime: 5000000, term: 20, label: 'Privilege Reserve ฿5M / 20yr', insReq: false },
-  retirement_o:      { y1: 1900,  annual: 1900, oneTime: 0, label: 'Retirement Non-O extension', insReq: false },
-  retirement_oa:     { y1: 5000,  annual: 5000, oneTime: 0, label: 'O-A visa + extension', insReq: true },
-  retirement_ox:     { y1: 10000, annual: 0,    oneTime: 0, label: 'O-X 10-year visa', insReq: true, term: 10 },
-  marriage:          { y1: 1900,  annual: 1900, oneTime: 0, label: 'Marriage Non-O extension', insReq: false },
-  education:         { y1: 25000, annual: 25000, oneTime: 0, label: 'Education ED + school', insReq: false },
-  business:          { y1: 1900,  annual: 1900, oneTime: 0, label: 'Non-B extension (employer pays often)', insReq: false },
-  smart:             { y1: 0,     annual: 0,    oneTime: 0, label: 'SMART-S visa (free)', insReq: false },
-  tourist:           { y1: 1200,  annual: 7200, oneTime: 0, label: 'Tourist TR e-Visa (multi-entry)', insReq: false }
+  dtv:               { y1: 10000, annual: 1900, oneTime: 0, label: 'DTV ฿10k visa fee' },
+  ltr:               { y1: 50000, annual: 0,    oneTime: 0, label: 'LTR ฿50k visa fee' },
+  privilege_gold:    { y1: 0,     annual: 0,    oneTime: 900000, term: 5, label: 'Privilege Gold ฿900k / 5yr' },
+  privilege_platinum:{ y1: 0,     annual: 0,    oneTime: 1500000, term: 10, label: 'Privilege Platinum ฿1.5M / 10yr' },
+  privilege_diamond: { y1: 0,     annual: 0,    oneTime: 2500000, term: 15, label: 'Privilege Diamond ฿2.5M / 15yr' },
+  privilege_reserve: { y1: 0,     annual: 0,    oneTime: 5000000, term: 20, label: 'Privilege Reserve ฿5M / 20yr' },
+  retirement_o:      { y1: 1900,  annual: 1900, oneTime: 0, label: 'Retirement Non-O extension' },
+  retirement_oa:     { y1: 5000,  annual: 5000, oneTime: 0, label: 'O-A visa + extension' },
+  retirement_ox:     { y1: 10000, annual: 0,    oneTime: 0, label: 'O-X 10-year visa', term: 10 },
+  marriage:          { y1: 1900,  annual: 1900, oneTime: 0, label: 'Marriage Non-O extension' },
+  education:         { y1: 25000, annual: 25000, oneTime: 0, label: 'Education ED + school' },
+  business:          { y1: 1900,  annual: 1900, oneTime: 0, label: 'Non-B extension' },
+  smart:             { y1: 0,     annual: 0,    oneTime: 0, label: 'SMART-S visa (free)' },
+  tourist:           { y1: 1200,  annual: 7200, oneTime: 0, label: 'Tourist TR e-Visa (multi-entry)' }
 };
 
 let agentFee = 0;
@@ -300,11 +832,11 @@ let agentFee = 0;
 document.querySelectorAll('.agent-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.agent-btn').forEach(b => {
-      b.classList.remove('border-brand-600', 'bg-brand-50');
+      b.classList.remove('border-gold-500', 'bg-gold-50');
       b.classList.add('border-ink/10');
     });
     btn.classList.remove('border-ink/10');
-    btn.classList.add('border-brand-600', 'bg-brand-50');
+    btn.classList.add('border-gold-500', 'bg-gold-50');
     agentFee = parseInt(btn.dataset.agent);
     calc();
   });
@@ -324,26 +856,21 @@ function calc() {
   const reporting = parseInt(document.getElementById('reporting').value);
   const v = VISA_COSTS[visa];
   
-  // Re-entry: 2+ trips → multi entry permit (฿3800/yr), else single (฿1000/trip)
   const reentryFee = reentry === 0 ? 0 : reentry >= 2 ? 3800 : 1000 * reentry;
-  
-  // 90-day reporting (4x/year approx, but cost is annual)
   const reportingFee = reporting * 4;
-  
-  // One-time membership prorated
   let proratedMembership = 0;
-  if (v.oneTime && v.term) {
-    proratedMembership = v.oneTime / v.term;
-  }
+  if (v.oneTime && v.term) proratedMembership = v.oneTime / v.term;
   
   const y1 = v.y1 + agentFee + insurance + reentryFee + reportingFee + (v.oneTime || 0);
   const annualAfter = v.annual + (agentFee ? agentFee/2 : 0) + insurance + reentryFee + reportingFee + proratedMembership;
   const y5 = y1 + 4 * annualAfter;
   const monthly = y5 / 60;
+  const daily = y5 / (5 * 365);
   
   document.getElementById('year1').textContent = fmt(y1);
   document.getElementById('year5').textContent = fmt(y5);
   document.getElementById('monthly').textContent = fmt(monthly) + '/mo';
+  document.getElementById('daily').textContent = fmt(daily) + '/day';
   
   const breakdown = document.getElementById('breakdown');
   const items = [
@@ -355,9 +882,9 @@ function calc() {
   ].filter(i => i[1] > 0);
   
   breakdown.innerHTML = items.map(([label, amt]) => `
-    <div class="flex justify-between">
-      <span class="text-slate-300">${label}</span>
-      <span class="font-mono">${fmt(amt)}</span>
+    <div class="flex justify-between items-center">
+      <span class="text-slate-300 text-sm">${label}</span>
+      <span class="font-mono text-white text-sm">${fmt(amt)}</span>
     </div>
   `).join('');
 }
@@ -365,59 +892,6 @@ function calc() {
 calc();
 </script>
 
-
-<section class="py-16 lg:py-20 bg-slate-50/50">
-  <div class="max-w-4xl mx-auto px-6 prose-custom">
-    <span class="eyebrow text-brand-700">How to use this calculator</span>
-    <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2 mb-6">What the calculator includes and what it doesn't</h2>
-    
-<p>Visa cost is rarely just the visa fee. The cost calculator above adds in the items that actually drive your annual spend on visa-related expenses: government fees, extensions, mandatory insurance for O-A and O-X, optional insurance for everything else, agent fees if you use one, re-entry permits if you travel, and 90-day reporting handling if you outsource it.</p>
-
-<h3>What's included in the year-1 number</h3>
-<ul class="check-list">
-  <li>Initial visa fee at embassy or airport</li>
-  <li>One-time membership fee for Privilege tiers (full upfront)</li>
-  <li>Annual insurance premium for chosen tier</li>
-  <li>Re-entry permit cost based on trip count (single ฿1,000 each, multi-entry ฿3,800 if 2+ trips)</li>
-  <li>90-day reporting cost (free DIY, ฿500 backup, or ~฿3,000 full agent)</li>
-  <li>Optional agent fee for handling visa application/extension</li>
-</ul>
-
-<h3>What's not included</h3>
-<ul class="x-list">
-  <li>Travel costs to Thai embassy abroad (for visas requiring embassy application)</li>
-  <li>Document translation, notarization, and apostille (typically $100–$500 one-time)</li>
-  <li>Bank account opening fees (typically free or ฿200)</li>
-  <li>Initial seasoning of bank deposit (you keep this — it's not a cost)</li>
-  <li>Cost of the underlying Privilege Visa membership prorated annually for ongoing comparison (the calculator shows this in the breakdown)</li>
-  <li>Healthcare costs above insurance limit (varies by individual)</li>
-  <li>Tax implications (LTR's tax exemption is significant but not cost-modeled here)</li>
-</ul>
-
-<h3>Why the 5-year total matters more than year 1</h3>
-<p>Some visas are front-loaded (Privilege: ฿900k year 1, then ~฿100k/year amortized). Some are evenly spread (Non-O: ~฿2,000/year extension + insurance + agent). The 5-year total reveals true cost-per-day of residency — which is the relevant metric for deciding between visa categories.</p>
-
-<h3>Sample comparison: 50-year-old retiree, ฿50k/yr insurance, full agent</h3>
-<table class="cmp-table">
-<thead><tr><th>Visa</th><th>Year 1</th><th>5-year total</th><th>Per month avg</th></tr></thead>
-<tbody>
-<tr><td class="row-label">Non-O Retirement</td><td>฿82,400</td><td>฿326,300</td><td>฿5,438</td></tr>
-<tr><td class="row-label">O-A Retirement</td><td>฿86,000</td><td>฿340,300</td><td>฿5,672</td></tr>
-<tr><td class="row-label">Privilege Gold</td><td>฿1,000,000</td><td>฿1,180,000</td><td>฿19,667</td></tr>
-<tr><td class="row-label">LTR Wealthy Pensioner</td><td>฿155,000</td><td>฿485,000</td><td>฿8,083</td></tr>
-</tbody>
-</table>
-
-<p>Privilege Gold's per-month figure looks scary, but remember: at year 6 the Privilege Gold's amortized cost drops because the original ฿900k membership is paid off. Plus tax savings (if applicable) under LTR change calculations significantly for high-income retirees.</p>
-
-<h3>How insurance choice affects the math</h3>
-<p>Insurance is the biggest variable for retirees. Same Non-O Retirement visa with no insurance: ฿15,000/year. With ฿200k/year premium insurance: ฿215,000/year. Pick your insurance tier based on age, health, and risk tolerance — read our health insurance guide for what coverage levels actually look like in practice.</p>
-
-<h3>Agent fees: when worth it</h3>
-<p>Year 1 with an agent: usually worth ฿8,000–฿15,000 to learn the process. Years 2+ on Non-O Retirement: most do it themselves to save the fee. Privilege concierge replaces all agent needs. LTR's online portal is friendly enough most do it themselves.</p>
-
-  </div>
-</section>
 </main>
 
 <footer class="bg-ink text-slate-400 relative overflow-hidden mt-20">
