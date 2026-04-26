@@ -458,7 +458,58 @@ html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a
       </a>
     </div>
   </section>
-  </main>
+  
+<section class="py-16 lg:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6 prose-custom">
+    <span class="eyebrow text-brand-700">What we do and don't do</span>
+    <h2 class="font-display font-bold text-3xl lg:text-4xl tracking-tight mt-2 mb-6">How Pattaya Visa Help works in practice</h2>
+    
+<p>This site exists because Thailand visa information is fragmented, contradictory, and often outdated. Government sources (BOI, Immigration Bureau, MFA) are accurate but cryptic. Agent sites are commercial and optimized to sell you the highest-margin visa. Forum advice is personal experience that doesn't always generalize. We aim for the middle: comprehensive, current, honest about money.</p>
+
+<h3>What we do</h3>
+<ul class="check-list">
+  <li>Maintain detailed pages on every Thai visa category (12 main ones) with current 2026 rules</li>
+  <li>Build practical guides for the operational stuff (90-day reporting, TM30, banking, tax)</li>
+  <li>Compare visas honestly — including showing when our top recommendation is "do nothing" or "use a free tool"</li>
+  <li>Offer free 15-minute consultations to help you narrow your situation to the right visa</li>
+  <li>Refer to vetted Pattaya specialists for the actual paperwork when needed</li>
+</ul>
+
+<h3>What we don't do</h3>
+<ul class="x-list">
+  <li>Sell visas directly — we don't operate as a visa agent</li>
+  <li>Recommend Privilege Visa to everyone who walks in (some agents do this because the commission is enormous)</li>
+  <li>Take payment for content recommendations — visa pages are not pay-to-play</li>
+  <li>Offer guarantees of visa approval — no honest provider can</li>
+  <li>Hide negative information about visas we cover</li>
+</ul>
+
+<h3>How the consultation works</h3>
+<p>You fill the form on our homepage or contact page. Within 24 hours, you get a real reply (not a chatbot) asking for whatever clarifications are needed to answer your question. The 15-minute call (or email exchange) covers your specific situation: which visa fits, what the realistic timeline looks like, what documentation you'll need, what the total cost will be. There's no obligation, no upsell, and no email-list signup.</p>
+
+<h3>How we make money</h3>
+<p>Honest answer: when you proceed with a visa application, we sometimes refer you to vetted Pattaya-based agents who handle the paperwork. We may receive a referral fee from them. We disclose this when relevant. The fee structure does NOT influence which visa we recommend — we recommend the right visa for your situation, then refer to whichever agent handles that visa best.</p>
+
+<h3>What "vetted" means</h3>
+<p>The agents we refer to have: real Pattaya office presence, multiple years of operation, verifiable Thai company registration, transparent pricing, and a track record we've checked. We've turned down referral arrangements from agents that didn't meet these standards.</p>
+
+<h3>Our content principles</h3>
+<ul>
+  <li><strong>Current:</strong> we update content for major rule changes (Royal Decree 743, visa-exempt cuts, SMART reform, Bronze tier extension) within days of announcement</li>
+  <li><strong>Specific:</strong> ranges and concrete numbers, not vague "varies by case"</li>
+  <li><strong>Honest about money:</strong> if Privilege isn't the right visa for you, we'll say so even though it's the highest-revenue referral category</li>
+  <li><strong>Pattaya-grounded:</strong> we cover what immigration in Pattaya actually does, not just the official rule</li>
+</ul>
+
+<h3>Where we get our information</h3>
+<p>Sources: official BOI/Immigration/MFA publications, Royal Gazette (Royal Decrees), embassy/consulate updates, Thai-language press releases, conversations with practicing Pattaya immigration agents, and Pattaya/Jomtien immigration officer discretion observed in practice. We cite official sources where applicable. When official sources contradict on-the-ground reality, we note both.</p>
+
+<h3>Who runs this</h3>
+<p>Pattaya Visa Help is independently operated from Pattaya. We're not affiliated with the Thai government, BOI, Privilege Visa Co., or any specific agent. We've lived this — many of the visa scenarios we describe are paths we've personally walked through or watched friends walk through.</p>
+
+  </div>
+</section>
+</main>
 
 <footer class="bg-ink text-slate-400 relative overflow-hidden mt-20">
   <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"></div>
@@ -536,5 +587,45 @@ if (menuBtn && mm) {
   mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); document.body.style.overflow = ''; }));
 }
 </script>
+
+<!-- Sticky mobile CTA -->
+<div id="stickyMobileCta" class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-ink/95 backdrop-blur-lg border-t border-gold-500/30 transform translate-y-full transition-transform duration-300" style="padding-bottom:env(safe-area-inset-bottom)">
+  <div class="px-4 py-3 flex items-center gap-3">
+    <div class="flex-1 min-w-0">
+      <div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Free 15-minute consult</div>
+      <div class="text-sm font-semibold text-white truncate">Reply within 24 hours</div>
+    </div>
+    <a href="/#consultation" class="bg-gold-500 hover:bg-gold-400 text-ink font-semibold text-sm px-5 py-2.5 rounded-full whitespace-nowrap transition">Book now →</a>
+    <button id="stickyMobileCtaClose" aria-label="Close" class="text-white/40 hover:text-white text-xl leading-none p-1">×</button>
+  </div>
+</div>
+<script>
+(function(){
+  var el = document.getElementById('stickyMobileCta');
+  var btn = document.getElementById('stickyMobileCtaClose');
+  if (!el || !btn) return;
+  var dismissed = false;
+  try { dismissed = sessionStorage.getItem('stickyCtaDismissed') === '1'; } catch(e){}
+  if (dismissed) { el.remove(); return; }
+  function check() {
+    var sc = window.scrollY;
+    var doc = document.documentElement;
+    var pct = sc / (doc.scrollHeight - doc.clientHeight);
+    if (pct > 0.25 && sc > 400) {
+      el.classList.remove('translate-y-full');
+    } else {
+      el.classList.add('translate-y-full');
+    }
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  btn.addEventListener('click', function(){
+    el.style.display = 'none';
+    try { sessionStorage.setItem('stickyCtaDismissed','1'); } catch(e){}
+  });
+  check();
+})();
+</script>
+<!-- End sticky mobile CTA -->
+
 </body>
 </html>

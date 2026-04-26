@@ -344,5 +344,45 @@ if (lf) {
   });
 }
 </script>
+
+<!-- Sticky mobile CTA -->
+<div id="stickyMobileCta" class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-ink/95 backdrop-blur-lg border-t border-gold-500/30 transform translate-y-full transition-transform duration-300" style="padding-bottom:env(safe-area-inset-bottom)">
+  <div class="px-4 py-3 flex items-center gap-3">
+    <div class="flex-1 min-w-0">
+      <div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Free 15-minute consult</div>
+      <div class="text-sm font-semibold text-white truncate">Reply within 24 hours</div>
+    </div>
+    <a href="/#consultation" class="bg-gold-500 hover:bg-gold-400 text-ink font-semibold text-sm px-5 py-2.5 rounded-full whitespace-nowrap transition">Book now →</a>
+    <button id="stickyMobileCtaClose" aria-label="Close" class="text-white/40 hover:text-white text-xl leading-none p-1">×</button>
+  </div>
+</div>
+<script>
+(function(){
+  var el = document.getElementById('stickyMobileCta');
+  var btn = document.getElementById('stickyMobileCtaClose');
+  if (!el || !btn) return;
+  var dismissed = false;
+  try { dismissed = sessionStorage.getItem('stickyCtaDismissed') === '1'; } catch(e){}
+  if (dismissed) { el.remove(); return; }
+  function check() {
+    var sc = window.scrollY;
+    var doc = document.documentElement;
+    var pct = sc / (doc.scrollHeight - doc.clientHeight);
+    if (pct > 0.25 && sc > 400) {
+      el.classList.remove('translate-y-full');
+    } else {
+      el.classList.add('translate-y-full');
+    }
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  btn.addEventListener('click', function(){
+    el.style.display = 'none';
+    try { sessionStorage.setItem('stickyCtaDismissed','1'); } catch(e){}
+  });
+  check();
+})();
+</script>
+<!-- End sticky mobile CTA -->
+
 </body>
 </html>

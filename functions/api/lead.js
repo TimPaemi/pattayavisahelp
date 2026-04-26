@@ -128,9 +128,11 @@ export async function onRequestPost(context) {
         <p style="font-size:16px;line-height:1.6;">A real human will reply to you within <strong>24 hours</strong> with the right answer for your situation. No automated runaround, no chatbot — just a real reply from someone who knows the Thai visa system.</p>
         <p style="font-size:16px;line-height:1.6;">In the meantime, you may find these useful:</p>
         <ul style="font-size:16px;line-height:1.8;">
+          <li><a href="https://pattayavisahelp.com/tools/visa-finder/" style="color:#0369a1;">Free visa-finder quiz — 5 questions, ranked match</a></li>
+          <li><a href="https://pattayavisahelp.com/tools/cost-calculator/" style="color:#0369a1;">Real cost calculator for your visa choice</a></li>
           <li><a href="https://pattayavisahelp.com/compare/visa-comparison-matrix/" style="color:#0369a1;">Compare every Thailand visa side by side</a></li>
           <li><a href="https://pattayavisahelp.com/guides/visa-scams-pattaya/" style="color:#0369a1;">Visa scams to avoid in Pattaya</a></li>
-          <li><a href="https://pattayavisahelp.com/pattaya/living-in-pattaya/" style="color:#0369a1;">Living in Pattaya — full expat guide</a></li>
+          <li><a href="https://pattayavisahelp.com/guides/cost-of-living-pattaya/" style="color:#0369a1;">Pattaya cost of living 2026</a></li>
         </ul>
         <p style="font-size:16px;line-height:1.6;">If your situation is urgent, just reply directly to this email — it goes straight to our inbox.</p>
         <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
@@ -185,6 +187,32 @@ export async function onRequestPost(context) {
       await env.LEADS_KV.put(kvKey, JSON.stringify(lead), {
         expirationTtl: 60 * 60 * 24 * 365 * 2, // 2 years
       });
+    }
+
+    // Optional: instant Slack/Discord webhook notification
+    // Set SLACK_WEBHOOK_URL or DISCORD_WEBHOOK_URL in Cloudflare Pages env vars
+    if (env.SLACK_WEBHOOK_URL) {
+      // Slack-format payload (works with Slack incoming webhooks)
+      const slackText = `:bell: *New lead — ${visaLabel}*\n*${lead.firstName} ${lead.lastName}* (${lead.ipCountry})\n${lead.email}${lead.phone ? ' · ' + lead.phone : ''}\n${lead.situation ? '> ' + lead.situation.slice(0, 300) : ''}`;
+      try {
+        await fetch(env.SLACK_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: slackText }),
+        });
+      } catch (e) { console.error('Slack webhook failed:', e); }
+    }
+
+    if (env.DISCORD_WEBHOOK_URL) {
+      // Discord-format payload
+      const discordContent = `🔔 **New lead — ${visaLabel}**\n**${lead.firstName} ${lead.lastName}** (${lead.ipCountry})\n${lead.email}${lead.phone ? ' · ' + lead.phone : ''}\n${lead.situation ? '> ' + lead.situation.slice(0, 300) : ''}`;
+      try {
+        await fetch(env.DISCORD_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: discordContent }),
+        });
+      } catch (e) { console.error('Discord webhook failed:', e); }
     }
 
     return new Response(
