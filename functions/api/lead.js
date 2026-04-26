@@ -113,8 +113,9 @@ export async function onRequestPost(context) {
           <p style="margin:0;">User agent: ${lead.userAgent}</p>
         </div>
 
-        <div style="margin-top:24px;display:flex;gap:8px;">
+        <div style="margin-top:24px;display:flex;gap:8px;flex-wrap:wrap;">
           <a href="mailto:${lead.email}?subject=Re:%20Your%20Thailand%20visa%20enquiry" style="background:#0c4a6e;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply by email</a>
+          ${lead.phone ? `<a href="https://wa.me/${lead.phone.replace(/[^0-9]/g, '')}" style="background:#25d366;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply on WhatsApp</a>` : ''}
         </div>
       </div>
     `;
@@ -134,7 +135,7 @@ export async function onRequestPost(context) {
           <li><a href="https://pattayavisahelp.com/guides/visa-scams-pattaya/" style="color:#0369a1;">Visa scams to avoid in Pattaya</a></li>
           <li><a href="https://pattayavisahelp.com/guides/cost-of-living-pattaya/" style="color:#0369a1;">Pattaya cost of living 2026</a></li>
         </ul>
-        <p style="font-size:16px;line-height:1.6;">If your situation is urgent, just reply directly to this email — it goes straight to our inbox.</p>
+        <p style="font-size:16px;line-height:1.6;">If your situation is urgent, message us on WhatsApp for faster reply: <a href="https://wa.me/66967286999" style="color:#25d366;font-weight:600;">+66 96 728 6999</a>. Or reply directly to this email — it goes straight to our inbox.</p>
         <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
         <p style="font-size:14px;color:#64748b;">Pattaya Visa Help<br>Independent Thailand visa guidance from Pattaya<br><a href="https://pattayavisahelp.com" style="color:#0369a1;">pattayavisahelp.com</a></p>
       </div>
