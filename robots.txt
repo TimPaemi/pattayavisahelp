@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Don't crawl admin / API endpoints
+Disallow: /api/
+Disallow: /functions/
+Disallow: /_research/
+
+# Sitemap
+Sitemap: https://pattayavisahelp.com/sitemap.xml

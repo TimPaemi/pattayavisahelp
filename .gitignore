@@ -37,3 +37,6 @@ desktop.ini
 # Local-only
 *.local
 .history/
+
+# Note: _research/ stays in the repo (committed) — it's the source of truth.
+# It's just not served publicly because Cloudflare Pages skips underscore-prefixed paths.

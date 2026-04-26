@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page not found · Pattaya Visa Help</title>
+  <meta name="robots" content="noindex" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand:{50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',500:'#0ea5e9',700:'#0369a1',800:'#075985',900:'#0c4a6e'}, gold:{500:'#f59e0b'}, ink:'#0f172a' }, fontFamily: { sans:['Inter','sans-serif'], display:['"Plus Jakarta Sans"','sans-serif'] } } } }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .mesh-bg { background: radial-gradient(at 20% 20%, rgba(186,230,253,0.5) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(125,211,252,0.4) 0px, transparent 50%), radial-gradient(at 80% 80%, rgba(14,165,233,0.15) 0px, transparent 50%), radial-gradient(at 0% 100%, rgba(186,230,253,0.4) 0px, transparent 50%); }
+  </style>
+</head>
+<body class="font-sans text-ink bg-white antialiased min-h-screen flex flex-col">
+
+  <header class="border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center text-white font-display font-bold text-lg shadow-md">P</span>
+        <span class="font-display font-bold text-lg tracking-tight">Pattaya Visa Help</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-1 mesh-bg flex items-center justify-center px-6">
+    <div class="max-w-2xl text-center py-20">
+      <p class="font-display font-extrabold text-9xl text-brand-200 leading-none">404</p>
+      <h1 class="mt-6 font-display font-bold text-4xl lg:text-5xl tracking-tight">Page not found</h1>
+      <p class="mt-6 text-lg text-slate-600 leading-relaxed">The page you're looking for doesn't exist or has moved. Try one of these instead:</p>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="/" class="bg-ink hover:bg-brand-900 text-white font-semibold px-6 py-3 rounded-xl transition">Home</a>
+        <a href="/#visas" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-xl transition">All visa types</a>
+        <a href="/compare/visa-comparison-matrix/" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-xl transition">Compare visas</a>
+        <a href="/contact/" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-xl transition">Contact us</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-ink text-slate-400 py-8 text-center text-sm">
+    <p>© <span id="year"></span> Pattaya Visa Help</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
