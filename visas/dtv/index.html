@@ -133,7 +133,6 @@ html { scroll-behavior:smooth; scroll-padding-top:6rem; }
 
 /* === Mobile + responsive: clean rebuild === */
 
-/* Base */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
 html, body { 
@@ -153,6 +152,317 @@ img, video { max-width: 100%; height: auto; }
   overflow-wrap: break-word; word-wrap: break-word; 
 }
 .font-mono, .key-fact-value, .tabular-nums { font-feature-settings: 'tnum' on, 'lnum' on; }
+
+/* === MOBILE (under 768px) — high specificity overrides === */
+@media (max-width: 767px) {
+  
+  /* === HEADER — FIX TEXT WRAPPING === */
+  /* Hide top consultation strip entirely */
+  body .hidden.lg\:block.bg-ink.text-white.text-sm,
+  body .bg-ink.text-white.text-sm.border-b {
+    display: none !important;
+  }
+  
+  /* Hide "Independent · Pattaya" subtitle on mobile to save space */
+  html body header a[href="/"] .text-\[10px\],
+  html body header a[href="/"] [class*="text-ink/50"][class*="font-mono"] {
+    display: none !important;
+  }
+  
+  /* Compact brand text */
+  html body header a[href="/"] .font-display.font-bold {
+    font-size: 0.95rem !important;
+    line-height: 1 !important;
+  }
+  html body header a[href="/"] svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  html body header a[href="/"] {
+    gap: 0.5rem !important;
+  }
+  
+  /* Header height + padding */
+  html body header.sticky {
+    height: 56px !important;
+  }
+  html body header.sticky > div {
+    height: 56px !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Hide desktop nav links */
+  html body header nav.hidden.lg\:flex { display: none !important; }
+  
+  /* Free consultation button → "Book" on mobile (compact) */
+  html body header a[href*="consultation"]:not(.btn-keep-text) {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.7rem !important;
+    min-height: 36px !important;
+    white-space: nowrap !important;
+  }
+  /* Hide arrow on mobile button */
+  html body header a[href*="consultation"] span[aria-hidden] { display: none !important; }
+  
+  /* === BREADCRUMB === */
+  nav.breadcrumb-nav {
+    overflow-x: auto;
+    padding: 0.5rem 0 !important;
+  }
+  nav.breadcrumb-nav > div {
+    display: flex; flex-wrap: nowrap; white-space: nowrap;
+    gap: 0.25rem !important;
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+  nav.breadcrumb-nav a, nav.breadcrumb-nav .breadcrumb-current {
+    padding: 0.2rem 0.55rem !important;
+    font-size: 0.7rem !important;
+  }
+  nav.breadcrumb-nav::-webkit-scrollbar { display: none; }
+  nav.breadcrumb-nav { scrollbar-width: none; }
+  
+  /* === FORCE ALL GRIDS TO 1 COLUMN === */
+  /* High specificity to override Tailwind utility classes */
+  html body .grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+  /* Special exception: 3-col stat grids (3 stats in a row, small content) */
+  html body .grid.grid-cols-3:not(.grid-stack-mobile) {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.4rem !important;
+  }
+  
+  /* === SECTION PADDING === */
+  html body section {
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+  
+  /* === CONTAINERS === */
+  main, section, footer { overflow-x: hidden; }
+  html body .max-w-7xl, html body .max-w-\[1400px\], 
+  html body .max-w-6xl, html body .max-w-5xl, 
+  html body .max-w-4xl, html body .max-w-3xl, 
+  html body .max-w-2xl, html body .max-w-\[1100px\],
+  html body .max-w-\[920px\], html body .max-w-\[900px\], 
+  html body .max-w-\[680px\] {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* === TYPOGRAPHY === */
+  body { font-size: 15px; line-height: 1.6; }
+  
+  html body h1, html body .display-xl, html body .display-lg {
+    font-size: 1.65rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    font-weight: 700 !important;
+  }
+  html body h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+  }
+  html body h3 { font-size: 1.05rem !important; line-height: 1.3 !important; }
+  html body h4 { font-size: 0.95rem !important; }
+  
+  html body .text-3xl { font-size: 1.4rem !important; }
+  html body .text-4xl { font-size: 1.5rem !important; }
+  html body .text-5xl { font-size: 1.65rem !important; }
+  html body .text-6xl { font-size: 1.75rem !important; }
+  html body .text-7xl { font-size: 1.85rem !important; }
+  
+  html body [class*="text-["][class*="px]"] { font-size: clamp(0.85rem, 4vw, 1.65rem) !important; }
+  html body h1[class*="text-["] { font-size: clamp(1.4rem, 6vw, 1.75rem) !important; }
+  html body h2[class*="text-["] { font-size: clamp(1.15rem, 5vw, 1.5rem) !important; }
+  
+  /* === PROSE === */
+  html body .prose-custom h2 { font-size: 1.3rem !important; margin-top: 1.5rem !important; margin-bottom: 0.5rem !important; }
+  html body .prose-custom h3 { font-size: 1.05rem !important; margin-top: 1.15rem !important; margin-bottom: 0.35rem !important; }
+  html body .prose-custom p { font-size: 0.92rem !important; line-height: 1.55 !important; margin-bottom: 0.65rem !important; }
+  html body .prose-custom ul, html body .prose-custom ol { padding-left: 1.1rem !important; margin-bottom: 0.7rem !important; }
+  html body .prose-custom li { font-size: 0.92rem !important; line-height: 1.5 !important; margin-bottom: 0.25rem !important; }
+  
+  /* === CARDS — force block layout === */
+  html body a[class*="rounded-xl"], html body a[class*="rounded-2xl"], html body a[class*="rounded-3xl"] {
+    display: block !important;
+  }
+  html body a[class*="rounded-xl"] > *, html body a[class*="rounded-2xl"] > *, html body a[class*="rounded-3xl"] > * {
+    display: block !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Card padding compact */
+  html body [class*="rounded-3xl"][class*="p-7"], html body [class*="rounded-3xl"][class*="p-8"], 
+  html body [class*="rounded-3xl"][class*="p-10"], html body [class*="rounded-3xl"][class*="p-12"] {
+    padding: 1.15rem !important;
+  }
+  html body [class*="rounded-2xl"][class*="p-5"], html body [class*="rounded-2xl"][class*="p-6"], 
+  html body [class*="rounded-2xl"][class*="p-7"], html body [class*="rounded-2xl"][class*="p-8"] {
+    padding: 1rem !important;
+  }
+  html body [class*="rounded-xl"][class*="p-4"], html body [class*="rounded-xl"][class*="p-5"], 
+  html body [class*="rounded-xl"][class*="p-6"] {
+    padding: 0.85rem !important;
+  }
+  
+  /* === DECORATIVE ELEMENTS — hide on mobile === */
+  html body .absolute[class*="rounded-full"][class*="blur-3xl"],
+  html body .absolute[class*="rounded-full"][class*="blur-2xl"],
+  html body div[class*="blur-3xl"],
+  html body div[class*="blur-2xl"] {
+    display: none !important;
+  }
+  html body div[style*="background-image: radial-gradient"] { display: none !important; }
+  html body div[style*="background-image: linear-gradient"][style*="rgba(255,255,255"] { display: none !important; }
+  
+  /* === FORMS === */
+  input, textarea, select {
+    font-size: 16px !important;
+    padding: 0.7rem 0.85rem !important;
+    min-height: 44px;
+  }
+  textarea { min-height: 88px !important; }
+  
+  /* === BUTTONS === */
+  button, a[class*="rounded-full"] { min-height: 44px; }
+  html body a[class*="px-8"], html body button[class*="px-8"] { padding-left: 1.15rem !important; padding-right: 1.15rem !important; }
+  html body a[class*="py-4"], html body button[class*="py-4"] { padding-top: 0.7rem !important; padding-bottom: 0.7rem !important; }
+  
+  /* CTA stacks */
+  html body .flex.flex-col.sm\:flex-row > a,
+  html body .flex.flex-col.sm\:flex-row > button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  
+  /* === CALLOUTS === */
+  html body .callout {
+    padding: 0.75rem 0.9rem !important;
+    margin: 0.85rem 0 !important;
+    border-radius: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  html body .callout-title { font-size: 0.6rem !important; margin-bottom: 0.25rem !important; }
+  html body .callout-key p { font-size: 1rem !important; line-height: 1.45 !important; }
+  html body .callout-body { font-size: 0.9rem !important; line-height: 1.5 !important; }
+  
+  /* === FAQ === */
+  html body .faq-item summary {
+    padding: 0.7rem 0.85rem !important;
+    min-height: 44px;
+  }
+  html body .faq-item summary span {
+    font-size: 0.9rem !important;
+    line-height: 1.35 !important;
+    padding-right: 0.5rem !important;
+  }
+  html body .faq-item div {
+    padding: 0 0.85rem 0.85rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* === EYEBROW === */
+  html body .eyebrow { font-size: 0.55rem !important; letter-spacing: 0.1em !important; }
+  
+  /* === STATS === */
+  html body .key-fact { padding: 0.55rem 0.7rem !important; min-width: 4rem !important; }
+  html body .key-fact-value { font-size: 0.95rem !important; }
+  html body .key-fact-label { font-size: 0.5rem !important; }
+  
+  /* === TABLES === */
+  html body .cmp-table { font-size: 0.78rem !important; }
+  html body .cmp-table th, html body .cmp-table td {
+    padding: 0.4rem 0.55rem !important;
+    min-width: 5rem;
+  }
+  html body .cmp-table .row-label { min-width: 6rem !important; font-size: 0.75rem !important; }
+  
+  /* === FOOTER === */
+  html body footer { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  html body footer .grid { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
+  html body footer .py-20 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  html body footer h3, html body footer h4 { font-size: 0.85rem !important; margin-bottom: 0.5rem !important; }
+  html body footer ul li { font-size: 0.85rem !important; }
+  
+  /* === MARGINS === */
+  html body .mt-12 { margin-top: 1.25rem !important; }
+  html body .mt-16, html body .mt-20 { margin-top: 1.5rem !important; }
+  html body .mt-24, html body .mt-28 { margin-top: 1.75rem !important; }
+  html body .mb-12 { margin-bottom: 1.25rem !important; }
+  html body .mb-16, html body .mb-20 { margin-bottom: 1.5rem !important; }
+  
+  /* === STICKY ELEMENTS === */
+  html body { padding-bottom: 80px; }
+  html body #stickyDesktopCta, html body #floatingWA { display: none !important; }
+  html body #stickyMobileCta { box-shadow: 0 -4px 24px rgba(0,0,0,0.18); }
+  
+  /* === HIDE DESKTOP === */
+  html body .hidden.lg\:flex { display: none !important; }
+  html body .hidden.lg\:block { display: none !important; }
+  html body .lg\:hidden { display: block !important; }
+  html body .lg\:hidden.flex { display: flex !important; }
+  
+  /* === LISTS === */
+  html body .check-list, html body .x-list { padding-left: 0 !important; }
+  html body .check-list li, html body .x-list li { font-size: 0.9rem !important; padding-left: 1.5rem !important; }
+  
+  /* === TRUST STRIPS === */
+  html body .flex.flex-wrap.justify-center.gap-x-6 { gap: 0.5rem !important; font-size: 0.7rem !important; }
+}
+
+/* === SMALL PHONES === */
+@media (max-width: 479px) {
+  body { font-size: 14.5px; }
+  html body h1, html body .display-xl { font-size: 1.5rem !important; }
+  html body h2 { font-size: 1.25rem !important; }
+  html body .prose-custom h2 { font-size: 1.2rem !important; }
+  
+  html body .max-w-7xl, html body .max-w-\[1400px\], html body .max-w-6xl, 
+  html body .max-w-5xl, html body .max-w-4xl, html body .max-w-3xl, html body .max-w-2xl {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+  
+  html body section { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  
+  /* Even header more compact */
+  html body header a[href="/"] .font-display.font-bold {
+    font-size: 0.85rem !important;
+  }
+  html body header a[href="/"] svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  html body header a[href*="consultation"] {
+    padding: 0.35rem 0.6rem !important;
+    font-size: 0.65rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #stickyMobileCta { display: none !important; }
+}
+
+@supports (padding: max(0px)) {
+  @media (max-width: 767px) {
+    html body { padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom))); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { 
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* === MOBILE FIRST OVERHAUL (under 768px) === */
 @media (max-width: 767px) {
