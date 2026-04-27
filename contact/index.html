@@ -1787,23 +1787,49 @@ if (menuBtn && mm) {
 })();
 </script>
 
+
 <style id="mobile-overrides">
 @media (max-width: 767px) {
+  /* Force grids to single column */
   body .grid { display: block !important; }
-  body .grid > * { display: block !important; width: 100% !important; margin-bottom: 0.5rem !important; }
+  body .grid > * { display: block !important; margin-bottom: 0.5rem !important; }
   body .grid > *:last-child { margin-bottom: 0 !important; }
   
+  /* Cards full width but don't touch their children's widths */
   body a.block, body a[class*="rounded-xl"], body a[class*="rounded-2xl"], body a[class*="rounded-3xl"] {
     display: block !important;
     width: 100% !important;
   }
-  body a > div, body a > p, body a > h3, body a > h4, body a > span {
+  
+  /* IMPORTANT: do NOT stretch icon containers / inline-flex elements */
+  /* Only stretch text-content divs — those that don't have w-X classes */
+  body a > div:not([class*="w-1"]):not([class*="w-2"]):not([class*="w-3"]):not([class*="w-4"]):not([class*="w-5"]):not([class*="w-6"]):not([class*="w-7"]):not([class*="w-8"]):not([class*="w-9"]):not([class*="w-10"]):not([class*="w-11"]):not([class*="w-12"]):not([class*="w-14"]):not([class*="w-16"]):not([class*="w-20"]):not([class*="inline-flex"]):not([class*="inline-block"]) {
     display: block !important;
-    width: auto !important;
   }
   
+  /* Preserve icon badges — keep their explicit dimensions */
+  body [class*="w-10"][class*="h-10"],
+  body [class*="w-11"][class*="h-11"],
+  body [class*="w-12"][class*="h-12"],
+  body [class*="w-14"][class*="h-14"],
+  body [class*="inline-flex"][class*="items-center"][class*="justify-center"] {
+    display: inline-flex !important;
+    width: auto !important;
+    flex-shrink: 0;
+  }
+  /* Restore explicit width sizing using class attribute */
+  body [class~="w-10"] { width: 2.5rem !important; }
+  body [class~="w-11"] { width: 2.75rem !important; }
+  body [class~="w-12"] { width: 3rem !important; }
+  body [class~="w-14"] { width: 3.5rem !important; }
+  body [class~="h-10"] { height: 2.5rem !important; }
+  body [class~="h-11"] { height: 2.75rem !important; }
+  body [class~="h-12"] { height: 3rem !important; }
+  body [class~="h-14"] { height: 3.5rem !important; }
+  
+  /* Header */
   body header a[href="/"] [class*="text-[10px]"] { display: none !important; }
-  body header a[href="/"] svg { width: 30px !important; height: 30px !important; }
+  body header a[href="/"] svg { width: 30px !important; height: 30px !important; flex-shrink: 0; }
   body header a[href="/"] span.font-display { font-size: 14px !important; line-height: 1 !important; }
   body header.sticky { height: 54px !important; }
   body header.sticky > div { height: 54px !important; padding: 0 0.75rem !important; }
@@ -1818,8 +1844,10 @@ if (menuBtn && mm) {
   
   body .bg-ink.text-white.text-sm.border-b { display: none !important; }
   
+  /* Sections */
   body section { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
   
+  /* Containers */
   body .max-w-\[1400px\], body .max-w-7xl, body .max-w-6xl, body .max-w-5xl,
   body .max-w-4xl, body .max-w-3xl, body .max-w-2xl, body .max-w-\[1100px\],
   body .max-w-\[920px\], body .max-w-\[900px\], body .max-w-\[680px\] {
@@ -1828,29 +1856,31 @@ if (menuBtn && mm) {
     padding-right: 1rem !important;
   }
   
+  /* Headings */
   body h1, body .display-xl { font-size: 1.6rem !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
   body h2 { font-size: 1.3rem !important; line-height: 1.2 !important; }
   body h3 { font-size: 1.05rem !important; line-height: 1.3 !important; }
-  
   body .text-3xl { font-size: 1.4rem !important; }
   body .text-4xl { font-size: 1.5rem !important; }
   body .text-5xl { font-size: 1.6rem !important; }
   body .text-6xl { font-size: 1.7rem !important; }
   body .text-7xl { font-size: 1.8rem !important; }
-  
   body [class*="text-["][class*="px]"] { font-size: clamp(0.85rem, 4vw, 1.7rem) !important; }
   body h1[class*="text-["] { font-size: clamp(1.4rem, 6vw, 1.7rem) !important; }
   body h2[class*="text-["] { font-size: clamp(1.15rem, 5vw, 1.4rem) !important; }
   
+  /* Card padding */
   body [class*="rounded-3xl"][class*="p-7"], body [class*="rounded-3xl"][class*="p-8"],
   body [class*="rounded-3xl"][class*="p-10"], body [class*="rounded-3xl"][class*="p-12"] { padding: 1.1rem !important; }
   body [class*="rounded-2xl"][class*="p-5"], body [class*="rounded-2xl"][class*="p-6"],
   body [class*="rounded-2xl"][class*="p-7"], body [class*="rounded-2xl"][class*="p-8"] { padding: 1rem !important; }
   body [class*="rounded-xl"][class*="p-4"], body [class*="rounded-xl"][class*="p-5"] { padding: 0.85rem !important; }
   
+  /* Hide decorations */
   body .absolute[class*="blur-3xl"], body .absolute[class*="blur-2xl"] { display: none !important; }
   body div[style*="background-image: linear-gradient(rgba(255,255,255"] { display: none !important; }
   
+  /* Forms */
   body input, body textarea, body select {
     font-size: 16px !important;
     padding: 0.7rem 0.85rem !important;
@@ -1858,28 +1888,34 @@ if (menuBtn && mm) {
   }
   body textarea { min-height: 88px !important; }
   
-  body button, body a[class*="rounded-full"] { min-height: 44px; }
-  body a[class*="px-8"], body button[class*="px-8"] { padding-left: 1.1rem !important; padding-right: 1.1rem !important; }
-  body a[class*="py-4"], body button[class*="py-4"] { padding-top: 0.7rem !important; padding-bottom: 0.7rem !important; }
+  /* Buttons */
+  body button:not([class*="w-10"]):not([class*="w-11"]):not([class*="w-12"]), 
+  body a[class*="rounded-full"]:not([class*="w-10"]):not([class*="w-12"]) { min-height: 44px; }
+  body a[class*="px-8"]:not(header *), body button[class*="px-8"]:not(header *) { padding-left: 1.1rem !important; padding-right: 1.1rem !important; }
+  body a[class*="py-4"]:not(header *), body button[class*="py-4"]:not(header *) { padding-top: 0.7rem !important; padding-bottom: 0.7rem !important; }
   body .flex.flex-col.sm\:flex-row > a, body .flex.flex-col.sm\:flex-row > button {
     width: 100% !important; justify-content: center !important;
   }
   
+  /* Callouts */
   body .callout { padding: 0.75rem 0.9rem !important; margin: 0.85rem 0 !important; border-radius: 0.5rem !important; }
   body .callout-title { font-size: 0.6rem !important; }
   body .callout-key p { font-size: 1rem !important; line-height: 1.45 !important; }
   body .callout-body { font-size: 0.9rem !important; line-height: 1.5 !important; }
   
+  /* FAQ */
   body .faq-item summary { padding: 0.7rem 0.85rem !important; min-height: 44px; }
   body .faq-item summary span { font-size: 0.9rem !important; }
   body .faq-item div { padding: 0 0.85rem 0.85rem !important; font-size: 0.9rem !important; }
   
+  /* Prose */
   body .prose-custom h2 { font-size: 1.25rem !important; margin-top: 1.5rem !important; }
   body .prose-custom h3 { font-size: 1.05rem !important; margin-top: 1.15rem !important; }
   body .prose-custom p { font-size: 0.92rem !important; line-height: 1.55 !important; }
   body .prose-custom ul, body .prose-custom ol { padding-left: 1.1rem !important; }
   body .prose-custom li { font-size: 0.92rem !important; line-height: 1.5 !important; }
   
+  /* Tables */
   body .prose-custom table, body .cmp-table {
     display: block !important; overflow-x: auto !important;
     font-size: 0.78rem !important;
@@ -1890,21 +1926,27 @@ if (menuBtn && mm) {
     min-width: 5rem !important;
   }
   
+  /* Footer */
   body footer { padding: 1.5rem 0 !important; }
   body footer .grid { display: block !important; }
   body footer .grid > * { display: block !important; margin-bottom: 1.25rem !important; }
   body footer h3, body footer h4 { font-size: 0.85rem !important; }
   body footer ul li { font-size: 0.85rem !important; }
   
+  /* Sticky */
   body { padding-bottom: 80px !important; }
   body #stickyDesktopCta, body #floatingWA { display: none !important; }
   
+  /* Margins */
   body .mt-12 { margin-top: 1.25rem !important; }
   body .mt-16, body .mt-20 { margin-top: 1.5rem !important; }
   body .mt-24, body .mt-28 { margin-top: 1.75rem !important; }
   body .mb-12 { margin-bottom: 1.25rem !important; }
   
+  /* Eyebrow */
   body .eyebrow { font-size: 0.55rem !important; letter-spacing: 0.1em !important; }
+  
+  /* Stat boxes */
   body .key-fact { padding: 0.55rem 0.7rem !important; }
   body .key-fact-value { font-size: 0.95rem !important; }
   body .key-fact-label { font-size: 0.5rem !important; }
