@@ -1632,6 +1632,7 @@ if (lf) {
 </script>
 
 
+
 <style id="mobile-overrides">
 @media (max-width: 767px) {
   /* Force grids to single column */
@@ -1639,37 +1640,26 @@ if (lf) {
   body .grid > * { display: block !important; margin-bottom: 0.5rem !important; }
   body .grid > *:last-child { margin-bottom: 0 !important; }
   
-  /* Cards full width but don't touch their children's widths */
+  /* Cards full width */
   body a.block, body a[class*="rounded-xl"], body a[class*="rounded-2xl"], body a[class*="rounded-3xl"] {
     display: block !important;
     width: 100% !important;
   }
   
-  /* IMPORTANT: do NOT stretch icon containers / inline-flex elements */
-  /* Only stretch text-content divs — those that don't have w-X classes */
-  body a > div:not([class*="w-1"]):not([class*="w-2"]):not([class*="w-3"]):not([class*="w-4"]):not([class*="w-5"]):not([class*="w-6"]):not([class*="w-7"]):not([class*="w-8"]):not([class*="w-9"]):not([class*="w-10"]):not([class*="w-11"]):not([class*="w-12"]):not([class*="w-14"]):not([class*="w-16"]):not([class*="w-20"]):not([class*="inline-flex"]):not([class*="inline-block"]) {
+  /* Icon badges — preserve their box dimensions */
+  /* When element has BOTH w-X and h-X, it's a square icon — keep dimensions */
+  body [class~="w-8"][class~="h-8"] { width: 2rem !important; height: 2rem !important; flex-shrink: 0; }
+  body [class~="w-9"][class~="h-9"] { width: 2.25rem !important; height: 2.25rem !important; flex-shrink: 0; }
+  body [class~="w-10"][class~="h-10"] { width: 2.5rem !important; height: 2.5rem !important; flex-shrink: 0; }
+  body [class~="w-11"][class~="h-11"] { width: 2.75rem !important; height: 2.75rem !important; flex-shrink: 0; }
+  body [class~="w-12"][class~="h-12"] { width: 3rem !important; height: 3rem !important; flex-shrink: 0; }
+  body [class~="w-14"][class~="h-14"] { width: 3.5rem !important; height: 3.5rem !important; flex-shrink: 0; }
+  body [class~="w-16"][class~="h-16"] { width: 4rem !important; height: 4rem !important; flex-shrink: 0; }
+  
+  /* Don't auto-stretch divs that have explicit w- classes (icons, buttons, badges) */
+  body a > div:not([class*="w-"]) {
     display: block !important;
   }
-  
-  /* Preserve icon badges — keep their explicit dimensions */
-  body [class*="w-10"][class*="h-10"],
-  body [class*="w-11"][class*="h-11"],
-  body [class*="w-12"][class*="h-12"],
-  body [class*="w-14"][class*="h-14"],
-  body [class*="inline-flex"][class*="items-center"][class*="justify-center"] {
-    display: inline-flex !important;
-    width: auto !important;
-    flex-shrink: 0;
-  }
-  /* Restore explicit width sizing using class attribute */
-  body [class~="w-10"] { width: 2.5rem !important; }
-  body [class~="w-11"] { width: 2.75rem !important; }
-  body [class~="w-12"] { width: 3rem !important; }
-  body [class~="w-14"] { width: 3.5rem !important; }
-  body [class~="h-10"] { height: 2.5rem !important; }
-  body [class~="h-11"] { height: 2.75rem !important; }
-  body [class~="h-12"] { height: 3rem !important; }
-  body [class~="h-14"] { height: 3.5rem !important; }
   
   /* Header */
   body header a[href="/"] [class*="text-[10px]"] { display: none !important; }
@@ -1732,11 +1722,9 @@ if (lf) {
   }
   body textarea { min-height: 88px !important; }
   
-  /* Buttons */
-  body button:not([class*="w-10"]):not([class*="w-11"]):not([class*="w-12"]), 
-  body a[class*="rounded-full"]:not([class*="w-10"]):not([class*="w-12"]) { min-height: 44px; }
-  body a[class*="px-8"]:not(header *), body button[class*="px-8"]:not(header *) { padding-left: 1.1rem !important; padding-right: 1.1rem !important; }
-  body a[class*="py-4"]:not(header *), body button[class*="py-4"]:not(header *) { padding-top: 0.7rem !important; padding-bottom: 0.7rem !important; }
+  /* Buttons (excluding icon-sized ones) */
+  body button:not([class*="w-"]):not([class*="h-"]):not([aria-label]) { min-height: 44px; }
+  body a[class*="rounded-full"]:not([class*="w-"]) { min-height: 44px; }
   body .flex.flex-col.sm\:flex-row > a, body .flex.flex-col.sm\:flex-row > button {
     width: 100% !important; justify-content: center !important;
   }
