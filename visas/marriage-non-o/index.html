@@ -1841,7 +1841,7 @@ input:focus, select:focus, textarea:focus {
  </div>
  </div>
  <div class="lg:col-span-2">
- <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">A</span> Visa types</h4>
+ <h3 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">A</span> Visa types</h4>
  <ul class="space-y-3 text-sm">
  <li><a href="/visas/dtv/" class="hover:text-white transition">DTV</a></li>
  <li><a href="/visas/retirement-non-o/" class="hover:text-white transition">Retirement</a></li>
@@ -1854,7 +1854,7 @@ input:focus, select:focus, textarea:focus {
  </ul>
  </div>
  <div class="lg:col-span-3">
- <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">B</span> Guides &amp; comparisons</h4>
+ <h3 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">B</span> Guides &amp; comparisons</h4>
  <ul class="space-y-3 text-sm">
  <li><a href="/compare/dtv-vs-ltr/" class="hover:text-white transition">DTV vs LTR</a></li>
  <li><a href="/compare/privilege-vs-ltr/" class="hover:text-white transition">Privilege vs LTR</a></li>
@@ -1865,7 +1865,7 @@ input:focus, select:focus, textarea:focus {
  </ul>
  </div>
  <div class="lg:col-span-3">
- <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">C</span> Site</h4>
+ <h3 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">C</span> Site</h4>
  <ul class="space-y-3 text-sm">
  <li><a href="/about/" class="hover:text-white transition">About us</a></li>
  <li><a href="/contact/" class="hover:text-white transition">Contact</a></li>
@@ -2005,6 +2005,19 @@ if (menuBtn && mm) {
   body [class~="w-11"][class~="h-11"] { width: 2.75rem !important; height: 2.75rem !important; flex-shrink: 0; }
   body [class~="w-12"][class~="h-12"] { width: 3rem !important; height: 3rem !important; flex-shrink: 0; }
   body [class~="w-14"][class~="h-14"] { width: 3.5rem !important; height: 3.5rem !important; flex-shrink: 0; }
+
+  /* CRITICAL: unset min-height for square icon links that older CSS made 44px */
+  body [class~="w-8"][class~="h-8"],
+  body [class~="w-9"][class~="h-9"],
+  body [class~="w-10"][class~="h-10"],
+  body [class~="w-11"][class~="h-11"],
+  body [class~="w-12"][class~="h-12"],
+  body [class~="w-14"][class~="h-14"],
+  body [class~="w-16"][class~="h-16"] {
+    min-height: 0 !important;
+    min-width: 0 !important;
+  }
+
   body [class~="w-16"][class~="h-16"] { width: 4rem !important; height: 4rem !important; flex-shrink: 0; }
   
   /* Don't auto-stretch divs that have explicit w- classes (icons, buttons, badges) */
