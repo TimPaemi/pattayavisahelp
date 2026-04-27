@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://pattayavisahelp.com/</loc>
     <lastmod>2026-04-26</lastmod>
@@ -18,37 +17,49 @@
   <url>
     <loc>https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/tools/bank-checker/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/tools/cost-calculator/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/tools/currency-converter/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/tools/document-checklist/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/tools/eligibility/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/tools/reminder/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/tools/visa-finder/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
@@ -79,13 +90,13 @@
     <loc>https://pattayavisahelp.com/visas/marriage-non-o/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/visas/media-non-m/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/visas/privilege-elite/</loc>
@@ -133,7 +144,7 @@
     <loc>https://pattayavisahelp.com/compare/dtv-vs-ltr/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/compare/non-o-vs-o-a/</loc>
@@ -144,8 +155,8 @@
   <url>
     <loc>https://pattayavisahelp.com/compare/pattaya-vs-hua-hin/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/compare/privilege-vs-ltr/</loc>
@@ -157,37 +168,37 @@
     <loc>https://pattayavisahelp.com/compare/visa-comparison-matrix/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/90-day-reporting/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/buying-property-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/cost-of-living-pattaya/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/driving-licence-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/foreign-marriage-legalisation/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/health-insurance/</loc>
@@ -199,7 +210,7 @@
     <loc>https://pattayavisahelp.com/guides/healthcare-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/international-schools-pattaya/</loc>
@@ -217,13 +228,13 @@
     <loc>https://pattayavisahelp.com/guides/pattaya-vs-phuket-vs-chiang-mai-retirement/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/permanent-residency-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/re-entry-permits/</loc>
@@ -235,7 +246,7 @@
     <loc>https://pattayavisahelp.com/guides/setting-up-thai-company/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/thai-bank-account-as-foreigner/</loc>
@@ -253,7 +264,7 @@
     <loc>https://pattayavisahelp.com/guides/thai-tax-foreign-residents/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/tm30-reporting/</loc>
@@ -265,19 +276,19 @@
     <loc>https://pattayavisahelp.com/guides/verify-moe-accredited-school/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/visa-overstay-penalties/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/visa-runs-vs-extensions/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/visa-scams-pattaya/</loc>
@@ -289,7 +300,7 @@
     <loc>https://pattayavisahelp.com/guides/will-writing-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/australia-to-thailand/</loc>
@@ -301,7 +312,7 @@
     <loc>https://pattayavisahelp.com/pattaya/bang-saray/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/china-to-thailand/</loc>
@@ -325,18 +336,18 @@
     <loc>https://pattayavisahelp.com/pattaya/india-to-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/jomtien/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/living-in-pattaya/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
@@ -349,31 +360,31 @@
     <loc>https://pattayavisahelp.com/pattaya/pratumnak/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/russia-to-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/uk-to-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/usa-to-thailand/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/pattaya/wongamat/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/about/</loc>
@@ -384,7 +395,7 @@
   <url>
     <loc>https://pattayavisahelp.com/contact/</loc>
     <lastmod>2026-04-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
