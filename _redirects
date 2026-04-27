@@ -1,0 +1,27 @@
+# Cloudflare Pages — Redirects
+# Format: from to status
+
+# Common typo / alternate paths
+/visa /tools/visa-finder/ 301
+/visas /#visas 301
+/quiz /tools/visa-finder/ 301
+/calculator /tools/cost-calculator/ 301
+/checklist /tools/document-checklist/ 301
+/banks /tools/bank-checker/ 301
+/news /blog/ 301
+/posts /blog/ 301
+
+# Legacy paths
+/elite /visas/privilege-elite/ 301
+/dtv /visas/dtv/ 301
+/ltr /visas/ltr/ 301
+/retirement /visas/retirement-non-o/ 301
+/marriage /visas/marriage-non-o/ 301
+/business /visas/business-non-b/ 301
+/smart /visas/smart/ 301
+/tourist /visas/tourist-tr-evisa/ 301
+/education /visas/education-ed/ 301
+
+# Common redirects
+/contact-us /contact/ 301
+/about-us /about/ 301

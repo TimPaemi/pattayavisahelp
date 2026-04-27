@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -10,9 +10,9 @@
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <meta name="color-scheme" content="light only" />
-  <title>Contact — Free Thailand Visa Consultation in Pattaya</title>
-  <meta name="description" content="Get free 15-minute Thailand visa consultation. Email or contact form. Reply within 24 hours from info@pattayavisahelp.com — no obligation." />
-  <link rel="canonical" href="https://pattayavisahelp.com/contact/" />
+ <title>Contact — Free Thailand Visa Consultation in Pattaya</title>
+ <meta name="description" content="Get free 15-minute Thailand visa consultation. Email or contact form. Reply within 24 hours from info@pattayavisahelp.com — no obligation." />
+ <link rel="canonical" href="https://pattayavisahelp.com/contact/" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Contact — Free Thailand Visa Consultation in Pattaya" />
 <meta property="og:description" content="Get free 15-minute Thailand visa consultation. Email or contact form. Reply within 24 hours from info@pattayavisahelp.com — no obligation." />
@@ -25,7 +25,7 @@
 <meta name="twitter:title" content="Contact — Free Thailand Visa Consultation in Pattaya" />
 <meta name="twitter:description" content="Get free 15-minute Thailand visa consultation. Email or contact form. Reply within 24 hours from info@pattayavisahelp.com — no obligation." />
 <meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
-  <meta name="theme-color" content="#0c4a6e" />
+ <meta name="theme-color" content="#0c4a6e" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,23 +33,23 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        brand: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e', 950:'#082f49' },
-        gold: { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706', 700:'#b45309' },
-        ink: '#0a0e1a',
-        paper: '#fafaf9',
-        cream: '#f5f3ee',
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-      },
-    }
-  }
+ theme: {
+ extend: {
+ colors: {
+ brand: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e', 950:'#082f49' },
+ gold: { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706', 700:'#b45309' },
+ ink: '#0a0e1a',
+ paper: '#fafaf9',
+ cream: '#f5f3ee',
+ },
+ fontFamily: {
+ sans: ['Inter', 'system-ui', 'sans-serif'],
+ display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+ serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+ mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+ },
+ }
+ }
 }
 </script>
 
@@ -129,351 +129,439 @@ html { scroll-behavior:smooth; scroll-padding-top:6rem; }
 .toc-link:hover { color:#0369a1; border-left-color:#0ea5e9; }
 .toc-link.active { color:#0369a1; border-left-color:#0ea5e9; font-weight:600; }
 
-/* === Mobile-first: prevent horizontal overflow globally === */
+/* === Mobile + responsive: clean rebuild === */
+
+/* Box model + base */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0); }
 html, body { 
-  color-scheme: light only; 
-  background-color: #fafaf9; 
-  color: #0a0e1a; 
-  overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-* { max-width: 100%; }
-img, video, iframe { max-width: 100%; height: auto; }
-pre, code { white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; }
-.prose-custom a, .prose-custom p, .prose-custom li, h1, h2, h3, h4 { 
-  word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;
+ color-scheme: light only; 
+ background-color: #fafaf9; 
+ color: #0a0e1a; 
+ margin: 0;
+ padding: 0;
 }
 
-/* All tables get a horizontal-scroll wrapper on mobile */
+/* Prevent horizontal scroll only when needed (specific containers, not blanket on body) */
+body { overflow-x: clip; }
+
+/* Tables — make them scroll horizontally if too wide, on all screens */
 .prose-custom table, .cmp-table {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  white-space: nowrap;
-}
-.prose-custom table thead, .cmp-table thead { white-space: nowrap; }
-.prose-custom table tbody, .cmp-table tbody { white-space: normal; }
-
-/* Add bottom padding so sticky CTA doesn't overlap content */
-@media (max-width: 1023px) {
-  body { padding-bottom: 76px; }
+ display: block;
+ max-width: 100%;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
 }
 
-/* === Mobile readability + tap targets === */
+/* Images responsive by default */
+img, video { max-width: 100%; height: auto; }
+
+/* Long-word break only in prose — not globally */
+.prose-custom p, .prose-custom li, .prose-custom h2, .prose-custom h3, .prose-custom h4 { 
+ overflow-wrap: break-word; 
+ word-wrap: break-word; 
+}
+
+/* Tabular numbers for prices */
+.font-mono, .key-fact-value, .tabular-nums { 
+ font-feature-settings: 'tnum' on, 'lnum' on; 
+}
+
+/* === Mobile breakpoint (768px and below) === */
 @media (max-width: 768px) {
-  body { font-size: 16px; }
-  
-  /* Headings — graduated by size */
-  h1 { font-size: 2rem !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
-  h2 { font-size: 1.625rem !important; line-height: 1.2 !important; }
-  h3 { font-size: 1.25rem !important; line-height: 1.3 !important; }
-  .prose-custom h2 { font-size: 1.5rem !important; margin-top: 2rem !important; margin-bottom: .75rem !important; }
-  .prose-custom h3 { font-size: 1.2rem !important; margin-top: 1.5rem !important; margin-bottom: .5rem !important; }
-  
-  /* Tailwind utility overrides for mobile */
-  .text-4xl { font-size: 1.75rem !important; }
-  .text-5xl { font-size: 2rem !important; line-height: 1.15 !important; }
-  .text-6xl { font-size: 2.25rem !important; line-height: 1.1 !important; }
-  .text-7xl { font-size: 2.5rem !important; line-height: 1.1 !important; }
-  .lg\:text-4xl, .lg\:text-5xl, .lg\:text-6xl, .lg\:text-7xl { font-size: inherit !important; }
-  
-  /* Body text */
-  .prose-custom p { font-size: 1rem !important; line-height: 1.65 !important; margin-bottom: 1rem !important; }
-  .prose-custom ul, .prose-custom ol { padding-left: 1.25rem !important; }
-  .prose-custom li { font-size: 1rem !important; line-height: 1.65 !important; }
-  
-  /* Tables — readable cells when scrolled */
-  .prose-custom table, .cmp-table { font-size: .8125rem !important; }
-  .prose-custom th, .prose-custom td { padding: .55rem .65rem !important; min-width: 7rem; }
-  .cmp-table th, .cmp-table td { padding: .55rem .65rem !important; font-size: .8125rem !important; min-width: 7rem; }
-  .cmp-table .row-label { min-width: 8rem !important; }
-  
-  /* Tap targets — minimum 44x44 */
-  button, a.bg-ink, a.bg-brand-700, a.bg-white, a.bg-gold-500, .faq-item summary,
-  a[class*="rounded-full"], a[class*="rounded-xl"], button[class*="rounded"] { 
-    min-height: 44px !important; 
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-  }
-  
-  /* Form fields — 44px min, 16px text to prevent iOS zoom */
-  input, textarea, select { 
-    min-height: 44px !important; 
-    font-size: 16px !important; 
-    padding: .65rem .85rem !important;
-  }
-  textarea { min-height: 88px !important; }
-  
-  /* Reduce hero padding aggressively on mobile */
-  section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-  section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-  section.py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  section.py-24, section.py-28 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  
-  /* Container padding */
-  .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
-    padding-left: 1rem !important; padding-right: 1rem !important;
-  }
-  
-  /* Stat grid stays readable */
-  .key-fact { padding: .75rem .85rem !important; min-width: 6rem !important; }
-  .key-fact-value { font-size: 1.1rem !important; }
-  .key-fact-label { font-size: .55rem !important; }
-  
-  /* Callouts breathe on mobile */
-  .callout { padding: 1rem 1.15rem !important; margin: 1.25rem 0 !important; border-radius: .75rem !important; }
-  .callout-key p { font-size: 1.05rem !important; }
-  
-  /* Cards in grids stack with proper spacing */
-  .grid { gap: .85rem !important; }
-  
-  /* FAQ accordion summary */
-  .faq-item summary { padding: 1rem 1rem !important; }
-  .faq-item summary span { font-size: .95rem !important; padding-right: .5rem !important; }
-  .faq-item div { padding: 0 1rem 1.25rem !important; font-size: .95rem !important; line-height: 1.6 !important; }
-  
-  /* Eyebrow text smaller */
-  .eyebrow { font-size: .65rem !important; }
-  
-  /* Breadcrumb scrolls if too long */
-  nav[aria-label="Breadcrumb"], nav.text-sm.text-slate-500 { 
-    overflow-x: auto !important; 
-    white-space: nowrap !important; 
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: .25rem !important;
-  }
-  nav[aria-label="Breadcrumb"]::-webkit-scrollbar, nav.text-sm.text-slate-500::-webkit-scrollbar { display: none; }
-  
-  /* Header — tighter on mobile */
-  header { height: 60px !important; }
-  header .h-\[72px\] { height: 60px !important; }
-  
-  /* Footer columns stack cleanly */
-  footer .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-  
-  /* Buttons in CTAs full-width on mobile */
-  .flex.flex-col.sm\:flex-row a { width: 100%; text-align: center; }
-  
-  /* Sticky mobile CTA polish */
-  #stickyMobileCta { box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
-  #stickyMobileCta .text-sm { font-size: .8rem !important; }
-  
-  /* Fix overflow on visa cards */
-  a[class*="grid"] > a, .grid > a { overflow: hidden; }
-  
-  /* Prose links break long URLs */
-  .prose-custom a[href^="http"] { word-break: break-all; }
+ /* Body bottom padding for sticky mobile CTA — only one sticky should appear here */
+ body { padding-bottom: 70px; }
+ 
+ /* Typography — scale down headings */
+ h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.02em; }
+ h2 { font-size: 1.5rem; line-height: 1.25; }
+ h3 { font-size: 1.2rem; line-height: 1.35; }
+ body { font-size: 16px; line-height: 1.6; }
+ 
+ /* Prose content sizing */
+ .prose-custom h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+ .prose-custom h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+ .prose-custom p { font-size: 1rem; margin-bottom: 0.75rem; }
+ 
+ /* Tables — readable cells */
+ .cmp-table { font-size: 0.85rem; }
+ .cmp-table th, .cmp-table td { padding: 0.5rem 0.65rem; min-width: 6rem; }
+ .cmp-table .row-label { min-width: 7rem; }
+ 
+ /* Form inputs prevent iOS zoom (16px+) */
+ input, textarea, select { font-size: 16px; }
+ 
+ /* Tap targets — minimum 44px */
+ button, .faq-item summary { min-height: 44px; }
+ 
+ /* Callouts — tighter padding */
+ .callout { padding: 1rem 1.15rem; margin: 1.25rem 0; border-radius: 0.75rem; }
+ .callout-key p { font-size: 1.05rem; }
+ 
+ /* FAQ items */
+ .faq-item summary { padding: 0.85rem 1rem; }
+ .faq-item summary span { font-size: 0.95rem; }
+ .faq-item div { padding: 0 1rem 1rem; font-size: 0.95rem; line-height: 1.55; }
+ 
+ /* Breadcrumb scrolls if needed */
+ nav.breadcrumb-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+ nav.breadcrumb-nav > div { display: flex; flex-wrap: nowrap; white-space: nowrap; }
+ nav.breadcrumb-nav::-webkit-scrollbar { display: none; }
+ nav.breadcrumb-nav { scrollbar-width: none; }
+ 
+ /* Sticky mobile CTA — ONLY this on mobile, not the desktop one */
+ #stickyDesktopCta { display: none !important; }
+ 
+ /* Eyebrow text smaller on mobile */
+ .eyebrow { font-size: 0.65rem; }
+ 
+ /* Stat boxes */
+ .key-fact { padding: 0.75rem 0.85rem; min-width: 5rem; }
+ .key-fact-value { font-size: 1.05rem; }
+ .key-fact-label { font-size: 0.55rem; }
 }
 
+/* === Small phones (480px and below) === */
 @media (max-width: 480px) {
-  /* Even tighter on small phones */
-  h1 { font-size: 1.75rem !important; }
-  h2 { font-size: 1.4rem !important; }
-  .prose-custom h2 { font-size: 1.35rem !important; }
-  .text-4xl { font-size: 1.625rem !important; }
-  .text-5xl { font-size: 1.75rem !important; }
-  .text-6xl { font-size: 2rem !important; }
-  
-  /* Even tighter container padding */
-  .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
-    padding-left: .85rem !important; padding-right: .85rem !important;
-  }
-  
-  /* Quiz/calc card breathing room */
-  #quizCard { padding: 1.25rem !important; }
-  
-  /* Stat grids 2-col on smallest */
-  .grid.md\:grid-cols-3, .grid.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
-  
-  /* Country flag grid 2-col on smallest */
-  .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; gap: .65rem !important; }
+ h1 { font-size: 1.75rem; }
+ h2 { font-size: 1.35rem; }
+ .prose-custom h2 { font-size: 1.3rem; }
+ .prose-custom h3 { font-size: 1.1rem; }
 }
 
-/* Safe area insets for notched devices */
+/* === Desktop only: hide mobile-specific elements === */
+@media (min-width: 1024px) {
+ #stickyMobileCta { display: none !important; }
+}
+
+/* Safe area insets for notched phones */
 @supports (padding: max(0px)) {
-  body { 
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-  @media (max-width: 1023px) {
-    body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
-  }
+ @media (max-width: 768px) {
+ body { padding-bottom: max(70px, calc(70px + env(safe-area-inset-bottom))); }
+ }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+ *, *::before, *::after { 
+ animation-duration: 0.01ms !important; 
+ transition-duration: 0.01ms !important; 
+ }
+}
+
+/* === Mobile readability + tap targets === */
+@media (max-width: 768px) {
+ body { font-size: 16px; }
+ 
+ /* Headings — graduated by size */
+ h1 { font-size: 2rem !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
+ h2 { font-size: 1.625rem !important; line-height: 1.2 !important; }
+ h3 { font-size: 1.25rem !important; line-height: 1.3 !important; }
+ .prose-custom h2 { font-size: 1.5rem !important; margin-top: 2rem !important; margin-bottom: .75rem !important; }
+ .prose-custom h3 { font-size: 1.2rem !important; margin-top: 1.5rem !important; margin-bottom: .5rem !important; }
+ 
+ /* Tailwind utility overrides for mobile */
+ .text-4xl { font-size: 1.75rem !important; }
+ .text-5xl { font-size: 2rem !important; line-height: 1.15 !important; }
+ .text-6xl { font-size: 2.25rem !important; line-height: 1.1 !important; }
+ .text-7xl { font-size: 2.5rem !important; line-height: 1.1 !important; }
+ .lg\:text-4xl, .lg\:text-5xl, .lg\:text-6xl, .lg\:text-7xl { font-size: inherit !important; }
+ 
+ /* Body text */
+ .prose-custom p { font-size: 1rem !important; line-height: 1.65 !important; margin-bottom: 1rem !important; }
+ .prose-custom ul, .prose-custom ol { padding-left: 1.25rem !important; }
+ .prose-custom li { font-size: 1rem !important; line-height: 1.65 !important; }
+ 
+ /* Tables — readable cells when scrolled */
+ .prose-custom table, .cmp-table { font-size: .8125rem !important; }
+ .prose-custom th, .prose-custom td { padding: .55rem .65rem !important; min-width: 7rem; }
+ .cmp-table th, .cmp-table td { padding: .55rem .65rem !important; font-size: .8125rem !important; min-width: 7rem; }
+ .cmp-table .row-label { min-width: 8rem !important; }
+ 
+ /* Tap targets — minimum 44x44 */
+ button, a.bg-ink, a.bg-brand-700, a.bg-white, a.bg-gold-500, .faq-item summary,
+ a[class*="rounded-full"], a[class*="rounded-xl"], button[class*="rounded"] { 
+ min-height: 44px !important; 
+ display: inline-flex; 
+ align-items: center; 
+ justify-content: center; 
+ }
+ 
+ /* Form fields — 44px min, 16px text to prevent iOS zoom */
+ input, textarea, select { 
+ min-height: 44px !important; 
+ font-size: 16px !important; 
+ padding: .65rem .85rem !important;
+ }
+ textarea { min-height: 88px !important; }
+ 
+ /* Reduce hero padding aggressively on mobile */
+ section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+ section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+ section.py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+ section.py-24, section.py-28 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+ 
+ /* Container padding */
+ .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+ padding-left: 1rem !important; padding-right: 1rem !important;
+ }
+ 
+ /* Stat grid stays readable */
+ .key-fact { padding: .75rem .85rem !important; min-width: 6rem !important; }
+ .key-fact-value { font-size: 1.1rem !important; }
+ .key-fact-label { font-size: .55rem !important; }
+ 
+ /* Callouts breathe on mobile */
+ .callout { padding: 1rem 1.15rem !important; margin: 1.25rem 0 !important; border-radius: .75rem !important; }
+ .callout-key p { font-size: 1.05rem !important; }
+ 
+ /* Cards in grids stack with proper spacing */
+ .grid { gap: .85rem !important; }
+ 
+ /* FAQ accordion summary */
+ .faq-item summary { padding: 1rem 1rem !important; }
+ .faq-item summary span { font-size: .95rem !important; padding-right: .5rem !important; }
+ .faq-item div { padding: 0 1rem 1.25rem !important; font-size: .95rem !important; line-height: 1.6 !important; }
+ 
+ /* Eyebrow text smaller */
+ .eyebrow { font-size: .65rem !important; }
+ 
+ /* Breadcrumb scrolls if too long */
+ nav[aria-label="Breadcrumb"], nav.text-sm.text-slate-500 { 
+ overflow-x: auto !important; 
+ white-space: nowrap !important; 
+ -webkit-overflow-scrolling: touch;
+ padding-bottom: .25rem !important;
+ }
+ nav[aria-label="Breadcrumb"]::-webkit-scrollbar, nav.text-sm.text-slate-500::-webkit-scrollbar { display: none; }
+ 
+ /* Header — tighter on mobile */
+ header { height: 60px !important; }
+ header .h-\[72px\] { height: 60px !important; }
+ 
+ /* Footer columns stack cleanly */
+ footer .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+ 
+ /* Buttons in CTAs full-width on mobile */
+ .flex.flex-col.sm\:flex-row a { width: 100%; text-align: center; }
+ 
+ /* Sticky mobile CTA polish */
+ #stickyMobileCta { box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+ #stickyMobileCta .text-sm { font-size: .8rem !important; }
+ 
+ /* Fix overflow on visa cards */
+ a[class*="grid"] > a, .grid > a { overflow: hidden; }
+ 
+ /* Prose links break long URLs */
+ .prose-custom a[href^="http"] { word-break: break-all; }
+}
+
+@media (max-width: 480px) {
+ /* Even tighter on small phones */
+ h1 { font-size: 1.75rem !important; }
+ h2 { font-size: 1.4rem !important; }
+ .prose-custom h2 { font-size: 1.35rem !important; }
+ .text-4xl { font-size: 1.625rem !important; }
+ .text-5xl { font-size: 1.75rem !important; }
+ .text-6xl { font-size: 2rem !important; }
+ 
+ /* Even tighter container padding */
+ .max-w-7xl, .max-w-\[1400px\], .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+ padding-left: .85rem !important; padding-right: .85rem !important;
+ }
+ 
+ /* Quiz/calc card breathing room */
+ #quizCard { padding: 1.25rem !important; }
+ 
+ /* Stat grids 2-col on smallest */
+ .grid.md\:grid-cols-3, .grid.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+ 
+ /* Country flag grid 2-col on smallest */
+ .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; gap: .65rem !important; }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+ body { 
+ padding-left: env(safe-area-inset-left);
+ padding-right: env(safe-area-inset-right);
+ }
+ @media (max-width: 1023px) {
+ body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+ }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 /* === Breadcrumb upgrade === */
 nav[aria-label="Breadcrumb"], nav.breadcrumb-nav {
-  background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
-  border-bottom: 1px solid rgba(10,14,26,0.06);
-  padding: .75rem 0;
-  margin-bottom: 0;
+ background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+ border-bottom: 1px solid rgba(10,14,26,0.06);
+ padding: .75rem 0;
+ margin-bottom: 0;
 }
 nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  font-size: .8125rem;
-  flex-wrap: wrap;
+ display: flex;
+ align-items: center;
+ gap: .5rem;
+ font-size: .8125rem;
+ flex-wrap: wrap;
 }
 nav[aria-label="Breadcrumb"] a, nav.breadcrumb-nav a {
-  color: #475569;
-  font-weight: 500;
-  text-decoration: none;
-  padding: .25rem .65rem;
-  border-radius: 999px;
-  transition: all .15s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: .25rem;
+ color: #475569;
+ font-weight: 500;
+ text-decoration: none;
+ padding: .25rem .65rem;
+ border-radius: 999px;
+ transition: all .15s ease;
+ display: inline-flex;
+ align-items: center;
+ gap: .25rem;
 }
 nav[aria-label="Breadcrumb"] a:hover, nav.breadcrumb-nav a:hover {
-  background: rgba(3,105,161,0.08);
-  color: #0369a1;
+ background: rgba(3,105,161,0.08);
+ color: #0369a1;
 }
 nav[aria-label="Breadcrumb"] a:first-child::before, nav.breadcrumb-nav a:first-child::before {
-  content: '⌂';
-  font-size: 0.95em;
-  margin-right: .15em;
-  opacity: 0.7;
+ content: '⌂';
+ font-size: 0.95em;
+ margin-right: .15em;
+ opacity: 0.7;
 }
 nav[aria-label="Breadcrumb"] .breadcrumb-sep, nav.breadcrumb-nav .breadcrumb-sep {
-  color: #cbd5e1;
-  font-weight: 400;
+ color: #cbd5e1;
+ font-weight: 400;
 }
 nav[aria-label="Breadcrumb"] > span:last-child, nav.breadcrumb-nav > span:last-child,
 nav[aria-label="Breadcrumb"] .breadcrumb-current, nav.breadcrumb-nav .breadcrumb-current {
-  color: #0a0e1a;
-  font-weight: 600;
-  padding: .25rem .65rem;
-  background: rgba(245,158,11,0.10);
-  border-radius: 999px;
+ color: #0a0e1a;
+ font-weight: 600;
+ padding: .25rem .65rem;
+ background: rgba(245,158,11,0.10);
+ border-radius: 999px;
 }
 @media (max-width: 768px) {
-  nav[aria-label="Breadcrumb"], nav.breadcrumb-nav { padding: .55rem 0; }
-  nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div { font-size: .7rem; flex-wrap: nowrap; overflow-x: auto; }
+ nav[aria-label="Breadcrumb"], nav.breadcrumb-nav { padding: .55rem 0; }
+ nav[aria-label="Breadcrumb"] > div, nav.breadcrumb-nav > div { font-size: .7rem; flex-wrap: nowrap; overflow-x: auto; }
 }
 
 /* === Visual polish pass === */
 
 /* Better Baht symbol rendering — Inter and Plus Jakarta have it, but force tabular for prices */
 .font-mono, .key-fact-value, [class*="font-display"] { 
-  font-feature-settings: 'tnum' on, 'lnum' on; 
+ font-feature-settings: 'tnum' on, 'lnum' on; 
 }
 
 /* Smoother card hovers */
 a[class*="rounded-xl"], a[class*="rounded-2xl"], 
 .bg-white.border, .bg-paper.border {
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+ transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 /* FAQ accordion polish */
 .faq-item {
-  transition: all .25s ease;
+ transition: all .25s ease;
 }
 .faq-item:hover {
-  border-color: rgba(3,105,161,0.25) !important;
-  box-shadow: 0 4px 16px -4px rgba(3,105,161,0.08);
+ border-color: rgba(3,105,161,0.25) !important;
+ box-shadow: 0 4px 16px -4px rgba(3,105,161,0.08);
 }
 .faq-item[open] {
-  border-color: rgba(3,105,161,0.35) !important;
-  background: linear-gradient(to bottom, rgba(240,249,255,0.4), white) !important;
+ border-color: rgba(3,105,161,0.35) !important;
+ background: linear-gradient(to bottom, rgba(240,249,255,0.4), white) !important;
 }
 .faq-item summary {
-  cursor: pointer;
-  user-select: none;
+ cursor: pointer;
+ user-select: none;
 }
 .faq-item summary:hover {
-  background: rgba(240,249,255,0.5);
+ background: rgba(240,249,255,0.5);
 }
 .faq-item[open] summary svg {
-  transform: rotate(180deg);
-  color: #0369a1;
+ transform: rotate(180deg);
+ color: #0369a1;
 }
 
 /* Callout polish */
 .callout {
-  position: relative;
-  transition: transform .2s ease;
+ position: relative;
+ transition: transform .2s ease;
 }
 .callout-key {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%) !important;
-  position: relative;
-  overflow: hidden;
+ background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%) !important;
+ position: relative;
+ overflow: hidden;
 }
 .callout-key::before {
-  content: '';
-  position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(245,158,11,0.15), transparent 70%);
-  pointer-events: none;
+ content: '';
+ position: absolute;
+ top: -20%;
+ right: -10%;
+ width: 200px;
+ height: 200px;
+ background: radial-gradient(circle, rgba(245,158,11,0.15), transparent 70%);
+ pointer-events: none;
 }
 
 /* Better buttons */
 button[class*="bg-ink"], a[class*="bg-ink"], 
 button[class*="bg-brand-700"], a[class*="bg-brand-700"],
 button[class*="bg-gold-500"], a[class*="bg-gold-500"] {
-  transition: all .2s ease;
-  position: relative;
-  overflow: hidden;
+ transition: all .2s ease;
+ position: relative;
+ overflow: hidden;
 }
 button[class*="bg-ink"]:hover, a[class*="bg-ink"]:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 25px -8px rgba(10,14,26,0.5);
+ transform: translateY(-1px);
+ box-shadow: 0 8px 25px -8px rgba(10,14,26,0.5);
 }
 button[class*="bg-gold-500"]:hover, a[class*="bg-gold-500"]:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 25px -8px rgba(245,158,11,0.5);
+ transform: translateY(-1px);
+ box-shadow: 0 8px 25px -8px rgba(245,158,11,0.5);
 }
 
 /* Top consultation strip — better */
 .bg-ink.text-white.text-sm.border-b {
-  background: linear-gradient(to right, #0a0e1a, #0f1729 50%, #0a0e1a) !important;
+ background: linear-gradient(to right, #0a0e1a, #0f1729 50%, #0a0e1a) !important;
 }
 
 /* Header polish */
 header.sticky {
-  transition: background-color .2s ease, backdrop-filter .2s ease;
+ transition: background-color .2s ease, backdrop-filter .2s ease;
 }
 
 /* Footer separator polish */
 footer .bg-gradient-to-r {
-  height: 2px !important;
+ height: 2px !important;
 }
 
 /* Section dividers more visible */
 section.border-y, section.border-t, section.border-b {
-  border-color: rgba(10,14,26,0.06) !important;
+ border-color: rgba(10,14,26,0.06) !important;
 }
 
 /* Eyebrow text consistency */
 .eyebrow {
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #0369a1;
+ display: inline-block;
+ font-family: 'JetBrains Mono', monospace;
+ font-size: 0.7rem;
+ font-weight: 500;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ color: #0369a1;
 }
 
 /* Better focus visibility */
 :focus-visible {
-  outline: 2px solid #0ea5e9 !important;
-  outline-offset: 4px !important;
-  border-radius: 4px;
+ outline: 2px solid #0ea5e9 !important;
+ outline-offset: 4px !important;
+ border-radius: 4px;
 }
 input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline-offset: 2px !important;
+ outline-offset: 2px !important;
 }
 
 /* Smooth scroll padding for fixed header */
@@ -481,43 +569,43 @@ html { scroll-padding-top: 80px; }
 
 /* Form fields polish */
 input, select, textarea {
-  transition: border-color .2s ease, box-shadow .2s ease;
+ transition: border-color .2s ease, box-shadow .2s ease;
 }
 input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: #0ea5e9 !important;
-  box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+ outline: none;
+ border-color: #0ea5e9 !important;
+ box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
 }
 
 /* Selection color */
 ::selection {
-  background: rgba(245,158,11,0.3);
-  color: #0a0e1a;
+ background: rgba(245,158,11,0.3);
+ color: #0a0e1a;
 }
 
 /* Better link underline */
 .prose-custom a {
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 3px;
-  transition: text-decoration-color .15s ease;
+ text-decoration-thickness: 1.5px;
+ text-underline-offset: 3px;
+ transition: text-decoration-color .15s ease;
 }
 .prose-custom a:hover {
-  text-decoration-color: #f59e0b;
+ text-decoration-color: #f59e0b;
 }
 
 /* Quiz card animation on load */
 @keyframes slideUpFade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+ from { opacity: 0; transform: translateY(20px); }
+ to { opacity: 1; transform: translateY(0); }
 }
 #quizCard, .bg-white.border.rounded-3xl {
-  animation: slideUpFade .6s ease-out;
+ animation: slideUpFade .6s ease-out;
 }
 
 /* Progress bar pulse */
 @keyframes progressPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0.4); }
-  50% { box-shadow: 0 0 0 6px rgba(14,165,233,0); }
+ 0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0.4); }
+ 50% { box-shadow: 0 0 0 6px rgba(14,165,233,0); }
 }
 
 /* Better scrollbars where they exist */
@@ -530,39 +618,39 @@ input:focus, select:focus, textarea:focus {
 </style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ContactPage",
-      "@id": "https://pattayavisahelp.com/contact/#contactpage",
-      "name": "Contact Pattaya Visa Help",
-      "url": "https://pattayavisahelp.com/contact/",
-      "description": "Free 15-minute consultation on Thailand visas. Reach Pattaya Visa Help by email at info@pattayavisahelp.com.",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "Pattaya Visa Help",
-        "url": "https://pattayavisahelp.com",
-        "email": "info@pattayavisahelp.com"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://pattayavisahelp.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contact",
-          "item": "https://pattayavisahelp.com/contact/"
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "ContactPage",
+ "@id": "https://pattayavisahelp.com/contact/#contactpage",
+ "name": "Contact Pattaya Visa Help",
+ "url": "https://pattayavisahelp.com/contact/",
+ "description": "Free 15-minute consultation on Thailand visas. Reach Pattaya Visa Help by email at info@pattayavisahelp.com.",
+ "mainEntity": {
+ "@type": "Organization",
+ "name": "Pattaya Visa Help",
+ "url": "https://pattayavisahelp.com",
+ "email": "info@pattayavisahelp.com"
+ }
+ },
+ {
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ {
+ "@type": "ListItem",
+ "position": 1,
+ "name": "Home",
+ "item": "https://pattayavisahelp.com/"
+ },
+ {
+ "@type": "ListItem",
+ "position": 2,
+ "name": "Contact",
+ "item": "https://pattayavisahelp.com/contact/"
+ }
+ ]
+ }
+ ]
 }
 </script>
 </head>
@@ -572,265 +660,265 @@ input:focus, select:focus, textarea:focus {
 
 <!-- TOP STRIP -->
 <div class="hidden lg:block bg-ink text-white text-sm border-b border-white/5">
-  <div class="max-w-[1400px] mx-auto px-8 py-2.5 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <span class="inline-flex w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
-      <span class="text-slate-300 font-medium">Free 15-minute consultation · Reply within 24 hours · Vetted Pattaya specialists</span>
-    </div>
-    <div class="flex items-center gap-6">
-      <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="text-green-400 hover:text-white transition text-xs font-medium inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a><span class="text-slate-600">·</span><a href="mailto:info@pattayavisahelp.com" class="text-slate-400 hover:text-white transition text-xs font-medium">info@pattayavisahelp.com</a>
-      <a href="/#consultation" class="text-brand-300 hover:text-white font-medium transition flex items-center gap-1.5">Book consultation <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
+ <div class="max-w-[1400px] mx-auto px-8 py-2.5 flex items-center justify-between">
+ <div class="flex items-center gap-4">
+ <span class="inline-flex w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+ <span class="text-slate-300 font-medium">Free 15-minute consultation · Reply within 24 hours · Vetted Pattaya specialists</span>
+ </div>
+ <div class="flex items-center gap-6">
+ <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="text-green-400 hover:text-white transition text-xs font-medium inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a><span class="text-slate-600">·</span><a href="mailto:info@pattayavisahelp.com" class="text-slate-400 hover:text-white transition text-xs font-medium">info@pattayavisahelp.com</a>
+ <a href="/#consultation" class="text-brand-300 hover:text-white font-medium transition flex items-center gap-1.5">Book consultation <span aria-hidden="true">→</span></a>
+ </div>
+ </div>
 </div>
 
 <!-- STICKY NAV -->
 <header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-lg border-b border-ink/8">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3 group">
-      <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-        <defs>
-          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient>
-          <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#d97706"/></linearGradient>
-        </defs>
-        <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#logoGrad)"/>
-        <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
-        <circle cx="29" cy="13" r="2" fill="url(#logoAccent)"/>
-      </svg>
-      <div class="flex flex-col leading-none">
-        <span class="font-display font-bold text-[17px] tracking-tight">Pattaya Visa Help</span>
-        <span class="text-[10px] font-mono text-ink/50 tracking-wider uppercase mt-0.5">Independent · Pattaya</span>
-      </div>
-    </a>
-    <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-ink/75">
-      <a href="/#visas" class="hover:text-ink transition">Visa types</a>
-      <a href="/#guides" class="hover:text-ink transition">Guides</a>
-      <a href="/about/" class="hover:text-ink transition">About</a>
-      <a href="/contact/" class="hover:text-ink transition">Contact</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <a href="#leadForm" class="inline-flex items-center gap-2 bg-ink hover:bg-brand-900 text-white text-[13px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition">
-        Send a message
-        <span aria-hidden="true" class="text-gold-400">→</span>
-      </a>
-      <button id="mobileMenuBtn" class="lg:hidden p-2" aria-label="Open menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </div>
+ <div class="max-w-[1400px] mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
+ <a href="/" class="flex items-center gap-3 group">
+ <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+ <defs>
+ <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient>
+ <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#d97706"/></linearGradient>
+ </defs>
+ <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#logoGrad)"/>
+ <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
+ <circle cx="29" cy="13" r="2" fill="url(#logoAccent)"/>
+ </svg>
+ <div class="flex flex-col leading-none">
+ <span class="font-display font-bold text-[17px] tracking-tight">Pattaya Visa Help</span>
+ <span class="text-[10px] font-mono text-ink/50 tracking-wider uppercase mt-0.5">Independent · Pattaya</span>
+ </div>
+ </a>
+ <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-ink/75">
+ <a href="/#visas" class="hover:text-ink transition">Visa types</a>
+ <a href="/#guides" class="hover:text-ink transition">Guides</a>
+ <a href="/about/" class="hover:text-ink transition">About</a>
+ <a href="/contact/" class="hover:text-ink transition">Contact</a>
+ </nav>
+ <div class="flex items-center gap-3">
+ <a href="#leadForm" class="inline-flex items-center gap-2 bg-ink hover:bg-brand-900 text-white text-[13px] font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition">
+ Send a message
+ <span aria-hidden="true" class="text-gold-400">→</span>
+ </a>
+ <button id="mobileMenuBtn" class="lg:hidden p-2" aria-label="Open menu">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+ </button>
+ </div>
+ </div>
 </header>
 
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="hidden fixed inset-0 z-50 bg-paper">
-  <div class="px-6 py-4 flex items-center justify-between border-b border-ink/8">
-    <span class="font-display font-bold text-lg">Menu</span>
-    <button id="closeMobileMenu" class="p-2" aria-label="Close menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-  </div>
-  <nav class="px-6 py-8 space-y-1">
-    <a href="/#visas" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Visa types</a>
-    <a href="/#guides" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Guides</a>
-    <a href="/about/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">About</a>
-    <a href="/contact/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Contact</a>
-    <a href="#leadForm" class="block bg-ink text-white text-center font-semibold px-6 py-4 rounded-full mt-8">Send a message →</a>
-  </nav>
+ <div class="px-6 py-4 flex items-center justify-between border-b border-ink/8">
+ <span class="font-display font-bold text-lg">Menu</span>
+ <button id="closeMobileMenu" class="p-2" aria-label="Close menu">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+ </button>
+ </div>
+ <nav class="px-6 py-8 space-y-1">
+ <a href="/#visas" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Visa types</a>
+ <a href="/#guides" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Guides</a>
+ <a href="/about/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">About</a>
+ <a href="/contact/" class="block text-2xl font-display font-bold py-3 border-b border-ink/8">Contact</a>
+ <a href="#leadForm" class="block bg-ink text-white text-center font-semibold px-6 py-4 rounded-full mt-8">Send a message →</a>
+ </nav>
 </div>
 
-  <!-- Nav (same as homepage) -->
+ <!-- Nav (same as homepage) -->
 
-  <main>
-  <!-- Hero -->
-  <section class="mesh-bg py-20 lg:py-28">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-brand-200 text-brand-800 text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full">
-        Contact us · Reply within 24 hours
-      </span>
-      <h1 class="font-display font-extrabold text-5xl lg:text-6xl mt-8 leading-[1.1] tracking-tight">Two ways to reach us.</h1>
-      <p class="mt-8 text-xl text-slate-600 leading-relaxed">Pick whichever is easiest — direct email or our structured form. We reply within 24 hours.</p>
-    </div>
-  </section>
+ <main>
+ <!-- Hero -->
+ <section class="mesh-bg py-20 lg:py-28">
+ <div class="max-w-4xl mx-auto px-6 text-center">
+ <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-brand-200 text-brand-800 text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full">
+ Contact us · Reply within 24 hours
+ </span>
+ <h1 class="font-display font-extrabold text-5xl lg:text-6xl mt-8 leading-[1.1] tracking-tight">Two ways to reach us.</h1>
+ <p class="mt-8 text-xl text-slate-600 leading-relaxed">Pick whichever is easiest — direct email or our structured form. We reply within 24 hours.</p>
+ </div>
+ </section>
 <section class="py-8 lg:py-12 -mt-4">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="grid md:grid-cols-3 gap-4">
-      <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="group bg-gradient-to-br from-green-50 to-white border-2 border-green-200 hover:border-green-500 rounded-2xl p-6 transition hover:shadow-xl">
-        <div class="flex items-center justify-between mb-3">
-          <div class="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center text-white">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <span class="text-green-600 group-hover:translate-x-1 transition">→</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-ink">WhatsApp</h3>
-        <p class="text-sm text-slate-600 mt-1">Fastest. Reply within 4 hours.</p>
-        <p class="text-xs font-mono text-green-700 mt-2">+66 96 728 6999</p>
-      </a>
-      <a href="mailto:info@pattayavisahelp.com" class="group bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 hover:border-brand-500 rounded-2xl p-6 transition hover:shadow-xl">
-        <div class="flex items-center justify-between mb-3">
-          <div class="w-11 h-11 rounded-xl bg-brand-700 flex items-center justify-center text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          </div>
-          <span class="text-brand-700 group-hover:translate-x-1 transition">→</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-ink">Email</h3>
-        <p class="text-sm text-slate-600 mt-1">Reply within 24 hours.</p>
-        <p class="text-xs font-mono text-brand-700 mt-2">info@pattayavisahelp.com</p>
-      </a>
-      <a href="#leadForm" class="group bg-gradient-to-br from-gold-100/50 to-white border-2 border-gold-300 hover:border-gold-500 rounded-2xl p-6 transition hover:shadow-xl">
-        <div class="flex items-center justify-between mb-3">
-          <div class="w-11 h-11 rounded-xl bg-gold-500 flex items-center justify-center text-ink">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-          </div>
-          <span class="text-gold-700 group-hover:translate-x-1 transition">↓</span>
-        </div>
-        <h3 class="font-display font-bold text-lg text-ink">Form below</h3>
-        <p class="text-sm text-slate-600 mt-1">Detailed situation. We reply within 24 hours.</p>
-      </a>
-    </div>
-  </div>
+ <div class="max-w-5xl mx-auto px-6">
+ <div class="grid md:grid-cols-3 gap-4">
+ <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="group bg-gradient-to-br from-green-50 to-white border-2 border-green-200 hover:border-green-500 rounded-2xl p-6 transition hover:shadow-xl">
+ <div class="flex items-center justify-between mb-3">
+ <div class="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center text-white">
+ <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ </div>
+ <span class="text-green-600 group-hover:translate-x-1 transition">→</span>
+ </div>
+ <h3 class="font-display font-bold text-lg text-ink">WhatsApp</h3>
+ <p class="text-sm text-slate-600 mt-1">Fastest. Reply within 4 hours.</p>
+ <p class="text-xs font-mono text-green-700 mt-2">+66 96 728 6999</p>
+ </a>
+ <a href="mailto:info@pattayavisahelp.com" class="group bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 hover:border-brand-500 rounded-2xl p-6 transition hover:shadow-xl">
+ <div class="flex items-center justify-between mb-3">
+ <div class="w-11 h-11 rounded-xl bg-brand-700 flex items-center justify-center text-white">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+ </div>
+ <span class="text-brand-700 group-hover:translate-x-1 transition">→</span>
+ </div>
+ <h3 class="font-display font-bold text-lg text-ink">Email</h3>
+ <p class="text-sm text-slate-600 mt-1">Reply within 24 hours.</p>
+ <p class="text-xs font-mono text-brand-700 mt-2">info@pattayavisahelp.com</p>
+ </a>
+ <a href="#leadForm" class="group bg-gradient-to-br from-gold-100/50 to-white border-2 border-gold-300 hover:border-gold-500 rounded-2xl p-6 transition hover:shadow-xl">
+ <div class="flex items-center justify-between mb-3">
+ <div class="w-11 h-11 rounded-xl bg-gold-500 flex items-center justify-center text-ink">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+ </div>
+ <span class="text-gold-700 group-hover:translate-x-1 transition">↓</span>
+ </div>
+ <h3 class="font-display font-bold text-lg text-ink">Form below</h3>
+ <p class="text-sm text-slate-600 mt-1">Detailed situation. We reply within 24 hours.</p>
+ </a>
+ </div>
+ </div>
 </section>
 
 
-  <!-- Three contact methods -->
-  <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-6 mb-16">
-      <a href="mailto:info@pattayavisahelp.com?subject=Thailand%20visa%20enquiry" class="group bg-gradient-to-br from-brand-50 to-white p-8 rounded-3xl border border-brand-100 hover:border-brand-300 hover:shadow-xl transition">
-        <div class="w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center text-white mb-5">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl">Email</h3>
-        <p class="mt-2 text-slate-600 text-sm">Best for detailed questions. Send us your situation and we'll come back with a thorough reply.</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-brand-700 text-sm font-semibold group-hover:gap-2 transition">info@pattayavisahelp.com →</span>
-      </a>
+ <!-- Three contact methods -->
+ <section class="py-20 bg-white">
+ <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-6 mb-16">
+ <a href="mailto:info@pattayavisahelp.com?subject=Thailand%20visa%20enquiry" class="group bg-gradient-to-br from-brand-50 to-white p-8 rounded-3xl border border-brand-100 hover:border-brand-300 hover:shadow-xl transition">
+ <div class="w-14 h-14 rounded-2xl bg-brand-700 grid place-items-center text-white mb-5">
+ <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+ </div>
+ <h3 class="font-display font-bold text-xl">Email</h3>
+ <p class="mt-2 text-slate-600 text-sm">Best for detailed questions. Send us your situation and we'll come back with a thorough reply.</p>
+ <span class="mt-4 inline-flex items-center gap-1 text-brand-700 text-sm font-semibold group-hover:gap-2 transition">info@pattayavisahelp.com →</span>
+ </a>
 
-      <a href="#leadForm" class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl border border-slate-200 hover:border-ink hover:shadow-xl transition">
-        <div class="w-14 h-14 rounded-2xl bg-ink grid place-items-center text-white mb-5">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl">Contact form</h3>
-        <p class="mt-2 text-slate-600 text-sm">Structured form below. Best if you want to outline everything in one go.</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-ink text-sm font-semibold group-hover:gap-2 transition">Scroll to form →</span>
-      </a>
-    </div>
+ <a href="#leadForm" class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl border border-slate-200 hover:border-ink hover:shadow-xl transition">
+ <div class="w-14 h-14 rounded-2xl bg-ink grid place-items-center text-white mb-5">
+ <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+ </div>
+ <h3 class="font-display font-bold text-xl">Contact form</h3>
+ <p class="mt-2 text-slate-600 text-sm">Structured form below. Best if you want to outline everything in one go.</p>
+ <span class="mt-4 inline-flex items-center gap-1 text-ink text-sm font-semibold group-hover:gap-2 transition">Scroll to form →</span>
+ </a>
+ </div>
 
-    <!-- Form -->
-    <div class="max-w-2xl mx-auto px-6">
-      <div id="leadForm" class="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-200">
-        <h2 class="font-display font-bold text-2xl mb-2">Send us a message</h2>
-        <p class="text-slate-600 mb-6 text-sm">Free, no obligation. We'll reply within 24 hours.</p>
+ <!-- Form -->
+ <div class="max-w-2xl mx-auto px-6">
+ <div id="leadForm" class="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-200">
+ <h2 class="font-display font-bold text-2xl mb-2">Send us a message</h2>
+ <p class="text-slate-600 mb-6 text-sm">Free, no obligation. We'll reply within 24 hours.</p>
 
-        <form action="/api/lead" method="POST">
-          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
-          <div class="space-y-4">
-            <div class="grid grid-cols-2 gap-3">
-              <input name="firstName" type="text" required placeholder="First name *" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
-              <input name="lastName" type="text" placeholder="Last name" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
-            </div>
-            <input name="email" type="email" required placeholder="Email *" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
-            <input name="phone" type="tel" placeholder="Phone (optional)" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
-            <select name="visaInterest" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-white">
-              <option value="">Visa interest *</option>
-              <option value="not-sure">Not sure yet</option>
-              <option value="dtv">DTV</option>
-              <option value="retirement">Retirement (Non-O / O-A)</option>
-              <option value="privilege">Privilege / Elite</option>
-              <option value="ltr">LTR</option>
-              <option value="marriage">Marriage</option>
-              <option value="education">Education / Muay Thai</option>
-              <option value="business">Business / Work permit</option>
-              <option value="smart">SMART</option>
-              <option value="tourist">Tourist</option>
-              <option value="other">Other</option>
-            </select>
-            <textarea name="situation" rows="4" placeholder="Tell us your situation (optional)" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition resize-none"></textarea>
-          </div>
-          <button type="submit" class="mt-6 w-full bg-ink hover:bg-brand-900 text-white font-semibold py-4 rounded-xl shadow-md transition">Send message</button>
-          <p class="mt-4 text-xs text-slate-500 text-center">By submitting, you agree to our <a href="/privacy/" class="underline">privacy policy</a>.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-  
+ <form action="/api/lead" method="POST">
+ <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+ <div class="space-y-4">
+ <div class="grid grid-cols-2 gap-3">
+ <input name="firstName" type="text" required placeholder="First name *" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+ <input name="lastName" type="text" placeholder="Last name" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+ </div>
+ <input name="email" type="email" required placeholder="Email *" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+ <input name="phone" type="tel" placeholder="Phone (optional)" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" />
+ <select name="visaInterest" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-white">
+ <option value="">Visa interest *</option>
+ <option value="not-sure">Not sure yet</option>
+ <option value="dtv">DTV</option>
+ <option value="retirement">Retirement (Non-O / O-A)</option>
+ <option value="privilege">Privilege / Elite</option>
+ <option value="ltr">LTR</option>
+ <option value="marriage">Marriage</option>
+ <option value="education">Education / Muay Thai</option>
+ <option value="business">Business / Work permit</option>
+ <option value="smart">SMART</option>
+ <option value="tourist">Tourist</option>
+ <option value="other">Other</option>
+ </select>
+ <textarea name="situation" rows="4" placeholder="Tell us your situation (optional)" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition resize-none"></textarea>
+ </div>
+ <button type="submit" class="mt-6 w-full bg-ink hover:bg-brand-900 text-white font-semibold py-4 rounded-xl shadow-md transition">Send message</button>
+ <p class="mt-4 text-xs text-slate-500 text-center">By submitting, you agree to our <a href="/privacy/" class="underline">privacy policy</a>.</p>
+ </form>
+ </div>
+ </div>
+ </section>
+ 
 <section class="related-pages-section py-12 lg:py-16 bg-slate-50/40 border-t border-ink/8">
-  <div class="max-w-5xl mx-auto px-6">
-    <span class="eyebrow text-brand-700">Related</span>
-    <h2 class="font-display font-bold text-2xl lg:text-3xl tracking-tight mt-2 mb-6">You might also need</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-      <a href="/tools/visa-finder/" class="block bg-white border border-ink/8 hover:border-brand-300 rounded-xl p-4 transition hover:shadow-lg"><div class="font-display font-bold text-ink text-sm">Visa Finder Quiz (free)</div><span class="inline-block mt-2 text-brand-700 text-xs">→</span></a>
+ <div class="max-w-5xl mx-auto px-6">
+ <span class="eyebrow text-brand-700">Related</span>
+ <h2 class="font-display font-bold text-2xl lg:text-3xl tracking-tight mt-2 mb-6">You might also need</h2>
+ <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+ <a href="/tools/visa-finder/" class="block bg-white border border-ink/8 hover:border-brand-300 rounded-xl p-4 transition hover:shadow-lg"><div class="font-display font-bold text-ink text-sm">Visa Finder Quiz (free)</div><span class="inline-block mt-2 text-brand-700 text-xs">→</span></a>
 <a href="/tools/cost-calculator/" class="block bg-white border border-ink/8 hover:border-brand-300 rounded-xl p-4 transition hover:shadow-lg"><div class="font-display font-bold text-ink text-sm">Cost Calculator</div><span class="inline-block mt-2 text-brand-700 text-xs">→</span></a>
 <a href="/tools/document-checklist/" class="block bg-white border border-ink/8 hover:border-brand-300 rounded-xl p-4 transition hover:shadow-lg"><div class="font-display font-bold text-ink text-sm">Document Checklist Generator</div><span class="inline-block mt-2 text-brand-700 text-xs">→</span></a>
 <a href="/compare/visa-comparison-matrix/" class="block bg-white border border-ink/8 hover:border-brand-300 rounded-xl p-4 transition hover:shadow-lg"><div class="font-display font-bold text-ink text-sm">Compare all 12 visas</div><span class="inline-block mt-2 text-brand-700 text-xs">→</span></a>
-    </div>
-  </div>
+ </div>
+ </div>
 </section>
 </main>
 
-  <script>document.getElementById('year').textContent = new Date().getF
+ <script>document.getElementById('year').textContent = new Date().getF
 </script>
 
 <footer class="bg-ink text-slate-400 relative overflow-hidden mt-20">
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"></div>
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20">
-    <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
-      <div class="lg:col-span-4">
-        <div class="flex items-center gap-3">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#footerLogoGrad)"/>
-            <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
-            <circle cx="29" cy="13" r="2" fill="#f59e0b"/>
-            <defs><linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient></defs>
-          </svg>
-          <div class="flex flex-col leading-none">
-            <span class="font-display font-bold text-white text-lg">Pattaya Visa Help</span>
-            <span class="text-[10px] font-mono text-white/40 tracking-wider uppercase mt-0.5">Independent · Pattaya, Thailand</span>
-          </div>
-        </div>
-        <p class="mt-6 text-sm leading-relaxed max-w-sm">Independent Thailand visa guidance from Pattaya. We connect expats with vetted local specialists across every visa category. Content verified for 2026 rules &mdash; updated monthly.</p>
-        <div class="mt-8 flex items-center gap-2">
-          <a href="mailto:info@pattayavisahelp.com" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 grid place-items-center text-slate-300 hover:text-white transition" aria-label="Email">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          </a><a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-green-500/30 grid place-items-center text-green-400 hover:text-white transition" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-        </div>
-      </div>
-      <div class="lg:col-span-2">
-        <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">A</span> Visa types</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a href="/visas/dtv/" class="hover:text-white transition">DTV</a></li>
-          <li><a href="/visas/retirement-non-o/" class="hover:text-white transition">Retirement</a></li>
-          <li><a href="/visas/privilege-elite/" class="hover:text-white transition">Privilege / Elite</a></li>
-          <li><a href="/visas/ltr/" class="hover:text-white transition">LTR</a></li>
-          <li><a href="/visas/marriage-non-o/" class="hover:text-white transition">Marriage</a></li>
-          <li><a href="/visas/education-ed/" class="hover:text-white transition">Education</a></li>
-          <li><a href="/visas/business-non-b/" class="hover:text-white transition">Business + WP</a></li>
-          <li><a href="/visas/smart/" class="hover:text-white transition">SMART</a></li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">B</span> Guides &amp; comparisons</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a href="/compare/dtv-vs-ltr/" class="hover:text-white transition">DTV vs LTR</a></li>
-          <li><a href="/compare/privilege-vs-ltr/" class="hover:text-white transition">Privilege vs LTR</a></li>
-          <li><a href="/guides/90-day-reporting/" class="hover:text-white transition">90-day reporting (TM47)</a></li>
-          <li><a href="/guides/jomtien-immigration-office/" class="hover:text-white transition">Jomtien Immigration</a></li>
-          <li><a href="/guides/health-insurance/" class="hover:text-white transition">Health insurance</a></li>
-          <li><a href="/guides/visa-scams-pattaya/" class="hover:text-white transition">Visa scams to avoid</a></li>
-        </ul>
-      </div>
-      <div class="lg:col-span-3">
-        <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">C</span> Site</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a href="/about/" class="hover:text-white transition">About us</a></li>
-          <li><a href="/contact/" class="hover:text-white transition">Contact</a></li>
-          <li><a href="/privacy/" class="hover:text-white transition">Privacy policy</a></li>
-          <li><a href="/terms/" class="hover:text-white transition">Terms of service</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="hairline mb-8" style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);"></div>
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-      <p class="text-slate-500">&copy; <span id="year"></span> Pattaya Visa Help. All rights reserved.</p>
-      <p class="text-slate-500 max-w-2xl text-center md:text-right">Information and matching service. Not a law firm. Visa decisions made by the Royal Thai Immigration Bureau and Thai Embassies / Consulates.</p>
-    </div>
-  </div>
+ <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"></div>
+ <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20">
+ <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
+ <div class="lg:col-span-4">
+ <div class="flex items-center gap-3">
+ <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#footerLogoGrad)"/>
+ <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
+ <circle cx="29" cy="13" r="2" fill="#f59e0b"/>
+ <defs><linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient></defs>
+ </svg>
+ <div class="flex flex-col leading-none">
+ <span class="font-display font-bold text-white text-lg">Pattaya Visa Help</span>
+ <span class="text-[10px] font-mono text-white/40 tracking-wider uppercase mt-0.5">Independent · Pattaya, Thailand</span>
+ </div>
+ </div>
+ <p class="mt-6 text-sm leading-relaxed max-w-sm">Independent Thailand visa guidance from Pattaya. We connect expats with vetted local specialists across every visa category. Content verified for 2026 rules &mdash; updated monthly.</p>
+ <div class="mt-8 flex items-center gap-2">
+ <a href="mailto:info@pattayavisahelp.com" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 grid place-items-center text-slate-300 hover:text-white transition" aria-label="Email">
+ <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+ </a><a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-green-500/30 grid place-items-center text-green-400 hover:text-white transition" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+ </div>
+ </div>
+ <div class="lg:col-span-2">
+ <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">A</span> Visa types</h4>
+ <ul class="space-y-3 text-sm">
+ <li><a href="/visas/dtv/" class="hover:text-white transition">DTV</a></li>
+ <li><a href="/visas/retirement-non-o/" class="hover:text-white transition">Retirement</a></li>
+ <li><a href="/visas/privilege-elite/" class="hover:text-white transition">Privilege / Elite</a></li>
+ <li><a href="/visas/ltr/" class="hover:text-white transition">LTR</a></li>
+ <li><a href="/visas/marriage-non-o/" class="hover:text-white transition">Marriage</a></li>
+ <li><a href="/visas/education-ed/" class="hover:text-white transition">Education</a></li>
+ <li><a href="/visas/business-non-b/" class="hover:text-white transition">Business + WP</a></li>
+ <li><a href="/visas/smart/" class="hover:text-white transition">SMART</a></li>
+ </ul>
+ </div>
+ <div class="lg:col-span-3">
+ <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">B</span> Guides &amp; comparisons</h4>
+ <ul class="space-y-3 text-sm">
+ <li><a href="/compare/dtv-vs-ltr/" class="hover:text-white transition">DTV vs LTR</a></li>
+ <li><a href="/compare/privilege-vs-ltr/" class="hover:text-white transition">Privilege vs LTR</a></li>
+ <li><a href="/guides/90-day-reporting/" class="hover:text-white transition">90-day reporting (TM47)</a></li>
+ <li><a href="/guides/jomtien-immigration-office/" class="hover:text-white transition">Jomtien Immigration</a></li>
+ <li><a href="/guides/health-insurance/" class="hover:text-white transition">Health insurance</a></li>
+ <li><a href="/guides/visa-scams-pattaya/" class="hover:text-white transition">Visa scams to avoid</a></li>
+ </ul>
+ </div>
+ <div class="lg:col-span-3">
+ <h4 class="text-white/95 font-display font-semibold text-sm mb-5 flex items-center gap-2"><span class="font-mono text-[10px] text-white/35">C</span> Site</h4>
+ <ul class="space-y-3 text-sm">
+ <li><a href="/about/" class="hover:text-white transition">About us</a></li>
+ <li><a href="/contact/" class="hover:text-white transition">Contact</a></li>
+ <li><a href="/privacy/" class="hover:text-white transition">Privacy policy</a></li>
+ <li><a href="/terms/" class="hover:text-white transition">Terms of service</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="hairline mb-8" style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);"></div>
+ <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+ <p class="text-slate-500">&copy; <span id="year"></span> Pattaya Visa Help. All rights reserved.</p>
+ <p class="text-slate-500 max-w-2xl text-center md:text-right">Information and matching service. Not a law firm. Visa decisions made by the Royal Thai Immigration Bureau and Thai Embassies / Consulates.</p>
+ </div>
+ </div>
 </footer>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -838,47 +926,47 @@ const menuBtn = document.getElementById('mobileMenuBtn');
 const closeMenuBtn = document.getElementById('closeMobileMenu');
 const mm = document.getElementById('mobileMenu');
 if (menuBtn && mm) {
-  menuBtn.addEventListener('click', () => { mm.classList.remove('hidden'); document.body.style.overflow = 'hidden'; });
-  closeMenuBtn.addEventListener('click', () => { mm.classList.add('hidden'); document.body.style.overflow = ''; });
-  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); document.body.style.overflow = ''; }));
+ menuBtn.addEventListener('click', () => { mm.classList.remove('hidden'); document.body.style.overflow = 'hidden'; });
+ closeMenuBtn.addEventListener('click', () => { mm.classList.add('hidden'); document.body.style.overflow = ''; });
+ mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); document.body.style.overflow = ''; }));
 }
 </script>
 
 <!-- Sticky mobile CTA -->
 <div id="stickyMobileCta" class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-ink/95 backdrop-blur-lg border-t border-gold-500/30 transform translate-y-full transition-transform duration-300" style="padding-bottom:env(safe-area-inset-bottom)">
-  <div class="px-4 py-3 flex items-center gap-3">
-    <div class="flex-1 min-w-0">
-      <div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Free 15-minute consult</div>
-      <div class="text-sm font-semibold text-white truncate">Reply within 24 hours</div>
-    </div>
-    <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="bg-green-500 hover:bg-green-400 text-white p-2.5 rounded-full whitespace-nowrap transition" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="/#consultation" class="bg-gold-500 hover:bg-gold-400 text-ink font-semibold text-sm px-5 py-2.5 rounded-full whitespace-nowrap transition">Book now →</a>
-    <button id="stickyMobileCtaClose" aria-label="Close" class="text-white/40 hover:text-white text-xl leading-none p-1">×</button>
-  </div>
+ <div class="px-4 py-3 flex items-center gap-3">
+ <div class="flex-1 min-w-0">
+ <div class="text-[10px] font-mono uppercase tracking-widest text-gold-400">Free 15-minute consult</div>
+ <div class="text-sm font-semibold text-white truncate">Reply within 24 hours</div>
+ </div>
+ <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="bg-green-500 hover:bg-green-400 text-white p-2.5 rounded-full whitespace-nowrap transition" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="/#consultation" class="bg-gold-500 hover:bg-gold-400 text-ink font-semibold text-sm px-5 py-2.5 rounded-full whitespace-nowrap transition">Book now →</a>
+ <button id="stickyMobileCtaClose" aria-label="Close" class="text-white/40 hover:text-white text-xl leading-none p-1">×</button>
+ </div>
 </div>
 <script>
 (function(){
-  var el = document.getElementById('stickyMobileCta');
-  var btn = document.getElementById('stickyMobileCtaClose');
-  if (!el || !btn) return;
-  var dismissed = false;
-  try { dismissed = sessionStorage.getItem('stickyCtaDismissed') === '1'; } catch(e){}
-  if (dismissed) { el.remove(); return; }
-  function check() {
-    var sc = window.scrollY;
-    var doc = document.documentElement;
-    var pct = sc / (doc.scrollHeight - doc.clientHeight);
-    if (pct > 0.25 && sc > 400) {
-      el.classList.remove('translate-y-full');
-    } else {
-      el.classList.add('translate-y-full');
-    }
-  }
-  window.addEventListener('scroll', check, {passive:true});
-  btn.addEventListener('click', function(){
-    el.style.display = 'none';
-    try { sessionStorage.setItem('stickyCtaDismissed','1'); } catch(e){}
-  });
-  check();
+ var el = document.getElementById('stickyMobileCta');
+ var btn = document.getElementById('stickyMobileCtaClose');
+ if (!el || !btn) return;
+ var dismissed = false;
+ try { dismissed = sessionStorage.getItem('stickyCtaDismissed') === '1'; } catch(e){}
+ if (dismissed) { el.remove(); return; }
+ function check() {
+ var sc = window.scrollY;
+ var doc = document.documentElement;
+ var pct = sc / (doc.scrollHeight - doc.clientHeight);
+ if (pct > 0.25 && sc > 400) {
+ el.classList.remove('translate-y-full');
+ } else {
+ el.classList.add('translate-y-full');
+ }
+ }
+ window.addEventListener('scroll', check, {passive:true});
+ btn.addEventListener('click', function(){
+ el.style.display = 'none';
+ try { sessionStorage.setItem('stickyCtaDismissed','1'); } catch(e){}
+ });
+ check();
 })();
 </script>
 <!-- End sticky mobile CTA -->
@@ -886,8 +974,52 @@ if (menuBtn && mm) {
 
 <!-- Floating WhatsApp button -->
 <a href="https://wa.me/66967286999" target="_blank" rel="noopener" id="floatingWA" class="hidden lg:flex fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 text-white shadow-2xl shadow-green-500/40 items-center justify-center transition hover:scale-110" aria-label="Chat on WhatsApp">
-  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span class="absolute right-full mr-3 px-3 py-1.5 bg-ink text-white text-xs font-semibold rounded-lg whitespace-nowrap opacity-0 hover:opacity-100 transition pointer-events-none">Chat on WhatsApp</span>
+ <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ <span class="absolute right-full mr-3 px-3 py-1.5 bg-ink text-white text-xs font-semibold rounded-lg whitespace-nowrap opacity-0 hover:opacity-100 transition pointer-events-none">Chat on WhatsApp</span>
 </a>
+
+<!-- Sticky desktop CTA -->
+<div id="stickyDesktopCta" class="hidden lg:block fixed bottom-6 left-6 z-40 transform translate-y-32 opacity-0 transition-all duration-300">
+ <div class="bg-white border-2 border-ink/10 rounded-2xl shadow-2xl shadow-ink/20 p-4 max-w-xs">
+ <div class="flex items-start gap-3">
+ <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white flex-shrink-0">
+ <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+ </div>
+ <div class="flex-1 min-w-0">
+ <div class="text-xs font-mono uppercase tracking-widest text-brand-700">Free 15-min consult</div>
+ <p class="text-sm font-semibold text-ink leading-snug mt-1">Reply within 24h. Real human.</p>
+ <a href="/#consultation" class="mt-2 inline-block bg-ink text-white text-xs font-semibold px-3 py-1.5 rounded-full hover:bg-brand-700 transition">Book →</a>
+ </div>
+ <button id="stickyDesktopCtaClose" aria-label="Close" class="text-slate-400 hover:text-ink text-lg leading-none">×</button>
+ </div>
+ </div>
+</div>
+<script>
+(function(){
+ var el = document.getElementById('stickyDesktopCta');
+ var btn = document.getElementById('stickyDesktopCtaClose');
+ if (!el || !btn) return;
+ var dismissed = false;
+ try { dismissed = sessionStorage.getItem('stickyDesktopCtaDismissed') === '1'; } catch(e){}
+ if (dismissed) { el.remove(); return; }
+ function check() {
+ var sc = window.scrollY;
+ var doc = document.documentElement;
+ var pct = sc / (doc.scrollHeight - doc.clientHeight);
+ if (pct > 0.30 && sc > 600) {
+ el.classList.remove('translate-y-32', 'opacity-0');
+ } else {
+ el.classList.add('translate-y-32', 'opacity-0');
+ }
+ }
+ window.addEventListener('scroll', check, {passive:true});
+ btn.addEventListener('click', function(){
+ el.style.display = 'none';
+ try { sessionStorage.setItem('stickyDesktopCtaDismissed','1'); } catch(e){}
+ });
+ check();
+})();
+</script>
+
 </body>
 </html>
