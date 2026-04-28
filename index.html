@@ -2522,6 +2522,71 @@ input:focus, select:focus, textarea:focus {
  </div>
 </section>
 
+<section id="newsletter" class="py-16 lg:py-20 bg-gradient-to-br from-brand-900 via-ink to-brand-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 30%, #f59e0b 0px, transparent 50%), radial-gradient(circle at 80% 70%, #0ea5e9 0px, transparent 50%);" aria-hidden="true"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-gold-300 text-xs font-mono uppercase tracking-widest px-4 py-2 rounded-full">
+      <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+      Newsletter
+    </span>
+    <h2 class="font-display font-bold text-3xl lg:text-5xl tracking-tight mt-6 leading-tight">Thai visa rules change. <span class="serif-emphasis text-gold-300">We track them.</span></h2>
+    <p class="mt-4 text-base lg:text-lg text-brand-100 max-w-xl mx-auto">Royal Gazette announcements, Cabinet rulings, BOI updates — we send a quick summary when something actually changes. Never spam, just signal.</p>
+
+    <form id="subscribeForm" class="mt-8 max-w-md mx-auto">
+      <div class="flex flex-col sm:flex-row gap-2">
+        <input type="email" name="email" required placeholder="your@email.com" class="flex-1 px-4 py-3 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-gold-400 focus:outline-none transition" />
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
+        <input type="hidden" name="source" value="homepage" />
+        <button type="submit" class="bg-gold-500 hover:bg-gold-400 text-ink font-semibold px-6 py-3 rounded-full transition whitespace-nowrap">Subscribe →</button>
+      </div>
+      <p id="subscribeMsg" class="mt-3 text-sm text-brand-200 text-left min-h-[20px]"></p>
+    </form>
+    <p class="mt-4 text-xs text-brand-300">No spam. Unsubscribe one-click. We use Resend (no Mailchimp fingerprinting).</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  const form = document.getElementById('subscribeForm');
+  const msg = document.getElementById('subscribeMsg');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Subscribing...';
+    msg.textContent = '';
+    msg.className = 'mt-3 text-sm text-brand-200 text-left min-h-[20px]';
+    
+    try {
+      const data = Object.fromEntries(new FormData(form).entries());
+      const r = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await r.json();
+      if (r.ok) {
+        msg.textContent = '✓ ' + (json.message || 'Subscribed.');
+        msg.className = 'mt-3 text-sm text-green-300 text-left min-h-[20px]';
+        form.reset();
+      } else {
+        msg.textContent = '✗ ' + (json.error || 'Subscribe failed.');
+        msg.className = 'mt-3 text-sm text-red-300 text-left min-h-[20px]';
+      }
+    } catch (e) {
+      msg.textContent = '✗ Network error. Try again.';
+      msg.className = 'mt-3 text-sm text-red-300 text-left min-h-[20px]';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = orig;
+    }
+  });
+})();
+</script>
+
+
 <section id="consultation" class="py-28 lg:py-36 mesh-deep grain text-white relative overflow-hidden">
  <div class="absolute inset-0 grid-fine opacity-10"></div>
 

@@ -1,46 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 — Page not found · Pattaya Visa Help</title>
-  <meta name="robots" content="noindex" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { colors: { brand:{50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',500:'#0ea5e9',700:'#0369a1',800:'#075985',900:'#0c4a6e'}, gold:{500:'#f59e0b'}, ink:'#0f172a' }, fontFamily: { sans:['Inter','sans-serif'], display:['"Plus Jakarta Sans"','sans-serif'] } } } }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    .mesh-bg { background: radial-gradient(at 20% 20%, rgba(186,230,253,0.5) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(125,211,252,0.4) 0px, transparent 50%), radial-gradient(at 80% 80%, rgba(14,165,233,0.15) 0px, transparent 50%), radial-gradient(at 0% 100%, rgba(186,230,253,0.4) 0px, transparent 50%); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#0c4a6e" />
+<title>Page not found — Pattaya Visa Help</title>
+<meta name="description" content="That page does not exist. Try our visa finder, comparison matrix, or contact us directly for Thailand visa guidance." />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: {
+    brand: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e', 950:'#082f49' },
+    gold: { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706', 700:'#b45309' },
+    ink: '#0a0e1a', paper: '#fafaf9'
+  },
+  fontFamily: {
+    sans: ['Inter', 'system-ui', 'sans-serif'],
+    display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+    serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+    mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+  }
+} } }
+</script>
+<style>
+html, body { color-scheme: light only; background-color: #fafaf9; color: #0a0e1a; margin: 0; }
+.serif-emphasis { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; }
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .7rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: #0369a1; }
+.mesh-light { background: radial-gradient(at 15% 25%, rgba(186,230,253,0.55) 0px, transparent 50%), radial-gradient(at 85% 5%, rgba(125,211,252,0.4) 0px, transparent 50%), #fafaf9; }
+</style>
 </head>
-<body class="font-sans text-ink bg-white antialiased min-h-screen flex flex-col">
+<body class="font-sans text-ink bg-paper antialiased">
 
-  <header class="border-b border-slate-200/80">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2.5">
-        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center text-white font-display font-bold text-lg shadow-md">P</span>
-        <span class="font-display font-bold text-lg tracking-tight">Pattaya Visa Help</span>
+<header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-lg border-b border-ink/8">
+  <div class="max-w-[1400px] mx-auto px-6 h-[60px] flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient></defs>
+        <path d="M20 2L36 8V20C36 28.8 29.2 36.4 20 38C10.8 36.4 4 28.8 4 20V8L20 2Z" fill="url(#g1)"/>
+        <path d="M14 12H22C24.7614 12 27 14.2386 27 17C27 19.7614 24.7614 22 22 22H17V28H14V12ZM17 19H22C23.1046 19 24 18.1046 24 17C24 15.8954 23.1046 15 22 15H17V19Z" fill="white"/>
+      </svg>
+      <span class="font-display font-bold text-base">Pattaya Visa Help</span>
+    </a>
+    <a href="/#consultation" class="bg-ink text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-brand-700 transition">Free consultation</a>
+  </div>
+</header>
+
+<section class="mesh-light py-16 lg:py-24">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <div class="font-display font-bold text-[100px] lg:text-[180px] leading-none text-ink/15 tracking-tighter">404</div>
+    <span class="inline-flex items-center gap-2 bg-white/90 backdrop-blur border border-brand-200 text-brand-800 text-xs font-mono uppercase tracking-widest px-4 py-2 rounded-full shadow-sm mt-4">
+      <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+      Page not found
+    </span>
+    <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight mt-6 leading-tight">
+      That page <span class="serif-emphasis text-brand-700">does not exist</span>
+    </h1>
+    <p class="mt-5 text-base lg:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto">
+      The URL you followed may be outdated, mistyped, or the page was moved. Try one of these instead:
+    </p>
+  </div>
+</section>
+
+<section class="py-12 lg:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+      <a href="/tools/visa-finder/" class="group bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 hover:border-brand-600 hover:shadow-xl rounded-2xl p-6 transition">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white text-xl font-bold mb-3">?</div>
+        <h3 class="font-display font-bold text-lg text-ink">Visa Finder Quiz</h3>
+        <p class="text-sm text-slate-600 mt-1.5">5 questions narrow 12 visas to top 1-3.</p>
+      </a>
+      <a href="/compare/visa-comparison-matrix/" class="group bg-white border border-ink/10 hover:border-brand-300 hover:shadow-xl rounded-2xl p-6 transition">
+        <div class="w-12 h-12 rounded-xl bg-ink flex items-center justify-center text-white text-lg font-bold mb-3">12</div>
+        <h3 class="font-display font-bold text-lg text-ink">Compare all 12 visas</h3>
+        <p class="text-sm text-slate-600 mt-1.5">Side-by-side matrix.</p>
+      </a>
+      <a href="/tools/cost-calculator/" class="group bg-gradient-to-br from-gold-50 to-white border-2 border-gold-300 hover:border-gold-500 hover:shadow-xl rounded-2xl p-6 transition">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white text-xl font-bold mb-3">฿</div>
+        <h3 class="font-display font-bold text-lg text-ink">Cost Calculator</h3>
+        <p class="text-sm text-slate-600 mt-1.5">Annual + 5-year totals.</p>
       </a>
     </div>
-  </header>
 
-  <main class="flex-1 mesh-bg flex items-center justify-center px-6">
-    <div class="max-w-2xl text-center py-20">
-      <p class="font-display font-extrabold text-9xl text-brand-200 leading-none">404</p>
-      <h1 class="mt-6 font-display font-bold text-4xl lg:text-5xl tracking-tight">Page not found</h1>
-      <p class="mt-6 text-lg text-slate-600 leading-relaxed">The page you're looking for doesn't exist or has moved. Try one of these instead:</p>
-      <div class="mt-10 flex flex-wrap justify-center gap-3">
-        <a href="/" class="bg-ink hover:bg-brand-900 text-white font-semibold px-6 py-3 rounded-xl transition">Home</a>
-        <a href="/#visas" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-xl transition">All visa types</a>
-        <a href="/compare/visa-comparison-matrix/" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-xl transition">Compare visas</a>
-        <a href="/contact/" class="bg-white hover:bg-slate-50 text-ink border border-slate-300 font-semibold px-6 py-3 rounded-xl transition">Contact us</a>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <a href="/" class="block bg-white border border-ink/10 hover:border-brand-300 rounded-xl p-4 transition">
+        <div class="font-display font-bold text-ink text-sm">Homepage</div>
+        <div class="text-xs text-slate-500 mt-1">Start over</div>
+      </a>
+      <a href="/visas/dtv/" class="block bg-white border border-ink/10 hover:border-brand-300 rounded-xl p-4 transition">
+        <div class="font-display font-bold text-ink text-sm">DTV — Digital Nomad</div>
+        <div class="text-xs text-slate-500 mt-1">5 years, ฿10k</div>
+      </a>
+      <a href="/visas/retirement-non-o/" class="block bg-white border border-ink/10 hover:border-brand-300 rounded-xl p-4 transition">
+        <div class="font-display font-bold text-ink text-sm">Retirement Non-O</div>
+        <div class="text-xs text-slate-500 mt-1">50+ retirees</div>
+      </a>
+      <a href="/blog/" class="block bg-white border border-ink/10 hover:border-brand-300 rounded-xl p-4 transition">
+        <div class="font-display font-bold text-ink text-sm">Blog &amp; news</div>
+        <div class="text-xs text-slate-500 mt-1">Recent rule changes</div>
+      </a>
+      <a href="/guides/embassy-directory/" class="block bg-white border border-ink/10 hover:border-brand-300 rounded-xl p-4 transition">
+        <div class="font-display font-bold text-ink text-sm">Embassy directory</div>
+        <div class="text-xs text-slate-500 mt-1">Worldwide</div>
+      </a>
+      <a href="/guides/glossary/" class="block bg-white border border-ink/10 hover:border-brand-300 rounded-xl p-4 transition">
+        <div class="font-display font-bold text-ink text-sm">Visa glossary</div>
+        <div class="text-xs text-slate-500 mt-1">Every acronym explained</div>
+      </a>
+    </div>
+
+    <div class="mt-12 p-6 bg-gradient-to-br from-brand-900 to-ink rounded-2xl text-white text-center">
+      <h2 class="font-display font-bold text-xl mb-2">Still cannot find it?</h2>
+      <p class="text-sm text-brand-100 mb-4">Free 15-minute consultation. Tell us what you were looking for and we will help.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/#consultation" class="inline-flex items-center justify-center gap-2 bg-white text-ink font-semibold px-6 py-3 rounded-full hover:bg-gold-300 transition">Book free consult →</a>
+        <a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-green-400 transition">WhatsApp us</a>
       </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <footer class="bg-ink text-slate-400 py-8 text-center text-sm">
-    <p>© <span id="year"></span> Pattaya Visa Help</p>
-  </footer>
+<footer class="bg-ink text-slate-400 py-8 mt-12">
+  <div class="max-w-[1400px] mx-auto px-6 text-center text-sm">
+    <p>&copy; <span id="year">2026</span> Pattaya Visa Help · <a href="/" class="text-brand-300 hover:text-white">pattayavisahelp.com</a></p>
+  </div>
+</footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
