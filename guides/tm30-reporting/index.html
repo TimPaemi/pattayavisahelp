@@ -1360,6 +1360,41 @@ input:focus, select:focus, textarea:focus {
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to file TM30 address registration",
+  "description": "Register your Thai address within 24 hours of arrival or moving",
+  "totalTime": "PT10M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Confirm your landlord/host",
+      "text": "TM30 is filed by the property owner, not the foreigner. Verify they will file."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Within 24 hours of arrival",
+      "text": "TM30 must be submitted within 24 hours of you taking up residence."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Method",
+      "text": "Online via section3.immigration.go.th, by mail, or in person at Jomtien."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Get the receipt",
+      "text": "Required for visa extension. Keep both digital and printed copy."
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-ink bg-paper antialiased">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -1849,5 +1884,23 @@ if (lf) {
   #stickyMobileCta { display: none !important; }
 }
 </style>
+
+<!-- Cloudflare Turnstile (anti-spam, free) -->
+<!-- To activate: 
+     1. Get site key at https://dash.cloudflare.com/?to=/:account/turnstile
+     2. Replace YOUR_SITE_KEY below
+     3. Add cf-turnstile div inside lead forms: <div class="cf-turnstile" data-sitekey="YOUR_KEY"></div>
+     4. Verify token in lead.js using TURNSTILE_SECRET env var
+-->
+<!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
+
+<!-- Cloudflare Web Analytics (free, privacy-friendly, no cookies, GDPR-compliant) -->
+<!-- To activate:
+     1. Enable in Cloudflare dash → Analytics & Logs → Web Analytics
+     2. Copy the JS beacon token
+     3. Uncomment below and paste your token
+-->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+
 </body>
 </html>

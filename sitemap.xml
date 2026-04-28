@@ -21,6 +21,18 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/blog/30-day-visa-exempt-rollback/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/blog/tdac-step-by-step/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/tools/bank-checker/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -195,10 +207,22 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/guides/embassy-directory/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/guides/foreign-marriage-legalisation/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/guides/glossary/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/guides/health-insurance/</loc>

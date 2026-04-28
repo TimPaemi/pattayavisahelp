@@ -38,6 +38,23 @@ export async function onRequestPost(context) {
       return new Response(JSON.stringify({ success: true }), { status: 200, headers });
     }
 
+    // Verify Cloudflare Turnstile token (anti-spam)
+    if (env.TURNSTILE_SECRET && data['cf-turnstile-response']) {
+      const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          secret: env.TURNSTILE_SECRET,
+          response: data['cf-turnstile-response'],
+          remoteip: request.headers.get('cf-connecting-ip')
+        })
+      });
+      const verify = await verifyRes.json();
+      if (!verify.success) {
+        return new Response(JSON.stringify({ error: 'Spam check failed. Please try again.' }), { status: 403, headers });
+      }
+    }
+
     // Validate required fields
     if (!data.firstName || !data.email || !data.visaInterest) {
       return new Response(
@@ -191,54 +208,4 @@ export async function onRequestPost(context) {
     }
 
     // Optional: instant Slack/Discord webhook notification
-    // Set SLACK_WEBHOOK_URL or DISCORD_WEBHOOK_URL in Cloudflare Pages env vars
-    if (env.SLACK_WEBHOOK_URL) {
-      // Slack-format payload (works with Slack incoming webhooks)
-      const slackText = `:bell: *New lead — ${visaLabel}*\n*${lead.firstName} ${lead.lastName}* (${lead.ipCountry})\n${lead.email}${lead.phone ? ' · ' + lead.phone : ''}\n${lead.situation ? '> ' + lead.situation.slice(0, 300) : ''}`;
-      try {
-        await fetch(env.SLACK_WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: slackText }),
-        });
-      } catch (e) { console.error('Slack webhook failed:', e); }
-    }
-
-    if (env.DISCORD_WEBHOOK_URL) {
-      // Discord-format payload
-      const discordContent = `🔔 **New lead — ${visaLabel}**\n**${lead.firstName} ${lead.lastName}** (${lead.ipCountry})\n${lead.email}${lead.phone ? ' · ' + lead.phone : ''}\n${lead.situation ? '> ' + lead.situation.slice(0, 300) : ''}`;
-      try {
-        await fetch(env.DISCORD_WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ content: discordContent }),
-        });
-      } catch (e) { console.error('Discord webhook failed:', e); }
-    }
-
-    return new Response(
-      JSON.stringify({ success: true, message: 'Thanks — we\'ll reply within 24 hours.' }),
-      { status: 200, headers }
-    );
-
-  } catch (err) {
-    console.error('Lead handler error:', err);
-    return new Response(
-      JSON.stringify({ error: 'Server error. Please email info@pattayavisahelp.com directly.' }),
-      { status: 500, headers }
-    );
-  }
-}
-
-// Handle OPTIONS for CORS preflight
-export async function onRequestOptions() {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': 'https://pattayavisahelp.com',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Max-Age': '86400',
-    },
-  });
-}
+    // Set SLACK_WEBHOOK_URL o

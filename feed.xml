@@ -3,15 +3,32 @@
 <channel>
   <title>Pattaya Visa Help — Thailand visa news</title>
   <link>https://pattayavisahelp.com/blog/</link>
-  <description>Thailand visa policy updates and rule changes from Pattaya Visa Help.</description>
+  <description>Thailand visa policy updates, rule changes, and step-by-step guides from Pattaya Visa Help.</description>
   <language>en-us</language>
   <atom:link href="https://pattayavisahelp.com/feed.xml" rel="self" type="application/rss+xml" />
   <lastBuildDate>Sat, 26 Apr 2026 12:00:00 +0700</lastBuildDate>
+  
+  <item>
+    <title>TDAC Step by Step — Thailand Digital Arrival Card 2026 Guide</title>
+    <link>https://pattayavisahelp.com/blog/tdac-step-by-step/</link>
+    <guid>https://pattayavisahelp.com/blog/tdac-step-by-step/</guid>
+    <description>How to fill the Thailand Digital Arrival Card. Step-by-step: passport, travel info, accommodation, health declaration. Free at tdac.immigration.go.th.</description>
+    <pubDate>Sat, 26 Apr 2026 12:00:00 +0700</pubDate>
+  </item>
+  
+  <item>
+    <title>Thailand 60→30 Day Visa-Exempt Rollback — What We Know</title>
+    <link>https://pattayavisahelp.com/blog/30-day-visa-exempt-rollback/</link>
+    <guid>https://pattayavisahelp.com/blog/30-day-visa-exempt-rollback/</guid>
+    <description>Thailand cabinet reviewing 60→30 day visa-exempt rollback. What is announced, when it might change, how to plan.</description>
+    <pubDate>Sat, 26 Apr 2026 12:00:00 +0700</pubDate>
+  </item>
+  
   <item>
     <title>Every Thailand Visa Change Going Into 2026 — Recap</title>
     <link>https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/</link>
     <guid>https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/</guid>
-    <description>TDAC mandatory, 17→7 visa code consolidation, 60→30 day visa-exempt rollback, stricter enforcement. What every traveler and expat needs to know in 2026.</description>
+    <description>TDAC mandatory, 17→7 visa code consolidation, 60→30 day visa-exempt rollback. What every traveler and expat needs to know in 2026.</description>
     <pubDate>Sat, 26 Apr 2026 12:00:00 +0700</pubDate>
   </item>
 </channel>

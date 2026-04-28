@@ -1360,6 +1360,41 @@ input:focus, select:focus, textarea:focus {
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to get a Thailand re-entry permit",
+  "description": "Apply for a single or multiple re-entry permit before leaving Thailand",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Decide single vs multi",
+      "text": "Single \u0e3f1,000 (one trip out and back). Multi \u0e3f3,800 (unlimited trips for visa duration)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Apply at airport on departure",
+      "text": "Visit immigration desk at airport before check-in. Allow 30+ minutes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Or apply at immigration office",
+      "text": "Jomtien or any immigration office, in advance. Faster than airport queue."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Bring documents",
+      "text": "Passport, current visa, \u0e3f1,000 or \u0e3f3,800 cash, photo (if applying at office)."
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-ink bg-paper antialiased">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -1845,5 +1880,23 @@ if (lf) {
   #stickyMobileCta { display: none !important; }
 }
 </style>
+
+<!-- Cloudflare Turnstile (anti-spam, free) -->
+<!-- To activate: 
+     1. Get site key at https://dash.cloudflare.com/?to=/:account/turnstile
+     2. Replace YOUR_SITE_KEY below
+     3. Add cf-turnstile div inside lead forms: <div class="cf-turnstile" data-sitekey="YOUR_KEY"></div>
+     4. Verify token in lead.js using TURNSTILE_SECRET env var
+-->
+<!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
+
+<!-- Cloudflare Web Analytics (free, privacy-friendly, no cookies, GDPR-compliant) -->
+<!-- To activate:
+     1. Enable in Cloudflare dash → Analytics & Logs → Web Analytics
+     2. Copy the JS beacon token
+     3. Uncomment below and paste your token
+-->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+
 </body>
 </html>

@@ -1362,6 +1362,53 @@ input:focus, select:focus, textarea:focus {
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to convert your driving licence to Thai",
+  "description": "Direct conversion of EU/US/UK/etc. licence to Thai driving licence",
+  "totalTime": "PT4H",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Get residence certificate",
+      "text": "From Jomtien Immigration, \u0e3f500. Same-day for prepared documents."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Get medical certificate",
+      "text": "Any clinic, \u0e3f300. Valid 30 days. Standard checkup."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Visit DLT office",
+      "text": "Department of Land Transport. Pattaya: Sukhumvit Road, North Pattaya. Bring all documents."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Take vision and reaction tests",
+      "text": "Vision (Snellen chart), color blindness (Ishihara), reaction time (foot pedal)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Attend 1-hour Thai road safety course",
+      "text": "Held at DLT. In Thai with English subtitles. Multiple-choice quiz at end."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Pay and get licence",
+      "text": "\u0e3f205 car / \u0e3f305 motorbike. Photo session, then licence printed same-day."
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-ink bg-paper antialiased">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -1840,5 +1887,23 @@ if (lf) {
   #stickyMobileCta { display: none !important; }
 }
 </style>
+
+<!-- Cloudflare Turnstile (anti-spam, free) -->
+<!-- To activate: 
+     1. Get site key at https://dash.cloudflare.com/?to=/:account/turnstile
+     2. Replace YOUR_SITE_KEY below
+     3. Add cf-turnstile div inside lead forms: <div class="cf-turnstile" data-sitekey="YOUR_KEY"></div>
+     4. Verify token in lead.js using TURNSTILE_SECRET env var
+-->
+<!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
+
+<!-- Cloudflare Web Analytics (free, privacy-friendly, no cookies, GDPR-compliant) -->
+<!-- To activate:
+     1. Enable in Cloudflare dash → Analytics & Logs → Web Analytics
+     2. Copy the JS beacon token
+     3. Uncomment below and paste your token
+-->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+
 </body>
 </html>
