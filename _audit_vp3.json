@@ -1,0 +1,59 @@
+{
+  "viewport": "iPhone-Plus",
+  "results": {
+    "index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "visas/dtv/index.html": [
+      {
+        "t": "hidden",
+        "n": 4
+      }
+    ],
+    "visas/retirement-non-o/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "visas/ltr/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "tools/visa-finder/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "tools/cost-calculator/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "compare/visa-comparison-matrix/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "pattaya/living-in-pattaya/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ],
+    "guides/visa-overstay-penalties/index.html": [
+      {
+        "t": "hidden",
+        "n": 1
+      }
+    ]
+  }
+}
