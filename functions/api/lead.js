@@ -207,5 +207,74 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Optional: instant Slack/Discord webhook notification
-    // Set SLACK_WEBHOOK_URL o
+    // Optional: instant Slack webhook notification
+    // Set SLACK_WEBHOOK_URL env var to enable
+    if (env.SLACK_WEBHOOK_URL) {
+      try {
+        await fetch(env.SLACK_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            text: `:bell: *New lead — ${visaLabel}*\n*Name:* ${lead.firstName} ${lead.lastName}\n*Email:* ${lead.email}${lead.phone ? `\n*Phone:* ${lead.phone}` : ''}\n*Country:* ${lead.ipCountry}\n*Page:* ${lead.page}${lead.situation ? `\n*Situation:* ${lead.situation.slice(0, 300)}` : ''}`
+          }),
+        });
+      } catch (e) {
+        console.error('Slack webhook failed:', e);
+      }
+    }
+
+    // Optional: instant Discord webhook notification
+    // Set DISCORD_WEBHOOK_URL env var to enable
+    if (env.DISCORD_WEBHOOK_URL) {
+      try {
+        await fetch(env.DISCORD_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            embeds: [{
+              title: `New lead — ${visaLabel}`,
+              color: 0x0ea5e9,
+              fields: [
+                { name: 'Name', value: `${lead.firstName} ${lead.lastName}`, inline: true },
+                { name: 'Email', value: lead.email, inline: true },
+                { name: 'Country', value: lead.ipCountry, inline: true },
+                ...(lead.phone ? [{ name: 'Phone', value: lead.phone, inline: true }] : []),
+                ...(lead.situation ? [{ name: 'Situation', value: lead.situation.slice(0, 1000) }] : []),
+                { name: 'Page', value: lead.page },
+              ],
+              timestamp: lead.timestamp,
+            }],
+          }),
+        });
+      } catch (e) {
+        console.error('Discord webhook failed:', e);
+      }
+    }
+
+    // Success response
+    return new Response(
+      JSON.stringify({ success: true, message: 'Thanks. We will reply within 24 hours.' }),
+      { status: 200, headers }
+    );
+
+  } catch (err) {
+    console.error('Lead handler error:', err);
+    return new Response(
+      JSON.stringify({ error: 'Server error. Please try again or email info@pattayavisahelp.com directly.' }),
+      { status: 500, headers }
+    );
+  }
+}
+
+// Handle CORS preflight requests
+export async function onRequestOptions() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': 'https://pattayavisahelp.com',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Max-Age': '86400',
+    },
+  });
+}
