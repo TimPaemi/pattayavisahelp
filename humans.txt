@@ -1,0 +1,29 @@
+/* TEAM */
+
+Founder + Editor: Tim
+Contact: info@pattayavisahelp.com
+WhatsApp: +66 96 728 6999
+Location: Pattaya, Chonburi, Thailand
+Twitter: @pattayavisahelp
+
+/* SITE */
+
+Last update: 2026-05-10
+Standards: HTML5, CSS3, Schema.org, JSON-LD, RSS 2.0, JSON Feed 1.1
+Components: Tailwind CSS (cdn.tailwindcss.com), Plus Jakarta Sans, Inter, Instrument Serif, JetBrains Mono
+Hosting: Cloudflare Pages
+Functions: Cloudflare Pages Functions (lead.js, subscribe.js)
+Email: Resend
+Mail relay: leads@pattayavisahelp.com
+Storage: Cloudflare KV (LEADS_KV, SUBSCRIBERS_KV)
+Built by: Pattaya Authority — https://pattaya-authority.com/
+
+/* PHILOSOPHY */
+
+Independent. No agent kickbacks. Primary-source research (Royal Gazette, MFA, Immigration Bureau).
+Honest about what we know and what we don't. Real human replies within 24 hours.
+We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bureau.
+
+/* SECURITY */
+
+Vulnerability reports: see /.well-known/security.txt

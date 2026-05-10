@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Pattaya Visa Help</ShortName>
+  <LongName>Pattaya Visa Help — Thailand Visa Search</LongName>
+  <Description>Search Thailand visa guidance, pillar pages, comparisons, tools, and glossary on Pattaya Visa Help.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image height="16" width="16" type="image/png">https://pattayavisahelp.com/favicon-32x32.png</Image>
+  <Image height="180" width="180" type="image/png">https://pattayavisahelp.com/apple-touch-icon.png</Image>
+  <Url type="text/html" method="get" template="https://www.google.com/search?q=site%3Apattayavisahelp.com+{searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://pattayavisahelp.com/opensearch.xml"/>
+  <moz:SearchForm>https://www.google.com/search</moz:SearchForm>
+  <Developer>Pattaya Visa Help</Developer>
+  <Contact>info@pattayavisahelp.com</Contact>
+  <Tags>Thailand visa Pattaya DTV LTR retirement immigration</Tags>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>en</Language>
+</OpenSearchDescription>
