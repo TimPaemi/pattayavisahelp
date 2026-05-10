@@ -1,0 +1,51 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Pattaya Visa Help — News & Updates",
+  "home_page_url": "https://pattayavisahelp.com/",
+  "feed_url": "https://pattayavisahelp.com/feed.json",
+  "description": "Royal Gazette announcements, Cabinet rulings, BOI updates, immigration practice changes — Thailand visa news from Pattaya.",
+  "language": "en",
+  "authors": [
+    {
+      "name": "Pattaya Visa Help",
+      "url": "https://pattayavisahelp.com/about/"
+    }
+  ],
+  "icon": "https://pattayavisahelp.com/og-default.png",
+  "favicon": "https://pattayavisahelp.com/favicon.svg",
+  "items": [
+    {
+      "id": "https://pattayavisahelp.com/blog/tdac-step-by-step/",
+      "url": "https://pattayavisahelp.com/blog/tdac-step-by-step/",
+      "title": "TDAC Step by Step — Thailand Digital Arrival Card 2026 Guide",
+      "content_text": "How to fill the Thailand Digital Arrival Card. Step-by-step: passport details, travel info, accommodation, health declaration. Free at tdac.immigration.go.th.",
+      "date_published": "2026-04-26T00:00:00Z",
+      "author": {
+        "name": "Pattaya Visa Help",
+        "url": "https://pattayavisahelp.com/about/"
+      }
+    },
+    {
+      "id": "https://pattayavisahelp.com/blog/30-day-visa-exempt-rollback/",
+      "url": "https://pattayavisahelp.com/blog/30-day-visa-exempt-rollback/",
+      "title": "Thailand 60→30 Day Visa-Exempt Rollback — What We Know",
+      "content_text": "Thailand cabinet reviewing 60→30 day visa-exempt rollback. As of April 2026 still 60 days. Whats announced, when it might change, how to plan.",
+      "date_published": "2026-04-26T00:00:00Z",
+      "author": {
+        "name": "Pattaya Visa Help",
+        "url": "https://pattayavisahelp.com/about/"
+      }
+    },
+    {
+      "id": "https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/",
+      "url": "https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/",
+      "title": "Every Thailand Visa Change Going Into 2026 — Recap",
+      "content_text": "TDAC mandatory, 17→7 visa code consolidation, 60→30 day visa-exempt rollback, stricter enforcement. What every traveler and expat needs to know in 2026.",
+      "date_published": "2026-04-26T00:00:00Z",
+      "author": {
+        "name": "Pattaya Visa Help",
+        "url": "https://pattayavisahelp.com/about/"
+      }
+    }
+  ]
+}

@@ -3,32 +3,32 @@
   <url>
     <loc>https://pattayavisahelp.com/about/</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/best-visa/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/best-visa/under-100k/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/best-visa/under-20k/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/best-visa/under-500k/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/</loc>
@@ -105,8 +105,8 @@
   <url>
     <loc>https://pattayavisahelp.com/contact/</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/faq/</loc>
@@ -349,6 +349,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/partners/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/pattaya/australia-to-thailand/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -441,50 +447,56 @@
   <url>
     <loc>https://pattayavisahelp.com/privacy/</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/content-creator/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/diving-instructor/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/dj/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/fitness-trainer/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/online-business-owner/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/professions/yoga-teacher/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/services/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/sitemap/</loc>
@@ -495,8 +507,8 @@
   <url>
     <loc>https://pattayavisahelp.com/terms/</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pattayavisahelp.com/tools/bank-checker/</loc>
