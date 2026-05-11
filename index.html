@@ -206,7 +206,7 @@ footer{border-top:1px solid var(--border);background:#000;padding:5rem 1.5rem 2r
 @media (max-width:1024px){.nav{top:auto;bottom:.75rem;right:.5rem;left:.5rem;justify-content:center;flex-wrap:wrap}.brand{top:1rem;left:1rem;font-size:.95rem}.hero{padding:6rem 1rem 3rem}.section{padding:4rem 1rem}.lead-wrap{padding:2rem 1.25rem}}
 </style>
 </head>
-<body>
+<body class="v2">
 
 <div class="mq"><div class="mq-t">
 <span class="mq-i"><span class="s">★</span> DTV · 5-YEAR DIGITAL NOMAD VISA · LIVE 2024</span><span class="mq-i x">×</span>
@@ -320,82 +320,4 @@ footer{border-top:1px solid var(--border);background:#000;padding:5rem 1.5rem 2r
 </section>
 
 <section class="section" id="faq">
-<div class="section-hd" style="text-align:center"><div class="s-label" style="justify-content:center"><span class="num">//</span> Quick answers</div><h2>FAQ.</h2></div>
-<div class="faq">
-<details><summary>Are you an agent? Do you take commissions?</summary><p>No. PVH is independent. The reply is free because it's free. If you want a specialist (lawyer or agent) we'll match you to a vetted Pattaya one — we don't take a cut from either side. You pay them direct.</p></details>
-<details><summary>Which visa is best for digital nomads in Pattaya?</summary><p>DTV in 95% of cases. 5 years, 180 days per entry, remote-work permitted, no Thai tax if you don't remit. The full breakdown lives at <a href="/visas/dtv/" style="color:var(--cyan)">/visas/dtv/</a>.</p></details>
-<details><summary>Do I have to pay Thai tax on foreign income?</summary><p>Depends. LTR holders (Royal Decree 743) are exempt from remittance tax on foreign income. Everyone else: foreign income remitted within the tax year of earning is taxable above 150K฿. If you stay 180+ days you're a tax resident.</p></details>
-<details><summary>Can I trust the agents you recommend?</summary><p>We've personally worked with them. We verify they're registered (Thai immigration consultant or licensed Thai lawyer), check Pantip and farang complaints, run quiet test cases. The shortlist changes — anyone who slips, drops.</p></details>
-<details><summary>How does the contact process actually work?</summary><p>You send a message (form, email, or WhatsApp). We reply inside 24 hrs (usually faster) with (a) the visa name that fits, (b) the doc list, (c) the realistic cost incl. all hidden fees, (d) the timeline, (e) whether you can DIY or need a specialist. Written, in your inbox, no pressure, no upsell.</p></details>
-<details><summary>Why email + WhatsApp, not phone calls?</summary><p>Because written answers are better. You get them documented, in your timezone, in your language. You can re-read them. We can include links to the right guide on our site. Email + WhatsApp wins for everyone.</p></details>
-<details><summary>Are you based in Pattaya for real?</summary><p>Yes. Jomtien. We reply Mon-Sat 9-18 ICT from a real Pattaya WhatsApp number (+66 96 728 6999). The site is built and maintained from here — no Manila call center, no Bangkok virtual office.</p></details>
-</div>
-</section>
-
-<section class="section" id="contact">
-<div class="section-hd" style="text-align:center"><div class="s-label" style="justify-content:center"><span class="num">//</span> Three ways to reach us</div><h2>Let's <span class="cy">sort</span> it.</h2><p class="lede" style="margin:0 auto 2rem;text-align:center">Tell us where you're at — we'll come back inside 24 hrs (usually faster) with the visa name + a doc list. Pick the channel you prefer.</p></div>
-<div class="contact-row">
-<a href="mailto:info@pattayavisahelp.com" class="contact-channel c-email"><div class="cc-label">// EMAIL · BEST FOR DETAIL</div><div class="cc-action">info@pattayavisahelp.com</div><div class="cc-meta">Reply within 24 hrs · Documented · Multilingual</div></a>
-<a href="https://wa.me/66967286999" target="_blank" rel="noopener" class="contact-channel c-wa"><div class="cc-label">// WHATSAPP · BEST FOR QUICK Qs</div><div class="cc-action">+66 96 728 6999</div><div class="cc-meta">Mon-Sat 9-18 ICT · EN · DE · РУ · TH</div></a>
-<a href="#leadForm" class="contact-channel c-form"><div class="cc-label">// CONTACT FORM · BELOW</div><div class="cc-action">Use the form below</div><div class="cc-meta">Best if you want to lay out the full picture</div></a>
-</div>
-<div class="lead-wrap">
-<form class="lead-form" id="leadForm" action="/api/lead" method="POST">
-<div class="row">
-<div class="field"><label for="firstName" class="req">First name</label><input id="firstName" name="firstName" type="text" required /></div>
-<div class="field"><label for="lastName">Last name</label><input id="lastName" name="lastName" type="text" /></div>
-</div>
-<div class="row">
-<div class="field"><label for="email" class="req">Email</label><input id="email" name="email" type="email" required /></div>
-<div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" type="tel" placeholder="+66..." /></div>
-</div>
-<div class="field"><label for="visaInterest" class="req">Which visa?</label><select id="visaInterest" name="visaInterest" required>
-<option value="">Not sure — help me pick</option>
-<option>DTV (Digital Nomad)</option><option>LTR (Long-Term Resident)</option><option>Thailand Privilege</option>
-<option>Retirement Non-O</option><option>O-A Retirement</option><option>Marriage</option>
-<option>Business / Non-B</option><option>Education / Non-ED</option><option>SMART</option><option>Tourist (TR)</option><option>Other / Multiple</option>
-</select></div>
-<div class="field"><label for="situation">Tell us your situation</label><textarea id="situation" name="situation" placeholder="e.g. UK, 67, retiring, plan to live in Jomtien, ~£3K/month pension, no Thai bank yet..."></textarea></div>
-<button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send message · We'll reply inside 24 hrs →</button>
-<p style="font:500 .68rem/1.5 'JetBrains Mono',monospace;letter-spacing:.1em;color:var(--td);text-align:center;margin:1rem 0 0;text-transform:uppercase">Or email <a href="mailto:info@pattayavisahelp.com" style="color:var(--cyan)">info@pattayavisahelp.com</a> · WhatsApp <a href="https://wa.me/66967286999" target="_blank" rel="noopener" style="color:#25d366">+66 96 728 6999</a> · No spam · We don't sell data</p>
-</form>
-</div>
-</section>
-
-<footer>
-<div class="f-grid">
-<div>
-<div class="f-brand">PATTAYA<span class="accent">VISA</span>HELP</div>
-<p class="f-tag">Independent Thailand visa guidance from Jomtien. 12 pathways mapped, real costs, no agent commissions.</p>
-<p class="f-tag mono" style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--td)"><a href="mailto:info@pattayavisahelp.com" style="color:var(--cyan)">info@pattayavisahelp.com</a><br><a href="https://wa.me/66967286999" target="_blank" rel="noopener" style="color:#25d366">WhatsApp: +66 96 728 6999</a><br>Jomtien, Pattaya</p>
-</div>
-<div><h4>Visas</h4>
-<a href="/visas/dtv/">DTV</a><a href="/visas/ltr/">LTR</a><a href="/visas/privilege-elite/">Privilege</a><a href="/visas/retirement-non-o/">Retirement</a><a href="/visas/marriage-non-o/">Marriage</a><a href="/visas/">All 12 →</a>
-</div>
-<div><h4>Tools</h4>
-<a href="/tools/visa-finder/">Visa Finder</a><a href="/tools/cost-calculator/">Cost Calc</a><a href="/tools/income-test/">Income Test</a><a href="/tools/document-checklist/">Doc List</a><a href="/tools/">All tools →</a>
-</div>
-<div><h4>Learn</h4>
-<a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/glossary/">Glossary</a><a href="/changelog/">Changelog</a><a href="/methodology/">Methodology</a>
-</div>
-<div><h4>About</h4>
-<a href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://pattaya-authority.com" target="_blank" rel="noopener">Pattaya Authority ↗</a>
-</div>
-</div>
-<div class="f-credit"><span class="f-credit-line"></span><span class="f-credit-text">// Site built &amp; managed by <a href="https://pattaya-authority.com" target="_blank" rel="noopener"><b>Pattaya Authority</b></a> · <b>Tim Paemi</b> <span class="star">★</span></span><span class="f-credit-line"></span></div>
-<div class="f-bot"><span>© 2026 Pattaya Visa Help · All rights reserved</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
-<p class="f-disclaimer">Pattaya Visa Help is an independent information and matchmaking service. We are not a licensed law firm and do not file visas directly. All visa decisions, document submissions, and immigration outcomes are the sole responsibility of the applicant and the Thai immigration authorities or licensed specialist you engage. Information current as of <b>10 May 2026</b> and reviewed regularly. Royal Thai immigration rules can change without notice — confirm critical details with your chosen specialist before acting. We do not accept commissions from visa agents or law firms.</p>
-</footer>
-
-<script>
-function updateClock(){
-  const d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Bangkok'}));
-  const hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
-  const el = document.querySelector('.hero-meta .live');
-  if(el) el.textContent = 'PATTAYA · '+hh+':'+mm+' · 32°C CLEAR';
-}
-updateClock(); setInterval(updateClock, 60000);
-</script>
-
-</body>
-</html>
+<
