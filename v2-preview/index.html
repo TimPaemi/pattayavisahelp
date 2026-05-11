@@ -31,13 +31,13 @@ a{color:inherit;text-decoration:none}
 .mq-i .s{color:var(--yel)}.mq-i .x{color:var(--pink);opacity:.7}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* LOGO + NAV */
-.brand{position:fixed;top:1.4rem;left:1.4rem;z-index:100;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;color:var(--t);display:inline-flex;align-items:center;gap:.5rem}
+/* LOGO + NAV — sit BELOW marquee */
+.brand{position:fixed;top:3.5rem;left:1.4rem;z-index:60;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;color:var(--t);display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);padding:.5rem .85rem;border:1px solid var(--border);border-radius:999px}
 .brand .dot{width:.5rem;height:.5rem;background:var(--pink);border-radius:50%;display:inline-block;box-shadow:0 0 12px var(--pink);animation:bp 2s ease-in-out infinite}
 @keyframes bp{0%,100%{opacity:1}50%{opacity:.4}}
 .brand .accent{color:var(--pink)}
 
-.nav{position:fixed;top:1.1rem;right:1.1rem;z-index:100;display:flex;gap:.1rem;padding:.35rem;background:rgba(20,20,20,.85);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:999px}
+.nav{position:fixed;top:3.3rem;right:1.1rem;z-index:60;display:flex;gap:.1rem;padding:.35rem;background:rgba(20,20,20,.85);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:999px}
 .nav a{font:500 .68rem/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--td);padding:.55rem .9rem;border-radius:999px;transition:all .2s}
 .nav a:hover{color:var(--t)}
 .nav a.live{color:var(--pink);background:rgba(236,72,153,.08)}
@@ -161,6 +161,17 @@ footer{border-top:1px solid var(--border);background:#000;padding:5rem 1.5rem 2r
 .f-brand .accent{color:var(--pink)}
 .f-tag{color:var(--tl);font-size:.9rem;line-height:1.5;max-width:320px;margin-bottom:1rem}
 .f-bot{max-width:1400px;margin:0 auto;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font:500 .68rem/1 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--td);text-transform:uppercase}
+
+.f-credit{max-width:1400px;margin:0 auto;padding:2rem 0;display:flex;align-items:center;gap:1.5rem;justify-content:center}
+.f-credit-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--yel),transparent);max-width:200px}
+.f-credit-text{font:500 .72rem/1.4 'JetBrains Mono',monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--tl);text-align:center}
+.f-credit-text a{color:var(--yel);text-decoration:none;border-bottom:1px solid rgba(251,191,36,.4);transition:all .2s}
+.f-credit-text a:hover{color:#fde047;border-bottom-color:#fde047}
+.f-credit-text .star{color:var(--yel)}
+@media (max-width:768px){.f-credit{flex-direction:column;gap:.75rem}.f-credit-line{max-width:80px;height:1px;width:80px}.f-credit-text{font-size:.65rem;line-height:1.6;letter-spacing:.12em}}
+
+.f-disclaimer{max-width:1400px;margin:2.5rem auto 0;padding-top:2rem;border-top:1px solid var(--border);font:400 .78rem/1.6 Inter,sans-serif;color:var(--td);text-align:center}
+.f-disclaimer b{color:var(--tl);font-weight:500}
 
 /* MOBILE */
 @media (max-width:1024px){
@@ -454,21 +465,24 @@ footer{border-top:1px solid var(--border);background:#000;padding:5rem 1.5rem 2r
     <h2>What's <span class="pk">changing</span> in 2026.</h2>
   </div>
   <div class="ways" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
-    <div class="way c1">
+    <a href="/ltr-long-term-resident-visa/" class="way c1">
       <div class="way-num"><span class="v">2026.04</span> / TAX</div>
       <h3>Royal Decree 743 in force</h3>
       <p>LTR holders confirmed exempt from remittance tax on foreign-sourced income. Massive for high earners considering Pattaya.</p>
-    </div>
-    <div class="way c2">
+      <span class="go">Read the LTR breakdown →</span>
+    </a>
+    <a href="/dtv-destination-thailand-visa/" class="way c2">
       <div class="way-num"><span class="v">2026.03</span> / DTV</div>
       <h3>DTV approvals up 38% YoY</h3>
       <p>Pattaya/Jomtien now #2 DTV destination after Bangkok. Soft-power category opening for chefs, fighters, artists.</p>
-    </div>
-    <div class="way c3">
+      <span class="go">DTV deep-dive →</span>
+    </a>
+    <a href="/blog/" class="way c3">
       <div class="way-num"><span class="v">2026.01</span> / TAX</div>
       <h3>180-day residency rule active</h3>
       <p>Foreign income remitted in year-of-earning is taxable. Non-LTR holders should map your tax residency carefully.</p>
-    </div>
+      <span class="go">Tax + residency guide →</span>
+    </a>
   </div>
 </section>
 
@@ -604,10 +618,18 @@ footer{border-top:1px solid var(--border);background:#000;padding:5rem 1.5rem 2r
       <a href="https://pattaya-authority.com" target="_blank">Pattaya Authority ↗</a>
     </div>
   </div>
-  <div class="f-bot">
-    <span>© 2026 Pattaya Visa Help · Jomtien</span>
-    <span>Built in Pattaya · 100% independent</span>
+  <div class="f-credit">
+    <span class="f-credit-line"></span>
+    <span class="f-credit-text">// Site built &amp; managed by <a href="https://pattaya-authority.com" target="_blank" rel="noopener"><b>Pattaya Authority</b></a> · <b>Tim Paemi</b> <span class="star">★</span></span>
+    <span class="f-credit-line"></span>
   </div>
+  <div class="f-bot">
+    <span>© 2026 Pattaya Visa Help · All rights reserved</span>
+    <span>Built in Pattaya · 12.92°N 100.88°E</span>
+  </div>
+  <p class="f-disclaimer">
+    Pattaya Visa Help is an independent information and matchmaking service. We are not a licensed law firm and do not file visas directly. All visa decisions, document submissions, and immigration outcomes are the sole responsibility of the applicant and the Thai immigration authorities or licensed specialist you engage. Information current as of <b>10 May 2026</b> and reviewed regularly. Royal Thai immigration rules can change without notice — confirm critical details with your chosen specialist before acting. We do not accept commissions from visa agents or law firms.
+  </p>
 </footer>
 
 <script>
