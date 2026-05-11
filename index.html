@@ -257,42 +257,8 @@ footer{border-top:1px solid var(--border);background:#000;padding:5rem 1.5rem 2r
   .btt{bottom:6rem;right:1rem;width:42px;height:42px}
 }
 
-/* === ROUND 7 === */
-
-/* CURSOR FOLLOWER */
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .08s ease-out}
-.cursor-dot{width:6px;height:6px;background:var(--pink);border-radius:50%;margin:-3px 0 0 -3px;box-shadow:0 0 16px var(--pink)}
-.cursor-ring{width:30px;height:30px;border:1px solid rgba(6,182,212,.6);border-radius:50%;margin:-15px 0 0 -15px;transition:transform .25s ease-out,width .25s,height .25s,border-color .25s}
-.cursor-ring.hover{width:50px;height:50px;margin:-25px 0 0 -25px;border-color:var(--pink)}
-@media (max-width:1024px){.cursor-dot,.cursor-ring{display:none}}
-html{cursor:none}
-@media (max-width:1024px){html{cursor:auto}}
-
-/* SECTION NUMBER WATERMARKS */
-.section{counter-increment:sec}
-.section::before{content:counter(sec,decimal-leading-zero);position:absolute;top:1.5rem;right:1.5rem;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(4rem,9vw,8rem);line-height:.85;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.04);pointer-events:none;z-index:0;opacity:.9}
-.section > *{position:relative;z-index:1}
-.hero{counter-reset:sec}
-body{counter-reset:sec}
-
-/* ANIMATED CTA BORDER */
-.btn-primary{position:relative;overflow:hidden}
-.btn-primary::before{content:"";position:absolute;inset:-2px;border-radius:6px;background:conic-gradient(from var(--ang,0deg),var(--pink),var(--cyan),var(--yel),var(--pink));z-index:-1;opacity:0;transition:opacity .25s;animation:rot 3s linear infinite}
-.btn-primary:hover::before{opacity:.65}
-@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
-@keyframes rot{to{--ang:360deg}}
-
-/* 3D TILT CARDS */
-.visa,.tool,.way,.contact-channel,.step{will-change:transform;transition:transform .25s ease-out,background .25s,box-shadow .25s,border-color .25s}
-.visa.tilt,.tool.tilt,.way.tilt,.contact-channel.tilt{transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0)) translateZ(0)}
-
-/* TYPEWRITER on hero badge */
-.hero-badge{position:relative}
-.hero-badge::after{content:"_";display:inline-block;margin-left:.15em;color:var(--cyan);animation:blink 1.05s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-
-/* GLOW STRONGER on certain hover */
-.btn-primary:hover{box-shadow:0 0 0 1px #f472b6,0 14px 40px rgba(236,72,153,.55),0 0 60px rgba(236,72,153,.3)}
+/* Subtle hover only — keep it clean */
+.btn-primary:hover{box-shadow:0 0 0 1px #f472b6,0 12px 32px rgba(236,72,153,.45)}
 
 /* LIVE STATUS PILL above contact section */
 .live-pill{display:inline-flex;align-items:center;gap:.55rem;font:600 .68rem/1 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--grn);padding:.55rem 1rem;border:1px solid rgba(16,185,129,.35);border-radius:999px;background:rgba(16,185,129,.06);margin-bottom:1rem;box-shadow:0 0 24px rgba(16,185,129,.08)}
@@ -302,8 +268,6 @@ body{counter-reset:sec}
 <body>
 
 <div class="progress" id="progress"></div>
-<div class="cursor-ring" id="cring"></div>
-<div class="cursor-dot" id="cdot"></div>
 
 <div class="mq"><div class="mq-t">
 <span class="mq-i"><span class="s">★</span> DTV · 5-YEAR DIGITAL NOMAD VISA · LIVE 2024</span><span class="mq-i x">×</span>
@@ -553,83 +517,6 @@ body{counter-reset:sec}
   }
   updateClock(); setInterval(updateClock, 60000);
 
-  // Cursor follower (desktop only)
-  if(window.matchMedia('(min-width:1025px)').matches){
-    var dot = document.getElementById('cdot'), ring = document.getElementById('cring');
-    var rx=0, ry=0, dx=0, dy=0, tx=0, ty=0;
-    window.addEventListener('mousemove', function(e){ tx = e.clientX; ty = e.clientY; });
-    function loop(){
-      dx += (tx - dx) * 0.55;
-      dy += (ty - dy) * 0.55;
-      rx += (tx - rx) * 0.18;
-      ry += (ty - ry) * 0.18;
-      if(dot) dot.style.transform = 'translate3d('+dx+'px,'+dy+'px,0)';
-      if(ring) ring.style.transform = 'translate3d('+rx+'px,'+ry+'px,0)';
-      requestAnimationFrame(loop);
-    }
-    loop();
-    // Hover state
-    document.querySelectorAll('a, button, .way, .visa, .tool, .contact-channel, summary').forEach(function(el){
-      el.addEventListener('mouseenter', function(){ ring && ring.classList.add('hover'); });
-      el.addEventListener('mouseleave', function(){ ring && ring.classList.remove('hover'); });
-    });
-  }
-
-  // Particles in hero
-  (function(){
-    var cv = document.getElementById('particles');
-    if(!cv) return;
-    var ctx = cv.getContext('2d');
-    var dpr = window.devicePixelRatio || 1;
-    function size(){
-      var p = cv.parentElement.getBoundingClientRect();
-      cv.width = p.width * dpr; cv.height = p.height * dpr;
-      cv.style.width = p.width + 'px'; cv.style.height = p.height + 'px';
-    }
-    size();
-    window.addEventListener('resize', size);
-    var pts = [];
-    for(var i=0; i<55; i++){
-      pts.push({
-        x: Math.random() * cv.width,
-        y: Math.random() * cv.height,
-        vx: (Math.random() - 0.5) * 0.3 * dpr,
-        vy: (Math.random() - 0.5) * 0.3 * dpr,
-        r: (0.6 + Math.random() * 1.4) * dpr,
-        c: ['rgba(236,72,153,', 'rgba(6,182,212,', 'rgba(251,191,36,'][Math.floor(Math.random()*3)]
-      });
-    }
-    function draw(){
-      ctx.clearRect(0, 0, cv.width, cv.height);
-      pts.forEach(function(p){
-        p.x += p.vx; p.y += p.vy;
-        if(p.x < 0 || p.x > cv.width) p.vx *= -1;
-        if(p.y < 0 || p.y > cv.height) p.vy *= -1;
-        ctx.fillStyle = p.c + (0.4 + Math.random()*0.3) + ')';
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
-      });
-      requestAnimationFrame(draw);
-    }
-    draw();
-  })();
-
-  // 3D tilt cards on mousemove
-  if(window.matchMedia('(min-width:1025px)').matches){
-    document.querySelectorAll('.visa, .tool, .way, .contact-channel').forEach(function(card){
-      card.classList.add('tilt');
-      card.addEventListener('mousemove', function(e){
-        var r = card.getBoundingClientRect();
-        var cx = (e.clientX - r.left) / r.width - 0.5;
-        var cy = (e.clientY - r.top) / r.height - 0.5;
-        card.style.setProperty('--rx', (-cy * 6) + 'deg');
-        card.style.setProperty('--ry', (cx * 6) + 'deg');
-      });
-      card.addEventListener('mouseleave', function(){
-        card.style.setProperty('--rx', '0deg');
-        card.style.setProperty('--ry', '0deg');
-      });
-    });
-  }
 })();
 </script>
 

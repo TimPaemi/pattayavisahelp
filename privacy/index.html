@@ -262,18 +262,13 @@ body > *{position:relative;z-index:2}
 .mq-i .s{display:inline-block;transition:all .2s}
 
 
-/* ROUND 7+8 */
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .08s ease-out}
-.cursor-dot{width:6px;height:6px;background:var(--pink);border-radius:50%;margin:-3px 0 0 -3px;box-shadow:0 0 16px var(--pink)}
-.cursor-ring{width:30px;height:30px;border:1px solid rgba(6,182,212,.6);border-radius:50%;margin:-15px 0 0 -15px;transition:transform .25s ease-out,width .25s,height .25s,border-color .25s}
-.cursor-ring.hover{width:50px;height:50px;margin:-25px 0 0 -25px;border-color:var(--pink)}
-@media (max-width:1024px){.cursor-dot,.cursor-ring{display:none}}
-@media (min-width:1025px){html{cursor:none}}
+@media (max-width:1024px){}
+
 .article-body h2{counter-increment:h2c}
 .article-body h2::after{box-shadow:0 0 12px rgba(236,72,153,.3)}
 .article-body{counter-reset:h2c}
-.rn,.cc{will-change:transform;transition:transform .25s ease-out,background .25s,box-shadow .25s,border-color .25s}
-.rn.tilt,.cc.tilt{transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0))}
+
+
 
 @media (max-width:1024px){
   body{font-size:16px}
