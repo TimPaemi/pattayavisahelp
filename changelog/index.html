@@ -362,6 +362,7 @@ html{ scroll-padding-top: 96px }
 }
 </style>
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
 </head>
 <body id="top">
 <a href="#main" class="skipto">Skip to content</a>
@@ -411,9 +412,33 @@ html{ scroll-padding-top: 96px }
 <main id="main" class="article-body">
 Site changelog
 
+ 2026-05-12
+ Mobile + a11y polish
+
+ <h2>Sitewide mobile UX + accessibility pass</h2>
+ <p>Hand-rebuilt mobile chrome (compressed marquee, tighter brand/nav pills, scroll-margin-top), added a sticky bottom nav with 5 quick destinations, killed the LTR full-screen overlay bug, added skip-to-content link, prefers-reduced-motion respect, tap-highlight feedback, table overflow handling, empty-form validation flashes on every tool, auto-scroll to results on all 9 tools, scroll-to-question on visa-finder step transitions.</p>
+
+ 2026-05-12
+ SEO hygiene
+
+ <h2>Schema cleanup + entity-encoding fixes + ItemList</h2>
+ <p>Stripped stale "Setting Up a Thai Company" Article schema from 125 pages where it had bled in from a template. Replaced with page-appropriate Blog / CollectionPage / WebPage schema. Fixed 14 pages with multi-encoded ampersand corruption in titles. Added homepage ItemList JSON-LD listing all 12 visa pathways for Google rich results. RSS discovery (link rel alternate) now on every page. hreflang cluster fixed on DE + RU landings (was self-pointing).</p>
+
+ 2026-05-11
+ Content + links
+
+ <h2>Glossary hub + orphan-page sweep</h2>
+ <p>Built a 36-term searchable Thai visa glossary at /glossary/. Detected 27 orphan pages (existed but linked from nowhere) and surfaced them via hub-page additions: 9 new comparison cards on /compare/, 3 new budget tiers on /best-visa/, 8 new profession landings on /professions/. Homepage footer now lists case-studies, resources, sitemap, work-permit, retirement, digital-nomad, gyms + DE/RU language landings with proper hreflang.</p>
+
+ 2026-05-10
+ Tools + visa pillars
+
+ <h2>9 working tools + 12 hand-crafted visa pillars</h2>
+ <p>Rebuilt every interactive tool with real working JS: visa-finder quiz (6-step state machine), cost-calculator, income-test, document-checklist, currency-converter, expiry-countdown, bank-checker, LTR eligibility pre-check, TM30 + 90-day reminder with .ics calendar export. Hand-crafted all 12 visa pillar pages with empire chrome, real Pattaya practitioner content, FAQ schema, and consistent footer credit.</p>
+
  2026-04-26
  Major refresh
- 
+
  <h2>Authority push v2 — 24 new pages, schema upgrade</h2>
 
  2026-04-20
