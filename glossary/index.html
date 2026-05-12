@@ -55,7 +55,80 @@ footer{border-top:1px solid var(--border);padding:60px 24px 40px;text-align:cent
 footer .credit{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--td);text-transform:uppercase;letter-spacing:.15em;line-height:1.8}
 footer .credit a{color:var(--cyan)}
 footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--td);margin-top:8px;opacity:.6}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+
+/* MOBILE-FIX-V2 */
+@media (max-width:760px){
+  .mq{padding:6px 0;font-size:10px}
+  .brand{top:36px;left:14px;padding:7px 11px;font-size:11px}
+  .brand .dot{width:6px;height:6px}
+  .nav{top:36px;right:14px;padding:5px 5px 5px 12px;gap:8px;font-size:10px}
+  .nav a:not(.cta){padding:4px 6px}
+  .nav a.cta{padding:6px 11px}
+  .hero{padding:108px 18px 34px}
+  .hero h1,header h1{font-size:clamp(1.85rem,7vw,2.45rem) !important;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
+  .hero h1 br{display:none}
+  .lede,.sub{font-size:0.98rem !important;line-height:1.55 !important}
+  .crumb,.crumbs{margin-bottom:12px;font-size:10px}
+  .label{margin-bottom:16px;font-size:10px;padding:5px 11px}
+  .wrap,.tool-wrap,main.tool-wrap{padding-left:16px !important;padding-right:16px !important}
+  .stats{gap:8px}
+  .stat{padding:10px 13px;font-size:10px}
+  .stat strong{font-size:17px}
+  section{margin-bottom:38px}
+  h2{font-size:clamp(1.35rem,5.2vw,1.85rem) !important;line-height:1.18;margin-bottom:12px}
+  h3{font-size:1.05rem;margin:18px 0 8px}
+  p{font-size:15px;line-height:1.6}
+  .card{padding:18px 18px 20px;border-radius:12px}
+  .card+.card{margin-top:14px}
+  .fld{margin-bottom:14px}
+  .fld label{font-size:10px;margin-bottom:6px}
+  .fld input,.fld select,.fld textarea{padding:12px 14px;font-size:15px;border-radius:9px}
+  .row{gap:10px}
+  .btn{padding:12px 20px;font-size:12px;letter-spacing:.08em}
+  .cta-box,.cta-row{padding:22px !important}
+  .cta-row{padding:0 !important;flex-direction:column}
+  .cta-row .btn{width:100%;text-align:center}
+  .table{font-size:13px;border-radius:10px;display:block;overflow-x:auto;max-width:100%}
+  .table th,.table td{padding:10px 12px}
+  .grid,.related{gap:10px !important;grid-template-columns:1fr !important}
+  ul li,ol li{font-size:14px;padding:4px 0 4px 24px}
+  footer{padding:40px 16px 28px !important}
+  footer .credit,footer .f-tag,footer .f-credit-text{font-size:10px !important;line-height:1.75 !important;letter-spacing:.12em !important}
+  footer .coords{font-size:9px}
+  .results{margin-top:18px}
+  .results h2{font-size:1.25rem !important}
+  .bank,.cat,.deadline,.term{padding:14px 16px}
+  .bank-name,.cat-name,.deadline-name,.term-name{font-size:1rem}
+  .flags{grid-template-columns:repeat(2,1fr)}
+  .flag-pill{padding:8px 10px;font-size:11px}
+  .pro-tips,.summary{padding:16px}
+  .export-row,.cta-row{gap:8px}
+  .deadline-head{flex-direction:column;align-items:flex-start}
+  .bank-head,.cat-head{align-items:flex-start}
+  /* prevent any stray overflow */
+  body{overflow-x:hidden}
+  *{max-width:100%}
+  pre,code{white-space:pre-wrap;word-break:break-word}
+}
+@media (max-width:400px){
+  .brand{font-size:10px;padding:6px 9px;letter-spacing:.01em}
+  .nav a:not(.cta){display:none}
+  .hero{padding-top:100px}
+  .hero h1,header h1{font-size:1.75rem !important}
+  .stat{padding:8px 11px}
+  .stat strong{font-size:15px}
+  h2{font-size:1.35rem !important}
+}
 </style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:image" content="https://pattayavisahelp.com/og-default.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Thai Visa Glossary — All Terms Explained · Pattaya Visa Help" />
+<meta name="twitter:description" content="36+ Thai visa terms explained plainly. TM30, TM6, 90-day report, BOI, LTR, DTV, FET, apostille, amphoe, MOR SOR 9, tabien baan, work permit — every term you&#x27;ll meet at Pattaya Immigration." />
+<meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
 </head>
 <body>
 
@@ -85,7 +158,7 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <main class="wrap">
 
 <div class="search-box">
-<input type="text" id="search" placeholder="Search terms — e.g. TM30, BOI, work permit, retirement..." />
+<input type="text" id="search" aria-label="Search glossary" placeholder="Search terms — e.g. TM30, BOI, work permit, retirement..." />
 </div>
 
 <h2 class="cat-head">Forms & filings</h2>
@@ -137,33 +210,4 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <a class="term" href="/glossary/tabien-baan/" data-k="tabien baan house registration"><span class="term-code">DOC</span><div class="term-name">Tabien Baan</div><div class="term-desc">Thai house registration book (blue Thai / yellow foreign).</div></a>
 <a class="term" href="/glossary/apostille/" data-k="apostille document legalisation"><span class="term-code">DOC</span><div class="term-name">Apostille</div><div class="term-desc">International document legalisation — required for foreign marriage paperwork.</div></a>
 <a class="term" href="/glossary/pr/" data-k="pr permanent residence"><span class="term-code">STATUS</span><div class="term-name">PR (Permanent Residence)</div><div class="term-desc">Permanent Residence — rare, ~100 spots/year per country.</div></a>
-<a class="term" href="/glossary/soft-power/" data-k="soft power dtv activity"><span class="term-code">CONCEPT</span><div class="term-name">Soft Power</div><div class="term-desc">Thai cultural activities accepted as DTV-eligible (Muay Thai, cooking, yoga, language).</div></a>
-</div>
-
-</main>
-
-<footer>
-<div class="credit">
-PATTAYA VISA HELP · INDEPENDENT GUIDANCE · JOMTIEN · PATTAYA<br>
-PART OF THE <a href="https://timpaemi.com">PATTAYA AUTHORITY</a> NETWORK · BUILT BY <a href="https://timpaemi.com">TIM PAEMI</a><br>
-info@pattayavisahelp.com · WA +66 96 728 6999
-</div>
-<div class="coords">12.9236°N · 100.8825°E · CHONBURI</div>
-</footer>
-
-<script>
-(function(){
-  var search = document.getElementById('search');
-  var terms = document.querySelectorAll('.term');
-  search.addEventListener('input', function(){
-    var q = this.value.trim().toLowerCase();
-    terms.forEach(function(t){
-      var k = (t.dataset.k || '') + ' ' + t.textContent.toLowerCase();
-      t.style.display = (q === '' || k.indexOf(q) > -1) ? '' : 'none';
-    });
-  });
-})();
-</script>
-
-</body>
-</html>
+<a class="term" href="/glossary/soft-power/" data-k="soft power dtv activity"><span class="term-code">CONCEPT</span><div class="term-name">Soft Power</div><div class="term-desc">Thai cultural activities accepted as DTV-
