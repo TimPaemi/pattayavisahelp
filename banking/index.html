@@ -351,9 +351,9 @@ body > *{position:relative;z-index:2}
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
-  .brand{top:36px;left:14px;padding:7px 11px;font-size:11px}
+  .brand{top:36px !important;left:14px !important;right:auto !important;bottom:auto !important;padding:7px 11px;font-size:11px;width:auto}
   .brand .dot{width:6px;height:6px}
-  .nav{top:36px;right:14px;padding:5px 5px 5px 12px;gap:8px;font-size:10px}
+  .nav{top:36px !important;right:14px !important;left:auto !important;bottom:auto !important;justify-content:flex-start !important;flex-wrap:nowrap !important;padding:5px 5px 5px 12px;gap:8px;font-size:10px;width:auto}
   .nav a:not(.cta){padding:4px 6px}
   .nav a.cta{padding:6px 11px}
   .hero{padding:108px 18px 34px}
@@ -362,7 +362,7 @@ body > *{position:relative;z-index:2}
   .lede,.sub{font-size:0.98rem !important;line-height:1.55 !important}
   .crumb,.crumbs{margin-bottom:12px;font-size:10px}
   .label{margin-bottom:16px;font-size:10px;padding:5px 11px}
-  .wrap,.tool-wrap,main.tool-wrap{padding-left:16px !important;padding-right:16px !important}
+  .wrap,.tool-wrap,main.tool-wrap,.article,.stats-wrap,.contact-section{padding-left:16px !important;padding-right:16px !important}
   .stats{gap:8px}
   .stat{padding:10px 13px;font-size:10px}
   .stat strong{font-size:17px}
@@ -377,15 +377,17 @@ body > *{position:relative;z-index:2}
   .fld input,.fld select,.fld textarea{padding:12px 14px;font-size:15px;border-radius:9px}
   .row{gap:10px}
   .btn{padding:12px 20px;font-size:12px;letter-spacing:.08em}
-  .cta-box,.cta-row{padding:22px !important}
-  .cta-row{padding:0 !important;flex-direction:column}
+  .cta-box{padding:22px !important}
+  .cta-row{padding:0 !important;flex-direction:column;gap:8px}
   .cta-row .btn{width:100%;text-align:center}
-  .table{font-size:13px;border-radius:10px;display:block;overflow-x:auto;max-width:100%}
-  .table th,.table td{padding:10px 12px}
-  .grid,.related{gap:10px !important;grid-template-columns:1fr !important}
+  .table,.article table{font-size:13px;border-radius:10px;display:block;overflow-x:auto;max-width:100%}
+  .table th,.table td,.article th,.article td{padding:10px 12px}
+  .grid,.related,.contact-row,.stats-inner,.lanes{gap:10px !important;grid-template-columns:1fr !important}
   ul li,ol li{font-size:14px;padding:4px 0 4px 24px}
-  footer{padding:40px 16px 28px !important}
-  footer .credit,footer .f-tag,footer .f-credit-text{font-size:10px !important;line-height:1.75 !important;letter-spacing:.12em !important}
+  footer{padding:40px 16px 92px !important}
+  footer .credit,footer .f-tag,footer .f-credit-text,footer .f-bot,footer .f-disclaim{font-size:10px !important;line-height:1.75 !important;letter-spacing:.12em !important}
+  footer .f-grid{grid-template-columns:1fr 1fr !important;gap:1.2rem !important}
+  footer .f-grid h2,footer .f-grid h4{font-size:0.65rem !important;letter-spacing:.18em !important;color:var(--cyan)}
   footer .coords{font-size:9px}
   .results{margin-top:18px}
   .results h2{font-size:1.25rem !important}
@@ -394,13 +396,11 @@ body > *{position:relative;z-index:2}
   .flags{grid-template-columns:repeat(2,1fr)}
   .flag-pill{padding:8px 10px;font-size:11px}
   .pro-tips,.summary{padding:16px}
-  .export-row,.cta-row{gap:8px}
-  .deadline-head{flex-direction:column;align-items:flex-start}
-  .bank-head,.cat-head{align-items:flex-start}
-  /* prevent any stray overflow */
+  .export-row{gap:8px}
+  .deadline-head,.bank-head,.cat-head{align-items:flex-start}
   body{overflow-x:hidden}
-  *{max-width:100%}
   pre,code{white-space:pre-wrap;word-break:break-word}
+  body{padding-bottom:72px}
 }
 @media (max-width:400px){
   .brand{font-size:10px;padding:6px 9px;letter-spacing:.01em}
@@ -411,7 +411,17 @@ body > *{position:relative;z-index:2}
   .stat strong{font-size:15px}
   h2{font-size:1.35rem !important}
 }
+/* MOBILE BOTTOM NAV */
+.mnav{display:none}
+@media (max-width:760px){
+  .mnav{display:flex !important;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(0,0,0,.92);backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.1);padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px));justify-content:space-around;align-items:center;gap:2px}
+  .mnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;color:#a1a1aa;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;border-radius:10px;transition:color .15s,background .15s}
+  .mnav a:hover,.mnav a.active{color:#fafafa;background:rgba(255,255,255,.04)}
+  .mnav a.cta{color:#ec4899}
+  .mnav .ic{font-size:18px;line-height:1;font-weight:400}
+}
 </style>
+<script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
 
@@ -649,13 +659,8 @@ Free 15-min consultation<h2>Want similar help?</h2><p>A real human in Pattaya re
   }, {threshold: 0.5});
   statEls.forEach(function(el){ sio.observe(el); });
 
-  );
-    document.querySelectorAll('.rn,.cc').forEach(function(card){
-      card.classList.add('tilt');
-      card.addEventListener('mousemove',function(e){
-        var r=card.getBoundingClientRect();
-        var cx=(e.clientX-r.left)/r.width-0.5,cy=(e.clientY-r.top)/r.height-0.5;
-        card.style.setProperty('--rx',(-cy*5)+'deg');
-        card.style.setProperty('--ry',(cx*5)+'deg');
-      });
-      card.addEventListener('mouseleave',function(){card.style.setProperty('--rx','0deg');
+})();
+</script>
+
+</body>
+</html>
