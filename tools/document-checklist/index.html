@@ -291,7 +291,10 @@ footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2r
   document.getElementById('genBtn').addEventListener('click', function(){
     var visaKey = document.getElementById('visa').value;
     if (!visaKey){
-      alert('Please select a visa first.');
+      var sel = document.getElementById('visa');
+      sel.style.borderColor = 'var(--pink)';
+      sel.focus();
+      setTimeout(function(){ sel.style.borderColor = ''; }, 2000);
       return;
     }
     var d = DOCS[visaKey];

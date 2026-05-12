@@ -204,7 +204,10 @@ footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2r
     var entryStr = document.getElementById('entry').value;
     var vtype = document.getElementById('vtype').value;
     if (!expStr){
-      alert('Please enter a visa expiry date.');
+      var expEl = document.getElementById('exp');
+      expEl.style.borderColor = 'var(--pink)';
+      expEl.focus();
+      setTimeout(function(){ expEl.style.borderColor = ''; }, 2000);
       return;
     }
     var exp = new Date(expStr + 'T00:00:00');
