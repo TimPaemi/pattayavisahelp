@@ -354,6 +354,19 @@ body > *{position:relative;z-index:2}
 }
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -430,6 +443,7 @@ body > *{position:relative;z-index:2}
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="progress" id="progress"></div>
 
@@ -473,7 +487,7 @@ body > *{position:relative;z-index:2}
 <p class="tldr-text">ED: schools must report 80% attendance to immigration. Many &quot;ED schools&quot; sell visas with light attendance — but enforcement crackdowns in 2024-2025 caught dozens of foreigners and several school operators. MOE…</p>
 </div>
 
-<main class="article-body">
+<main id="main" class="article-body">
 Visa head-to-headLengthED 1yr / DTV 5yrCostED ฿20-40k/yr / DTV ฿2k/yrAttendanceED required / DTV noneForeign incomeED no / DTV yes<h2>The 60-second answer</h2>
 
 <h2>Income requirement</h2>

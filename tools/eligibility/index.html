@@ -91,6 +91,19 @@ footer .credit a{color:var(--cyan)}
 footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--td);margin-top:8px;opacity:.6}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -175,6 +188,7 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body>
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="mq"><div class="mq-t">
 <span class="mq-i"><span class="s">★</span> LTR ELIGIBILITY PRE-CHECK · 4 BOI CATEGORIES</span><span class="mq-i x">×</span>
@@ -195,7 +209,7 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <a href="/contact/" class="cta">Contact →</a>
 </nav>
 
-<header class="hero">
+<header class="hero" id="main">
 <div class="crumb"><a href="/">Home</a> / <a href="/tools/">Tools</a> / LTR Eligibility</div>
 <span class="label">Tool 09 / LTR Pre-Check</span>
 <h1>Do you qualify for<br><span class="gradient">the 10-year LTR?</span></h1>
@@ -285,6 +299,13 @@ info@pattayavisahelp.com · WA +66 96 728 6999
 
   document.getElementById('checkBtn').addEventListener('click', function(){
     var age = parseInt(document.getElementById('age').value) || 0;
+    if (age <= 0){
+      var ageEl = document.getElementById('age');
+      ageEl.style.borderColor = 'var(--pink)';
+      ageEl.focus();
+      setTimeout(function(){ ageEl.style.borderColor = ''; }, 2000);
+      return;
+    }
     var income = parseFloat(document.getElementById('income').value) || 0;
     var assets = parseFloat(document.getElementById('assets').value) || 0;
     var pension = parseFloat(document.getElementById('pension').value) || 0;
@@ -389,13 +410,4 @@ info@pattayavisahelp.com · WA +66 96 728 6999
 
   function fmt(n){
     if (!n) return '$0';
-    return '$' + n.toLocaleString('en-US');
-  }
-  function labelEmploy(v){
-    return {remote:'remote employee', 'thai-skill':'Thai skilled worker', none:'not employed', entrepreneur:'entrepreneur', '':'none selected'}[v] || v;
-  }
-})();
-</script>
-
-</body>
-</html>
+    return '$' + n.toLocaleString('en-US')

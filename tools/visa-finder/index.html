@@ -115,6 +115,19 @@ footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2r
 @media (max-width:1024px){.nav{top:auto;bottom:.5rem;right:.5rem;left:.5rem;justify-content:center;flex-wrap:wrap}.brand{top:1rem;left:1rem;font-size:.9rem;padding:.4rem .7rem}.hero{padding:6rem 1rem 1.5rem}.q-card{padding:1.5rem}}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -196,6 +209,7 @@ footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2r
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body>
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="mq"><div class="mq-t">
 <span class="mq-i"><span class="s">★</span> FREE TOOL · NO EMAIL · 60 SECONDS</span><span class="mq-i x">×</span>
@@ -211,7 +225,7 @@ footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2r
 <a href="/" class="brand"><span class="dot"></span>PATTAYA<span class="accent">VISA</span>HELP</a>
 <nav class="nav"><a href="/#visas">Visas</a><a href="/tools/">Tools</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a><a href="/contact/" class="cta">Contact →</a></nav>
 
-<header class="hero">
+<header class="hero" id="main">
 <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/tools/">Tools</a><span class="sep">/</span><span>Visa Finder</span></div>
 <span class="label">// FREE TOOL · NO EMAIL · 60 SECONDS</span>
 <h1>Find your <span class="pk">visa.</span> <span class="cy">6 questions.</span></h1>
@@ -417,6 +431,11 @@ footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2r
   function renderQuestion() {
     var q = QUESTIONS[state.step];
     var selectedVal = state.answers[q.key];
+    // scroll quiz area into view on each step (mobile UX)
+    try {
+      var offset = quizArea.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({top: Math.max(0, offset), behavior:'smooth'});
+    } catch(e){}
     var optionsHtml = q.options.map(function(o){
       var sel = (selectedVal === o.v) ? ' selected' : '';
       return '<button class="opt'+sel+'" data-key="'+q.key+'" data-val="'+o.v+'" type="button">'+o.t+'</button>';

@@ -348,6 +348,19 @@ body > *{position:relative;z-index:2}
 }
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -424,6 +437,7 @@ body > *{position:relative;z-index:2}
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="progress" id="progress"></div>
 
@@ -467,7 +481,7 @@ body > *{position:relative;z-index:2}
 <p class="tldr-text">$80k/year pension. Royal Decree 743 foreign-income exemption.</p>
 </div>
 
-<main class="article-body">
+<main id="main" class="article-body">
 Retirement hubVisa options4Age50+ requiredTax-exempt pathLTR Wealthy PensionerPillar pages5+<h2>Retirement visa options</h2><a href="/visas/retirement-non-o/">Annual<h3>Retirement Non-O</h3>Read →</a><a href="/visas/retirement-o-a/">Embassy<h3>Retirement O-A</h3>Read →</a><a href="/visas/retirement-o-x/">10-year<h3>Retirement O-X</h3>Read →</a><a href="/visas/ltr/">10-year + tax<h3>LTR Wealthy Pensioner</h3><p>$80k/year pension. Royal Decree 743 foreign-income exemption.</p>Read →</a><a href="/visas/privilege-elite/">Membership<h3>Privilege (Elite)</h3><p>Pay-once-forget. ฿900k-฿5M. No insurance requirement.</p>Read →</a><a href="/compare/non-o-vs-o-a/">Compare<h3>Non-O vs O-A retirement</h3><p>When each makes sense.</p>Read →</a><h2>Comparisons + tools</h2><p>Decision-making aids for the retirement choice.</p><a href="/compare/dtv-vs-ltr/">Compare<h3>DTV vs LTR</h3><p>For under-50 + over-50 alternative paths.</p>Read →</a><a href="/compare/privilege-vs-ltr/">Compare<h3>Privilege vs LTR</h3><p>Premium retirement showdown.</p>Read →</a><a href="/compare/o-a-vs-o-x/">Compare<h3>O-A vs O-X</h3><p>For high-net-worth from eligible countries.</p>Read →</a><a href="/tools/eligibility/">Tool<h3>LTR Eligibility Checker</h3><p>Quick Wealthy Pensioner / Wealthy Global Citizen check.</p>Read →</a><a href="/tools/income-test/">Tool<h3>Income Test Calculator</h3><p>฿65k/month + ฿800k bank combination math.</p>Read →</a><a href="/tools/cost-calculator/">Tool<h3>Cost Calculator</h3><p>5-year all-in retirement budget.</p>Read →</a><h2>Life in Thailand as a retiree</h2><p>The everything-else of retirement.</p><a href="/guides/retiring-in-thailand/">Pillar<h3>Retiring in Thailand</h3><p>Master playbook.</p>Read →</a><a href="/healthcare/">Healthcare<h3>Healthcare hub</h3><p>Hospitals, insurance, costs.</p>Read →</a><a href="/banking/">Banking<h3>Banking hub</h3><p>Thai bank account for retirees.</p>Read →</a><a href="/tax/">Tax<h3>Tax hub</h3><p>LTR exemption + remittance rules.</p>Read →</a><a href="/property/">Property<h3>Property hub</h3><p>Condo ownership for retirees.</p>Read →</a><a href="/pattaya/jomtien/">Pattaya<h3>Jomtien — retiree central</h3><p>Beachfront retirement community.</p>Read →</a>Free 15-min consultation<h2>Want a personal answer?</h2><p>A real human in Pattaya replies within 24 hours.</p><a href="/contact/">Book free consult →</a><a href="https://wa.me/66967286999" target="_blank" rel="noopener noreferrer">WhatsApp +66 96 728 6999</a>
 </main>
 

@@ -57,6 +57,19 @@ footer .credit a{color:var(--cyan)}
 footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--td);margin-top:8px;opacity:.6}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -141,6 +154,7 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body>
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="mq"><div class="mq-t">
 <span class="mq-i"><span class="s">★</span> 36+ THAI VISA TERMS · PLAIN ENGLISH</span><span class="mq-i x">×</span>
@@ -158,7 +172,7 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <a href="/#visas">Visas</a><a href="/tools/">Tools</a><a href="/about/">About</a><a href="/contact/" class="cta">Contact →</a>
 </nav>
 
-<header class="hero">
+<header class="hero" id="main">
 <div class="crumb"><a href="/">Home</a> / Glossary</div>
 <span class="label">Glossary / 36 Terms</span>
 <h1>Thai visa<br><span class="gradient">terms decoded</span></h1>
@@ -220,7 +234,7 @@ footer .coords{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(-
 <a class="term" href="/glossary/tabien-baan/" data-k="tabien baan house registration"><span class="term-code">DOC</span><div class="term-name">Tabien Baan</div><div class="term-desc">Thai house registration book (blue Thai / yellow foreign).</div></a>
 <a class="term" href="/glossary/apostille/" data-k="apostille document legalisation"><span class="term-code">DOC</span><div class="term-name">Apostille</div><div class="term-desc">International document legalisation — required for foreign marriage paperwork.</div></a>
 <a class="term" href="/glossary/pr/" data-k="pr permanent residence"><span class="term-code">STATUS</span><div class="term-name">PR (Permanent Residence)</div><div class="term-desc">Permanent Residence — rare, ~100 spots/year per country.</div></a>
-<a class="term" href="/glossary/soft-power/" data-k="soft power dtv activity"><span class="term-code">CONCEPT</span><div class="term-name">Soft Power</div><div class="term-desc">Thai cultural activities accepted as DTV-</div></a>
+<a class="term" href="/glossary/soft-power/" data-k="soft power dtv activity"><span class="term-code">CONCEPT</span><div class="term-name">Soft Power</div><div class="term-desc">Thai cultural activities accepted as DTV-eligible (Muay Thai, cooking, yoga, language).</div></a>
 </div>
 
 </main>

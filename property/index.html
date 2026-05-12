@@ -348,6 +348,19 @@ body > *{position:relative;z-index:2}
 }
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -424,6 +437,7 @@ body > *{position:relative;z-index:2}
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="progress" id="progress"></div>
 
@@ -467,7 +481,7 @@ body > *{position:relative;z-index:2}
 <p class="tldr-text">High-rise condos, Norwegian / German / British retirement quarter.</p>
 </div>
 
-<main class="article-body">
+<main id="main" class="article-body">
 Property hubCondo ownershipFreehold (49% rule)Land ownershipLease onlyLease max30+30+30 yearsPillar pages3+<h2>Pillar guides</h2><a href="/guides/buying-property-thailand/">Pillar<h3>Buying property in Thailand</h3>Read →</a><a href="/guides/will-writing-thailand/">Estate<h3>Will writing in Thailand</h3>Read →</a><a href="/pattaya/jomtien/">Neighborhood<h3>Jomtien property scene</h3>Read →</a><a href="/pattaya/wongamat/">Neighborhood<h3>Wongamat beachfront luxury</h3><p>High-rise condos, Norwegian / German / British retirement quarter.</p>Read →</a><a href="/pattaya/pratumnak/">Neighborhood<h3>Pratumnak Hill</h3><p>Upscale hill between Pattaya and Jomtien. Sea-view condos, lower density.</p>Read →</a><a href="/professions/real-estate-agent/">Profession<h3>Foreign real estate agents</h3><p>Restricted-occupation reality, agency sponsorship paths, market data.</p>Read →</a><h2>Three rules every foreign buyer needs to know</h2>
 <p><strong>1. Condos: yes, you can own freehold.</strong> Up to 49% of any condo building can be foreign-owned (the "foreign quota"). Before signing, ask the developer or current owner for the Land Office's foreign-quota certificate. If the foreign quota is full, the unit you are buying might be available only via leasehold or Thai company structure — different game.</p>
 <p><strong>2. Land: foreigners cannot own land directly.</strong> Workarounds: (a) 30-year lease with two 30-year renewal options (legal but enforcement of renewals is weak in court); (b) Thai limited company holding the land with you as minority foreign shareholder + Thai majority partners (legal but scrutinized — you must have actual operations and Thai shareholders cannot be nominees); (c) Marry a Thai citizen and have them hold the land (sound on paper, vulnerable on divorce).</p>

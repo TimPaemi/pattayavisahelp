@@ -348,6 +348,19 @@ body > *{position:relative;z-index:2}
 }
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -424,6 +437,7 @@ body > *{position:relative;z-index:2}
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="progress" id="progress"></div>
 
@@ -467,7 +481,7 @@ body > *{position:relative;z-index:2}
 <p class="tldr-text">Permits remote work for foreign employers. Does NOT allow Thai-paid work.</p>
 </div>
 
-<main class="article-body">
+<main id="main" class="article-body">
 Work permit hubVisa classesNon-B, SMART, LTRMin foreign salary฿25-50k/monthRestricted jobs39 occupationsProfession guides12<h2>Visa classes that allow work</h2><a href="/visas/business-non-b/">Standard<h3>Business Non-B</h3>Read →</a><a href="/visas/smart/">Tech / startup<h3>SMART Visa</h3>Read →</a><a href="/visas/ltr/">10-year<h3>LTR Work-from-Thailand</h3>Read →</a><a href="/visas/dtv/">5-year<h3>DTV — for foreign-paid work only</h3><p>Permits remote work for foreign employers. Does NOT allow Thai-paid work.</p>Read →</a><a href="/visas/marriage-non-o/">Marriage<h3>Marriage Non-O</h3><p>With work permit add-on, foreign spouse can work.</p>Read →</a><a href="/visas/education-ed/">Education<h3>Education ED</h3><p>Does NOT allow paid work — common misconception.</p>Read →</a><h2>Profession-specific guides</h2><p>Each profession faces its own legal restrictions and pathway nuances.</p><a href="/professions/online-business-owner/">Business<h3>Online business owner</h3><p>Foreign company structures + Thai expansion routing.</p>Read →</a><a href="/professions/content-creator/">Digital<h3>Content creator + YouTuber</h3><p>DTV vs LTR vs Privilege.</p>Read →</a><a href="/professions/english-teacher/">Education<h3>English teacher</h3><p>School Non-B + TEFL + MOE teaching license.</p>Read →</a><a href="/professions/diving-instructor/">Tourism<h3>Diving instructor</h3><p>Strict work-permit reality.</p>Read →</a><a href="/professions/yoga-teacher/">Wellness<h3>Yoga teacher</h3><p>Studio sponsorship paths.</p>Read →</a><a href="/professions/dj/">Performance<h3>DJ + electronic artist</h3><p>The legal grey of Pattaya gigs.</p>Read →</a><a href="/professions/fitness-trainer/">Coaching<h3>Fitness trainer</h3><p>Online vs gym-sponsored.</p>Read →</a><a href="/professions/photographer/">Creative<h3>Photographer + videographer</h3><p>CAAT drone licensing.</p>Read →</a><a href="/professions/chef/">Hospitality<h3>Chef + restaurateur</h3><p>Hotel sponsorship vs independent restaurant.</p>Read →</a><a href="/professions/hairdresser/">Beauty<h3>Hairdresser + barber</h3><p>Salon sponsorship + opening your own.</p>Read →</a><a href="/professions/tattoo-artist/">Creative<h3>Tattoo artist</h3><p>Studio residency + Public Health licensing.</p>Read →</a><a href="/professions/real-estate-agent/">Sales<h3>Real estate agent</h3><p>Restricted-occupation reality.</p>Read →</a><h2>Restricted occupations — read first</h2>
 <p>Thai labor law explicitly restricts 39 occupations to Thai citizens only. These include: rice farming, accounting (excluding internal audit), engineering (excluding senior consulting), architecture (with caveats), legal practice, tour guiding, hairdressing for Thai customers (debated), tattoo work on Thai customers (debated), retail trading, currency trading, real-estate brokering, and several others.</p>
 <p>Many of these "restrictions" are flexibly enforced in practice — foreign-owned salons, real-estate agencies, and engineering firms all operate in Pattaya — but the legal vulnerability is real. The standard workaround is to be employed in a permitted role (marketing, sales, advisory) within a company that has Thai licensed practitioners.</p>

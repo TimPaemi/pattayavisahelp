@@ -348,6 +348,19 @@ body > *{position:relative;z-index:2}
 }
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
+/* A11Y-V1 */
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto:focus{left:0;top:0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .mq-t{animation:none !important}
+  .brand .dot{animation:none !important}
+}
+/* POLISH-V1 */
+*{ -webkit-tap-highlight-color: rgba(236,72,153,.18) }
+html{ scroll-padding-top: 96px }
+:target{ scroll-margin-top: 96px }
+.btn:active, button:active{ transform: translateY(1px) }
 /* MOBILE-FIX-V2 */
 @media (max-width:760px){
   .mq{padding:6px 0;font-size:10px}
@@ -424,6 +437,7 @@ body > *{position:relative;z-index:2}
 <script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
+<a href="#main" class="skipto">Skip to content</a>
 
 <div class="progress" id="progress"></div>
 
@@ -467,7 +481,7 @@ body > *{position:relative;z-index:2}
 <p class="tldr-text">DTV at ฿2k/yr amortised — cheapest long-stay if eligible.</p>
 </div>
 
-<main class="article-body">
+<main id="main" class="article-body">
 Digital nomad hubBest visaDTVLength5-year multi-entryIncome req$80k/yr or 500k THBTop citiesPTY, CM, BKK<h2>Visa pages for nomads</h2><a href="/visas/dtv/">5 years<h3>DTV — Destination Thailand Visa</h3>Read →</a><a href="/visas/ltr/">10 years<h3>LTR — Long-Term Resident</h3>Read →</a><a href="/visas/privilege-elite/">Membership<h3>Privilege (Elite)</h3>Read →</a><a href="/best-visa/under-20k/">Budget<h3>Best visa under ฿20k/yr</h3><p>DTV at ฿2k/yr amortised — cheapest long-stay if eligible.</p>Read →</a><a href="/professions/content-creator/">Profession<h3>Content creators + YouTubers</h3><p>Tax math for $50k-$500k creators. LTR vs DTV vs Privilege.</p>Read →</a><a href="/professions/online-business-owner/">Profession<h3>Online business owners</h3><p>Shopify, agency, SaaS, FBA — visa map.</p>Read →</a><h2>Living-as-a-nomad guides</h2><p>The everything-else of nomading in Thailand long-term.</p><a href="/banking/">Hub<h3>Thai banking for nomads</h3><p>Bangkok Bank is most DTV-friendly. Branch-level variance.</p>Read →</a><a href="/tax/">Hub<h3>Thai tax for nomads</h3><p>180-day rule + remittance taxation + LTR exemption.</p>Read →</a><a href="/guides/cost-of-living-pattaya/">Cost<h3>Pattaya cost of living 2026</h3><p>Real monthly budgets — frugal, comfortable, premium.</p>Read →</a><a href="/guides/90-day-reporting/">Compliance<h3>90-day reporting</h3><p>Quarterly admin every long-stay nomad must do.</p>Read →</a><a href="/tools/visa-finder/">Tool<h3>Visa finder quiz</h3><p>5 questions, ranked output.</p>Read →</a><a href="/pattaya/jomtien/">City<h3>Pattaya — Jomtien for nomads</h3><p>Coworking scene, cafes, beach. Below-Bangkok cost.</p>Read →</a>Free 15-min consultation<h2>Want a personal answer?</h2><p>A real human in Pattaya replies within 24 hours.</p><a href="/contact/">Book free consult →</a><a href="https://wa.me/66967286999" target="_blank" rel="noopener noreferrer">WhatsApp +66 96 728 6999</a>
 </main>
 
