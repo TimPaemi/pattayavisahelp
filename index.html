@@ -310,7 +310,7 @@ html{ scroll-padding-top: 96px }
   .cta-box{padding:22px !important}
   .cta-row{padding:0 !important;flex-direction:column;gap:8px}
   .cta-row .btn{width:100%;text-align:center}
-  .table,.article table{font-size:13px;border-radius:10px;display:block;overflow-x:auto;max-width:100%}
+  .table,.article table,table{font-size:13px;border-radius:10px;display:block;overflow-x:auto;max-width:100%}
   .table th,.table td,.article th,.article td{padding:10px 12px}
   .grid,.related,.contact-row,.stats-inner,.lanes{gap:10px !important;grid-template-columns:1fr !important}
   ul li,ol li{font-size:14px;padding:4px 0 4px 24px}
@@ -540,10 +540,10 @@ html{ scroll-padding-top: 96px }
 <a href="/tools/visa-finder/">Visa Finder</a><a href="/tools/cost-calculator/">Cost Calc</a><a href="/tools/income-test/">Income Test</a><a href="/tools/document-checklist/">Doc List</a><a href="/tools/">All tools →</a>
 </div>
 <div><h2>Learn</h2>
-<a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/glossary/">Glossary</a><a href="/changelog/">Changelog</a><a href="/methodology/">Methodology</a>
+<a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/glossary/">Glossary</a><a href="/changelog/">Changelog</a><a href="/methodology/">Methodology</a><a href="/case-studies/">Case Studies</a><a href="/resources/">Resources</a><a href="/work-permit/">Work permits</a><a href="/retirement/">Retirement</a><a href="/digital-nomad/">Digital nomad</a><a href="/pattaya-digital-nomad-guide/">DN in Pattaya</a><a href="/gyms/">Pattaya gyms</a>
 </div>
 <div><h2>About</h2>
-<a href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://pattaya-authority.com" target="_blank" rel="noopener">Pattaya Authority ↗</a>
+<a href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a><a href="/de/" hreflang="de">Deutsch</a><a href="/ru/" hreflang="ru">Русский</a><a href="https://pattaya-authority.com" target="_blank" rel="noopener">Pattaya Authority ↗</a>
 </div>
 </div>
 <div class="f-credit"><span class="f-credit-line"></span><span class="f-credit-text">// Site built &amp; managed by <a href="https://pattaya-authority.com" target="_blank" rel="noopener"><b>Pattaya Authority</b></a> · <b>Tim Paemi</b> <span class="star">★</span></span><span class="f-credit-line"></span></div>
@@ -597,18 +597,4 @@ html{ scroll-padding-top: 96px }
     var hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
     var el = document.querySelector('.hero-meta .live');
     if(el) el.textContent = 'PATTAYA · '+hh+':'+mm+' · 32°C CLEAR';
-    var lp = document.querySelector('.live-pill');
-    if(lp){
-      var hr = d.getHours();
-      var online = (hr >= 9 && hr < 18);
-      lp.firstElementChild.nextSibling && (lp.lastChild.textContent = online ? 'ONLINE NOW · PATTAYA '+hh+':'+mm+' ICT · 24H REPLY' : 'ASLEEP · PATTAYA '+hh+':'+mm+' ICT · BACK 9AM');
-    }
-    }
-  }
-  updateClock();
-  setInterval(updateClock, 60000);
-})();
-</script>
-
-</body>
-</html>
+    var lp = docume
