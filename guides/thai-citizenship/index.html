@@ -562,22 +562,7 @@ Thai citizenship overview
   }, {threshold: 0.5});
   statEls.forEach(function(el){ sio.observe(el); });
 
-  if(window.matchMedia('(min-width:1025px)').matches){
-    var d2=document.createElement('div');d2.className='cursor-dot';document.body.appendChild(d2);
-    var r2=document.createElement('div');r2.className='cursor-ring';document.body.appendChild(r2);
-    var rx=0,ry=0,dx=0,dy=0,tx=0,ty=0;
-    window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;});
-    function loop(){
-      dx+=(tx-dx)*0.55;dy+=(ty-dy)*0.55;rx+=(tx-rx)*0.18;ry+=(ty-ry)*0.18;
-      d2.style.transform='translate3d('+dx+'px,'+dy+'px,0)';
-      r2.style.transform='translate3d('+rx+'px,'+ry+'px,0)';
-      requestAnimationFrame(loop);
-    }
-    loop();
-    document.querySelectorAll('a,button,.rn,.cc,summary').forEach(function(el){
-      el.addEventListener('mouseenter',function(){r2.classList.add('hover');});
-      el.addEventListener('mouseleave',function(){r2.classList.remove('hover');});
-    });
+  );
     document.querySelectorAll('.rn,.cc').forEach(function(card){
       card.classList.add('tilt');
       card.addEventListener('mousemove',function(e){
