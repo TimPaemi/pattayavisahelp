@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pattaya Visa Help — Thailand Visa Guide 2026 (DTV · LTR · Retirement)</title>
+<title>Pattaya Visa Help — Thailand Visa Guide 2026</title>
 <meta name="description" content="Independent Thailand visa guide from Pattaya. DTV, LTR, Privilege, Retirement, Marriage, Education — 12 visas mapped, real costs, no agent commissions. Email or WhatsApp." />
 <meta name="rating" content="general" />
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -573,44 +573,4 @@ html{ scroll-padding-top: 96px }
   var btt = document.getElementById('btt');
   function upd(){
     var s = document.documentElement.scrollTop || document.body.scrollTop;
-    var h = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.documentElement.clientHeight;
-    var pct = h > 0 ? (s / h) * 100 : 0;
-    if(p) p.style.width = pct + '%';
-    if(btt){ if(s > 600) btt.classList.add('show'); else btt.classList.remove('show'); }
-  }
-  window.addEventListener('scroll', upd, {passive:true});
-  upd();
-
-  var fadeEls = document.querySelectorAll('.way, .visa, .tool, .step, .stat, .contact-channel, .lead-wrap, .section-hd');
-  fadeEls.forEach(function(el){ el.classList.add('fade-up'); });
-  var fio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); fio.unobserve(e.target); } });
-  }, {threshold: 0.08});
-  fadeEls.forEach(function(el){ fio.observe(el); });
-
-  var statEls = document.querySelectorAll('.stat .n');
-  function animate(el){
-    var raw = el.textContent.trim();
-    var num = parseFloat(raw.replace(/[^0-9.]/g, ''));
-    if(isNaN(num) || num < 2) return;
-    var suffix = raw.replace(/[\d.]/g, '');
-    var dur = 1200, start = performance.now();
-    function tick(t){
-      var p = Math.min(1, (t - start) / dur);
-      var ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(num * ease) + suffix;
-      if(p < 1) requestAnimationFrame(tick); else el.textContent = raw;
-    }
-    requestAnimationFrame(tick);
-  }
-  var sio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ animate(e.target); sio.unobserve(e.target); } });
-  }, {threshold: 0.5});
-  statEls.forEach(function(el){ sio.observe(el); });
-
-  function updateClock(){
-    var d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Bangkok'}));
-    var hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
-    var el = document.querySelector('.hero-meta .live');
-    if(el) el.textContent = 'PATTAYA · '+hh+':'+mm+' · 32°C CLEAR';
-    var lp = docume
+    var h = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.document
