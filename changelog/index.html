@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Site Changelog — Thailand Visa Updates Log | Pattaya Visa Help</title>
-<meta name="description" content="Public log of every Pattaya Visa Help update — when content changed, what was corrected, what we added. Transparency on freshness so you trust the page you read." />
+<meta name="description" content="Public log of every Pattaya Visa Help update — when content changed, what was corrected, what we added." />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
 <meta name="author" content="Pattaya Visa Help" />
 <meta name="theme-color" content="#000000" />
@@ -16,14 +16,14 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta property="og:title" content="Site Changelog — Thailand Visa Updates Log | Pattaya Visa Help" />
-<meta property="og:description" content="Public log of every Pattaya Visa Help update — when content changed, what was corrected, what we added. Transparency on freshness so you trust the page you read." />
+<meta property="og:description" content="Public log of every Pattaya Visa Help update — when content changed, what was corrected, what we added." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pattayavisahelp.com/changelog/" />
 <meta property="og:image" content="https://pattayavisahelp.com/og-default.png" />
 <meta property="og:site_name" content="Pattaya Visa Help" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Site Changelog — Thailand Visa Updates Log | Pattaya Visa Help" />
-<meta name="twitter:description" content="Public log of every Pattaya Visa Help update — when content changed, what was corrected, what we added. Transparency on freshness so you trust the page you read." />
+<meta name="twitter:description" content="Public log of every Pattaya Visa Help update — when content changed, what was corrected, what we added." />
 <meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattayavisahelp.com"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://pattayavisahelp.com/#guides"},{"@type":"ListItem","position":3,"name":"Setting up a Thai company","item":"https://pattayavisahelp.com/guides/setting-up-thai-company/"}]}
@@ -583,56 +583,4 @@ Site changelog
   
   // Scroll fade-in
   var fadeEls = document.querySelectorAll('.tldr, .article-body h2, .article-body > p, .read-next, .contact-section, .vstats-wrap');
-  fadeEls.forEach(function(el){ el.classList.add('fade-up'); });
-  var fio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); fio.unobserve(e.target); }
-    });
-  }, {threshold: 0.12});
-  fadeEls.forEach(function(el){ fio.observe(el); });
-  
-  // Auto-badge visa codes + currency in article body
-  var ab = document.querySelectorAll('.article-body p, .article-body li, .article-body td');
-  ab.forEach(function(el){
-    if(el.children.length > 3) return;
-    // Skip if already has links
-    var html = el.innerHTML;
-    var orig = html;
-    // Auto-badge: DTV, LTR, SMART, TM30, TM6, TM8, BOI, MOE, PRD (visa/agency codes, when standalone)
-    html = html.replace(/(DTV|LTR|SMART|BOI|MOE|PRD|TM6|TM8|TM30|TM47|WP|FET)(?![^<]*>)/g, '<span class="badge">$1</span>');
-    // Auto-badge currency: 800K฿, 400K฿, 65K฿, etc.
-    html = html.replace(/(\d+[KMm]?฿|\$\d+[KMm]?|฿\d+[KMm]?|\€\d+[KMm]?)(?![^<]*>)/g, '<span class="badge by">$1</span>');
-    // Auto-badge percentages
-    html = html.replace(/(\d+%)(?![^<]*>)/g, '<span class="badge bp">$1</span>');
-    if(html !== orig) el.innerHTML = html;
-  });
-  
-  // Animated count-up for visa stats
-  var statEls = document.querySelectorAll('.vs .n');
-  function animate(el){
-    var raw = el.textContent.trim();
-    var num = parseFloat(raw.replace(/[^0-9.]/g, ''));
-    if(isNaN(num) || num < 2) return;
-    var suffix = raw.replace(/[\d.]/g, '');
-    var dur = 1100, start = performance.now();
-    function tick(t){
-      var p = Math.min(1, (t - start) / dur);
-      var ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(num * ease) + suffix;
-      if(p < 1) requestAnimationFrame(tick);
-      else el.textContent = raw;
-    }
-    requestAnimationFrame(tick);
-  }
-  var sio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ animate(e.target); sio.unobserve(e.target); }
-    });
-  }, {threshold: 0.5});
-  statEls.forEach(function(el){ sio.observe(el); });
-
-})();
-</script>
-
-</body>
-</html>
+  fadeEls.forEach(function(el){ el.
