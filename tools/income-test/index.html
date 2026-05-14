@@ -191,8 +191,11 @@ html{ scroll-padding-top: 96px }
 <meta name="twitter:title" content="Thailand Visa Income Test — Which Visas You Qualify For" />
 <meta name="twitter:description" content="Enter your monthly foreign income. We check which Thailand visas you qualify for — DTV, LTR, Retirement, Marriage, all 12 pathways. Free, no signup." />
 <meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
-<script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Thailand Visa Income Test","url":"https://pattayavisahelp.com/tools/income-test/","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Check which Thailand visas you qualify for based on your monthly income and liquid assets."}
+</script>
 </head>
 <body>
 <a href="#main" class="skipto">Skip to content</a>
@@ -293,154 +296,5 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <div class="f-bot"><span>© 2026 Pattaya Visa Help</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Eligibility estimates only. Confirm exact requirements with us before applying.</p>
 </footer>
-
-<script>
-(function(){
-  // FX rates (approximate, 2026)
-  var FX = {USD: 35, EUR: 38, GBP: 44, THB: 1};
-
-  // Visas: requirements as functions returning {qualifies, reason}
-  var VISAS = [
-    {
-      key: 'dtv',
-      name: 'DTV — Destination Thailand Visa',
-      url: '/visas/dtv/',
-      check: function(m, age, liquidThb){
-        if (liquidThb >= 500000) return {ok: true, why: '฿500K+ liquid'};
-        return {ok: false, why: 'need ฿500K+ liquid'};
-      }
-    },
-    {
-      key: 'ltr-wp',
-      name: 'LTR Wealthy Pensioner',
-      url: '/visas/ltr/',
-      check: function(m, age, liquidThb){
-        if (age !== '50plus') return {ok: false, why: 'age 50+ only'};
-        if (m * 12 >= 80000) return {ok: true, why: '$80K+/yr ✓'};
-        if (m * 12 >= 40000 && liquidThb >= 250000 * 35) return {ok: true, why: '$40K+/yr + $250K invest'};
-        return {ok: false, why: 'need $80K+/yr'};
-      }
-    },
-    {
-      key: 'ltr-wgc',
-      name: 'LTR Wealthy Global Citizen',
-      url: '/visas/ltr/',
-      check: function(m, age, liquidThb){
-        if (m * 12 >= 80000 && liquidThb >= 1000000 * 35) return {ok: true, why: '$80K+/yr + $1M assets'};
-        return {ok: false, why: 'need $80K/yr + $1M'};
-      }
-    },
-    {
-      key: 'ltr-wftp',
-      name: 'LTR Work-from-Thailand Pro',
-      url: '/visas/ltr/',
-      check: function(m, age, liquidThb){
-        if (m * 12 >= 80000) return {ok: true, why: '$80K+/yr · need eligible employer'};
-        return {ok: false, why: 'need $80K+/yr'};
-      }
-    },
-    {
-      key: 'retirement-non-o',
-      name: 'Retirement Non-O',
-      url: '/visas/retirement-non-o/',
-      check: function(m, age, liquidThb){
-        if (age !== '50plus') return {ok: false, why: 'age 50+ only'};
-        var thbMonth = m * 35; // assumes USD already converted
-        if (liquidThb >= 800000) return {ok: true, why: '฿800K bank ✓'};
-        if (thbMonth >= 65000) return {ok: true, why: '฿65K+/m income ✓'};
-        return {ok: false, why: 'need ฿800K bank or ฿65K/m'};
-      }
-    },
-    {
-      key: 'marriage-non-o',
-      name: 'Marriage Non-O',
-      url: '/visas/marriage-non-o/',
-      check: function(m, age, liquidThb){
-        var thbMonth = m * 35;
-        if (liquidThb >= 400000) return {ok: true, why: '฿400K bank ✓ (need Thai spouse)'};
-        if (thbMonth >= 40000) return {ok: true, why: '฿40K+/m ✓ (need Thai spouse)'};
-        return {ok: false, why: 'need ฿400K bank or ฿40K/m'};
-      }
-    },
-    {
-      key: 'privilege-elite',
-      name: 'Thailand Privilege',
-      url: '/visas/privilege-elite/',
-      check: function(m, age, liquidThb){
-        if (liquidThb >= 900000) return {ok: true, why: '฿900K+ for membership ✓'};
-        return {ok: false, why: 'need ฿900K+ for Gold tier'};
-      }
-    },
-    {
-      key: 'smart',
-      name: 'SMART Visa',
-      url: '/visas/smart/',
-      check: function(m, age, liquidThb){
-        if (m >= 3000) return {ok: true, why: '$3K+/m · need BOI sector + endorsement'};
-        return {ok: false, why: 'need $3K+/m + BOI sector'};
-      }
-    },
-    {
-      key: 'business-non-b',
-      name: 'Business Non-B',
-      url: '/visas/business-non-b/',
-      check: function(m, age, liquidThb){
-        return {ok: true, why: 'no income test — need Thai employer'};
-      }
-    },
-    {
-      key: 'education-ed',
-      name: 'Education ED',
-      url: '/visas/education-ed/',
-      check: function(m, age, liquidThb){
-        if (liquidThb >= 50000) return {ok: true, why: '~฿30-50K/yr school fee'};
-        return {ok: false, why: 'need ~฿50K for tuition'};
-      }
-    },
-    {
-      key: 'tourist-tr-evisa',
-      name: 'Tourist TR (60-day)',
-      url: '/visas/tourist-tr-evisa/',
-      check: function(m, age, liquidThb){
-        return {ok: true, why: 'no income test · short stay only'};
-      }
-    },
-  ];
-
-  document.getElementById('checkBtn').addEventListener('click', function(){
-    var amt = parseFloat(document.getElementById('incAmt').value) || 0;
-    if (amt <= 0){
-      var inp = document.getElementById('incAmt');
-      inp.style.borderColor = 'var(--pink)';
-      inp.focus();
-      setTimeout(function(){ inp.style.borderColor = ''; }, 2000);
-      return;
-    }
-    var cur = document.getElementById('incCur').value;
-    var age = document.getElementById('age').value;
-    var liquidStr = document.getElementById('liquid').value;
-    var liquidMap = {low: 200000, mid: 600000, high: 1500000, huge: 5000000};
-    var liquidThb = liquidMap[liquidStr];
-
-    // Convert to USD/month
-    var thbMonth = amt * FX[cur];
-    var usdMonth = thbMonth / 35;
-
-    var qualified = [], borderline = [], notQual = [];
-    VISAS.forEach(function(v){
-      var r = v.check(usdMonth, age, liquidThb);
-      var html = '<a href="'+v.url+'" class="v-row '+(r.ok?'':'no')+'">' +
-        '<span class="status">'+(r.ok?'YES':'NO')+'</span>' +
-        '<span class="name">'+v.name+'</span>' +
-        '<span class="why">'+r.why+'</span>' +
-        (r.ok?'<span class="arr">→</span>':'') +
-        '</a>';
-      if (r.ok) qualified.push(html);
-      else notQual.push(html);
-    });
-
-    var qCount = qualified.length;
-    var summary = '<b>You qualify for '+qCount+' visa'+(qCount!==1?'s':'')+' based on this input.</b> ' +
-      'Monthly income: ' + (cur === 'THB' ? '฿'+amt.toLocaleString() : '$' + Math.round(usdMonth).toLocaleString() + ' USD-equivalent') +
-      '. Liquid: ' + (liquidThb >= 1000000 ? '฿' + (liquidThb/1000000).toFixed(1) + 'M' : '฿' + Math.round(liquidThb/1000) + 'K') + '+.';
-    document.getElementById('summary').innerHTML = sum
+</body>
+</html>

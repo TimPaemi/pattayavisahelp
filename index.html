@@ -367,7 +367,7 @@ html{ scroll-padding-top: 96px }
   .mnav .ic{font-size:18px;line-height:1;font-weight:400}
 }
 </style>
-<script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 </head>
 <body id="top">
 <a href="#main" class="skipto">Skip to content</a>
@@ -548,11 +548,5 @@ html{ scroll-padding-top: 96px }
 <div class="f-bot"><span>© 2026 Pattaya Visa Help · All rights reserved</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Pattaya Visa Help is an independent information and matchmaking service. We are not a licensed law firm and do not file visas directly. All visa decisions are the sole responsibility of the applicant and the Thai immigration authorities. Information current as of <b>10 May 2026</b>. Royal Thai immigration rules can change without notice — confirm critical details with your chosen specialist. We do not accept commissions from visa agents or law firms.</p>
 </footer>
-
-<script>
-(function(){
-  var p = document.getElementById('progress');
-  var btt = document.getElementById('btt');
-  function upd(){
-    var s = document.documentElement.scrollTop || document.body.scrollTop;
-    var h = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.document
+</body>
+</html>

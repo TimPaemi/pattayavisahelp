@@ -364,7 +364,7 @@ html{ scroll-padding-top: 96px }
   .mnav .ic{font-size:18px;line-height:1;font-weight:400}
 }
 </style>
-<script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
 </head>
 <body id="top">
@@ -498,94 +498,5 @@ html{ scroll-padding-top: 96px }
 <div class="f-bot"><span>© 2026 Pattaya Visa Help · All rights reserved</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Pattaya Visa Help is an independent information and matchmaking service. We are not a licensed law firm and do not file visas directly. All visa decisions are the sole responsibility of the applicant and the Thai immigration authorities or licensed specialist you engage. Information current as of <b>10 May 2026</b>. Royal Thai immigration rules can change without notice — confirm critical details with your chosen specialist. We do not accept commissions from visa agents or law firms.</p>
 </footer>
-
-<script>
-(function(){
-  var p = document.getElementById('progress');
-  var btt = document.getElementById('btt');
-  
-  // Scroll progress + back-to-top
-  function upd(){
-    var s = document.documentElement.scrollTop || document.body.scrollTop;
-    var h = (document.documentElement.scrollHeight || document.body.scrollHeight) - document.documentElement.clientHeight;
-    var pct = h > 0 ? (s / h) * 100 : 0;
-    p.style.width = pct + '%';
-    if(s > 600) btt.classList.add('show'); else btt.classList.remove('show');
-  }
-  window.addEventListener('scroll', upd, {passive:true});
-  upd();
-  
-  // Build TOC from h2s
-  var heads = document.querySelectorAll('.article-body h2');
-  if(heads.length >= 3){
-    var toc = document.createElement('aside');
-    toc.className = 'toc has-items';
-    toc.innerHTML = '<div class="toc-label">// On this page</div><ul></ul>';
-    var ul = toc.querySelector('ul');
-    heads.forEach(function(h, i){
-      var id = 'sec-' + i;
-      h.id = id;
-      var txt = h.textContent.replace(/^\s*\/\/\s*/, '').trim();
-      var li = document.createElement('li');
-      li.innerHTML = '<a href="#'+id+'">'+txt+'</a>';
-      ul.appendChild(li);
-    });
-    document.body.appendChild(toc);
-    // Active state
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          toc.querySelectorAll('a').forEach(function(a){ a.classList.remove('active'); });
-          var active = toc.querySelector('a[href="#'+e.target.id+'"]');
-          if(active) active.classList.add('active');
-        }
-      });
-    }, {rootMargin: '-30% 0px -60% 0px'});
-    heads.forEach(function(h){ io.observe(h); });
-  }
-  
-  // Scroll fade-in
-  var fadeEls = document.querySelectorAll('.tldr, .article-body h2, .article-body > p, .read-next, .contact-section, .vstats-wrap');
-  fadeEls.forEach(function(el){ el.classList.add('fade-up'); });
-  var fio = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); fio.unobserve(e.target); }
-    });
-  }, {threshold: 0.12});
-  fadeEls.forEach(function(el){ fio.observe(el); });
-  
-  // Auto-badge visa codes + currency in article body
-  var ab = document.querySelectorAll('.article-body p, .article-body li, .article-body td');
-  ab.forEach(function(el){
-    if(el.children.length > 3) return;
-    // Skip if already has links
-    var html = el.innerHTML;
-    var orig = html;
-    // Auto-badge: DTV, LTR, SMART, TM30, TM6, TM8, BOI, MOE, PRD (visa/agency codes, when standalone)
-    html = html.replace(/(DTV|LTR|SMART|BOI|MOE|PRD|TM6|TM8|TM30|TM47|WP|FET)(?![^<]*>)/g, '<span class="badge">$1</span>');
-    // Auto-badge currency: 800K฿, 400K฿, 65K฿, etc.
-    html = html.replace(/(\d+[KMm]?฿|\$\d+[KMm]?|฿\d+[KMm]?|\€\d+[KMm]?)(?![^<]*>)/g, '<span class="badge by">$1</span>');
-    // Auto-badge percentages
-    html = html.replace(/(\d+%)(?![^<]*>)/g, '<span class="badge bp">$1</span>');
-    if(html !== orig) el.innerHTML = html;
-  });
-  
-  // Animated count-up for visa stats
-  var statEls = document.querySelectorAll('.vs .n');
-  function animate(el){
-    var raw = el.textContent.trim();
-    var num = parseFloat(raw.replace(/[^0-9.]/g, ''));
-    if(isNaN(num) || num < 2) return;
-    var suffix = raw.replace(/[\d.]/g, '');
-    var dur = 1100, start = performance.now();
-    function tick(t){
-      var p = Math.min(1, (t - start) / dur);
-      var ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(num * ease) + suffix;
-      if(p < 1) requestAnimationFrame(tick);
-      else el.textContent = raw;
-    }
-    requestAnimationFrame(tick);
-  }
-  var sio = new IntersectionObserver(function(entries){
-    entries.forEach(
+</body>
+</html>

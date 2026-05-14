@@ -187,8 +187,11 @@ html{ scroll-padding-top: 96px }
 <meta name="twitter:title" content="Thailand Visa Cost Calculator — Real Total · Pattaya" />
 <meta name="twitter:description" content="Free Thailand visa cost calculator. Pick a visa + years of stay, get total cost including extensions, insurance, opportunity cost. Real Pattaya numbers." />
 <meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
-<script>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Thailand Visa Cost Calculator","url":"https://pattayavisahelp.com/tools/cost-calculator/","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate the real total cost of any Thailand visa over multiple years — fees, extensions, insurance, opportunity cost."}
+</script>
 </head>
 <body>
 <a href="#main" class="skipto">Skip to content</a>
@@ -296,101 +299,5 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <div class="f-bot"><span>© 2026 Pattaya Visa Help</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Cost calculator gives estimates based on 2026 published government fees. Confirm exact costs with us before applying.</p>
 </footer>
-
-<script>
-(function(){
-  // Visa data — costs in THB, structured by [oneTime, perYearGov, perYearOther, name, url]
-  var VISAS = {
-    'dtv':         {name:'DTV', url:'/visas/dtv/', govFee:10000, ext:1900, perYearExtra:0, insRequired:false, notes:'Apply from any Thai embassy. ฿500K seasoning required but stays in your account (not a cost).'},
-    'ltr-wp':      {name:'LTR Wealthy Pensioner', url:'/visas/ltr/', govFee:50000, ext:0, perYearExtra:0, insRequired:true, notes:'10-year fee paid once. Replaces 90-day reporting with annual. Foreign income tax-exempt under R.D. 743.'},
-    'ltr-h':       {name:'LTR Highly-Skilled Pro', url:'/visas/ltr/', govFee:50000, ext:0, perYearExtra:0, insRequired:true, notes:'17% flat tax on Thai-employer income. Work permit bundled.'},
-    'retirement':  {name:'Retirement Non-O', url:'/visas/retirement-non-o/', govFee:2000, ext:1900, perYearExtra:3800, insRequired:false, notes:'Annual renewal at Jomtien. ฿800K bank seasoning required. Re-entry permit add ฿3,800/yr.'},
-    'oa':          {name:'O-A Retirement', url:'/visas/retirement-o-a/', govFee:5000, ext:1900, perYearExtra:3800, insRequired:true, notes:'Insurance mandatory. Police clearance required at first application.'},
-    'marriage':    {name:'Marriage Non-O', url:'/visas/marriage-non-o/', govFee:2000, ext:1900, perYearExtra:3800, insRequired:false, notes:'฿400K bank or ฿40K/m income. Work permit available separately (~฿4K/yr).'},
-    'nonb':        {name:'Non-B Business', url:'/visas/business-non-b/', govFee:2000, ext:1900, perYearExtra:7800, insRequired:false, notes:'Includes work permit ~฿4,000/yr + re-entry ฿3,800. Thai employer sponsors.'},
-    'smart':       {name:'SMART Visa', url:'/visas/smart/', govFee:10000, ext:0, perYearExtra:0, insRequired:true, notes:'4-year visa. Work permit waived for T/I/E/H categories. BOI endorsement required.'},
-    'ed':          {name:'Non-ED Education', url:'/visas/education-ed/', govFee:2000, ext:1900, perYearExtra:40000, insRequired:false, notes:'Plus ~฿30-50K/year in school tuition (MOE-accredited only).'},
-    'tourist':     {name:'Tourist TR', url:'/visas/tourist-tr-evisa/', govFee:2000, ext:1900, perYearExtra:0, insRequired:false, notes:'Short-stay only — 60 days + 30-day extension per entry.'},
-    'priv-gold':   {name:'Privilege Gold', url:'/visas/privilege-elite/', govFee:900000, ext:0, perYearExtra:0, insRequired:true, notes:'5-year membership. One-time fee, no income test.'},
-    'priv-plat':   {name:'Privilege Platinum', url:'/visas/privilege-elite/', govFee:1500000, ext:0, perYearExtra:0, insRequired:true, notes:'10-year membership. Premium concierge included.'},
-    'priv-dia':    {name:'Privilege Diamond', url:'/visas/privilege-elite/', govFee:2500000, ext:0, perYearExtra:0, insRequired:true, notes:'15-year membership. VIP airport service.'},
-  };
-
-  function fmtTHB(n){
-    if (n >= 1000000) return '฿' + (n/1000000).toFixed(2).replace(/\.?0+$/, '') + 'M';
-    if (n >= 1000) return '฿' + Math.round(n/1000) + 'K';
-    return '฿' + n;
-  }
-  function fmtUSD(n){
-    var u = Math.round(n / 35);
-    if (u >= 1000) return '~$' + Math.round(u/100)/10 + 'K USD';
-    return '~$' + u + ' USD';
-  }
-
-  function calculate(){
-    var visaKey = document.getElementById('visa').value;
-    if (!visaKey || !VISAS[visaKey]){
-      var sel = document.getElementById('visa');
-      sel.style.borderColor = 'var(--pink)';
-      sel.focus();
-      setTimeout(function(){ sel.style.borderColor = ''; }, 2000);
-      return;
-    }
-    var years = parseInt(document.getElementById('years').value, 10) || 1;
-    if (years < 1) years = 1;
-    if (years > 20) years = 20;
-    var insChoice = parseInt(document.getElementById('includeIns').value, 10);
-    var v = VISAS[visaKey];
-
-    var govCost = v.govFee;
-    var extCost = v.ext * (years - 1); // first year is gov fee, then extensions
-    if (v.govFee >= 50000) extCost = 0; // multi-year visas don't have annual extensions
-    var otherCost = v.perYearExtra * years;
-    var insAnnual = insChoice * 1500 * 35; // $1500 or $3000 per year, in THB
-    var insCost = insAnnual * years;
-
-    // Privilege special: membership covers full term, no extension
-    if (visaKey.startsWith('priv-')){
-      var tier = visaKey.split('-')[1];
-      var tierYears = tier === 'gold' ? 5 : tier === 'plat' ? 10 : 15;
-      if (years > tierYears) {
-        // need a renewal — add another membership
-        govCost += v.govFee * Math.floor((years - 1) / tierYears);
-      }
-    }
-
-    var total = govCost + extCost + otherCost + insCost;
-
-    document.getElementById('totalThb').textContent = fmtTHB(total);
-    document.getElementById('totalUsd').innerHTML = fmtUSD(total) + ' · <span>' + years + '</span> year' + (years>1?'s':'') + ' on <span>' + v.name + '</span>';
-    document.getElementById('years-out').textContent = years;
-    document.getElementById('visa-name').textContent = v.name;
-
-    // Breakdown
-    var bd = document.getElementById('breakdown');
-    var rows = [];
-    rows.push({label: 'Government fee', v: fmtTHB(govCost)});
-    if (extCost > 0) rows.push({label: 'Annual extensions ('+(years-1)+' × ฿'+v.ext+')', v: fmtTHB(extCost)});
-    if (otherCost > 0) rows.push({label: 'Other recurring (re-entry, WP, school)', v: fmtTHB(otherCost)});
-    if (insCost > 0) rows.push({label: 'Health insurance ('+years+' years)', v: fmtTHB(insCost)});
-    rows.push({label: 'TOTAL ('+years+'-year all-in)', v: fmtTHB(total), cls: 'total'});
-
-    bd.innerHTML = rows.map(function(r){
-      return '<div class="bd-row '+(r.cls||'')+'"><span class="label-l">'+r.label+'</span><span class="v">'+r.v+'</span></div>';
-    }).join('');
-
-    document.getElementById('note').textContent = v.notes;
-    document.getElementById('visaLink').href = v.url;
-    document.getElementById('visaLink').textContent = 'Read full '+v.name+' guide →';
-    var res = document.getElementById('result');
-    res.classList.add('show');
-    try {
-      var off = res.getBoundingClientRect().top + window.pageYOffset - 90;
-      window.scrollTo({top: Math.max(0, off), behavior:'smooth'});
-    } catch(e){}
-  }
-
-  document.getElementById('calcBtn').addEventListener('click', calculate);
-  // Recalc on change
-  document.getElementById('visa').addEventListener('change', function(){
-    if (document.getElement
+</body>
+</html>
