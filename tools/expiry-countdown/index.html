@@ -312,5 +312,127 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <div class="f-bot"><span>© 2026 Pattaya Visa Help</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Reminder tool only — overstay penalties are real. Always verify expiry with immigration directly.</p>
 </footer>
+
+<script>
+(function(){
+  function daysBetween(a, b){
+    return Math.floor((b - a) / (1000 * 60 * 60 * 24));
+  }
+  function fmtDate(d){
+    return d.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}).toUpperCase();
+  }
+
+  document.getElementById('calcBtn').addEventListener('click', function(){
+    var expStr = document.getElementById('exp').value;
+    var entryStr = document.getElementById('entry').value;
+    var vtype = document.getElementById('vtype').value;
+    if (!expStr){
+      var expEl = document.getElementById('exp');
+      expEl.style.borderColor = 'var(--pink)';
+      expEl.focus();
+      setTimeout(function(){ expEl.style.borderColor = ''; }, 2000);
+      return;
+    }
+    var exp = new Date(expStr + 'T00:00:00');
+    var entry = entryStr ? new Date(entryStr + 'T00:00:00') : null;
+    var today = new Date();
+    today.setHours(0,0,0,0);
+
+    var daysToExp = daysBetween(today, exp);
+
+    var v = document.getElementById('daysRem');
+    var sub = document.getElementById('expSub');
+    if (daysToExp < 0){
+      v.textContent = 'OVERSTAY ' + Math.abs(daysToExp);
+      v.className = 'v expired';
+      sub.textContent = 'EXPIRED ' + fmtDate(exp) + ' · ฿500/day fine up to ฿20K · LEAVE OR REGULARISE NOW';
+    } else if (daysToExp <= 7){
+      v.textContent = daysToExp;
+      v.className = 'v alert';
+      sub.textContent = 'URGENT · EXPIRES ' + fmtDate(exp) + ' · EXTEND OR LEAVE IMMEDIATELY';
+    } else if (daysToExp <= 30){
+      v.textContent = daysToExp;
+      v.className = 'v warn';
+      sub.textContent = 'EXPIRES ' + fmtDate(exp) + ' · TIME TO APPLY FOR EXTENSION';
+    } else {
+      v.textContent = daysToExp;
+      v.className = 'v';
+      sub.textContent = 'EXPIRES ' + fmtDate(exp) + ' · YOU HAVE TIME';
+    }
+
+    // Build timeline
+    var events = [];
+
+    // 90-day reporting (for non-multi-entry or based on last entry)
+    if (entry && vtype !== 'tourist'){
+      var nextReport = new Date(entry.getTime());
+      while (nextReport <= today){
+        nextReport.setDate(nextReport.getDate() + 90);
+      }
+      // If next report falls within visa period
+      if (nextReport < exp){
+        var daysToReport = daysBetween(today, nextReport);
+        events.push({
+          date: fmtDate(nextReport),
+          title: '90-day report (TM47)',
+          desc: 'File at Jomtien Immigration or online · ' + daysToReport + ' days away',
+          urgency: daysToReport <= 7 ? 'urgent' : ''
+        });
+      }
+
+      // TM30 — if last entry was within 24h, remind
+      var entryDays = daysBetween(entry, today);
+      if (entryDays <= 1){
+        events.push({
+          date: 'NOW',
+          title: 'TM30 address registration',
+          desc: 'Must be filed by landlord/hotel within 24h of arrival · ฿800-2K fine if missed',
+          urgency: 'urgent'
+        });
+      }
+    }
+
+    // Extension reminder — 30 days before expiry
+    var extReminder = new Date(exp.getTime());
+    extReminder.setDate(extReminder.getDate() - 30);
+    if (extReminder > today){
+      events.push({
+        date: fmtDate(extReminder),
+        title: 'Apply for extension (window opens)',
+        desc: 'Last 30 days before expiry · TM7 form + ฿1,900 at Jomtien'
+      });
+    }
+
+    // Visa expiry
+    events.push({
+      date: fmtDate(exp),
+      title: 'VISA EXPIRES',
+      desc: 'Leave Thailand or have extension in hand by this date',
+      urgency: daysToExp <= 30 ? 'urgent' : ''
+    });
+
+    // Penalty deadline (1 day after expiry)
+    var penalty = new Date(exp.getTime());
+    penalty.setDate(penalty.getDate() + 1);
+    events.push({
+      date: fmtDate(penalty),
+      title: 'Overstay penalties start',
+      desc: '฿500/day fine, ฿20K max, then blacklist 1-10 years'
+    });
+
+    events.sort(function(a, b){
+      if (a.date === 'NOW') return -1;
+      if (b.date === 'NOW') return 1;
+      return new Date(a.date) - new Date(b.date);
+    });
+
+    document.getElementById('timeline').innerHTML = events.map(function(e){
+      return '<div class="tl-event '+(e.urgency||'')+'"><div class="tl-date">'+e.date+'</div><div class="tl-info"><strong>'+e.title+'</strong><span>'+e.desc+'</span></div></div>';
+    }).join('');
+
+    document.getElementById('results').classList.add('show');
+  });
+})();
+</script>
 </body>
 </html>

@@ -265,5 +265,106 @@ info@pattayavisahelp.com · WA +66 96 728 6999 · LINE @timpaemi
 </div>
 <div class="coords">12.9236°N · 100.8825°E · CHONBURI</div>
 </footer>
+
+<script>
+(function(){
+  // pre-fill today
+  var today = new Date();
+  document.getElementById('arrival').value = today.toISOString().split('T')[0];
+
+  document.getElementById('checkBtn').addEventListener('click', function(){
+    var arrivalStr = document.getElementById('arrival').value;
+    var name = document.getElementById('name').value || 'Foreigner';
+    var box = document.getElementById('results');
+    if (!arrivalStr) {
+      box.innerHTML = '<div class="card" style="border-color:rgba(236,72,153,.4)"><strong style="color:var(--pink)">Pick an arrival date first.</strong></div>';
+      box.classList.add('show');
+      return;
+    }
+    var arrival = new Date(arrivalStr + 'T12:00:00');
+    var now = new Date();
+
+    // TM30 deadline = arrival + 24h
+    var tm30 = new Date(arrival.getTime() + 24*60*60*1000);
+    var tm30Done = now > tm30;
+
+    // 90-day reports: arrival + 90, +180, +270, +360
+    var r90Dates = [];
+    for (var i=1; i<=4; i++){
+      r90Dates.push(new Date(arrival.getTime() + i*90*24*60*60*1000));
+    }
+
+    var html = '<div class="card"><h2>Your immigration deadlines</h2>';
+    html += '<div class="deadline tm30">';
+    html += '<div class="deadline-head"><div class="deadline-name">TM30 — Address Registration</div><div class="deadline-date">'+fmtDate(tm30)+'</div></div>';
+    html += '<div class="deadline-info"><strong>Within 24 hours of arrival/move.</strong> Your landlord (or you) must file TM30 at Pattaya Immigration (Soi 5) or online via the TM30 portal. Required for every re-entry too. Fine: THB 800–2,000 if missed.';
+    if (tm30Done) html += ' <span style="color:var(--yel)">— Should already be filed.</span>';
+    html += '</div></div>';
+
+    r90Dates.forEach(function(d, i){
+      var due = (now > d);
+      html += '<div class="deadline r90'+(due?' warn':'')+'">';
+      html += '<div class="deadline-head"><div class="deadline-name">90-Day Report #'+(i+1)+'</div><div class="deadline-date">'+fmtDate(d)+'</div></div>';
+      html += '<div class="deadline-info"><strong>File within ±15 days of this date.</strong> Online via tm47.immigration.go.th, or in person at Pattaya Immigration (Soi 5, Jomtien), or by registered mail. Fine: THB 2,000 if missed (up to THB 5,000 if caught at airport). Resets if you leave Thailand.';
+      html += '</div></div>';
+    });
+
+    // ICS calendar export
+    var ics = buildIcs(name, arrival, tm30, r90Dates);
+    var dataUri = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+
+    html += '<div class="export-row">';
+    html += '<a href="'+dataUri+'" download="pattaya-visa-reminders.ics" class="btn btn-ics">Download .ics calendar file →</a>';
+    html += '<a href="https://wa.me/66967286999" class="btn btn-wa">WhatsApp help →</a>';
+    html += '<a href="mailto:info@pattayavisahelp.com" class="btn btn-em">Email me</a>';
+    html += '</div>';
+    html += '<p style="margin-top:16px;font-size:12px;color:var(--td);font-family:JetBrains Mono,monospace">Import the .ics into Apple Calendar, Google Calendar, Outlook, or any calendar app. Reminders set to 7 days before each deadline.</p>';
+    html += '</div>';
+    box.innerHTML = html;
+    box.classList.add('show');
+    box.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  function fmtDate(d){
+    return d.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  }
+
+  function buildIcs(name, arrival, tm30, r90Dates){
+    function ts(d){ return d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z'; }
+    function dt(d){ return d.toISOString().split('T')[0].replace(/-/g,''); }
+    var lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Pattaya Visa Help//EN',
+      'CALSCALE:GREGORIAN'
+    ];
+    // TM30
+    lines.push(
+      'BEGIN:VEVENT',
+      'UID:tm30-'+ts(arrival)+'@pattayavisahelp.com',
+      'DTSTAMP:'+ts(new Date()),
+      'DTSTART;VALUE=DATE:'+dt(tm30),
+      'SUMMARY:TM30 deadline ('+name+')',
+      'DESCRIPTION:File TM30 at Pattaya Immigration Soi 5 Jomtien or online. Within 24h of arrival/move.',
+      'BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:TM30 due tomorrow','END:VALARM',
+      'END:VEVENT'
+    );
+    r90Dates.forEach(function(d, i){
+      lines.push(
+        'BEGIN:VEVENT',
+        'UID:r90-'+(i+1)+'-'+ts(d)+'@pattayavisahelp.com',
+        'DTSTAMP:'+ts(new Date()),
+        'DTSTART;VALUE=DATE:'+dt(d),
+        'SUMMARY:90-Day Report #'+(i+1)+' ('+name+')',
+        'DESCRIPTION:File 90-day report online tm47.immigration.go.th or at Pattaya Immigration Soi 5 Jomtien. Window: ±15 days.',
+        'BEGIN:VALARM','TRIGGER:-P7D','ACTION:DISPLAY','DESCRIPTION:90-day report due in 1 week','END:VALARM',
+        'END:VEVENT'
+      );
+    });
+    lines.push('END:VCALENDAR');
+    return lines.join('\r\n');
+  }
+})();
+</script>
 </body>
 </html>

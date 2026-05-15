@@ -314,5 +314,126 @@ info@pattayavisahelp.com · WA +66 96 728 6999 · LINE @timpaemi
 </div>
 <div class="coords">12.9236°N · 100.8825°E · CHONBURI</div>
 </footer>
+
+<script>
+(function(){
+  document.getElementById('employ').addEventListener('change', function(){
+    var v = this.value;
+    document.getElementById('employer-fld').style.display = (v === 'remote') ? 'block' : 'none';
+  });
+
+  document.getElementById('checkBtn').addEventListener('click', function(){
+    var age = parseInt(document.getElementById('age').value) || 0;
+    var income = parseFloat(document.getElementById('income').value) || 0;
+    var assets = parseFloat(document.getElementById('assets').value) || 0;
+    var pension = parseFloat(document.getElementById('pension').value) || 0;
+    var thInvest = parseFloat(document.getElementById('thInvest').value) || 0;
+    var ins = parseFloat(document.getElementById('ins').value) || 0;
+    var employ = document.getElementById('employ').value;
+    var empRev = parseFloat(document.getElementById('empRev').value) || 0;
+
+    var results = [];
+
+    // 1. WEALTHY GLOBAL CITIZEN
+    var wgc = {name:'Wealthy Global Citizen', code:'W', reasons:[], pass:true};
+    if (assets >= 1000000) wgc.reasons.push({ok:true, t:'Assets ≥ $1M ('+fmt(assets)+')'});
+    else { wgc.reasons.push({ok:false, t:'Assets must be ≥ $1M (you: '+fmt(assets)+')'}); wgc.pass=false; }
+    if (income >= 80000) wgc.reasons.push({ok:true, t:'Income ≥ $80k/yr ('+fmt(income)+')'});
+    else { wgc.reasons.push({ok:false, t:'Income must be ≥ $80k/yr (you: '+fmt(income)+')'}); wgc.pass=false; }
+    if (thInvest >= 500000) wgc.reasons.push({ok:true, t:'Thai investment ≥ $500k ('+fmt(thInvest)+')'});
+    else { wgc.reasons.push({ok:false, t:'Thai investment must be ≥ $500k (you: '+fmt(thInvest)+'). Options: Thai government bonds, BOI-approved company shares, Thai real estate.'}); wgc.pass=false; }
+    if (ins >= 50000) wgc.reasons.push({ok:true, t:'Health insurance ≥ $50k ('+fmt(ins)+')'});
+    else { wgc.reasons.push({ok:false, t:'Need health insurance ≥ $50k coverage (you: '+fmt(ins)+')'}); wgc.pass=false; }
+    results.push(wgc);
+
+    // 2. WEALTHY PENSIONER
+    var wp = {name:'Wealthy Pensioner', code:'P', reasons:[], pass:true};
+    if (age >= 50) wp.reasons.push({ok:true, t:'Age ≥ 50 (you: '+age+')'});
+    else { wp.reasons.push({ok:false, t:'Must be 50+ (you: '+age+')'}); wp.pass=false; }
+    if (pension >= 80000) {
+      wp.reasons.push({ok:true, t:'Pension ≥ $80k/yr ('+fmt(pension)+') — no Thai investment needed'});
+    } else if (pension >= 40000) {
+      wp.reasons.push({ok:true, t:'Pension ≥ $40k/yr ('+fmt(pension)+') — Thai investment required'});
+      if (thInvest >= 250000) wp.reasons.push({ok:true, t:'Thai investment ≥ $250k ('+fmt(thInvest)+')'});
+      else { wp.reasons.push({ok:false, t:'With $40–80k pension you need Thai investment ≥ $250k (you: '+fmt(thInvest)+')'}); wp.pass=false; }
+    } else {
+      wp.reasons.push({ok:false, t:'Pension must be ≥ $40k/yr minimum (you: '+fmt(pension)+')'});
+      wp.pass = false;
+    }
+    if (ins >= 50000) wp.reasons.push({ok:true, t:'Health insurance ≥ $50k ('+fmt(ins)+')'});
+    else { wp.reasons.push({ok:false, t:'Need health insurance ≥ $50k (you: '+fmt(ins)+')'}); wp.pass=false; }
+    results.push(wp);
+
+    // 3. WORK-FROM-THAILAND PROFESSIONAL
+    var wft = {name:'Work-from-Thailand Professional', code:'T', reasons:[], pass:true};
+    if (employ === 'remote') wft.reasons.push({ok:true, t:'Remote employee for foreign company'});
+    else { wft.reasons.push({ok:false, t:'Must be employed by foreign company (current: '+labelEmploy(employ)+')'}); wft.pass=false; }
+    if (income >= 80000) wft.reasons.push({ok:true, t:'Income ≥ $80k/yr — no Master\'s required'});
+    else if (income >= 40000) {
+      wft.reasons.push({ok:'warn', t:'Income $40–80k/yr — requires Master\'s degree OR IP ownership OR Series A funded company'});
+    } else {
+      wft.reasons.push({ok:false, t:'Income must be ≥ $40k/yr minimum (you: '+fmt(income)+')'});
+      wft.pass = false;
+    }
+    if (empRev >= 150000000) wft.reasons.push({ok:true, t:'Employer revenue ≥ $150M ('+fmt(empRev)+')'});
+    else { wft.reasons.push({ok:'warn', t:'Employer must have ≥ $150M revenue (last 3y) OR be publicly listed (you entered: '+fmt(empRev)+')'}); if (employ==='remote') wft.pass=false; }
+    if (ins >= 50000) wft.reasons.push({ok:true, t:'Health insurance ≥ $50k'});
+    else { wft.reasons.push({ok:false, t:'Need health insurance ≥ $50k (you: '+fmt(ins)+')'}); wft.pass=false; }
+    results.push(wft);
+
+    // 4. HIGHLY-SKILLED PROFESSIONAL
+    var hsp = {name:'Highly-Skilled Professional', code:'H', reasons:[], pass:true};
+    if (employ === 'thai-skill') hsp.reasons.push({ok:true, t:'Employed by Thai BOI/target-industry company'});
+    else { hsp.reasons.push({ok:false, t:'Must be employed by Thai BOI-promoted or target-industry company (current: '+labelEmploy(employ)+')'}); hsp.pass=false; }
+    if (income >= 80000) hsp.reasons.push({ok:true, t:'Income ≥ $80k/yr'});
+    else if (income >= 40000) hsp.reasons.push({ok:'warn', t:'Income $40–80k/yr — requires Master\'s in STEM or special expertise'});
+    else { hsp.reasons.push({ok:false, t:'Income must be ≥ $40k/yr (you: '+fmt(income)+')'}); hsp.pass=false; }
+    if (ins >= 50000) hsp.reasons.push({ok:true, t:'Health insurance ≥ $50k'});
+    else { hsp.reasons.push({ok:false, t:'Need health insurance ≥ $50k (you: '+fmt(ins)+')'}); hsp.pass=false; }
+    results.push(hsp);
+
+    var box = document.getElementById('results');
+    var passing = results.filter(function(r){return r.pass});
+    var html = '<div class="card"><h2>Your LTR eligibility results</h2>';
+    results.forEach(function(r){
+      var cls = r.pass ? 'green' : (r.reasons.some(function(x){return x.ok==='warn'}) ? 'yellow' : 'red');
+      var tag = r.pass ? 'QUALIFY' : (cls==='yellow' ? 'CLOSE' : 'NO');
+      html += '<div class="cat '+cls+'">';
+      html += '<div class="cat-head"><div class="cat-name">'+r.name+' ('+r.code+')</div><div class="cat-tag '+cls+'">'+tag+'</div></div>';
+      html += '<ul class="cat-reasons">';
+      r.reasons.forEach(function(x){
+        var rcls = x.ok===true ? 'ok' : (x.ok===false ? 'fail' : 'warn');
+        html += '<li class="'+rcls+'">'+x.t+'</li>';
+      });
+      html += '</ul></div>';
+    });
+    html += '<div class="summary"><h3>Summary</h3>';
+    if (passing.length > 0) {
+      html += '<p>You qualify under <strong style="color:var(--grn)">'+passing.length+' categor'+(passing.length>1?'ies':'y')+'</strong>: '+passing.map(function(r){return r.name}).join(', ')+'. Pick the simplest path — usually the one needing the least Thai investment.</p>';
+    } else {
+      html += '<p style="color:var(--pink)"><strong>Not yet eligible under any category.</strong> Look at the ✗ items above — those are the gaps. The most common single fix: increase health insurance to $50k, or add a Thai investment ($250–500k).</p>';
+    }
+    html += '</div>';
+    html += '<div class="cta-row">';
+    html += '<a href="https://wa.me/66967286999" class="btn btn-wa">Discuss next steps · WhatsApp →</a>';
+    html += '<a href="mailto:info@pattayavisahelp.com" class="btn btn-em">Email me</a>';
+    html += '</div>';
+    html += '<p style="margin-top:16px;font-size:12px;color:var(--td);font-family:JetBrains Mono,monospace">Source: BOI LTR program rules (TIBA / Royal Decree 743 framework). This is guidance, not legal advice — final approval is at BOI/Immigration discretion.</p>';
+    html += '</div>';
+
+    box.innerHTML = html;
+    box.classList.add('show');
+    box.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  function fmt(n){
+    if (!n) return '$0';
+    return '$' + n.toLocaleString('en-US');
+  }
+  function labelEmploy(v){
+    return {remote:'remote employee', 'thai-skill':'Thai skilled worker', none:'not employed', entrepreneur:'entrepreneur', '':'none selected'}[v] || v;
+  }
+})();
+</script>
 </body>
 </html>

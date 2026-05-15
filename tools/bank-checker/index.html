@@ -289,5 +289,147 @@ info@pattayavisahelp.com · WA +66 96 728 6999 · LINE @timpaemi
 </div>
 <div class="coords">12.9236°N · 100.8825°E · CHONBURI</div>
 </footer>
+
+<script>
+(function(){
+  // Bank rules database — visa key -> array of bank objects
+  // status: green = will open, yellow = sometimes / branch-dependent, red = no
+  var BANKS = {
+    dtv: [
+      {bank:'Bangkok Bank', status:'yellow', tag:'BRANCH-DEPENDENT', note:'Some Pattaya branches open with DTV + lease + TM30. South Pattaya and Jomtien Beach Rd branches are friendliest. Bring 10–20k THB seed deposit.', branches:'Jomtien Beach · South Pattaya · Central Festival'},
+      {bank:'Kasikorn (KBank)', status:'yellow', tag:'POSSIBLE', note:'Hit or miss. Some branches require yellow book/PR. Try Terminal 21 branch — known to open for long-stay foreigners with lease + TM30.', branches:'Terminal 21 · Central Marina'},
+      {bank:'Krungsri (BAY)', status:'yellow', tag:'PRO-EXPAT', note:'Generally the most expat-friendly. Krungsri Exclusive (THB 1M+) opens easily. Standard account needs lease + TM30 + reference letter from agent.', branches:'Central Festival · The Avenue'},
+      {bank:'SCB', status:'red', tag:'USUALLY NO', note:'SCB has tightened on DTV holders. Requires either work permit or extensive paperwork. Skip unless you have Thai friend introducing.', branches:'—'},
+      {bank:'Krungthai (KTB)', status:'red', tag:'NO', note:'State bank — requires Thai national ID or work permit. Not realistic for DTV.', branches:'—'},
+      {bank:'UOB', status:'yellow', tag:'PREMIUM ONLY', note:'UOB Privilege (THB 3M+ deposit) opens for any visa. Standard account very hard without work permit.', branches:'Central Festival'}
+    ],
+    ltr: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES', note:'LTR is a BOI super-visa. All major banks roll out the red carpet. Bangkok Bank opens same-day with LTR card + passport.', branches:'Any branch'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES + PREMIUM', note:'KBank Wisdom (private banking tier) actively recruits LTR holders. Free debit cards, multi-currency, online onboarding.', branches:'Any branch · Wisdom Centers'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES + EXCLUSIVE', note:'Krungsri Exclusive opens immediately. MUFG-backed — strong for international transfers.', branches:'Any branch · Exclusive Centers'},
+      {bank:'SCB', status:'green', tag:'YES + PRIVATE', note:'SCB Private Banking targets LTR holders. THB 30M+ AUM gets dedicated RM. SCB Easy app excellent.', branches:'Any branch · SCB First/Private'},
+      {bank:'Krungthai (KTB)', status:'yellow', tag:'POSSIBLE', note:'KTB opens for LTR but with paperwork delay (1–2 weeks). Useful only if you need government bond purchases.', branches:'Larger branches'},
+      {bank:'UOB', status:'green', tag:'YES', note:'UOB Privilege opens easily. Strong for ASEAN cross-border (Singapore link).', branches:'Any branch'}
+    ],
+    retire: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES', note:'Bangkok Bank is THE retirement bank in Pattaya. Standard account with retirement visa + lease + TM30. THB 800k deposit for extension lives here.', branches:'Jomtien Beach · South Pattaya · Naklua'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES', note:'KBank opens easily for Non-O retirement. Many retirees prefer KBank for the K PLUS app interface.', branches:'Any branch'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES', note:'Pro-expat. Krungsri Foreign Currency Deposit (FCD) account excellent for SWIFT inflow before THB conversion.', branches:'Central Festival · The Avenue'},
+      {bank:'SCB', status:'yellow', tag:'BRANCH-DEPENDENT', note:'SCB varies wildly by branch and staff mood. Bring agent letter + lease + TM30 + retirement visa stamp.', branches:'Central Festival · Mike Shopping'},
+      {bank:'Krungthai (KTB)', status:'yellow', tag:'POSSIBLE', note:'KTB opens for retirement but slower. Useful for paying government bills.', branches:'Pattaya Klang'},
+      {bank:'UOB', status:'yellow', tag:'PREMIUM', note:'UOB opens easily if you maintain THB 1M+ balance. Otherwise tricky.', branches:'Central Festival'}
+    ],
+    oa: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES', note:'O-A holders treated like Non-O retirees. Open with visa + lease + passport.', branches:'Any branch'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES', note:'Standard retirement account opens easily.', branches:'Any branch'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES', note:'Pro-expat. Open with O-A + lease + TM30.', branches:'Any branch'},
+      {bank:'SCB', status:'yellow', tag:'BRANCH-DEPENDENT', note:'Some SCB branches require Thai guarantor for O-A. Try larger Bangkok branches if Pattaya rejects.', branches:'—'},
+      {bank:'Krungthai (KTB)', status:'yellow', tag:'POSSIBLE', note:'Slow but possible.', branches:'Pattaya Klang'},
+      {bank:'UOB', status:'yellow', tag:'PREMIUM', note:'Easier with THB 1M+ deposit.', branches:'Central Festival'}
+    ],
+    marriage: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES', note:'Bring Thai wife/husband as joint applicant or guarantor. Opens same-day in most Pattaya branches.', branches:'Any branch'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES', note:'Easy if Thai spouse already banks with KBank — they can co-sign.', branches:'Any branch'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES', note:'Joint account or guaranteed account both work.', branches:'Any branch'},
+      {bank:'SCB', status:'green', tag:'YES', note:'With Thai spouse SCB opens easily. Bring marriage certificate (Kor Ror 2/3).', branches:'Any branch'},
+      {bank:'Krungthai (KTB)', status:'green', tag:'YES', note:'With Thai spouse KTB will open — useful for government services.', branches:'Any branch'},
+      {bank:'UOB', status:'green', tag:'YES', note:'Marriage visa + spouse = easy account.', branches:'Central Festival'}
+    ],
+    elite: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES + VIP LANE', note:'Privilege/Elite members get TPC Elite Personal Liaison who walks you through Bangkok Bank opening. Often same-day.', branches:'Any branch via TPC'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES + WISDOM', note:'KBank Wisdom (private banking) targets Elite members. Multi-currency, premium service.', branches:'Wisdom Centers'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES + EXCLUSIVE', note:'Krungsri Exclusive lounge access aligns with Elite tier.', branches:'Exclusive Centers'},
+      {bank:'SCB', status:'green', tag:'YES + PRIME', note:'SCB Prime/First opens for Elite. Diamond/Reserve tier members can access SCB Private.', branches:'Prime/First lounges'},
+      {bank:'Krungthai (KTB)', status:'yellow', tag:'POSSIBLE', note:'Less common for Elite — most prefer private banks.', branches:'—'},
+      {bank:'UOB', status:'green', tag:'YES + PRIVILEGE', note:'UOB Privilege natural fit for Elite members.', branches:'Any branch'}
+    ],
+    smart: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES + BOI LANE', note:'BOI Smart Visa = special treatment. Bring BOI endorsement letter. Often same-day in Bangkok BOI center.', branches:'BOI One-Start (Chamchuri)'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES + BIZ', note:'Smart-T/E/I holders open business accounts too. KBank K-BIZ excellent for startups.', branches:'Any branch'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES', note:'Pro-startup. MUFG infrastructure helps for Japan/intl wires.', branches:'Any branch'},
+      {bank:'SCB', status:'green', tag:'YES', note:'SCB 10X startup-friendly. Good API banking for tech founders.', branches:'Any branch'},
+      {bank:'Krungthai (KTB)', status:'yellow', tag:'POSSIBLE', note:'KTB for BOI bond holdings only.', branches:'—'},
+      {bank:'UOB', status:'green', tag:'YES', note:'Strong for SE Asia regional companies.', branches:'Any branch'}
+    ],
+    business: [
+      {bank:'Bangkok Bank', status:'green', tag:'YES (PERSONAL + BIZ)', note:'Work permit unlocks everything. Personal + company accounts open easily.', branches:'Any branch'},
+      {bank:'Kasikorn (KBank)', status:'green', tag:'YES + K-BIZ', note:'K-BIZ is the go-to business banking platform for SMEs.', branches:'Any branch'},
+      {bank:'Krungsri (BAY)', status:'green', tag:'YES', note:'Strong for trade finance and import/export.', branches:'Any branch'},
+      {bank:'SCB', status:'green', tag:'YES', note:'SCB Business excellent for corporate accounts.', branches:'Any branch'},
+      {bank:'Krungthai (KTB)', status:'green', tag:'YES', note:'Required for government tender / bidding work.', branches:'Any branch'},
+      {bank:'UOB', status:'green', tag:'YES', note:'Strong for international trade.', branches:'Any branch'}
+    ],
+    ed: [
+      {bank:'Bangkok Bank', status:'yellow', tag:'WITH SCHOOL LETTER', note:'Bring school enrollment letter + ED visa + lease + TM30. Pattaya Klang branch most cooperative.', branches:'Pattaya Klang · Central Festival'},
+      {bank:'Kasikorn (KBank)', status:'yellow', tag:'POSSIBLE', note:'School letter required. K PLUS works once opened.', branches:'Terminal 21'},
+      {bank:'Krungsri (BAY)', status:'yellow', tag:'POSSIBLE', note:'Easier than KBank for ED holders.', branches:'Central Festival'},
+      {bank:'SCB', status:'red', tag:'UNLIKELY', note:'SCB rarely opens for ED visa without work permit.', branches:'—'},
+      {bank:'Krungthai (KTB)', status:'red', tag:'NO', note:'Not realistic.', branches:'—'},
+      {bank:'UOB', status:'red', tag:'NO', note:'Premium-only. Not for ED.', branches:'—'}
+    ],
+    tourist: [
+      {bank:'Bangkok Bank', status:'red', tag:'NO', note:'Tourist visa = no bank account. Period. (Pre-COVID maybe, not in 2025/2026.)', branches:'—'},
+      {bank:'Kasikorn (KBank)', status:'red', tag:'NO', note:'No.', branches:'—'},
+      {bank:'Krungsri (BAY)', status:'red', tag:'NO', note:'No.', branches:'—'},
+      {bank:'SCB', status:'red', tag:'NO', note:'No.', branches:'—'},
+      {bank:'Krungthai (KTB)', status:'red', tag:'NO', note:'No.', branches:'—'},
+      {bank:'UOB', status:'yellow', tag:'PREMIUM ONLY', note:'ONLY UOB Privilege tier (THB 3M+ deposit) might open for tourists. Otherwise impossible.', branches:'Bangkok only'}
+    ]
+  };
+
+  // If work permit = yes, override most reds to green
+  function applyWorkPermit(banks){
+    return banks.map(function(b){
+      if (b.status === 'red' || b.status === 'yellow') {
+        return Object.assign({}, b, {
+          status:'green',
+          tag:'YES (WORK PERMIT)',
+          note: 'Work permit unlocks this bank. Standard account opens with WP + passport + visa + lease.',
+        });
+      }
+      return b;
+    });
+  }
+
+  document.getElementById('checkBtn').addEventListener('click', function(){
+    var visa = document.getElementById('visa').value;
+    var wp = document.getElementById('wp').value;
+    var box = document.getElementById('results');
+    if (!visa) {
+      box.innerHTML = '<div class="card" style="border-color:rgba(236,72,153,.4)"><strong style="color:var(--pink)">Pick a visa first.</strong></div>';
+      box.classList.add('show');
+      return;
+    }
+    var list = BANKS[visa];
+    if (wp === 'yes') list = applyWorkPermit(list);
+    var visaLabel = document.querySelector('#visa option[value="'+visa+'"]').textContent;
+    var html = '<div class="card"><h2>'+visaLabel+(wp==='yes'?' + Work Permit':'')+'</h2>';
+    list.forEach(function(b){
+      html += '<div class="bank '+b.status+'">';
+      html += '<div class="bank-head"><div class="bank-name">'+b.bank+'</div><div class="bank-tag '+b.status+'">'+b.tag+'</div></div>';
+      html += '<div class="bank-note">'+b.note+'</div>';
+      if (b.branches && b.branches !== '—') html += '<div class="bank-branches">Best Pattaya branches: '+b.branches+'</div>';
+      html += '</div>';
+    });
+    html += '<div class="pro-tips"><h3>Pattaya bank-opening checklist</h3><ul>';
+    html += '<li>Passport + visa stamp page</li>';
+    html += '<li>TM30 receipt (proof of address registered by landlord)</li>';
+    html += '<li>Rental contract (signed lease, 6+ months ideal)</li>';
+    html += '<li>Initial deposit: THB 500–1,000 minimum (more is better)</li>';
+    html += '<li>Phone number with Thai SIM (some banks ask)</li>';
+    html += '<li>Best time: weekday 10am–2pm — staff less rushed, manager available</li>';
+    html += '<li>If rejected at one branch, try a different branch of same bank — policies are branch-discretionary in Thailand</li>';
+    html += '</ul></div>';
+    html += '<div class="cta-row">';
+    html += '<a href="https://wa.me/66967286999" class="btn btn-wa">Need help opening? WhatsApp →</a>';
+    html += '<a href="mailto:info@pattayavisahelp.com" class="btn btn-em">Email info@pattayavisahelp.com</a>';
+    html += '</div>';
+    html += '</div>';
+    box.innerHTML = html;
+    box.classList.add('show');
+    box.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+</script>
 </body>
 </html>
