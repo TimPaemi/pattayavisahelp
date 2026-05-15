@@ -30,6 +30,18 @@
 <meta name="twitter:title" content="Site Map — All Pages on Pattaya Visa Help" />
 <meta name="twitter:description" content="Browse every page on Pattaya Visa Help — visa pillars, tools, guides, comparisons, profession-specific pages, and Pattaya neighborhood content." />
 <meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
+<style>
+.mnav{display:none}
+@media (max-width:760px){
+  body{padding-bottom:76px}
+  .mnav{display:flex !important;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(0,0,0,.92);backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.1);padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px));justify-content:space-around;align-items:center;gap:2px}
+  .mnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;color:#a1a1aa;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;border-radius:10px;transition:color .15s,background .15s}
+  .mnav a:hover,.mnav a.active{color:#fafafa;background:rgba(255,255,255,.04)}
+  .mnav a.cta{color:#ec4899}
+  .mnav .ic{font-size:18px;line-height:1;font-weight:400}
+}
+</style>
+<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-RSNN24M25C');</script>

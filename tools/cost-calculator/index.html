@@ -377,7 +377,7 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
     var total = govCost + extCost + otherCost + insCost;
 
     document.getElementById('totalThb').textContent = fmtTHB(total);
-    document.getElementById('totalUsd').innerHTML = fmtUSD(total) + ' · <span>' + years + '</span> year' + (years>1?'s':'') + ' on <span>' + v.name + '</span>';
+    document.getElementById('totalUsd').innerHTML = fmtUSD(total) + ' · <span id="years-out">' + years + '</span> year' + (years>1?'s':'') + ' on <span id="visa-name">' + v.name + '</span>';
     document.getElementById('years-out').textContent = years;
     document.getElementById('visa-name').textContent = v.name;
 
