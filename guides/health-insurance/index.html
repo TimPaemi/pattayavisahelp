@@ -59,9 +59,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link rel="preconnect" href="https://www.googletagmanager.com" />
 <link rel="preconnect" href="https://www.google-analytics.com" />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 <style>
 :root{--bg:#000;--bg-1:#0a0a0a;--bg-2:#111;--bg-3:#161616;--bg-4:#1c1c1c;--border:rgba(255,255,255,.07);--border-2:rgba(255,255,255,.14);--border-3:rgba(255,255,255,.22);--t:#fafafa;--td:#71717a;--tl:#a1a1aa;--pink:#ec4899;--pink-d:#be185d;--cyan:#06b6d4;--cyan-d:#0e7490;--yel:#fbbf24;--pur:#a855f7;--grn:#10b981;--wa:#25d366}
 *{box-sizing:border-box}
@@ -391,12 +392,56 @@ html{ scroll-padding-top: 96px }
   .mnav a.cta{color:#ec4899}
   .mnav .ic{font-size:18px;line-height:1;font-weight:400}
 }
+
+/* NUCLEAR-A11Y-V1 */
+.nav a{color:var(--tl)!important}
+.nav a.cta{color:#000!important;font-weight:800}
+.nav a.cta:hover{color:#000!important}
+.mnav a{color:var(--tl)!important}
+.crumb,.crumb a,.crumbs,.crumbs a,.way-num,.meta,.visa .meta,.article-meta,.f-tag,.f-tag a,.f-credit-text,.f-credit-text a,.f-bot,.f-disclaim,footer a:not(.btn),.hint,.l,.lab,.met,.cc .met,.deadline-info,.note{color:var(--tl)!important}
+.crumb a,.crumbs a,.credit a,.f-credit-text a,.f-tag a,.f-disclaim a{text-decoration:underline;text-underline-offset:.16em}
+
+
+/* NUCLEAR-A11Y-V2 */
+label,.fld label,.cc-meta,.credit,.step-counter,.toc a,.jump a,.side a,.rail a,[style*="color:var(--td)"],[style*="color: var(--td)"]{color:var(--tl)!important}
+.btn-primary,.btn-wa{color:#000!important;font-weight:800}
+.step .n{color:var(--tl)!important;opacity:1!important}
+.article-body a[style],main a[style],.wrap a[style],.content a[style]{text-decoration:underline!important;text-underline-offset:.16em}
+
+
+/* NUCLEAR-A11Y-V3 */
+.cc-label,.coords{color:var(--tl)!important}
+
+
+/* NUCLEAR-A11Y-V4 */
+.coords{color:var(--tl)!important;opacity:1!important}
+footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!important}
+
 </style>
 <script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-RSNN24M25C');</script>
+<!-- Google tag (gtag.js) - delayed for LCP -->
+<script>
+(function(w,d,id){
+  w.dataLayer=w.dataLayer||[];
+  w.gtag=w.gtag||function(){w.dataLayer.push(arguments)};
+  w.gtag('js',new Date());
+  function loadGtag(){
+    if(w.__pvhGtagLoaded)return;
+    w.__pvhGtagLoaded=1;
+    var s=d.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+id;
+    d.head.appendChild(s);
+    w.gtag('config',id);
+  }
+  ['pointerdown','keydown','scroll'].forEach(function(evt){
+    w.addEventListener(evt,loadGtag,{once:true,passive:true});
+  });
+  if('requestIdleCallback' in w){w.requestIdleCallback(loadGtag,{timeout:2000});}
+  else{w.setTimeout(loadGtag,2000);}
+})(window,document,'G-RSNN24M25C');
+</script>
 </head>
 <body id="top">
 <a href="#main" class="skipto">Skip to content</a>
@@ -450,7 +495,7 @@ Compliance guide · Verified April 2026
 
  <article>
  <h2>Insurance required, by visa type (2026)</h2>
- <table>
+ <table tabindex="0">
  <thead><tr><th>Visa</th><th>Required?</th><th>Minimum coverage</th><th>Notes</th></tr></thead>
  <tbody>
  <tr><td><strong>Non-O Retirement</strong></td><td><strong>No</strong></td><td>n/a</td><td>The biggest reason most Pattaya retirees prefer Non-O over O-A</td></tr>
@@ -476,7 +521,7 @@ Compliance guide · Verified April 2026
  </ul>
 
  <h3>Cost of compliant O-A insurance (illustrative)</h3>
- <table>
+ <table tabindex="0">
  <thead><tr><th>Age</th><th>Annual premium (3M THB coverage)</th><th>Notes</th></tr></thead>
  <tbody>
  <tr><td>50–55</td><td>~30,000–50,000 THB</td><td>Healthy applicants typically get standard rates</td></tr>

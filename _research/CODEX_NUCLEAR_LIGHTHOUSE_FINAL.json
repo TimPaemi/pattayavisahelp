@@ -1,0 +1,740 @@
+{
+  "generatedAt": "2026-05-16T00:38:22.807Z",
+  "base": "http://127.0.0.1:8090",
+  "pages": [
+    {
+      "name": "home",
+      "path": "/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/",
+      "ok": true,
+      "scores": {
+        "performance": 81,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67612,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 11,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 5,
+          "numTasks": 1328,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 1,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 29848015.95492227,
+          "maxRtt": 9.069,
+          "maxServerLatency": 64.458,
+          "totalByteWeight": 353802,
+          "totalTaskTime": 230.23899999999892,
+          "mainDocumentTransferSize": 57939
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "home",
+      "path": "/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/",
+      "ok": true,
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67126,
+            "wastedPercent": 42.18525193001213
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 11,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 5,
+          "numTasks": 1335,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 3,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 1,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 29366031.059514925,
+          "maxRtt": 9.028999999999998,
+          "maxServerLatency": 43.0717,
+          "totalByteWeight": 353802,
+          "totalTaskTime": 265.12099999999833,
+          "mainDocumentTransferSize": 57939
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "dtv",
+      "path": "/visas/dtv/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/visas/dtv/",
+      "ok": true,
+      "scores": {
+        "performance": 79,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67612,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1290,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 30372832.37902151,
+          "maxRtt": 8.85,
+          "maxServerLatency": 36.3821,
+          "totalByteWeight": 326326,
+          "totalTaskTime": 224.1109999999996,
+          "mainDocumentTransferSize": 49275
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "dtv",
+      "path": "/visas/dtv/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/visas/dtv/",
+      "ok": true,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67612,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1288,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 30436324.139557738,
+          "maxRtt": 8.491999999999999,
+          "maxServerLatency": 36.3108,
+          "totalByteWeight": 326326,
+          "totalTaskTime": 214.81499999999895,
+          "mainDocumentTransferSize": 49275
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "ltr",
+      "path": "/visas/ltr/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/visas/ltr/",
+      "ok": true,
+      "scores": {
+        "performance": 82,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67612,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1286,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 29414345.986581545,
+          "maxRtt": 9.814,
+          "maxServerLatency": 35.9464,
+          "totalByteWeight": 322965,
+          "totalTaskTime": 224.4539999999997,
+          "mainDocumentTransferSize": 45914
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "ltr",
+      "path": "/visas/ltr/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/visas/ltr/",
+      "ok": true,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67126,
+            "wastedPercent": 42.18525193001213
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1296,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 1,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 32847006.07602357,
+          "maxRtt": 8.836,
+          "maxServerLatency": 35.6891,
+          "totalByteWeight": 322965,
+          "totalTaskTime": 241.77899999999826,
+          "mainDocumentTransferSize": 45914
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "retirement-non-o",
+      "path": "/visas/retirement-non-o/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/visas/retirement-non-o/",
+      "ok": true,
+      "scores": {
+        "performance": 86,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 153594,
+            "wastedBytes": 65428,
+            "wastedPercent": 42.59786268970611
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1312,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 1,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 21384491.124309693,
+          "maxRtt": 8.079999999999998,
+          "maxServerLatency": 39.123,
+          "totalByteWeight": 321579,
+          "totalTaskTime": 221.75099999999878,
+          "mainDocumentTransferSize": 44494
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "retirement-non-o",
+      "path": "/visas/retirement-non-o/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/visas/retirement-non-o/",
+      "ok": true,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67612,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1303,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 2,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 1,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 29202874.83862128,
+          "maxRtt": 8.688999999999998,
+          "maxServerLatency": 36.354800000000004,
+          "totalByteWeight": 321545,
+          "totalTaskTime": 221.7799999999987,
+          "mainDocumentTransferSize": 44494
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "visa-finder",
+      "path": "/tools/visa-finder/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/tools/visa-finder/",
+      "ok": true,
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1550,
+          "numTasksOver10ms": 4,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 0,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 23289376.548111767,
+          "maxRtt": 9.574,
+          "maxServerLatency": 35.3755,
+          "totalByteWeight": 316808,
+          "totalTaskTime": 187.4809999999985,
+          "mainDocumentTransferSize": 39757
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "visa-finder",
+      "path": "/tools/visa-finder/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/tools/visa-finder/",
+      "ok": true,
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 1487,
+          "numTasksOver10ms": 7,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 0,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 35799213.32408672,
+          "maxRtt": 8.743,
+          "maxServerLatency": 36.5402,
+          "totalByteWeight": 316842,
+          "totalTaskTime": 223.04199999999992,
+          "mainDocumentTransferSize": 39757
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "cost-calculator",
+      "path": "/tools/cost-calculator/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/tools/cost-calculator/",
+      "ok": true,
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67612,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 9,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 3,
+          "numTasks": 1251,
+          "numTasksOver10ms": 4,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 0,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 26443946.210960723,
+          "maxRtt": 8.796000000000001,
+          "maxServerLatency": 38.2476,
+          "totalByteWeight": 301294,
+          "totalTaskTime": 147.09199999999922,
+          "mainDocumentTransferSize": 33162
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "cost-calculator",
+      "path": "/tools/cost-calculator/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/tools/cost-calculator/",
+      "ok": true,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 156341,
+            "wastedBytes": 66378,
+            "wastedPercent": 42.45734344297041
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 9,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 3,
+          "numTasks": 1225,
+          "numTasksOver10ms": 4,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 34540333.3404704,
+          "maxRtt": 8.761,
+          "maxServerLatency": 37.2384,
+          "totalByteWeight": 301294,
+          "totalTaskTime": 154.08399999999915,
+          "mainDocumentTransferSize": 33162
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "eligibility",
+      "path": "/tools/eligibility/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/tools/eligibility/",
+      "ok": true,
+      "scores": {
+        "performance": 88,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [
+          {
+            "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap",
+            "totalBytes": 1562,
+            "wastedMs": 807
+          }
+        ],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 157731,
+            "wastedBytes": 67022,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 9,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 3,
+          "numTasks": 1262,
+          "numTasksOver10ms": 5,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 0,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 19935079.89414078,
+          "maxRtt": 8.67,
+          "maxServerLatency": 39.10300000000001,
+          "totalByteWeight": 299020,
+          "totalTaskTime": 140.15899999999925,
+          "mainDocumentTransferSize": 30927
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "eligibility",
+      "path": "/tools/eligibility/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/tools/eligibility/",
+      "ok": true,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [
+          {
+            "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap",
+            "totalBytes": 1562,
+            "wastedMs": 256
+          }
+        ],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67559,
+            "wastedPercent": 42.45734344297041
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 9,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 3,
+          "numTasks": 1218,
+          "numTasksOver10ms": 3,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 0,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 29671865.115725186,
+          "maxRtt": 9.179000000000002,
+          "maxServerLatency": 35.6098,
+          "totalByteWeight": 299020,
+          "totalTaskTime": 111.14800000000012,
+          "mainDocumentTransferSize": 30927
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "contact",
+      "path": "/contact/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8090/contact/",
+      "ok": true,
+      "scores": {
+        "performance": 86,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 156338,
+            "wastedBytes": 66430,
+            "wastedPercent": 42.49117216522616
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 4917,
+          "numTasksOver10ms": 4,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 29856189.225604355,
+          "maxRtt": 8.927999999999999,
+          "maxServerLatency": 35.738,
+          "totalByteWeight": 323688,
+          "totalTaskTime": 714.5669999999609,
+          "mainDocumentTransferSize": 46600
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    },
+    {
+      "name": "contact",
+      "path": "/contact/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8090/contact/",
+      "ok": true,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "audits": {
+        "renderBlocking": [],
+        "networkDependencyTree": "",
+        "unusedJavaScript": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C",
+            "totalBytes": 159121,
+            "wastedBytes": 67559,
+            "wastedPercent": 42.45734344297041
+          }
+        ],
+        "diagnostics": {
+          "numRequests": 10,
+          "numScripts": 1,
+          "numStylesheets": 1,
+          "numFonts": 4,
+          "numTasks": 4590,
+          "numTasksOver10ms": 6,
+          "numTasksOver25ms": 1,
+          "numTasksOver50ms": 1,
+          "numTasksOver100ms": 0,
+          "numTasksOver500ms": 0,
+          "rtt": 0,
+          "throughput": 30298680.273162883,
+          "maxRtt": 8.42,
+          "maxServerLatency": 41.2516,
+          "totalByteWeight": 323690,
+          "totalTaskTime": 1246.3489999999622,
+          "mainDocumentTransferSize": 46600
+        },
+        "cspXss": 1,
+        "contrast": []
+      }
+    }
+  ]
+}

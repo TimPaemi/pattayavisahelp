@@ -6,7 +6,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://www.googletagmanager.com" />
 <link rel="preconnect" href="https://www.google-analytics.com" />
 <title>LTR Visa Eligibility Pre-Check · Pattaya Visa Help</title>
 <meta name="description" content="LTR visa eligibility pre-check — moved to /tools/eligibility/" />
@@ -22,6 +21,31 @@ a{color:#06b6d4;text-decoration:underline}
 p{color:#a1a1aa;font-size:15px;line-height:1.6}
 h1{font-size:1.6rem;margin-bottom:12px;font-weight:700;letter-spacing:-.01em}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+
+/* NUCLEAR-A11Y-V1 */
+.nav a{color:var(--tl)!important}
+.nav a.cta{color:#000!important;font-weight:800}
+.nav a.cta:hover{color:#000!important}
+.mnav a{color:var(--tl)!important}
+.crumb,.crumb a,.crumbs,.crumbs a,.way-num,.meta,.visa .meta,.article-meta,.f-tag,.f-tag a,.f-credit-text,.f-credit-text a,.f-bot,.f-disclaim,footer a:not(.btn),.hint,.l,.lab,.met,.cc .met,.deadline-info,.note{color:var(--tl)!important}
+.crumb a,.crumbs a,.credit a,.f-credit-text a,.f-tag a,.f-disclaim a{text-decoration:underline;text-underline-offset:.16em}
+
+
+/* NUCLEAR-A11Y-V2 */
+label,.fld label,.cc-meta,.credit,.step-counter,.toc a,.jump a,.side a,.rail a,[style*="color:var(--td)"],[style*="color: var(--td)"]{color:var(--tl)!important}
+.btn-primary,.btn-wa{color:#000!important;font-weight:800}
+.step .n{color:var(--tl)!important;opacity:1!important}
+.article-body a[style],main a[style],.wrap a[style],.content a[style]{text-decoration:underline!important;text-underline-offset:.16em}
+
+
+/* NUCLEAR-A11Y-V3 */
+.cc-label,.coords{color:var(--tl)!important}
+
+
+/* NUCLEAR-A11Y-V4 */
+.coords{color:var(--tl)!important;opacity:1!important}
+footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!important}
+
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -36,9 +60,28 @@ h1{font-size:1.6rem;margin-bottom:12px;font-weight:700;letter-spacing:-.01em}
 <meta name="twitter:title" content="LTR Visa Eligibility Pre-Check · Pattaya Visa Help" />
 <meta name="twitter:description" content="LTR visa eligibility pre-check — moved to /tools/eligibility/" />
 <meta name="twitter:image" content="https://pattayavisahelp.com/og-default.png" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSNN24M25C"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-RSNN24M25C');</script>
+<!-- Google tag (gtag.js) - delayed for LCP -->
+<script>
+(function(w,d,id){
+  w.dataLayer=w.dataLayer||[];
+  w.gtag=w.gtag||function(){w.dataLayer.push(arguments)};
+  w.gtag('js',new Date());
+  function loadGtag(){
+    if(w.__pvhGtagLoaded)return;
+    w.__pvhGtagLoaded=1;
+    var s=d.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+id;
+    d.head.appendChild(s);
+    w.gtag('config',id);
+  }
+  ['pointerdown','keydown','scroll'].forEach(function(evt){
+    w.addEventListener(evt,loadGtag,{once:true,passive:true});
+  });
+  if('requestIdleCallback' in w){w.requestIdleCallback(loadGtag,{timeout:2000});}
+  else{w.setTimeout(loadGtag,2000);}
+})(window,document,'G-RSNN24M25C');
+</script>
 </head>
 <body>
 <div>
