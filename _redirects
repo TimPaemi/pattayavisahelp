@@ -3,7 +3,7 @@
 
 # Common typo / alternate paths
 /visa /tools/visa-finder/ 301
-/visas /#visas 301
+/visas /visas/ 301
 /quiz /tools/visa-finder/ 301
 /calculator /tools/cost-calculator/ 301
 /checklist /tools/document-checklist/ 301

@@ -19,6 +19,20 @@
  */
 
 export async function onRequestPost(context) {
+// HTML escape helper for safely interpolating user input into email/Slack/Discord payloads
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function clean(s, max) {
+  max = max || 200;
+  return String(s == null ? '' : s).replace(/[\x00-\x1f\x7f]/g, ' ').slice(0, max);
+}
+
   const { request, env } = context;
 
   // CORS / security headers
@@ -38,8 +52,11 @@ export async function onRequestPost(context) {
       return new Response(JSON.stringify({ success: true }), { status: 200, headers });
     }
 
-    // Verify Cloudflare Turnstile token (anti-spam)
-    if (env.TURNSTILE_SECRET && data['cf-turnstile-response']) {
+    // Verify Cloudflare Turnstile token (anti-spam) — fail closed if secret configured
+    if (env.TURNSTILE_SECRET) {
+      if (!data['cf-turnstile-response']) {
+        return new Response(JSON.stringify({ error: 'Spam check token missing. Please refresh and try again.' }), { status: 403, headers });
+      }
       const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -152,7 +169,7 @@ export async function onRequestPost(context) {
           <li><a href="https://pattayavisahelp.com/guides/visa-scams-pattaya/" style="color:#0369a1;">Visa scams to avoid in Pattaya</a></li>
           <li><a href="https://pattayavisahelp.com/guides/cost-of-living-pattaya/" style="color:#0369a1;">Pattaya cost of living 2026</a></li>
         </ul>
-        <p style="font-size:16px;line-height:1.6;">If your situation is urgent, message us on WhatsApp for faster reply: <a href="https://wa.me/66967286999" style="color:#25d366;font-weight:600;">+66 96 728 6999</a>. Or reply directly to this email — it goes straight to our inbox.</p>
+        <p style="font-size:16px;line-height:1.6;">If your situation is urgent, message us on WhatsApp for faster reply: <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" style="color:#25d366;font-weight:600;">+66 96 728 6999</a>. Or reply directly to this email — it goes straight to our inbox.</p>
         <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
         <p style="font-size:14px;color:#64748b;">Pattaya Visa Help<br>Independent Thailand visa guidance from Pattaya<br><a href="https://pattayavisahelp.com" style="color:#0369a1;">pattayavisahelp.com</a></p>
       </div>
@@ -164,7 +181,7 @@ export async function onRequestPost(context) {
       const notificationEmail = env.NOTIFICATION_EMAIL || 'info@pattayavisahelp.com';
 
       // Internal notification
-      await fetch('https://api.resend.com/emails', {
+      const _resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${env.RESEND_API_KEY}`,
@@ -178,10 +195,11 @@ export async function onRequestPost(context) {
           html: internalHtml,
         }),
       });
+      if (_resendRes && !_resendRes.ok) { console.error("Resend send failed:", _resendRes.status); }
 
       // Auto-reply (small delay to feel less automated)
       await new Promise(resolve => setTimeout(resolve, 500));
-      await fetch('https://api.resend.com/emails', {
+      const _resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${env.RESEND_API_KEY}`,
@@ -194,6 +212,7 @@ export async function onRequestPost(context) {
           html: autoReplyHtml,
         }),
       });
+      if (_resendRes && !_resendRes.ok) { console.error("Resend send failed:", _resendRes.status); }
     } else {
       // No API key configured yet — log to console (visible in Cloudflare dashboard)
       console.log('LEAD RECEIVED (Resend not configured):', JSON.stringify(lead, null, 2));

@@ -312,9 +312,8 @@ info@pattayavisahelp.com · WA +66 96 728 6999 · LINE @timpaemi
 
 <script>
 (function(){
-  // pre-fill today
-  var today = new Date();
-  document.getElementById('arrival').value = today.toISOString().split('T')[0];
+  // Empty by default; user picks the date explicitly. Today's date suggested in placeholder via label.
+  // var today = new Date(); document.getElementById('arrival').value = today.toISOString().split('T')[0];
 
   document.getElementById('checkBtn').addEventListener('click', function(){
     var arrivalStr = document.getElementById('arrival').value;

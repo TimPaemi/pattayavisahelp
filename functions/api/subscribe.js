@@ -31,7 +31,10 @@ export async function onRequestPost(context) {
     }
 
     // Verify Cloudflare Turnstile token (optional)
-    if (env.TURNSTILE_SECRET && data['cf-turnstile-response']) {
+    if (env.TURNSTILE_SECRET) {
+      if (!data['cf-turnstile-response']) {
+        return new Response(JSON.stringify({ error: 'Spam check token missing.' }), { status: 403, headers });
+      }
       const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -91,7 +94,7 @@ export async function onRequestPost(context) {
             <li><a href="https://pattayavisahelp.com/tools/cost-calculator/" style="color:#0369a1;">Cost calculator</a></li>
             <li><a href="https://pattayavisahelp.com/blog/2026-thailand-visa-changes-recap/" style="color:#0369a1;">2026 visa changes recap</a></li>
           </ul>
-          <p style="font-size:16px;line-height:1.6;">Free 15-minute consultations are always open: <a href="https://pattayavisahelp.com/#consultation" style="color:#0369a1;">book here</a> or WhatsApp <a href="https://wa.me/66967286999" style="color:#25d366;">+66 96 728 6999</a>.</p>
+          <p style="font-size:16px;line-height:1.6;">Free 15-minute consultations are always open: <a href="https://pattayavisahelp.com/#consultation" style="color:#0369a1;">book here</a> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" style="color:#25d366;">+66 96 728 6999</a>.</p>
           <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
           <p style="font-size:13px;color:#64748b;">Pattaya Visa Help · Independent Thailand visa guidance from Pattaya · <a href="https://pattayavisahelp.com" style="color:#0369a1;">pattayavisahelp.com</a></p>
           <p style="font-size:11px;color:#94a3b8;">To unsubscribe, reply to this email with "unsubscribe" in the subject.</p>
@@ -99,7 +102,7 @@ export async function onRequestPost(context) {
       `;
 
       try {
-        await fetch('https://api.resend.com/emails', {
+        const _subResendRes = await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${env.RESEND_API_KEY}`,
@@ -112,6 +115,7 @@ export async function onRequestPost(context) {
             html: welcomeHtml,
           }),
         });
+      if (_subResendRes && !_subResendRes.ok) { console.error("Resend send failed:", _subResendRes.status); }
       } catch (e) {
         console.error('Welcome email failed:', e);
       }

@@ -81,8 +81,6 @@
       "remote_work_for_foreign_employers": true,
       "thai_employment_allowed": true,
       "tax_residency_threshold_days": 180,
-      "ltr_tax_exemption": true,
-      "tax_exemption_basis": "Royal Decree 743 (effective 2024) — foreign income exempt from Thai remittance tax for LTR holders",
       "applies_at": "boi_long_term_resident_program",
       "best_for": [
         "High earners $80K+/year",
@@ -114,7 +112,26 @@
       ],
       "primary_source_url": "https://ltr.boi.go.th/",
       "primary_source_name": "Board of Investment of Thailand — LTR Program",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-18",
+      "tax_treatment_by_category": {
+        "wealthy-global-citizen": {
+          "foreign_income_exempt": true,
+          "basis": "Royal Decree 743 (2024)"
+        },
+        "wealthy-pensioner": {
+          "foreign_income_exempt": true,
+          "basis": "Royal Decree 743 (2024)"
+        },
+        "work-from-thailand-pro": {
+          "foreign_income_exempt": true,
+          "basis": "Royal Decree 743 (2024)"
+        },
+        "highly-skilled-pro": {
+          "foreign_income_exempt": false,
+          "thai_employer_income_flat_rate_pct": 17,
+          "basis": "17% flat personal income tax cap on Thai-employer income only; foreign-source income NOT exempt"
+        }
+      }
     },
     {
       "id": "privilege-elite",
