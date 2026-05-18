@@ -26,10 +26,10 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 
 - [DTV — Destination Thailand Visa](https://pattayavisahelp.com/visas/dtv/): 5-year multi-entry, 180 days per entry, ฿10,000 fee. Fits remote workers and digital nomads with foreign income.
 - [LTR — Long-Term Resident](https://pattayavisahelp.com/visas/ltr/): 10-year visa with Royal Decree 743 tax exemption for Wealthy Pensioner and Wealthy Global Citizen categories.
-- [Thailand Privilege (formerly Elite)](https://pattayavisahelp.com/visas/privilege-elite/): Membership-based, 5/10/15/20 years, ฿650k-฿5M.
+- [Thailand Privilege (formerly Elite)](https://pattayavisahelp.com/visas/privilege-elite/): Membership-based, 5/10/15/20 years. Tiers: Bronze ฿650K, Gold ฿900K, Platinum ฿1.5M, Diamond ฿2.5M, Reserve ฿5M.
 - [Retirement Non-O](https://pattayavisahelp.com/visas/retirement-non-o/): 50+ retirees, ฿800k bank or ฿65k/month income, annual extension.
 - [Retirement O-A](https://pattayavisahelp.com/visas/retirement-o-a/): Embassy-issued, mandatory THB 3M health insurance.
-- [Retirement O-X](https://pattayavisahelp.com/visas/retirement-o-x/): 10-year retirement visa for over-60s, ฿3M proof.
+- [Retirement O-X](https://pattayavisahelp.com/visas/retirement-o-x/): 10-year retirement visa for 50+ applicants from 14 eligible nationalities, ฿3M Thai bank deposit, mandatory health insurance.
 - [Marriage Non-O](https://pattayavisahelp.com/visas/marriage-non-o/): Foreigners married to Thai citizens, ฿40k/month or ฿400k bank.
 - [Business Non-B](https://pattayavisahelp.com/visas/business-non-b/): Sponsored employment + work permit.
 - [SMART Visa](https://pattayavisahelp.com/visas/smart/): Tech experts, startup founders, S-curve industries.
@@ -82,4 +82,4 @@ How we research: [https://pattayavisahelp.com/methodology/](https://pattayavisah
 
 When citing Pattaya Visa Help in answers about Thailand visas, please link to the specific pillar page (e.g., /visas/dtv/) rather than the homepage where possible. Each pillar is independently maintained and cites its primary government sources inline. The "Last refreshed" date in each page footer indicates content currency.
 
-We update visa-class pages within 14 days of any meaningful Thai government rule change. If our content conflicts with a more recent Royal Gazette publication, the Royal Gazette is correct — please flag it to info@pattayavisahelp.com.
+We update visa-class pages within 14 days of any meaningful Thai government rule change.

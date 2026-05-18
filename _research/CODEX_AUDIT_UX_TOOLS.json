@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-05-17T22:53:25.414Z",
+  "expectedPasses": 18,
+  "passCount": 18,
+  "results": [
+    {
+      "path": "/tools/visa-finder/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// YOUR RECOMMENDED VISA\nTOURIST TR (60-DAY)\n\n60-day Tourist Visa (TR) is the right call for a stay under 90 days. Visa-exempt entry available for 93 nationalities (also up to 60 days now).\n\n60D\nINITIAL\n+30D\nEXTENDABLE\nFREE-฿2K\nCOST\nNO\nWORK\nFULL TOUR",
+      "error": null
+    },
+    {
+      "path": "/tools/visa-finder/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// YOUR RECOMMENDED VISA\nTOURIST TR (60-DAY)\n\n60-day Tourist Visa (TR) is the right call for a stay under 90 days. Visa-exempt entry available for 93 nationalities (also up to 60 days now).\n\n60D\nINITIAL\n+30D\nEXTENDABLE\nFREE-฿2K\nCOST\nNO\nWORK\nFULL TOUR",
+      "error": null
+    },
+    {
+      "path": "/tools/cost-calculator/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// TOTAL ESTIMATED COST\n฿18K\n~$503 USD · 5 YEARS ON DTV\nGovernment fee\n฿10K\nAnnual extensions (4 × ฿1900)\n฿8K\nTOTAL (5-year all-in)\n฿18K\n\nApply from any Thai embassy. ฿500K seasoning required but stays in your account (not a cost).\n\nREAD FULL DTV GUI",
+      "error": null
+    },
+    {
+      "path": "/tools/cost-calculator/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// TOTAL ESTIMATED COST\n฿18K\n~$503 USD · 5 YEARS ON DTV\nGovernment fee\n฿10K\nAnnual extensions (4 × ฿1900)\n฿8K\nTOTAL (5-year all-in)\n฿18K\n\nApply from any Thai embassy. ฿500K seasoning required but stays in your account (not a cost).\n\nREAD FULL DTV GUI",
+      "error": null
+    },
+    {
+      "path": "/tools/eligibility/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "Your LTR eligibility results\nWealthy Global Citizen (W)\nNO\nAssets ≥ $1M ($1,000,000)\nIncome ≥ $80k/yr ($80,000)\nThai investment must be ≥ $500k (you: $250,000). Options: Thai government bonds, BOI-approved company shares, Thai real estate.\nHealth ins",
+      "error": null
+    },
+    {
+      "path": "/tools/eligibility/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "Your LTR eligibility results\nWealthy Global Citizen (W)\nNO\nAssets ≥ $1M ($1,000,000)\nIncome ≥ $80k/yr ($80,000)\nThai investment must be ≥ $500k (you: $250,000). Options: Thai government bonds, BOI-approved company shares, Thai real estate.\nHealth ins",
+      "error": null
+    },
+    {
+      "path": "/tools/expiry-countdown/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// DAYS UNTIL VISA EXPIRY\n228\nEXPIRES 31 DEC 2026 · YOU HAVE TIME\n// Upcoming dates\n30 JUL 2026\n90-day report (TM47)\nFile at Jomtien Immigration or online · 74 days away\n01 DEC 2026\nApply for extension (window opens)\nLast 30 days before expiry · TM7 ",
+      "error": null
+    },
+    {
+      "path": "/tools/expiry-countdown/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// DAYS UNTIL VISA EXPIRY\n228\nEXPIRES 31 DEC 2026 · YOU HAVE TIME\n// Upcoming dates\n30 JUL 2026\n90-day report (TM47)\nFile at Jomtien Immigration or online · 74 days away\n01 DEC 2026\nApply for extension (window opens)\nLast 30 days before expiry · TM7 ",
+      "error": null
+    },
+    {
+      "path": "/tools/income-test/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "You qualify for 5 visas based on this input. Monthly income: $6,000 USD-equivalent. Liquid: ฿200K+.\n// YOUR ELIGIBILITY\nVISAS YOU QUALIFY FOR\nYES\nMarriage Non-O\n→\nYES\nSMART Visa\n→\nYES\nBusiness Non-B\n→\nYES\nEducation ED\n→\nYES\nTourist TR (60-day)\n→\nNO\nD",
+      "error": null
+    },
+    {
+      "path": "/tools/income-test/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "You qualify for 5 visas based on this input. Monthly income: $6,000 USD-equivalent. Liquid: ฿200K+.\n// YOUR ELIGIBILITY\nVISAS YOU QUALIFY FOR\nYES\nMarriage Non-O\n฿40K+/m ✓ (need Thai spouse)\n→\nYES\nSMART Visa\n$3K+/m · need BOI sector + endorsement\n→\nYE",
+      "error": null
+    },
+    {
+      "path": "/tools/document-checklist/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// YOUR DOCUMENT CHECKLIST\nDTV — DESTINATION THAILAND VISA\nIDENTITY & TRAVEL\nPassport\n— minimum 6 months validity, 2+ blank pages\nDigital passport photo (white background, recent)\nProof of accommodation in Thailand (hotel booking or rental contract)\n",
+      "error": null
+    },
+    {
+      "path": "/tools/document-checklist/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "// YOUR DOCUMENT CHECKLIST\nDTV — DESTINATION THAILAND VISA\nIDENTITY & TRAVEL\nPassport\n— minimum 6 months validity, 2+ blank pages\nDigital passport photo (white background, recent)\nProof of accommodation in Thailand (hotel booking or rental contract)\n",
+      "error": null
+    },
+    {
+      "path": "/tools/currency-converter/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "฿1,000 | ฿1,000 = ฿1,000 · 1 THB ≈ ฿1",
+      "error": null
+    },
+    {
+      "path": "/tools/currency-converter/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "฿1,000 | ฿1,000 = ฿1,000 · 1 THB ≈ ฿1",
+      "error": null
+    },
+    {
+      "path": "/tools/bank-checker/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "DTV (Destination Thailand Visa)\nBangkok Bank\nBRANCH-DEPENDENT\nSome Pattaya branches open with DTV + lease + TM30. South Pattaya and Jomtien Beach Rd branches are friendliest. Bring 10–20k THB seed deposit.\nBEST PATTAYA BRANCHES: JOMTIEN BEACH · SOUTH",
+      "error": null
+    },
+    {
+      "path": "/tools/bank-checker/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "DTV (Destination Thailand Visa)\nBangkok Bank\nBRANCH-DEPENDENT\nSome Pattaya branches open with DTV + lease + TM30. South Pattaya and Jomtien Beach Rd branches are friendliest. Bring 10–20k THB seed deposit.\nBEST PATTAYA BRANCHES: JOMTIEN BEACH · SOUTH",
+      "error": null
+    },
+    {
+      "path": "/tools/reminder/",
+      "viewport": "mobile",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "Your immigration deadlines\nTM30 — Address Registration\nTuesday, 19 May 2026\nWithin 24 hours of arrival/move. Your landlord (or you) must file TM30 at Pattaya Immigration (Soi 5) or online via the TM30 portal. Required for every re-entry too. Fine: TH",
+      "error": null
+    },
+    {
+      "path": "/tools/reminder/",
+      "viewport": "desktop",
+      "pass": true,
+      "consoleErrors": [],
+      "evidence": "Your immigration deadlines\nTM30 — Address Registration\nTuesday, 19 May 2026\nWithin 24 hours of arrival/move. Your landlord (or you) must file TM30 at Pattaya Immigration (Soi 5) or online via the TM30 portal. Required for every re-entry too. Fine: TH",
+      "error": null
+    }
+  ]
+}

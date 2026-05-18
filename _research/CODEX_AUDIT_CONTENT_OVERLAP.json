@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-05-17T23:06:52.155Z",
+  "method": "normalized 5-word shingle Jaccard after boilerplate removal; not a substitute for paid plagiarism index",
+  "results": [
+    {
+      "local": "visas/dtv/index.html",
+      "url": "https://www.siam-legal.com/thailand-visa/dtv-visa-thailand.php",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 2416,
+      "remoteWords": 5331,
+      "localShingles": 1535,
+      "remoteShingles": 3443,
+      "jaccard5": 0.0006
+    },
+    {
+      "local": "visas/dtv/index.html",
+      "url": "https://budapest.thaiembassy.org/en/publicservice/destination-thailand-visa-dtv?cate=698497c323290a095267d1c3",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 2416,
+      "remoteWords": 931,
+      "localShingles": 1535,
+      "remoteShingles": 428,
+      "jaccard5": 0
+    },
+    {
+      "local": "visas/ltr/index.html",
+      "url": "https://ltr.boi.go.th/",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 1867,
+      "remoteWords": 2451,
+      "localShingles": 1204,
+      "remoteShingles": 1318,
+      "jaccard5": 0
+    },
+    {
+      "local": "visas/privilege-elite/index.html",
+      "url": "https://www.thailandprivilege.co.th/why-thailand/expat-health-insurance-thailand-guide",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 1777,
+      "remoteWords": 5678,
+      "localShingles": 1153,
+      "remoteShingles": 3584,
+      "jaccard5": 0
+    },
+    {
+      "local": "visas/retirement-o-x/index.html",
+      "url": "https://thailand.go.th/public/issue-focus-detail/001-01-058",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 1534,
+      "remoteWords": 1,
+      "localShingles": 968,
+      "remoteShingles": 0,
+      "jaccard5": 0
+    },
+    {
+      "local": "visas/retirement-non-o/index.html",
+      "url": "https://www.conciergepattaya.com/thailand-visa-services/thailand-retirement-visa-pattaya/",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 1980,
+      "remoteWords": 1317,
+      "localShingles": 1275,
+      "remoteShingles": 697,
+      "jaccard5": 0
+    },
+    {
+      "local": "guides/90-day-reporting/index.html",
+      "url": "https://www.thaiembassy.com/travel-to-thailand/guide-to-thai-immigration-90-day-reporting",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 2532,
+      "remoteWords": 5692,
+      "localShingles": 1574,
+      "remoteShingles": 2648,
+      "jaccard5": 0
+    },
+    {
+      "local": "guides/tm30-reporting/index.html",
+      "url": "https://www.thai-visa-services.com/guides/tm30-reporting",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 1467,
+      "remoteWords": 2264,
+      "localShingles": 932,
+      "remoteShingles": 1477,
+      "jaccard5": 0
+    },
+    {
+      "local": "guides/best-visa-digital-nomads/index.html",
+      "url": "https://www.thaiembassy.com/thailand-visa/the-best-visas-for-digital-nomads-in-thailand",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 822,
+      "remoteWords": 3690,
+      "localShingles": 551,
+      "remoteShingles": 1517,
+      "jaccard5": 0
+    },
+    {
+      "local": "visas/marriage-non-o/index.html",
+      "url": "https://www.conciergepattaya.com/blog/marriage-visa-for-thailand/",
+      "ok": true,
+      "status": 200,
+      "error": null,
+      "localWords": 2172,
+      "remoteWords": 1392,
+      "localShingles": 1355,
+      "remoteShingles": 711,
+      "jaccard5": 0
+    }
+  ]
+}

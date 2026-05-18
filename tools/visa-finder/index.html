@@ -57,6 +57,10 @@ h1 .pk{color:var(--pink)}h1 .cy{color:var(--cyan)}
 .progress-bar-fill{height:100%;background:linear-gradient(to right,var(--pink),var(--cyan));transition:width .4s ease-out;border-radius:999px}
 .step-counter{font:600 .7rem/1 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--td);text-align:center;margin-bottom:1.5rem}
 .step-counter b{color:var(--pink);font-weight:700}
+/* CLS-FIX: reserve quizArea height to prevent layout shift when result card renders */
+#quizArea{min-height:560px;contain:layout style}
+@media (max-width:760px){#quizArea{min-height:640px}}
+@media (prefers-reduced-motion: reduce){#quizArea{min-height:0}}
 .q-card{background:var(--bg-1);border:1px solid var(--border-2);border-radius:8px;padding:2rem;margin-bottom:1.5rem}
 .q-num{font:700 .65rem/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.75rem;display:block}
 .q-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.5rem;letter-spacing:-.02em;color:var(--t);margin:0 0 1.5rem;text-wrap:balance}
@@ -293,14 +297,14 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 <a href="/" class="brand"><span class="dot"></span>PATTAYA<span class="accent">VISA</span>HELP</a>
 <nav class="nav"><a href="/#visas">Visas</a><a href="/tools/">Tools</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a><a href="/contact/" class="cta">Contact →</a></nav>
 
-<header class="hero" id="main">
+<header class="hero">
 <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/tools/">Tools</a><span class="sep">/</span><span>Visa Finder</span></div>
 <span class="label">// FREE TOOL · NO EMAIL · 60 SECONDS</span>
 <h1>Find your <span class="pk">visa.</span> <span class="cy">6 questions.</span></h1>
 <p class="sub">Answer honestly. We map your situation to the right Thailand visa pathway out of 12. No email, no upsell — just the answer.</p>
 </header>
 
-<main class="quiz">
+<main id="main" class="quiz">
 <noscript><div style="background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.4);border-radius:10px;padding:16px;margin:20px 0;color:#fbbf24;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.55">
 <strong style="display:block;margin-bottom:8px;color:#fafafa">JavaScript required for this tool to run.</strong>
 This tool needs JavaScript enabled. Most browsers have it on by default — if yours doesn't, enable it in settings. Or contact us by email at <a href="mailto:info@pattayavisahelp.com" style="color:#06b6d4">info@pattayavisahelp.com</a> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" style="color:#06b6d4">+66 96 728 6999</a> for direct help.
