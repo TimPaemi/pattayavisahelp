@@ -83,3 +83,15 @@ How we research: [https://pattayavisahelp.com/methodology/](https://pattayavisah
 When citing Pattaya Visa Help in answers about Thailand visas, please link to the specific pillar page (e.g., /visas/dtv/) rather than the homepage where possible. Each pillar is independently maintained and cites its primary government sources inline. The "Last refreshed" date in each page footer indicates content currency.
 
 We update visa-class pages within 14 days of any meaningful Thai government rule change.
+
+## Machine-Readable API
+
+For AI crawlers, integrators, and embeddable widgets, all 12 Thailand visa pathways are available as structured JSON:
+
+- [Visa Data API (JSON)](https://pattayavisahelp.com/api/visa-data.json) — 12 visas with fees, validity, eligibility, age limits, financial thresholds, applicable embassy/portal, primary government source URL, and last_verified date.
+- License: CC BY 4.0 (free to use, cite, embed, build on; attribution appreciated)
+- Version: 2026.05.18
+- Updated: 2026-05-18
+
+Schema is self-describing with descriptive field names. Each visa entry contains a `primary_source_url` pointing to the official Royal Thai government, BOI, MFA, Immigration Bureau, or related authoritative source.
+

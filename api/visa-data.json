@@ -1,0 +1,487 @@
+{
+  "name": "Pattaya Visa Help — Thailand Visa Data API",
+  "description": "Structured, machine-readable data for all 12 Thailand long-stay and short-stay visa pathways. Independent, no agent commissions, sourced from official Royal Thai government, BOI, MFA, and Immigration Bureau publications.",
+  "url": "https://pattayavisahelp.com/api/visa-data.json",
+  "publisher": {
+    "name": "Pattaya Visa Help",
+    "url": "https://pattayavisahelp.com/",
+    "founder": "Tim Paemi",
+    "area_served": [
+      "Pattaya",
+      "Jomtien",
+      "Chonburi",
+      "Thailand"
+    ]
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "license_note": "Free to use, cite, embed, and build on. Attribution to Pattaya Visa Help appreciated but not required.",
+  "version": "2026.05.18",
+  "last_updated": "2026-05-18",
+  "currency_note": "All amounts in THB unless otherwise specified. USD amounts noted explicitly.",
+  "rule_basis": "Royal Thai government regulations as of 2026 Q2",
+  "visa_count": 12,
+  "visas": [
+    {
+      "id": "dtv",
+      "slug": "dtv",
+      "name": "DTV — Destination Thailand Visa",
+      "alt_names": [
+        "DTV",
+        "Destination Thailand Visa",
+        "Thai Digital Nomad Visa"
+      ],
+      "url": "https://pattayavisahelp.com/visas/dtv/",
+      "category": "long-stay-remote-work",
+      "validity_years": 5,
+      "stay_per_entry_days": 180,
+      "extension_per_entry_days": 180,
+      "max_consecutive_days": 360,
+      "government_fee_thb": 10000,
+      "financial_threshold_thb": 500000,
+      "financial_seasoning_months_min": 3,
+      "financial_seasoning_months_max": 6,
+      "seasoning_note": "Vientiane and Penang have accepted 3 months; Budapest and several European embassies require 6 months.",
+      "income_proof_required": true,
+      "thai_sponsor_required": false,
+      "work_permit_included": false,
+      "remote_work_for_foreign_employers": true,
+      "thai_employment_allowed": false,
+      "tax_residency_threshold_days": 180,
+      "ltr_tax_exemption": false,
+      "applies_at": "thai_embassy_or_evisa_portal",
+      "best_for": [
+        "Digital nomads",
+        "Remote workers",
+        "Freelancers with foreign clients",
+        "Muay Thai students",
+        "Thai cooking school students"
+      ],
+      "primary_source_url": "https://budapest.thaiembassy.org/en/publicservice/destination-thailand-visa-dtv",
+      "primary_source_name": "Royal Thai Embassy Budapest — DTV public service page",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "ltr",
+      "slug": "ltr",
+      "name": "LTR — Long-Term Resident Visa",
+      "alt_names": [
+        "LTR",
+        "Long-Term Resident",
+        "Thailand LTR"
+      ],
+      "url": "https://pattayavisahelp.com/visas/ltr/",
+      "category": "long-stay-wealth-skill",
+      "validity_years": 10,
+      "government_fee_thb": 50000,
+      "financial_threshold_usd_assets": 1000000,
+      "financial_threshold_usd_income_per_year": 80000,
+      "income_proof_required": true,
+      "thai_sponsor_required": false,
+      "work_permit_included": true,
+      "remote_work_for_foreign_employers": true,
+      "thai_employment_allowed": true,
+      "tax_residency_threshold_days": 180,
+      "ltr_tax_exemption": true,
+      "tax_exemption_basis": "Royal Decree 743 (effective 2024) — foreign income exempt from Thai remittance tax for LTR holders",
+      "applies_at": "boi_long_term_resident_program",
+      "best_for": [
+        "High earners $80K+/year",
+        "Wealthy retirees",
+        "Skilled professionals in BOI target industries",
+        "Anyone wanting tax exemption on foreign income"
+      ],
+      "eligibility_categories": [
+        {
+          "id": "wealthy-global-citizen",
+          "name": "Wealthy Global Citizen",
+          "criteria": "$1M assets + $80K/yr income + $500K Thai investment + $50K health insurance"
+        },
+        {
+          "id": "wealthy-pensioner",
+          "name": "Wealthy Pensioner",
+          "criteria": "Age 50+, $80K/yr pension (or $40K + $250K Thai investment) + $50K health insurance"
+        },
+        {
+          "id": "work-from-thailand-pro",
+          "name": "Work-from-Thailand Professional",
+          "criteria": "Foreign employer with $150M revenue or publicly listed, $80K/yr income (or $40K + Master's), $50K insurance"
+        },
+        {
+          "id": "highly-skilled-pro",
+          "name": "Highly-Skilled Professional",
+          "criteria": "Thai BOI-promoted or target-industry employer, $80K/yr (or $40K + Master's in STEM/expertise), $50K insurance"
+        }
+      ],
+      "primary_source_url": "https://ltr.boi.go.th/",
+      "primary_source_name": "Board of Investment of Thailand — LTR Program",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "privilege-elite",
+      "slug": "privilege-elite",
+      "name": "Thailand Privilege (formerly Thailand Elite)",
+      "alt_names": [
+        "Thailand Privilege",
+        "Thailand Elite",
+        "TPC",
+        "Privilege Visa"
+      ],
+      "url": "https://pattayavisahelp.com/visas/privilege-elite/",
+      "category": "pay-to-stay-membership",
+      "validity_years_range": [
+        5,
+        20
+      ],
+      "stay_per_entry_days": 365,
+      "government_fee_thb_range": [
+        650000,
+        5000000
+      ],
+      "tiers": [
+        {
+          "name": "Bronze",
+          "fee_thb": 650000,
+          "years": 5
+        },
+        {
+          "name": "Gold",
+          "fee_thb": 900000,
+          "years": 5
+        },
+        {
+          "name": "Platinum",
+          "fee_thb": 1500000,
+          "years": 10
+        },
+        {
+          "name": "Diamond",
+          "fee_thb": 2500000,
+          "years": 15
+        },
+        {
+          "name": "Reserve",
+          "fee_thb": 5000000,
+          "years": 20,
+          "note": "Invitation only"
+        }
+      ],
+      "income_proof_required": false,
+      "thai_sponsor_required": false,
+      "work_permit_included": false,
+      "thai_employment_allowed": false,
+      "applies_at": "thailand_privilege_card_company",
+      "best_for": [
+        "High net worth applicants",
+        "No financial-disclosure paperwork",
+        "Long-stay without annual extension hassle",
+        "Concierge / fast-track preference"
+      ],
+      "primary_source_url": "https://www.thailandprivilege.co.th/",
+      "primary_source_name": "Thailand Privilege (official programme website)",
+      "primary_source_bronze_pdf": "https://cms.thailandprivilege.co.th/stocks/download/o0x0/xa/kb/ah5vxakbog8/670910_brochure-BRONZE_1.pdf",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "retirement-non-o",
+      "slug": "retirement-non-o",
+      "name": "Non-O Retirement Visa",
+      "alt_names": [
+        "Non-O Retirement",
+        "Non-Immigrant O (Retirement)",
+        "Retirement Visa Thailand"
+      ],
+      "url": "https://pattayavisahelp.com/visas/retirement-non-o/",
+      "category": "retirement",
+      "validity_years": 1,
+      "renewable_annually": true,
+      "government_fee_thb": 1900,
+      "financial_threshold_thb_bank": 800000,
+      "financial_threshold_thb_monthly_income": 65000,
+      "financial_options_note": "EITHER THB 800,000 in Thai bank seasoned 2 months pre-application + 3 months post-extension, OR THB 65,000/month income, OR a combination totaling THB 800K/year",
+      "age_min": 50,
+      "income_proof_required": true,
+      "work_permit_included": false,
+      "thai_employment_allowed": false,
+      "applies_at": "thai_immigration_office_inside_thailand_or_embassy",
+      "best_for": [
+        "Retirees 50+ permanently settling in Thailand",
+        "Steady pension or savings",
+        "Pattaya retirees wanting simpler/cheaper than O-A"
+      ],
+      "primary_source_url": "https://www.immigration.go.th/",
+      "primary_source_name": "Thai Immigration Bureau",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "retirement-o-a",
+      "slug": "retirement-o-a",
+      "name": "Non-O-A Retirement Visa (Embassy)",
+      "alt_names": [
+        "O-A Retirement",
+        "Non-O-A",
+        "Long Stay Visa"
+      ],
+      "url": "https://pattayavisahelp.com/visas/retirement-o-a/",
+      "category": "retirement",
+      "validity_years": 1,
+      "multi_entry": true,
+      "renewable_annually": true,
+      "financial_threshold_thb_bank": 800000,
+      "financial_threshold_thb_monthly_income": 65000,
+      "age_min": 50,
+      "health_insurance_mandatory_thb": 3000000,
+      "criminal_background_check_required": true,
+      "medical_certificate_required": true,
+      "income_proof_required": true,
+      "work_permit_included": false,
+      "thai_employment_allowed": false,
+      "applies_at": "thai_embassy_in_home_country",
+      "best_for": [
+        "Retirees wanting multi-entry from day 1",
+        "Those who can fly home if mistakes need correction"
+      ],
+      "primary_source_url": "https://www.thaiembassy.com/thailand-visa/non-immigrant-visa-oa-long-stay",
+      "primary_source_name": "Royal Thai Embassy (Long Stay O-A)",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "retirement-o-x",
+      "slug": "retirement-o-x",
+      "name": "Non-O-X Retirement Visa (10-Year)",
+      "alt_names": [
+        "O-X Retirement",
+        "Non-O-X",
+        "10-Year Thailand Retirement"
+      ],
+      "url": "https://pattayavisahelp.com/visas/retirement-o-x/",
+      "category": "retirement",
+      "validity_years": 10,
+      "structure": "5 years + 5-year renewal",
+      "government_fee_thb": 10000,
+      "financial_threshold_thb_thai_bank_deposit": 3000000,
+      "age_min": 50,
+      "health_insurance_mandatory_thb": 3000000,
+      "eligible_countries_count": 14,
+      "eligible_countries": [
+        "Australia",
+        "Canada",
+        "Denmark",
+        "Finland",
+        "France",
+        "Germany",
+        "Italy",
+        "Japan",
+        "Netherlands",
+        "Norway",
+        "Sweden",
+        "Switzerland",
+        "United Kingdom",
+        "United States"
+      ],
+      "income_proof_required": true,
+      "work_permit_included": false,
+      "thai_employment_allowed": false,
+      "applies_at": "thai_embassy_in_home_country",
+      "best_for": [
+        "50+ retirees from 14 eligible nationalities wanting a 10-year lock-in"
+      ],
+      "primary_source_url": "https://thailand.go.th/public/issue-focus-detail/001-01-058",
+      "primary_source_name": "Thailand.go.th — Non-O-X Long Stay Visa",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "marriage-non-o",
+      "slug": "marriage-non-o",
+      "name": "Non-O Marriage Visa",
+      "alt_names": [
+        "Marriage Visa Thailand",
+        "Non-O Marriage"
+      ],
+      "url": "https://pattayavisahelp.com/visas/marriage-non-o/",
+      "category": "family",
+      "validity_years": 1,
+      "renewable_annually": true,
+      "government_fee_thb": 1900,
+      "financial_threshold_thb_bank": 400000,
+      "financial_threshold_thb_monthly_income": 40000,
+      "thai_spouse_required": true,
+      "thai_sponsor_required": true,
+      "work_permit_included": false,
+      "thai_employment_allowed": false,
+      "applies_at": "thai_immigration_office",
+      "best_for": [
+        "Foreigners legally married to Thai citizens"
+      ],
+      "primary_source_url": "https://www.immigration.go.th/",
+      "primary_source_name": "Thai Immigration Bureau",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "business-non-b",
+      "slug": "business-non-b",
+      "name": "Non-B Business Visa",
+      "alt_names": [
+        "Non-B",
+        "Business Visa Thailand",
+        "Work Visa"
+      ],
+      "url": "https://pattayavisahelp.com/visas/business-non-b/",
+      "category": "employment",
+      "validity_years": 1,
+      "renewable_annually": true,
+      "government_fee_thb": 1900,
+      "thai_sponsor_required": true,
+      "work_permit_separate_required": true,
+      "thai_employment_allowed": true,
+      "applies_at": "thai_embassy_then_work_permit_inside",
+      "best_for": [
+        "Foreigners employed by a registered Thai company",
+        "Business owners with BOI promotion"
+      ],
+      "primary_source_url": "https://www.immigration.go.th/",
+      "primary_source_name": "Thai Immigration Bureau",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "education-ed",
+      "slug": "education-ed",
+      "name": "Non-ED Education Visa",
+      "alt_names": [
+        "Non-ED",
+        "Education Visa Thailand",
+        "ED Visa"
+      ],
+      "url": "https://pattayavisahelp.com/visas/education-ed/",
+      "category": "study",
+      "validity_years": 1,
+      "renewable_annually": true,
+      "government_fee_thb": 2000,
+      "school_enrollment_required": true,
+      "moe_accredited_school_required": true,
+      "thai_employment_allowed": false,
+      "applies_at": "thai_embassy_with_school_letter",
+      "best_for": [
+        "Full-time Thai language students",
+        "Muay Thai students at accredited gyms",
+        "International school families"
+      ],
+      "primary_source_url": "https://www.moe.go.th/",
+      "primary_source_name": "Ministry of Education Thailand",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "smart",
+      "slug": "smart",
+      "name": "SMART Visa",
+      "alt_names": [
+        "SMART Visa Thailand",
+        "Thailand SMART"
+      ],
+      "url": "https://pattayavisahelp.com/visas/smart/",
+      "category": "tech-talent",
+      "validity_years_range": [
+        1,
+        4
+      ],
+      "government_fee_thb": 10000,
+      "smart_categories": [
+        "Talent (T)",
+        "Investor (I)",
+        "Executive (E)",
+        "Startup (S)",
+        "Other (O)"
+      ],
+      "income_proof_required": true,
+      "income_minimum_thb_monthly": 100000,
+      "work_permit_included": true,
+      "thai_employment_allowed": true,
+      "applies_at": "boi_one_start_one_stop",
+      "best_for": [
+        "Tech experts in S-curve industries",
+        "Startup founders",
+        "Investors in BOI-promoted businesses"
+      ],
+      "primary_source_url": "https://smart-visa.boi.go.th/",
+      "primary_source_name": "Board of Investment of Thailand — SMART Visa",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "tourist-tr-evisa",
+      "slug": "tourist-tr-evisa",
+      "name": "Tourist Visa TR + eVisa",
+      "alt_names": [
+        "Tourist Visa",
+        "TR Visa",
+        "Thai eVisa",
+        "METV"
+      ],
+      "url": "https://pattayavisahelp.com/visas/tourist-tr-evisa/",
+      "category": "tourist",
+      "stay_per_entry_days": 60,
+      "extension_per_entry_days": 30,
+      "max_consecutive_days": 90,
+      "tiers": [
+        {
+          "name": "Single Entry",
+          "fee_usd": 40,
+          "validity_months": 3
+        },
+        {
+          "name": "Double Entry",
+          "fee_usd": 80,
+          "validity_months": 6
+        },
+        {
+          "name": "METV (Multi-Entry)",
+          "fee_usd": 200,
+          "validity_months": 6
+        }
+      ],
+      "thai_employment_allowed": false,
+      "thai_sponsor_required": false,
+      "applies_at": "evisa_portal_thaievisa_go_th",
+      "best_for": [
+        "Tourists from non-visa-exempt countries",
+        "Multi-trip travelers wanting METV",
+        "Pre-approved entry confidence"
+      ],
+      "primary_source_url": "https://www.thaievisa.go.th/",
+      "primary_source_name": "Royal Thai Government eVisa Portal",
+      "last_verified": "2026-05-18"
+    },
+    {
+      "id": "media-non-m",
+      "slug": "media-non-m",
+      "name": "Non-M Media Visa",
+      "alt_names": [
+        "Non-M",
+        "Media Visa Thailand",
+        "Press Visa",
+        "Journalist Visa"
+      ],
+      "url": "https://pattayavisahelp.com/visas/media-non-m/",
+      "category": "media-press",
+      "validity_years_range": [
+        0.25,
+        1
+      ],
+      "duration_tiers": [
+        "90 days",
+        "1 year"
+      ],
+      "prd_endorsement_required": true,
+      "work_permit_included": true,
+      "thai_employment_allowed": true,
+      "applies_at": "thai_embassy_with_prd_letter",
+      "best_for": [
+        "Accredited journalists",
+        "Foreign correspondents",
+        "Documentary crews",
+        "Photojournalists assigned to cover Thailand"
+      ],
+      "primary_source_url": "https://www.prd.go.th/",
+      "primary_source_name": "Public Relations Department of Thailand",
+      "last_verified": "2026-05-18"
+    }
+  ]
+}
