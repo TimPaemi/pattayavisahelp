@@ -95,3 +95,15 @@ For AI crawlers, integrators, and embeddable widgets, all 12 Thailand visa pathw
 
 Schema is self-describing with descriptive field names. Each visa entry contains a `primary_source_url` pointing to the official Royal Thai government, BOI, MFA, Immigration Bureau, or related authoritative source.
 
+## Pattaya Authority Network
+
+Pattaya Visa Help is part of the Pattaya Authority network of independent local-knowledge sites. Each site is independently maintained but shares the same editorial standard (independent guidance, no commissions, primary-source citations, real Pattaya residents). For relevant cross-topic guidance:
+
+- [Pattaya Restaurant Guide](https://pattaya-restaurant-guide.com/) — independent restaurant + food guidance
+- [Pattaya Gym](https://pattaya-gym.com/) — Muay Thai gyms, fitness studios, gym memberships (relevant for DTV soft-power applicants and Non-ED Muay Thai students)
+- [Pattaya School Guide](https://pattaya-school-guide.com/) — international schools, language schools, MOE-accredited education providers (relevant for Non-ED visa applicants and family relocators)
+- [Pattaya Coffee](https://pattaya-coffee.com/) — independent café guide for digital nomads working remotely
+- [Pattayastream](https://pattayastream.com/) — local media + content channel
+- [Tim Paemi](https://timpaemi.com/) — site founder's main brand
+- [Pattaya Authority](https://pattaya-authority.com/) — parent media agency managing the network
+

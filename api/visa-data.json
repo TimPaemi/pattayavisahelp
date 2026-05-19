@@ -15,8 +15,8 @@
   },
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "license_note": "Free to use, cite, embed, and build on. Attribution to Pattaya Visa Help appreciated but not required.",
-  "version": "2026.05.18",
-  "last_updated": "2026-05-18",
+  "version": "2026.05.19",
+  "last_updated": "2026-05-19",
   "currency_note": "All amounts in THB unless otherwise specified. USD amounts noted explicitly.",
   "rule_basis": "Royal Thai government regulations as of 2026 Q2",
   "visa_count": 12,
@@ -58,7 +58,7 @@
       ],
       "primary_source_url": "https://budapest.thaiembassy.org/en/publicservice/destination-thailand-visa-dtv",
       "primary_source_name": "Royal Thai Embassy Budapest — DTV public service page",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "ltr",
@@ -112,7 +112,7 @@
       ],
       "primary_source_url": "https://ltr.boi.go.th/",
       "primary_source_name": "Board of Investment of Thailand — LTR Program",
-      "last_verified": "2026-05-18",
+      "last_verified": "2026-05-19",
       "tax_treatment_by_category": {
         "wealthy-global-citizen": {
           "foreign_income_exempt": true,
@@ -196,7 +196,7 @@
       "primary_source_url": "https://www.thailandprivilege.co.th/",
       "primary_source_name": "Thailand Privilege (official programme website)",
       "primary_source_bronze_pdf": "https://cms.thailandprivilege.co.th/stocks/download/o0x0/xa/kb/ah5vxakbog8/670910_brochure-BRONZE_1.pdf",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "retirement-non-o",
@@ -227,7 +227,7 @@
       ],
       "primary_source_url": "https://www.immigration.go.th/",
       "primary_source_name": "Thai Immigration Bureau",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "retirement-o-a",
@@ -259,7 +259,7 @@
       ],
       "primary_source_url": "https://www.thaiembassy.com/thailand-visa/non-immigrant-visa-oa-long-stay",
       "primary_source_name": "Royal Thai Embassy (Long Stay O-A)",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "retirement-o-x",
@@ -304,7 +304,7 @@
       ],
       "primary_source_url": "https://thailand.go.th/public/issue-focus-detail/001-01-058",
       "primary_source_name": "Thailand.go.th — Non-O-X Long Stay Visa",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "marriage-non-o",
@@ -331,7 +331,7 @@
       ],
       "primary_source_url": "https://www.immigration.go.th/",
       "primary_source_name": "Thai Immigration Bureau",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "business-non-b",
@@ -357,7 +357,7 @@
       ],
       "primary_source_url": "https://www.immigration.go.th/",
       "primary_source_name": "Thai Immigration Bureau",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "education-ed",
@@ -384,7 +384,7 @@
       ],
       "primary_source_url": "https://www.moe.go.th/",
       "primary_source_name": "Ministry of Education Thailand",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "smart",
@@ -420,7 +420,7 @@
       ],
       "primary_source_url": "https://smart-visa.boi.go.th/",
       "primary_source_name": "Board of Investment of Thailand — SMART Visa",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "tourist-tr-evisa",
@@ -464,7 +464,7 @@
       ],
       "primary_source_url": "https://www.thaievisa.go.th/",
       "primary_source_name": "Royal Thai Government eVisa Portal",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     },
     {
       "id": "media-non-m",
@@ -498,7 +498,7 @@
       ],
       "primary_source_url": "https://www.prd.go.th/",
       "primary_source_name": "Public Relations Department of Thailand",
-      "last_verified": "2026-05-18"
+      "last_verified": "2026-05-19"
     }
   ]
 }
