@@ -315,8 +315,8 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <div class="step-counter">Question <b id="curStep">1</b> of 6</div>
 <div id="quizArea"></div>
 <div class="controls">
-<button class="btn btn-outline" id="backBtn" disabled>← Back</button>
-<button class="btn btn-primary" id="nextBtn" disabled>Next →</button>
+<button type="button" class="btn btn-outline" id="backBtn" disabled>← Back</button>
+<button type="button" class="btn btn-primary" id="nextBtn" disabled>Next →</button>
 </div>
 </main>
 
@@ -579,7 +579,7 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
       '<a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas'+encodeURIComponent('Hi — quiz said '+v.name+' fits me. Can we discuss?')+'" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:var(--wa);color:var(--wa)">WhatsApp us</a>' +
       '</div>' +
       altHtml +
-      '<button class="reset-btn" id="resetQuiz">Restart quiz</button>' +
+      '<button type="button" class="reset-btn" id="resetQuiz">Restart quiz</button>' +
       '</div>';
 
     document.getElementById('resetQuiz').addEventListener('click', function(){
