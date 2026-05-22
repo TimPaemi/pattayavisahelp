@@ -555,102 +555,27 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 </div>
 
 <main id="main" class="article-body">
-<p>Tell us your situation and we'll reply within 24 hours with the visa name, the document list, the realistic all-in cost, and an honest view on whether you can do it yourself. Free, no obligation, and no agent commissions — ever.</p>
-<p>Prefer to talk directly? Email <a href="mailto:info@pattayavisahelp.com">info@pattayavisahelp.com</a>, message us on <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" target="_blank" rel="noopener noreferrer">WhatsApp</a>, or use the channel cards below. The form is best when you want to lay out the full picture in one go.</p>
+<p>Tell us your situation and we reply within 24 hours &mdash; with the visa name, the document list, the realistic all-in cost, and an honest view on whether you can handle it yourself. Free, no obligation, and no agent commissions, ever.</p>
+<p>We don't run a contact form on purpose. A direct message reaches a real person in Jomtien straight away &mdash; no ticket queue, no chatbot, no third-party sign-ups &mdash; and you keep the full thread to re-read later.</p>
 
-<h2>Send us your situation</h2>
-<style>
-#leadForm{max-width:680px;margin:1.5rem 0 .5rem}
-#leadForm .lf-row{display:flex;gap:1rem;flex-wrap:wrap}
-#leadForm .lf-row .lf-field{flex:1;min-width:200px}
-#leadForm .lf-field{margin:0 0 1.1rem}
-#leadForm label{display:block;font:600 .72rem/1.4 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--tl,#a1a1aa);margin:0 0 .45rem}
-#leadForm .lf-req{color:var(--pink,#ec4899)}
-#leadForm input,#leadForm select,#leadForm textarea{width:100%;background:var(--bg-2,#111);border:1px solid var(--border-2,rgba(255,255,255,.14));border-radius:8px;color:var(--t,#fafafa);font:400 16px/1.5 Inter,sans-serif;padding:13px 14px}
-#leadForm input:focus,#leadForm select:focus,#leadForm textarea:focus{outline:2px solid var(--cyan,#06b6d4);outline-offset:1px;border-color:var(--cyan,#06b6d4)}
-#leadForm textarea{resize:vertical;min-height:120px}
-#leadForm .lf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-#leadForm .lf-btn{width:100%;min-height:48px;background:var(--pink,#ec4899);color:#fff;border:0;border-radius:8px;font:700 .78rem/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;padding:16px;cursor:pointer;transition:opacity .15s}
-#leadForm .lf-btn:hover{opacity:.88}
-#leadForm .lf-btn:disabled{opacity:.5;cursor:not-allowed}
-#leadForm .lf-status{margin:1rem 0 0;font:600 .92rem/1.55 Inter,sans-serif}
-#leadForm .lf-status.ok{color:var(--grn,#10b981)}
-#leadForm .lf-status.err{color:var(--pink,#ec4899)}
-#leadForm .lf-status:empty{display:none}
-#leadForm .lf-fine{font:500 .66rem/1.6 'JetBrains Mono',monospace;letter-spacing:.05em;color:var(--td,#71717a);text-transform:uppercase;margin:1rem 0 0}
-</style>
-<form id="leadForm" novalidate>
-<div class="lf-row">
-<div class="lf-field"><label for="firstName">First name <span class="lf-req">*</span></label><input id="firstName" name="firstName" type="text" autocomplete="given-name" maxlength="100" required /></div>
-<div class="lf-field"><label for="lastName">Last name</label><input id="lastName" name="lastName" type="text" autocomplete="family-name" maxlength="100" /></div>
-</div>
-<div class="lf-row">
-<div class="lf-field"><label for="email">Email <span class="lf-req">*</span></label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="200" required /></div>
-<div class="lf-field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+66..." maxlength="50" /></div>
-</div>
-<div class="lf-field"><label for="visaInterest">Which visa are you asking about? <span class="lf-req">*</span></label>
-<select id="visaInterest" name="visaInterest" required>
-<option value="" disabled selected>Select one...</option>
-<option value="not-sure">Not sure - help me pick</option>
-<option value="dtv">DTV (Digital Nomad)</option>
-<option value="ltr">LTR (Long-Term Resident)</option>
-<option value="privilege">Thailand Privilege</option>
-<option value="retirement">Retirement (Non-O / O-A)</option>
-<option value="marriage">Marriage</option>
-<option value="business">Business / Work Permit</option>
-<option value="education">Education / Muay Thai</option>
-<option value="smart">SMART</option>
-<option value="tourist">Tourist (TR)</option>
-<option value="other">Other / multiple</option>
-</select>
-</div>
-<div class="lf-field"><label for="situation">Tell us your situation</label>
-<textarea id="situation" name="situation" rows="5" maxlength="2000" placeholder="e.g. UK, 67, retiring, plan to live in Jomtien, ~GBP 3K/month pension, no Thai bank account yet..."></textarea>
-</div>
-<div class="lf-hp" aria-hidden="true"><label>Leave this field blank<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
-<button type="submit" id="lfSubmit" class="lf-btn">Send message - reply within 24 hrs &rarr;</button>
-<p id="formStatus" class="lf-status" role="status" aria-live="polite" aria-atomic="true"></p>
-<p class="lf-fine">No spam. We never sell your data. We take no commissions from agents or law firms.</p>
-</form>
-<script>
-(function(){
-  var f=document.getElementById('leadForm');
-  if(!f)return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var status=document.getElementById('formStatus');
-    var btn=document.getElementById('lfSubmit');
-    if(f.website&&f.website.value){return;}
-    if(!f.firstName.value.trim()||!f.email.value.trim()||!f.visaInterest.value){
-      status.className='lf-status err';
-      status.textContent='Please add your name, email, and which visa you are asking about.';
-      return;
-    }
-    btn.disabled=true;btn.textContent='Sending...';
-    status.className='lf-status';status.textContent='';
-    var payload={firstName:f.firstName.value.trim(),lastName:f.lastName.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),visaInterest:f.visaInterest.value,situation:f.situation.value.trim(),website:f.website?f.website.value:'',page:location.pathname,timestamp:new Date().toISOString()};
-    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-      .then(function(r){return r.json().then(function(d){return{ok:r.ok,d:d};});})
-      .then(function(res){
-        if(res.ok&&res.d&&res.d.success){
-          f.reset();
-          status.className='lf-status ok';
-          status.textContent=(res.d&&res.d.message)||'Thank you - we will reply within 24 hours.';
-          btn.style.display='none';
-        }else{
-          status.className='lf-status err';
-          status.textContent=(res.d&&res.d.error)||'Something went wrong. Please email info@pattayavisahelp.com directly.';
-          btn.disabled=false;btn.textContent='Send message - reply within 24 hrs \u2192';
-        }
-      })
-      .catch(function(){
-        status.className='lf-status err';
-        status.textContent='Network error. Please email info@pattayavisahelp.com directly.';
-        btn.disabled=false;btn.textContent='Send message - reply within 24 hrs \u2192';
-      });
-  });
-})();
-</script>
+<h2>Three ways to reach us</h2>
+<p>Use whichever you already have open. All three reach the same person.</p>
+<ul>
+<li><strong>WhatsApp &mdash; <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" target="_blank" rel="noopener noreferrer">+66 96 728 6999</a></strong>. Best for quick questions. Monday to Saturday, 9&ndash;18 ICT. English, German, Russian, Thai.</li>
+<li><strong>Email &mdash; <a href="mailto:info@pattayavisahelp.com">info@pattayavisahelp.com</a></strong>. Best for detail &mdash; documented, answered in your own time, easy to re-read.</li>
+<li><strong>LINE &mdash; <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">@timpaemi</a></strong>. Best if you are already in Thailand. Voice notes and photos welcome.</li>
+</ul>
+
+<h2>What to tell us</h2>
+<p>So we can give you a genuinely useful answer in a single reply, include as much of this as you can in your first message:</p>
+<ul>
+<li>Your nationality and your age.</li>
+<li>Your rough monthly income, pension, or savings.</li>
+<li>Whether you are married to a Thai national, or have Thai children.</li>
+<li>What you actually want from Thailand &mdash; long stay, remote work, retirement, study, Muay Thai, or running a business.</li>
+<li>Whether you are already in Thailand, and on which visa or stamp.</li>
+</ul>
+<p>The more you tell us up front, the more precise our answer &mdash; and the fewer back-and-forth messages it takes to get you sorted.</p>
 
 <h2>You might also need</h2>
 <p>While you wait for our reply, these free tools give you a head start:</p>
@@ -678,7 +603,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 <div class="contact-row">
 <a href="mailto:info@pattayavisahelp.com" class="cc c-email"><div class="lab">// EMAIL · BEST FOR DETAIL</div><div class="act">info@pattayavisahelp.com</div><div class="met">Reply within 24 hrs · Documented</div></a>
 <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" target="_blank" rel="noopener noreferrer" class="cc c-wa"><div class="lab">// WHATSAPP · QUICK Qs</div><div class="act">+66 96 728 6999</div><div class="met">Mon-Sat 9-18 ICT · EN · DE · РУ</div></a>
-<a href="#leadForm" class="cc c-form"><div class="lab">// CONTACT FORM</div><div class="act">Use the form</div><div class="met">For the full picture</div></a>
+<a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="cc c-line"><div class="lab">// LINE &middot; INSIDE THAILAND</div><div class="act">@timpaemi</div><div class="met">Voice notes &amp; photos OK</div></a>
 </div>
 </section>
 
