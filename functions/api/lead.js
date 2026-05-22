@@ -120,36 +120,52 @@ function clean(s, max) {
     };
     const visaLabel = visaLabels[lead.visaInterest] || lead.visaInterest;
 
+    // Escaped / cleaned copies for safe interpolation into HTML emails and webhook payloads
+    const safe = {
+      firstName: escapeHtml(lead.firstName),
+      lastName: escapeHtml(lead.lastName),
+      email: escapeHtml(lead.email),
+      phone: escapeHtml(lead.phone),
+      situation: escapeHtml(lead.situation),
+      page: escapeHtml(lead.page),
+      userAgent: escapeHtml(lead.userAgent),
+      ipCountry: escapeHtml(lead.ipCountry),
+      timestamp: escapeHtml(lead.timestamp),
+      visaLabel: escapeHtml(visaLabel),
+    };
+    const phoneDigits = lead.phone.replace(/[^0-9]/g, '');
+    const emailUrl = encodeURIComponent(lead.email);
+
     // Compose internal notification email (to Tim)
-    const internalSubject = `[NEW LEAD - ${visaLabel}] ${lead.firstName} ${lead.lastName} from ${lead.ipCountry}`;
+    const internalSubject = clean(`[NEW LEAD - ${visaLabel}] ${lead.firstName} ${lead.lastName} from ${lead.ipCountry}`, 200);
     const internalHtml = `
       <div style="font-family:-apple-system,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#0f172a;">
-        <h2 style="font-size:20px;color:#0c4a6e;border-bottom:2px solid #0ea5e9;padding-bottom:8px;">New Lead — ${visaLabel}</h2>
+        <h2 style="font-size:20px;color:#0c4a6e;border-bottom:2px solid #0ea5e9;padding-bottom:8px;">New Lead — ${safe.visaLabel}</h2>
 
         <div style="background:#f8fafc;padding:20px;border-radius:12px;margin:16px 0;">
-          <p style="margin:0 0 8px;"><strong>Name:</strong> ${lead.firstName} ${lead.lastName}</p>
-          <p style="margin:0 0 8px;"><strong>Email:</strong> <a href="mailto:${lead.email}" style="color:#0369a1;">${lead.email}</a></p>
-          ${lead.phone ? `<p style="margin:0 0 8px;"><strong>Phone:</strong> ${lead.phone}</p>` : ''}
-          <p style="margin:0 0 8px;"><strong>Visa interest:</strong> ${visaLabel}</p>
-          <p style="margin:0 0 8px;"><strong>Country (by IP):</strong> ${lead.ipCountry}</p>
-          <p style="margin:0;"><strong>Submitted:</strong> ${lead.timestamp}</p>
+          <p style="margin:0 0 8px;"><strong>Name:</strong> ${safe.firstName} ${safe.lastName}</p>
+          <p style="margin:0 0 8px;"><strong>Email:</strong> <a href="mailto:${emailUrl}" style="color:#0369a1;">${safe.email}</a></p>
+          ${lead.phone ? `<p style="margin:0 0 8px;"><strong>Phone:</strong> ${safe.phone}</p>` : ''}
+          <p style="margin:0 0 8px;"><strong>Visa interest:</strong> ${safe.visaLabel}</p>
+          <p style="margin:0 0 8px;"><strong>Country (by IP):</strong> ${safe.ipCountry}</p>
+          <p style="margin:0;"><strong>Submitted:</strong> ${safe.timestamp}</p>
         </div>
 
         ${lead.situation ? `
           <div style="background:#fff;border:1px solid #e2e8f0;padding:20px;border-radius:12px;margin:16px 0;">
             <p style="margin:0 0 8px;font-weight:600;">Their situation:</p>
-            <p style="margin:0;white-space:pre-wrap;">${lead.situation}</p>
+            <p style="margin:0;white-space:pre-wrap;">${safe.situation}</p>
           </div>
         ` : ''}
 
         <div style="margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;font-size:13px;color:#64748b;">
-          <p style="margin:0 0 4px;">Page submitted from: ${lead.page}</p>
-          <p style="margin:0;">User agent: ${lead.userAgent}</p>
+          <p style="margin:0 0 4px;">Page submitted from: ${safe.page}</p>
+          <p style="margin:0;">User agent: ${safe.userAgent}</p>
         </div>
 
         <div style="margin-top:24px;display:flex;gap:8px;flex-wrap:wrap;">
-          <a href="mailto:${lead.email}?subject=Re:%20Your%20Thailand%20visa%20enquiry" style="background:#0c4a6e;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply by email</a>
-          ${lead.phone ? `<a href="https://wa.me/${lead.phone.replace(/[^0-9]/g, '')}" style="background:#25d366;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply on WhatsApp</a>` : ''}
+          <a href="mailto:${emailUrl}?subject=Re:%20Your%20Thailand%20visa%20enquiry" style="background:#0c4a6e;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply by email</a>
+          ${phoneDigits ? `<a href="https://wa.me/${phoneDigits}" style="background:#25d366;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Reply on WhatsApp</a>` : ''}
         </div>
       </div>
     `;
@@ -158,8 +174,8 @@ function clean(s, max) {
     const autoReplySubject = `Thanks for getting in touch — Pattaya Visa Help`;
     const autoReplyHtml = `
       <div style="font-family:-apple-system,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#0f172a;">
-        <h2 style="font-size:24px;color:#0c4a6e;">Thanks, ${lead.firstName}.</h2>
-        <p style="font-size:16px;line-height:1.6;">We've received your enquiry about <strong>${visaLabel}</strong>.</p>
+        <h2 style="font-size:24px;color:#0c4a6e;">Thanks, ${safe.firstName}.</h2>
+        <p style="font-size:16px;line-height:1.6;">We've received your enquiry about <strong>${safe.visaLabel}</strong>.</p>
         <p style="font-size:16px;line-height:1.6;">A real human will reply to you within <strong>24 hours</strong> with the right answer for your situation. No automated runaround, no chatbot — just a real reply from someone who knows the Thai visa system.</p>
         <p style="font-size:16px;line-height:1.6;">In the meantime, you may find these useful:</p>
         <ul style="font-size:16px;line-height:1.8;">
@@ -181,7 +197,7 @@ function clean(s, max) {
       const notificationEmail = env.NOTIFICATION_EMAIL || 'info@pattayavisahelp.com';
 
       // Internal notification
-      const _resendRes = await fetch('https://api.resend.com/emails', {
+      let _resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${env.RESEND_API_KEY}`,
@@ -199,7 +215,7 @@ function clean(s, max) {
 
       // Auto-reply (small delay to feel less automated)
       await new Promise(resolve => setTimeout(resolve, 500));
-      const _resendRes = await fetch('https://api.resend.com/emails', {
+      _resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${env.RESEND_API_KEY}`,
@@ -234,7 +250,7 @@ function clean(s, max) {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            text: `:bell: *New lead — ${visaLabel}*\n*Name:* ${lead.firstName} ${lead.lastName}\n*Email:* ${lead.email}${lead.phone ? `\n*Phone:* ${lead.phone}` : ''}\n*Country:* ${lead.ipCountry}\n*Page:* ${lead.page}${lead.situation ? `\n*Situation:* ${lead.situation.slice(0, 300)}` : ''}`
+            text: `:bell: *New lead — ${clean(visaLabel, 60)}*\n*Name:* ${clean(lead.firstName, 100)} ${clean(lead.lastName, 100)}\n*Email:* ${clean(lead.email, 200)}${lead.phone ? `\n*Phone:* ${clean(lead.phone, 50)}` : ''}\n*Country:* ${clean(lead.ipCountry, 10)}\n*Page:* ${clean(lead.page, 200)}${lead.situation ? `\n*Situation:* ${clean(lead.situation, 300)}` : ''}`
           }),
         });
       } catch (e) {
@@ -251,15 +267,15 @@ function clean(s, max) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             embeds: [{
-              title: `New lead — ${visaLabel}`,
+              title: `New lead — ${clean(visaLabel, 60)}`,
               color: 0x0ea5e9,
               fields: [
-                { name: 'Name', value: `${lead.firstName} ${lead.lastName}`, inline: true },
-                { name: 'Email', value: lead.email, inline: true },
-                { name: 'Country', value: lead.ipCountry, inline: true },
-                ...(lead.phone ? [{ name: 'Phone', value: lead.phone, inline: true }] : []),
-                ...(lead.situation ? [{ name: 'Situation', value: lead.situation.slice(0, 1000) }] : []),
-                { name: 'Page', value: lead.page },
+                { name: 'Name', value: `${clean(lead.firstName, 100)} ${clean(lead.lastName, 100)}`, inline: true },
+                { name: 'Email', value: clean(lead.email, 200), inline: true },
+                { name: 'Country', value: clean(lead.ipCountry, 10), inline: true },
+                ...(lead.phone ? [{ name: 'Phone', value: clean(lead.phone, 50), inline: true }] : []),
+                ...(lead.situation ? [{ name: 'Situation', value: clean(lead.situation, 1000) }] : []),
+                { name: 'Page', value: clean(lead.page, 200) },
               ],
               timestamp: lead.timestamp,
             }],

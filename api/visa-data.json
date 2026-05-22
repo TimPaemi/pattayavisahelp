@@ -15,8 +15,8 @@
   },
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "license_note": "Free to use, cite, embed, and build on. Attribution to Pattaya Visa Help appreciated but not required.",
-  "version": "2026.05.19",
-  "last_updated": "2026-05-19",
+  "version": "2026.05.22",
+  "last_updated": "2026-05-22",
   "currency_note": "All amounts in THB unless otherwise specified. USD amounts noted explicitly.",
   "rule_basis": "Royal Thai government regulations as of 2026 Q2",
   "visa_count": 12,
@@ -116,15 +116,15 @@
       "tax_treatment_by_category": {
         "wealthy-global-citizen": {
           "foreign_income_exempt": true,
-          "basis": "Royal Decree 743 (2024)"
+          "basis": "Royal Decree 743 (B.E. 2565 / 2022)"
         },
         "wealthy-pensioner": {
           "foreign_income_exempt": true,
-          "basis": "Royal Decree 743 (2024)"
+          "basis": "Royal Decree 743 (B.E. 2565 / 2022)"
         },
         "work-from-thailand-pro": {
           "foreign_income_exempt": true,
-          "basis": "Royal Decree 743 (2024)"
+          "basis": "Royal Decree 743 (B.E. 2565 / 2022)"
         },
         "highly-skilled-pro": {
           "foreign_income_exempt": false,

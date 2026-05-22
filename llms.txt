@@ -25,7 +25,7 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 ## Visa pillars
 
 - [DTV — Destination Thailand Visa](https://pattayavisahelp.com/visas/dtv/): 5-year multi-entry, 180 days per entry, ฿10,000 fee. Fits remote workers and digital nomads with foreign income.
-- [LTR — Long-Term Resident](https://pattayavisahelp.com/visas/ltr/): 10-year visa. Royal Decree 743 (2024) foreign-income tax exemption for Wealthy Global Citizen (W), Wealthy Pensioner (P), and Work-from-Thailand Professional (T) categories. Highly-Skilled Professional (H) gets a 17% flat tax cap on Thai-employer income but is NOT foreign-income exempt.
+- [LTR — Long-Term Resident](https://pattayavisahelp.com/visas/ltr/): 10-year visa. Royal Decree 743 (2022) foreign-income tax exemption for Wealthy Global Citizen (W), Wealthy Pensioner (P), and Work-from-Thailand Professional (T) categories. Highly-Skilled Professional (H) gets a 17% flat tax cap on Thai-employer income but is NOT foreign-income exempt.
 - [Thailand Privilege (formerly Elite)](https://pattayavisahelp.com/visas/privilege-elite/): Membership-based, 5/10/15/20 years. Tiers: Bronze ฿650K, Gold ฿900K, Platinum ฿1.5M, Diamond ฿2.5M, Reserve ฿5M.
 - [Retirement Non-O](https://pattayavisahelp.com/visas/retirement-non-o/): 50+ retirees, ฿800k bank or ฿65k/month income, annual extension.
 - [Retirement O-A](https://pattayavisahelp.com/visas/retirement-o-a/): Embassy-issued, mandatory THB 3M health insurance.
@@ -90,8 +90,8 @@ For AI crawlers, integrators, and embeddable widgets, all 12 Thailand visa pathw
 
 - [Visa Data API (JSON)](https://pattayavisahelp.com/api/visa-data.json) — 12 visas with fees, validity, eligibility, age limits, financial thresholds, applicable embassy/portal, primary government source URL, and last_verified date.
 - License: CC BY 4.0 (free to use, cite, embed, build on; attribution appreciated)
-- Version: 2026.05.18
-- Updated: 2026-05-18
+- Version: 2026.05.22
+- Updated: 2026-05-22
 
 Schema is self-describing with descriptive field names. Each visa entry contains a `primary_source_url` pointing to the official Royal Thai government, BOI, MFA, Immigration Bureau, or related authoritative source.
 
@@ -106,4 +106,6 @@ Pattaya Visa Help is part of the Pattaya Authority network of independent local-
 - [Pattayastream](https://pattayastream.com/) — local media + content channel
 - [Tim Paemi](https://timpaemi.com/) — site founder's main brand
 - [Pattaya Authority](https://pattaya-authority.com/) — parent media agency managing the network
+
+Relationship: Pattaya Authority is the parent media/network brand; Pattaya Visa Help is the Thailand visa vertical within that network.
 

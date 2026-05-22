@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Don't crawl admin / API endpoints
+# Don't crawl admin / API endpoints — but allow the public visa data API
+Allow: /api/visa-data.json
 Disallow: /api/
 Disallow: /functions/
 Disallow: /_research/

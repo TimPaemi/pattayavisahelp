@@ -25,3 +25,7 @@
 # Common redirects
 /contact-us /contact/ 301
 /about-us /about/ 301
+
+# Legacy moved pages — server-side 301 (replaces meta-refresh stubs)
+/tools/ltr-eligibility/ /tools/eligibility/ 301
+/professions/digital-nomad/ /digital-nomad/ 301
