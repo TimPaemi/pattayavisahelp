@@ -341,10 +341,10 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <a href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://pattaya-authority.com" target="_blank" rel="noopener noreferrer">Pattaya Authority ↗</a>
 </div>
 </div>
-<div class="f-network" style="text-align:center;padding:1.5rem 1rem;border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:.5rem;font:500 .68rem/1.9 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tl,#a1a1aa)">
+<nav class="f-network" style="text-align:center;padding:1.5rem 1rem;border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:.5rem;font:500 .68rem/1.9 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tl,#a1a1aa)" aria-label="Pattaya Authority Network">
 <span style="color:var(--pink,#ec4899);margin-right:.5rem">// Pattaya Authority Network ·</span>
 <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a> · <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> · <a href="https://pattaya-gym.com/" target="_blank" rel="noopener noreferrer">Pattaya Gym</a> · <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> · <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> · <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a> · <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> · <a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a> · <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>
-</div>
+</nav>
 <div class="f-credit"><span class="f-credit-line"></span><span class="f-credit-text">// Site built &amp; managed by <a href="https://pattaya-authority.com" target="_blank" rel="noopener noreferrer"><b>Pattaya Authority</b></a> · <b>Tim Paemi</b> <span class="star">★</span></span><span class="f-credit-line"></span></div>
 <div class="f-bot"><span>© 2026 Pattaya Visa Help · All rights reserved</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Pattaya Visa Help is independent. The Visa Finder is a guidance tool — not a guarantee. Confirm with us via email/WhatsApp before applying.</p>
@@ -580,7 +580,7 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
       '<div class="stats-row">'+statsHtml+'</div>' +
       '<div class="ctas">' +
       '<a href="'+v.url+'" class="btn btn-primary">Full '+v.name.split('—')[0].trim()+' guide →</a>' +
-      '<a href="mailto:info@pattayavisahelp.com?subject='+encodeURIComponent('Quiz result: '+v.name)+'" class="btn btn-outline">Email us to confirm</a>' +
+      '<button type="button" class="btn btn-outline" id="emailConfirm">Email us to confirm</button>' +
       '<a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas'+encodeURIComponent('Hi — quiz said '+v.name+' fits me. Can we discuss?')+'" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:var(--wa);color:var(--wa)">WhatsApp us</a>' +
       '</div>' +
       altHtml +
@@ -592,6 +592,9 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
       backBtn.style.display = '';
       nextBtn.style.display = '';
       renderQuestion();
+    });
+    document.getElementById('emailConfirm').addEventListener('click', function(){
+      window.location.href = 'mailto:info@pattayavisahelp.com?subject=' + encodeURIComponent('Quiz result: ' + v.name);
     });
 
     backBtn.style.display = 'none';
