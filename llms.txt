@@ -61,12 +61,17 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 
 ## Profession-specific pages
 
+- [Visa for affiliate marketers](https://pattayavisahelp.com/professions/affiliate-marketer/)
+- [Visa for AI engineers](https://pattayavisahelp.com/professions/ai-engineer/)
+- [Visa for SaaS founders](https://pattayavisahelp.com/professions/saas-founder/)
+- [Visa for crypto traders](https://pattayavisahelp.com/professions/crypto-trader/)
 - [Visa for DJs and electronic artists](https://pattayavisahelp.com/professions/dj/)
 - [Visa for yoga teachers](https://pattayavisahelp.com/professions/yoga-teacher/)
 - [Visa for diving instructors](https://pattayavisahelp.com/professions/diving-instructor/)
 - [Visa for fitness trainers](https://pattayavisahelp.com/professions/fitness-trainer/)
 - [Visa for content creators and YouTubers](https://pattayavisahelp.com/professions/content-creator/)
 - [Visa for online business owners](https://pattayavisahelp.com/professions/online-business-owner/)
+- [All profession pages](https://pattayavisahelp.com/professions/)
 
 ## Methodology
 
@@ -90,8 +95,8 @@ For AI crawlers, integrators, and embeddable widgets, all 12 Thailand visa pathw
 
 - [Visa Data API (JSON)](https://pattayavisahelp.com/api/visa-data.json) — 12 visas with fees, validity, eligibility, age limits, financial thresholds, applicable embassy/portal, primary government source URL, and last_verified date.
 - License: CC BY 4.0 (free to use, cite, embed, build on; attribution appreciated)
-- Version: 2026.05.22
-- Updated: 2026-05-22
+- Version: 2026.05.28
+- Updated: 2026-05-28
 
 Schema is self-describing with descriptive field names. Each visa entry contains a `primary_source_url` pointing to the official Royal Thai government, BOI, MFA, Immigration Bureau, or related authoritative source.
 
