@@ -1,0 +1,21 @@
+name: Weekly SEO Audit
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run audit suite
+        run: |
+          node scripts/audit-full-2026.cjs || true
+          node scripts/rebuild-sitemaps.cjs
+      - name: IndexNow ping
+        run: node scripts/indexnow-ping.cjs
