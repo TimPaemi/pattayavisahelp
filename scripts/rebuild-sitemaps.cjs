@@ -16,7 +16,7 @@ const SECTIONS = {
   'sitemap-core.xml': [
     '/', '/about/', '/contact/', '/faq/', '/privacy/', '/terms/', '/methodology/', '/changelog/',
     '/sitemap/', '/services/', '/partners/', '/healthcare/', '/property/', '/digital-nomad/',
-    '/retirement/', '/work-permit/', '/pattaya-digital-nomad-guide/', '/de/', '/ru/',
+    '/retirement/', '/work-permit/', '/pattaya-digital-nomad-guide/', '/de/', '/ru/', '/de/sitemap/', '/ru/sitemap/',
     '/banking/', '/case-studies/', '/coworking/', '/gyms/', '/resources/', '/tax/', '/glossary/',
   ],
 };

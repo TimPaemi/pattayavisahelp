@@ -294,6 +294,71 @@ const POSTS = {
 <p>Non-B extension and WP renewal should align — immigration and DOE do not auto-sync. We see Pattaya cases where WP renewed but visa expired first.</p>
 <p>Employer need a checklist? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
   },
+  'o-a-health-insurance-2026': {
+    title: 'O-A Health Insurance 2026 — THB 3M Requirement Explained',
+    description:
+      'O-A retirement visa health insurance 2026 — THB 3 million coverage rule, approved insurers, embassy vs immigration checks, and Pattaya retiree mistakes.',
+    h1: 'O-A health insurance in 2026: the THB 3M rule that blocks embassy approval',
+    lede: 'O-A applicants must show THB 3 million annual health coverage before travel — but not every travel policy qualifies. Embassy officers reject ambiguous wording weekly.',
+    tldr: 'Policy must explicitly meet THB 3,000,000 inpatient coverage for Thailand. Travel insurance often rejected — use O-A-specific Thai or international policies listed by embassy. Non-O in-country does NOT require this — common confusion.',
+    crumbs: 'O-A Health Insurance 2026',
+    readMin: '4',
+    date: '2026-06-07',
+    body: `<p><strong>Guides:</strong> <a href="/visas/retirement-o-a/">O-A retirement visa</a> · <a href="/guides/health-insurance/">Health insurance guide</a> · <a href="/compare/non-o-vs-o-a/">Non-O vs O-A</a></p>
+<h2>The requirement</h2>
+<p>O-A visa applicants (50+, applying at embassy before travel) must hold health insurance with <strong>THB 3 million inpatient coverage</strong> valid in Thailand for the application period.</p>
+<h2>What gets rejected</h2>
+<ul>
+<li>Travel policies capped at USD 100K without THB equivalent clause</li>
+<li>Policies excluding Thailand or age 50+</li>
+<li>Screenshot without certificate of coverage letter</li>
+</ul>
+<h2>O-A vs Non-O confusion</h2>
+<p><strong>Non-O</strong> extensions in Pattaya do not legally require THB 3M insurance — but we still recommend cover. <strong>O-A</strong> is stricter at embassy stage.</p>
+<p>Need policy review before embassy? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'tourist-visa-extension-2026': {
+    title: 'Tourist Visa Extension 2026 — 30 Days at Immigration Pattaya',
+    description:
+      'Tourist visa extension Thailand 2026 — one 30-day extension at immigration, TM7, fee, TM30, and when to switch to DTV or Non-O instead.',
+    h1: 'Tourist visa extension in 2026: one 30 days, then you need a real visa',
+    lede: 'TR tourist entries get one 30-day extension in-country — not renewable forever. Pattaya immigration sees tourists trying third extensions via visa runs; rules tightened in 2025–2026.',
+    tldr: 'Apply before expiry at Jomtien with TM7, passport, photo, TM30, ฿1,900 fee (confirm day-of). One extension only per entry. Long-stay = plan DTV, ED, or Non-O before tourist time runs out.',
+    crumbs: 'Tourist Extension 2026',
+    readMin: '4',
+    date: '2026-06-07',
+    body: `<p><strong>Guides:</strong> <a href="/visas/tourist-tr-evisa/">Tourist TR visa</a> · <a href="/guides/visa-runs-vs-extensions/">Visa runs vs extensions</a> · <a href="/visas/dtv/">DTV</a></p>
+<h2>Who qualifies</h2>
+<p>Valid TR tourist stamp or tourist visa — not visa-exempt entries in all cases; confirm your stamp type at Jomtien before queueing.</p>
+<h2>Documents</h2>
+<p>TM7, passport, photo, TM30, cash fee, proof of onward travel sometimes requested.</p>
+<h2>After the 30 days</h2>
+<p>Exit and re-enter, or switch visa category from abroad. DTV from home country increasingly popular for Pattaya-bound nomads — see <a href="/blog/dtv-embassy-seasoning-2026/">DTV seasoning guide</a>.</p>
+<p>Stuck on tourist time? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'dtv-tax-residency-2026': {
+    title: 'DTV Tax Residency 2026 — When Remote Workers Owe Thai Tax',
+    description:
+      'DTV visa tax residency Thailand 2026 — 180-day rule, foreign income remittance tax, Royal Decree 743 exclusion, and Pattaya nomad structuring.',
+    h1: 'DTV and Thai tax in 2026: no RD 743 escape hatch for nomads',
+    lede: 'DTV does not include Royal Decree 743 relief. Remote workers who become tax residents and remit income to Thailand face remittance tax since 2024 — enforcement is real in 2026.',
+    tldr: '180+ days in Thailand = tax resident for most practical purposes. DTV foreign income remitted to Thai banks is taxable unless kept offshore. LTR W/WGC/T categories differ — DTV is not LTR. Get accountant advice before remitting large sums.',
+    crumbs: 'DTV Tax Residency 2026',
+    readMin: '5',
+    date: '2026-06-07',
+    body: `<p><strong>Guides:</strong> <a href="/visas/dtv/">DTV 2026</a> · <a href="/guides/thai-tax-foreign-residents/">Thai tax for foreign residents</a> · <a href="/blog/ltr-royal-decree-743-2026/">Royal Decree 743</a></p>
+<h2>DTV ≠ tax-free</h2>
+<p>Marketing conflates DTV with LTR tax perks. <strong>DTV holders cannot claim Royal Decree 743.</strong> Remote work for foreign employers is still assessable if you are tax resident and remit to Thailand.</p>
+<h2>180-day residency</h2>
+<p>Spend 180+ days per calendar year in Thailand and you likely trigger tax residency — bank remittance reporting increased 2025–2026.</p>
+<h2>Structuring options (high level)</h2>
+<ul>
+<li>Keep salary offshore + spend from foreign cards (legal grey — get accountant)</li>
+<li>Qualify for LTR T category if income/assets fit</li>
+<li>Limit days in-country below residency threshold (not practical for Pattaya residents)</li>
+</ul>
+<p>Tax structure review? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999 · not tax advice</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:

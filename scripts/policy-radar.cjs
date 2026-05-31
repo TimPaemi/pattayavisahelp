@@ -20,6 +20,9 @@ const TOPICS = [
   { slug: 'ltr-boi-application-checklist-2026', keywords: ['ltr', 'boi', 'application'], priority: 'high' },
   { slug: 'marriage-non-o-documents-2026', keywords: ['marriage', 'non-o', 'extension'], priority: 'medium' },
   { slug: 'work-permit-renewal-pattaya-2026', keywords: ['work permit', 'renewal', 'pattaya'], priority: 'medium' },
+  { slug: 'o-a-health-insurance-2026', keywords: ['o-a', 'health insurance', '3m'], priority: 'medium' },
+  { slug: 'tourist-visa-extension-2026', keywords: ['tourist', 'extension', 'immigration'], priority: 'medium' },
+  { slug: 'dtv-tax-residency-2026', keywords: ['dtv', 'tax', 'residency'], priority: 'high' },
 ];
 
 function daysSince(iso) {

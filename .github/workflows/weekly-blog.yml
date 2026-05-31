@@ -8,6 +8,8 @@ on:
 jobs:
   blog-check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -21,5 +23,12 @@ jobs:
         run: node scripts/rebuild-sitemaps.cjs
       - name: Full SEO audit
         run: node scripts/audit-full-2026.cjs || true
+      - name: Commit radar output if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: weekly blog pipeline — policy radar and sitemap refresh"
+          git push || true
       - name: IndexNow ping
         run: node scripts/indexnow-ping.cjs
