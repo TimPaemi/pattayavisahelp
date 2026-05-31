@@ -38,6 +38,10 @@ desktop.ini
 *.local
 .history/
 
+# Generated audits (local runs)
+_audit-*.json
+_policy-radar.json
+
 # Note: _research/ stays in the repo (committed) — it's the source of truth.
 # It's just not served publicly because Cloudflare Pages skips underscore-prefixed paths.
 .tmp.driveupload/

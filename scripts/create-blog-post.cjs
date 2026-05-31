@@ -107,6 +107,38 @@ const POSTS = {
 <p>Overdue 90-day: ฿2,000 fine at immigration when you next report or extend. Chronic misses can flag your profile. Use our <a href="/tools/expiry-countdown/">expiry countdown</a> to track both visa expiry and 90-day dates.</p>
 <p>Questions? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
   },
+  'non-o-extension-documents-2026': {
+    title: 'Non-O Extension Documents 2026 — Jomtien Immigration Checklist',
+    description:
+      'Non-O retirement extension documents 2026 at Jomtien Immigration — bank letter, TM30, TM7, photos, income proof, and common rejection reasons in Pattaya.',
+    h1: 'Non-O extension at Jomtien: document checklist for 2026',
+    lede: 'Annual Non-O extensions fail at the photocopy counter — not because rules changed, but because bank letters, TM30, or outfit code slip. Here is the Pattaya checklist we use with clients.',
+    tldr: 'Bring TM7, passport originals + copies, 2 photos, stamped 800k bank letter (or 65k/month income proof), TM30 receipt, lease, and map to condo. Apply 30 days before expiry. Collared shirt, long trousers — no shorts.',
+    crumbs: 'Non-O Extension Documents 2026',
+    readMin: '4',
+    date: '2026-06-03',
+    body: `<p><strong>Full guides:</strong> <a href="/visas/retirement-non-o/">Non-O retirement</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration</a> · <a href="/blog/jomtien-immigration-2026/">Queue times 2026</a></p>
+<h2>When to apply</h2>
+<p>Earliest: <strong>30 days before</strong> visa expiry. Latest: do not overstay — even 1 day triggers ฿500/day fine and extension complications.</p>
+<h2>Document checklist</h2>
+<ul>
+<li><strong>TM7</strong> extension form — download or pick up at Jomtien</li>
+<li><strong>Passport</strong> original + copy of photo page + current visa page</li>
+<li><strong>2 passport photos</strong> — 4×6 cm, white background, recent</li>
+<li><strong>Bank proof:</strong> stamped letter showing ฿800,000 balance OR 3 months statements + ฿65,000/month income (pension letter apostilled if from abroad)</li>
+<li><strong>TM30</strong> receipt — landlord must have filed; print from tm30.immigration.go.th if needed</li>
+<li><strong>Lease / yellow house book</strong> copy + map to property</li>
+<li><strong>฿1,900 fee</strong> cash (amount subject to immigration notice — confirm day-of)</li>
+</ul>
+<h2>Top rejection reasons (Pattaya 2026)</h2>
+<p><strong>Mobile banking screenshot</strong> instead of stamped bank letter — refused.</p>
+<p><strong>Missing TM30</strong> — see <a href="/blog/tm30-landlord-refusal-2026/">TM30 landlord refusal guide</a>.</p>
+<p><strong>Wrong queue</strong> — 90-day reports are Building A; extensions different window — ask security first.</p>
+<p><strong>Dress code</strong> — shorts and sandals = turned away, lose queue position.</p>
+<h2>After approval</h2>
+<p>Photograph new stamp. Set reminder: next extension ~11 months, 90-day report separate cycle. Use <a href="/tools/expiry-countdown/">expiry countdown tool</a>.</p>
+<p>Need doc review before you queue? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:

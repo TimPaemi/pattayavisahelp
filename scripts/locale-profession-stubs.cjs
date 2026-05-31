@@ -92,6 +92,46 @@ const PROFESSIONS = {
       visa: '/visas/dtv/',
     },
   },
+  'affiliate-marketer': {
+    de: { title: 'Thailand Visum für Affiliate Marketer 2026', h1: 'Affiliate Marketer', lede: 'Auslandseinkommen aus Affiliate-Netzwerken → DTV. Thai-Traffic monetarisieren → Steuer beachten.', visa: '/visas/dtv/' },
+    ru: { title: 'Виза для affiliate marketer 2026', h1: 'Affiliate marketer', lede: 'Доход из зарубежных сетей → DTV. Монетизация тайского трафика → налоги.', visa: '/visas/dtv/' },
+  },
+  'ai-engineer': {
+    de: { title: 'Thailand Visum für AI Engineers 2026', h1: 'AI Engineer', lede: 'Remote für ausländischen Arbeitgeber → DTV oder LTR W-from-T. Thai-Arbeitgeber → SMART/Non-B.', visa: '/visas/dtv/' },
+    ru: { title: 'Виза для AI engineer 2026', h1: 'AI engineer', lede: 'Remote на иностранную компанию → DTV или LTR. Тайский employer → SMART/Non-B.', visa: '/visas/dtv/' },
+  },
+  chef: {
+    de: { title: 'Thailand Visum für Köche 2026 — Non-B', h1: 'Koch / Chef', lede: 'Arbeit in thailändischem Restaurant → Non-B + Work Permit. Eigenes Catering ohne WP → illegal.', visa: '/visas/business-non-b/' },
+    ru: { title: 'Виза для шеф-повара 2026 — Non-B', h1: 'Шеф-повар', lede: 'Работа в тайском ресторане → Non-B + work permit.', visa: '/visas/business-non-b/' },
+  },
+  'diving-instructor': {
+    de: { title: 'Thailand Visum für Tauchlehrer 2026', h1: 'Tauchlehrer', lede: 'Bei PADI-Zentrum angestellt → Non-B. Saisonales Einkommen dokumentieren für Verlängerung.', visa: '/visas/business-non-b/' },
+    ru: { title: 'Виза для diving instructor 2026', h1: 'Diving instructor', lede: 'Работа в дайв-центре → Non-B. Сезонный доход для продления.', visa: '/visas/business-non-b/' },
+  },
+  'fitness-trainer': {
+    de: { title: 'Thailand Visum für Personal Trainer 2026', h1: 'Fitness Trainer', lede: 'Online-Coaching Ausland → DTV. Training in thailändischem Gym → Non-B Sponsoring.', visa: '/visas/dtv/' },
+    ru: { title: 'Виза для fitness trainer 2026', h1: 'Fitness trainer', lede: 'Онлайн-коучинг → DTV. Работа в зале → Non-B.', visa: '/visas/dtv/' },
+  },
+  hairdresser: {
+    de: { title: 'Thailand Visum für Friseure 2026 — Non-B', h1: 'Friseur / Hairdresser', lede: 'Salon-Arbeit in Pattaya → Non-B + Work Permit. Freelance ohne WP → Risiko.', visa: '/visas/business-non-b/' },
+    ru: { title: 'Виза для парикмахера 2026', h1: 'Hairdresser', lede: 'Работа в салоне → Non-B + work permit.', visa: '/visas/business-non-b/' },
+  },
+  'online-business-owner': {
+    de: { title: 'Thailand Visum für Online Business Owner 2026', h1: 'Online Business Owner', lede: 'E-Commerce / SaaS mit ausländischen Kunden → DTV. Thai Ltd + lokaler Umsatz → Non-B Struktur.', visa: '/visas/dtv/' },
+    ru: { title: 'Виза для online business owner 2026', h1: 'Online business owner', lede: 'E-commerce с зарубежными клиентами → DTV. Тайская компания → Non-B.', visa: '/visas/dtv/' },
+  },
+  photographer: {
+    de: { title: 'Thailand Visum für Fotografen 2026', h1: 'Fotograf', lede: 'Stock + Auslandskunden → DTV. Hochzeiten/commercial shoots in Thailand → Non-B oder korrekte Rechnungsstellung.', visa: '/visas/dtv/' },
+    ru: { title: 'Виза для фотографа 2026', h1: 'Photographer', lede: 'Stock и клиенты из-за рубежа → DTV. Съёмки в Таиланде → Non-B.', visa: '/visas/dtv/' },
+  },
+  'real-estate-agent': {
+    de: { title: 'Thailand Visum für Immobilienmakler 2026', h1: 'Immobilienmakler', lede: 'Thai License + Non-B erforderlich für legalen Verkauf. Auslands-Einkommen → DTV wenn remote.', visa: '/visas/business-non-b/' },
+    ru: { title: 'Виза для риелтора 2026', h1: 'Real estate agent', lede: 'Лицензия + Non-B для легальной работы. Remote доход → DTV.', visa: '/visas/business-non-b/' },
+  },
+  'tattoo-artist': {
+    de: { title: 'Thailand Visum für Tattoo Artists 2026', h1: 'Tattoo Artist', lede: 'Studio mit Work Permit → Non-B. Guest spots ohne WP → grau — Pattaya DTV für Auslandseinkommen parallel.', visa: '/visas/dtv/' },
+    ru: { title: 'Виза для tattoo artist 2026', h1: 'Tattoo artist', lede: 'Студия с work permit → Non-B. Guest spots → риск. DTV для дохода из-за рубежа.', visa: '/visas/dtv/' },
+  },
 };
 
 let styles = '';
