@@ -215,7 +215,7 @@ if (!b30.includes('/blog/tdac-step-by-step/')) {
 }
 
 let cmp = read('compare/index.html');
-if (!cmp.includes('/compare/visa-comparison-matrix/')) {
+if (!cmp.includes('href="/compare/visa-comparison-matrix/"')) {
   cmp = cmp.replace(
     '<p><strong>Comparison hub:</strong>',
     '<p><strong>Comparison hub:</strong> <a href="/compare/visa-comparison-matrix/">Full visa comparison matrix</a> ·'
