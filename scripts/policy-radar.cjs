@@ -23,6 +23,9 @@ const TOPICS = [
   { slug: 'o-a-health-insurance-2026', keywords: ['o-a', 'health insurance', '3m'], priority: 'medium' },
   { slug: 'tourist-visa-extension-2026', keywords: ['tourist', 'extension', 'immigration'], priority: 'medium' },
   { slug: 'dtv-tax-residency-2026', keywords: ['dtv', 'tax', 'residency'], priority: 'high' },
+  { slug: 'smart-visa-application-2026', keywords: ['smart', 'boi', 'application'], priority: 'medium' },
+  { slug: 'permanent-residency-eligibility-2026', keywords: ['pr', 'permanent residency'], priority: 'medium' },
+  { slug: 'overstay-voluntary-surrender-2026', keywords: ['overstay', 'voluntary', 'blacklist'], priority: 'medium' },
 ];
 
 function daysSince(iso) {

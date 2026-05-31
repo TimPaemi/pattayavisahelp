@@ -359,6 +359,68 @@ const POSTS = {
 </ul>
 <p>Tax structure review? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999 · not tax advice</p>`,
   },
+  'smart-visa-application-2026': {
+    title: 'SMART Visa Application 2026 — BOI Checklist & Categories',
+    description:
+      'Thailand SMART Visa 2026 application — T, I, E, S categories, BOI-endorsed companies, documents, processing time, and who should use DTV instead.',
+    h1: 'SMART Visa in 2026: BOI categories and who actually qualifies',
+    lede: 'SMART is not a nomad visa — it requires BOI-certified employers or startup programs. Pattaya applicants often confuse SMART with DTV; here is the 2026 BOI checklist.',
+    tldr: 'Categories: Talent (T), Investor (I), Executive (E), Startup (S). Employer must hold BOI SMART endorsement. 2–4 year visa, work permit often bundled. Remote freelancers without Thai BOI sponsor → DTV or LTR instead.',
+    crumbs: 'SMART Visa Application 2026',
+    readMin: '5',
+    date: '2026-06-08',
+    body: `<p><strong>Guides:</strong> <a href="/visas/smart/">SMART Visa 2026</a> · <a href="/compare/dtv-vs-smart/">DTV vs SMART</a> · <a href="/compare/smart-vs-ltr/">SMART vs LTR</a></p>
+<h2>Who SMART is for</h2>
+<p>Highly skilled employees of BOI SMART-certified Thai companies, approved startup founders, and qualifying investors — not generic remote workers.</p>
+<h2>Application flow</h2>
+<ol>
+<li>Confirm employer BOI SMART letter or startup program acceptance</li>
+<li>Submit SMART application via BOI portal with passport, degree/experience proof</li>
+<li>Receive endorsement → apply visa at immigration or embassy</li>
+<li>Work permit issued alongside or shortly after</li>
+</ol>
+<h2>Common mistakes</h2>
+<p>Applying without employer SMART status. Using SMART for freelance Thai clients without proper structure. Confusing 17% flat tax (HSP) with foreign-income exemption (LTR only).</p>
+<p>Employer SMART status unclear? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'permanent-residency-eligibility-2026': {
+    title: 'Permanent Residency Thailand 2026 — Eligibility & Pattaya Timeline',
+    description:
+      'Thailand PR eligibility 2026 — investment, employment, marriage, retirement categories, annual quota, 3-year wait, and Pattaya application patterns.',
+    h1: 'Thailand PR in 2026: who can apply and how long it really takes',
+    lede: 'PR is not automatic after 10 years on Non-O. Annual quotas, category fit, and Thai language test — Pattaya residents often apply via Chonburi immigration zone.',
+    tldr: 'Categories: investment, business, employment, expert, family, retirement. Usually 3+ consecutive years on qualifying visa. Quota ~100 per nationality per year. Processing 6–12 months. Does not replace 90-day reporting until citizenship.',
+    crumbs: 'PR Eligibility 2026',
+    readMin: '5',
+    date: '2026-06-08',
+    body: `<p><strong>Guides:</strong> <a href="/guides/permanent-residency-thailand/">PR complete guide</a> · <a href="/guides/marriage-non-o-to-pr/">Marriage Non-O to PR</a> · <a href="/glossary/pr/">PR glossary</a></p>
+<h2>Baseline requirements</h2>
+<p>Valid long-stay visa history, clean immigration record, tax docs (category-dependent), Thai language proficiency test for most categories.</p>
+<h2>Realistic timeline</h2>
+<p>Year 1–3: build qualifying visa history. Year 4: apply during annual window (usually Oct–Dec). Year 5: receive PR if quota available.</p>
+<h2>PR vs LTR</h2>
+<p>LTR is 10-year visa with tax perks for qualifying income. PR is permanent residence status — different paths; some holders switch LTR → PR after meeting PR rules.</p>
+<p>PR pathway mapping? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'overstay-voluntary-surrender-2026': {
+    title: 'Overstay Voluntary Surrender Thailand 2026 — Fines & Blacklist',
+    description:
+      'Thailand overstay voluntary surrender 2026 — immigration fine ฿500/day, max ฿20K, blacklist thresholds, and when to surrender vs extend in Pattaya.',
+    h1: 'Overstay in 2026: voluntary surrender, fines, and blacklist rules',
+    lede: 'Caught overstay or realised your visa expired yesterday? Voluntary surrender at immigration usually beats airport arrest — but blacklist rules changed in recent enforcement passes.',
+    tldr: 'Fine ฿500/day capped at ฿20,000 for voluntary surrender. Overstay 90+ days may trigger 1-year re-entry ban; longer overstays = multi-year bans. Fix TM30/extension issues before surrender if possible.',
+    crumbs: 'Overstay Voluntary Surrender 2026',
+    readMin: '4',
+    date: '2026-06-08',
+    body: `<p><strong>Guides:</strong> <a href="/guides/visa-overstay-penalties/">Overstay penalties</a> · <a href="/glossary/overstay/">Overstay glossary</a> · <a href="/blog/non-o-extension-documents-2026/">Extension checklist</a></p>
+<h2>Voluntary surrender process</h2>
+<p>Go to immigration (Jomtien or airport) before a scheduled flight if possible. Pay fine, receive overstay stamp, exit Thailand. Re-enter on new valid visa.</p>
+<h2>Blacklist thresholds (verify day-of)</h2>
+<p>Short overstays under voluntary surrender often avoid long bans. 90+ days frequently triggers 1-year ban — immigration discretion applies.</p>
+<h2>Prevention</h2>
+<p>Use <a href="/tools/expiry-countdown/">expiry countdown</a>. Set 90-day and extension reminders. TM30 gaps block extensions — fix before expiry.</p>
+<p>Overstay now? <a href="/contact/">Urgent consult</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:
