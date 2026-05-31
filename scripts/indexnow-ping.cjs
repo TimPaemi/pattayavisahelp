@@ -49,20 +49,22 @@ function ping(endpoint, urlList) {
 
 (async () => {
   const urls = getUrls();
-  const batch = urls.slice(0, 100);
   const endpoints = [
     'https://api.indexnow.org/indexnow',
     'https://www.bing.com/indexnow',
   ];
-  for (const ep of endpoints) {
-    try {
-      const r = await ping(ep, batch);
-      console.log(ep, r.status, r.body.slice(0, 120));
-    } catch (e) {
-      console.error(ep, e.message);
+  const BATCH = 100;
+  for (let i = 0; i < urls.length; i += BATCH) {
+    const batch = urls.slice(i, i + BATCH);
+    const label = `${i + 1}-${Math.min(i + BATCH, urls.length)}`;
+    for (const ep of endpoints) {
+      try {
+        const r = await ping(ep, batch);
+        console.log(ep, `batch ${label}`, r.status, r.body.slice(0, 80));
+      } catch (e) {
+        console.error(ep, `batch ${label}`, e.message);
+      }
     }
   }
-  if (urls.length > 100) {
-    console.log(`Note: ${urls.length} URLs total; pinged first 100. Run again with offset for full set.`);
-  }
+  console.log(`IndexNow: submitted ${urls.length} URLs in ${Math.ceil(urls.length / BATCH)} batches`);
 })();
