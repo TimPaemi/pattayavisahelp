@@ -1,0 +1,33 @@
+name: Weekly Blog Pipeline
+
+on:
+  schedule:
+    - cron: '0 7 * * 3'
+  workflow_dispatch:
+
+jobs:
+  blog-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Policy radar — flag stale visa pillars
+        run: |
+          node -e "
+          const fs=require('fs'),path=require('path');
+          const root='visas',stale=[];
+          for (const d of fs.readdirSync(root)) {
+            const f=path.join(root,d,'index.html');
+            if (!fs.existsSync(f)) continue;
+            const h=fs.readFileSync(f,'utf8');
+            const m=h.match(/\"dateModified\":\\s*\"([^\"]+)\"/);
+            if (m && m[1] < new Date(Date.now()-21*864e5).toISOString().slice(0,10)) stale.push(d+':'+m[1]);
+          }
+          console.log('Stale visa pillars (>21d):', stale.length ? stale.join(', ') : 'none');
+          "
+      - name: Rebuild sitemaps
+        run: node scripts/rebuild-sitemaps.cjs
+      - name: Full SEO audit
+        run: node scripts/audit-full-2026.cjs || true
