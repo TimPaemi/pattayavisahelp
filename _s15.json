@@ -1,0 +1,253 @@
+﻿{
+  "date": "2026-05-31",
+  "indexable": 195,
+  "childSitemaps": 11,
+  "sections": {
+    "sitemap-core.xml": 25,
+    "sitemap-best-visa.xml": 7,
+    "sitemap-blog.xml": 18,
+    "sitemap-compare.xml": 16,
+    "sitemap-glossary.xml": 38,
+    "sitemap-guides.xml": 37,
+    "sitemap-pattaya.xml": 15,
+    "sitemap-professions.xml": 17,
+    "sitemap-tools.xml": 10,
+    "sitemap-visas.xml": 13
+  }
+}
+{
+  "verdict": "FAIL",
+  "pages": 535,
+  "indexed": 195,
+  "failIndexed": 115,
+  "warnIndexed": 0,
+  "localeStubs": 120
+}
+{
+  "applied": [
+    {
+      "slug": "marriage-non-o-documents-2026",
+      "words": 949,
+      "readMin": 5
+    },
+    {
+      "slug": "visa-agent-red-flags-2026",
+      "words": 656,
+      "readMin": 4
+    },
+    {
+      "slug": "boi-company-setup-visa-2026",
+      "words": 521,
+      "readMin": 4
+    },
+    {
+      "slug": "extension-timeline-jomtien-2026",
+      "words": 484,
+      "readMin": 4
+    },
+    {
+      "slug": "tourist-visa-extension-2026",
+      "words": 501,
+      "readMin": 4
+    },
+    {
+      "slug": "overstay-voluntary-surrender-2026",
+      "words": 516,
+      "readMin": 4
+    },
+    {
+      "slug": "permanent-residency-eligibility-2026",
+      "words": 505,
+      "readMin": 4
+    },
+    {
+      "slug": "o-a-health-insurance-2026",
+      "words": 484,
+      "readMin": 4
+    },
+    {
+      "slug": "smart-visa-application-2026",
+      "words": 443,
+      "readMin": 4
+    },
+    {
+      "slug": "work-permit-renewal-pattaya-2026",
+      "words": 438,
+      "readMin": 4
+    },
+    {
+      "slug": "dtv-tax-residency-2026",
+      "words": 467,
+      "readMin": 4
+    },
+    {
+      "slug": "re-entry-permit-pattaya-2026",
+      "words": 379,
+      "readMin": 4
+    },
+    {
+      "slug": "ltr-boi-application-checklist-2026",
+      "words": 376,
+      "readMin": 4
+    },
+    {
+      "slug": "privilege-elite-renewal-2026",
+      "words": 363,
+      "readMin": 4
+    },
+    {
+      "slug": "ed-visa-moe-accreditation-2026",
+      "words": 517,
+      "readMin": 4
+    },
+    {
+      "slug": "jomtien-immigration-2026",
+      "words": 700,
+      "readMin": 4
+    },
+    {
+      "slug": "90-day-report-online-2026",
+      "words": 513,
+      "readMin": 4
+    },
+    {
+      "slug": "non-o-extension-documents-2026",
+      "words": 533,
+      "readMin": 4
+    },
+    {
+      "slug": "tm30-landlord-refusal-2026",
+      "words": 503,
+      "readMin": 4
+    },
+    {
+      "slug": "dtv-embassy-seasoning-2026",
+      "words": 490,
+      "readMin": 4
+    },
+    {
+      "slug": "dtv-180-day-extension-2026",
+      "words": 514,
+      "readMin": 4
+    },
+    {
+      "slug": "2026-annual-review",
+      "words": 548,
+      "readMin": 4
+    }
+  ],
+  "indexed": [
+    {
+      "slug": "marriage-non-o-documents-2026",
+      "words": 949,
+      "readMin": 5
+    },
+    {
+      "slug": "visa-agent-red-flags-2026",
+      "words": 656,
+      "readMin": 4
+    },
+    {
+      "slug": "boi-company-setup-visa-2026",
+      "words": 521,
+      "readMin": 4
+    },
+    {
+      "slug": "tourist-visa-extension-2026",
+      "words": 501,
+      "readMin": 4
+    },
+    {
+      "slug": "overstay-voluntary-surrender-2026",
+      "words": 516,
+      "readMin": 4
+    },
+    {
+      "slug": "permanent-residency-eligibility-2026",
+      "words": 505,
+      "readMin": 4
+    },
+    {
+      "slug": "ed-visa-moe-accreditation-2026",
+      "words": 517,
+      "readMin": 4
+    },
+    {
+      "slug": "jomtien-immigration-2026",
+      "words": 700,
+      "readMin": 4
+    },
+    {
+      "slug": "90-day-report-online-2026",
+      "words": 513,
+      "readMin": 4
+    },
+    {
+      "slug": "non-o-extension-documents-2026",
+      "words": 533,
+      "readMin": 4
+    },
+    {
+      "slug": "tm30-landlord-refusal-2026",
+      "words": 503,
+      "readMin": 4
+    },
+    {
+      "slug": "dtv-180-day-extension-2026",
+      "words": 514,
+      "readMin": 4
+    },
+    {
+      "slug": "2026-annual-review",
+      "words": 548,
+      "readMin": 4
+    }
+  ],
+  "heldNoindex": [
+    {
+      "slug": "extension-timeline-jomtien-2026",
+      "words": 484,
+      "readMin": 4
+    },
+    {
+      "slug": "o-a-health-insurance-2026",
+      "words": 484,
+      "readMin": 4
+    },
+    {
+      "slug": "smart-visa-application-2026",
+      "words": 443,
+      "readMin": 4
+    },
+    {
+      "slug": "work-permit-renewal-pattaya-2026",
+      "words": 438,
+      "readMin": 4
+    },
+    {
+      "slug": "dtv-tax-residency-2026",
+      "words": 467,
+      "readMin": 4
+    },
+    {
+      "slug": "re-entry-permit-pattaya-2026",
+      "words": 379,
+      "readMin": 4
+    },
+    {
+      "slug": "ltr-boi-application-checklist-2026",
+      "words": 376,
+      "readMin": 4
+    },
+    {
+      "slug": "privilege-elite-renewal-2026",
+      "words": 363,
+      "readMin": 4
+    },
+    {
+      "slug": "dtv-embassy-seasoning-2026",
+      "words": 490,
+      "readMin": 4
+    }
+  ]
+}
