@@ -43,6 +43,7 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 - [Русский — консультации по визам](https://pattayavisahelp.com/ru/)
 - German visa overviews: `/de/visas/{slug}/` for all 12 pillars (e.g. [DTV auf Deutsch](https://pattayavisahelp.com/de/visas/dtv/))
 - Russian visa overviews: `/ru/visas/{slug}/` for all 12 pillars (e.g. [DTV на русском](https://pattayavisahelp.com/ru/visas/dtv/))
+- Profession overviews (DE/RU stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — saas-founder, dj, crypto-trader, english-teacher, yoga-teacher, content-creator
 
 ## Hub pages
 

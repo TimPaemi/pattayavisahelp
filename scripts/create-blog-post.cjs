@@ -13,6 +13,69 @@ if (!slug) {
 }
 
 const POSTS = {
+  'tm30-landlord-refusal-2026': {
+    title: 'TM30 Landlord Refusal in Thailand 2026 — What to Do in Pattaya',
+    description:
+      'Landlord won\'t file TM30? 2026 guide for Pattaya tenants — self-filing options, extension blocks, condo juristic person, and how to fix before Jomtien Immigration.',
+    h1: 'Your landlord won\'t file TM30 — fixes that actually work in Pattaya',
+    lede: 'No TM30 on file means blocked extensions, failed 90-day online reports, and wasted queue time at Jomtien. Here is the 2026 workaround path.',
+    tldr: 'Ask landlord to file at tm30.immigration.go.th — takes 5 minutes. If they refuse, some tenants file via condo juristic office or switch to a TM30-ready lease. Never fly in on a new visa without confirming TM30 will be filed within 24 hours of check-in.',
+    crumbs: 'TM30 Landlord Refusal 2026',
+    readMin: '4',
+    date: '2026-06-02',
+    body: `<p><strong>Related:</strong> <a href="/guides/tm30-reporting/">TM30 reporting guide</a> · <a href="/blog/90-day-report-online-2026/">90-day online report</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration</a></p>
+<h2>Why TM30 matters</h2>
+<p>Every foreigner check-in must be reported to immigration within 24 hours. Your landlord, hotel, or condo juristic person files TM30 online. Without it on file, <strong>visa extensions and 90-day reports fail</strong> at the counter — we see this weekly in Pattaya.</p>
+<h2>Step 1 — Ask properly</h2>
+<p>Send your landlord the direct link: <strong>tm30.immigration.go.th</strong>. Explain it is a legal obligation, not optional. Provide passport copy + lease. Most Pattaya condo owners simply do not know how — a 2-minute walkthrough fixes 80% of cases.</p>
+<h2>Step 2 — Condo juristic person</h2>
+<p>In a managed condo (Jomtien, Pratumnak, Central Pattaya), the <strong>juristic office</strong> often files TM30 for tenants. Bring lease + passport to the front desk. Fee: usually free to ฿200.</p>
+<h2>Step 3 — Switch lease if needed</h2>
+<p>Some guesthouses and informal landlords permanently refuse. If you are on Non-O or DTV with annual extensions ahead, <strong>move to a TM30-ready landlord</strong> before your next extension — cheaper than repeated immigration rejections.</p>
+<h2>What does NOT work</h2>
+<ul>
+<li>Bribing immigration without TM30 — they send you back.</li>
+<li>Fake hotel receipts — flagged in 2025–2026 enforcement passes.</li>
+<li>Ignoring it until extension day — you lose your queue slot.</li>
+</ul>
+<h2>Pattaya-specific tip</h2>
+<p>Before signing a 6–12 month lease, add a clause: "Landlord agrees to file TM30 within 24 hours of tenant check-in." Agents in Naklua and Jomtien increasingly accept this — it protects both sides.</p>
+<p>Stuck now? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'dtv-embassy-seasoning-2026': {
+    title: 'DTV Bank Seasoning by Embassy 2026 — 3 vs 6 Month Guide',
+    description:
+      'DTV ฿500K seasoning requirements by embassy in 2026 — Vientiane 3 months vs Europe 6 months, statement format, rejection patterns, and Pattaya applicant checklist.',
+    h1: 'DTV bank seasoning in 2026: which embassy wants 3 vs 6 months',
+    lede: 'The ฿500K requirement is not the hard part — seasoning length and statement format vary by embassy and change without announcement. Here is what Pattaya applicants are seeing in mid-2026.',
+    tldr: 'Plan for 6-month statements if applying in Europe or home country. Vientiane and some ASEAN posts accept 3 months. Mobile app screenshots are rejected — stamped bank letters or official PDFs with transaction history required.',
+    crumbs: 'DTV Embassy Seasoning 2026',
+    readMin: '5',
+    date: '2026-06-02',
+    body: `<p><strong>Full DTV guide:</strong> <a href="/visas/dtv/">DTV 2026</a> · <a href="/de/visas/dtv/">DTV auf Deutsch</a> · <a href="/ru/visas/dtv/">DTV на русском</a> · <a href="/tools/income-test/">Income test</a></p>
+<h2>The rule vs the practice</h2>
+<p>Official DTV guidance references ฿500,000 equivalent seasoned in your account. In practice, embassies interpret <strong>how many months of history</strong> differently — and they change without a Gazette notice.</p>
+<h2>Embassy patterns (May 2026)</h2>
+<ul>
+<li><strong>Vientiane / ASEAN hubs:</strong> often 3-month statements if balance stable — popular with Pattaya-bound nomads doing visa runs.</li>
+<li><strong>UK / EU / US consulates:</strong> increasingly 6-month bank history; sudden large deposits questioned.</li>
+<li><strong>Moscow / Istanbul:</strong> notarised translations + 6-month statements common for Russian applicants.</li>
+</ul>
+<h2>Statement format that gets accepted</h2>
+<ul>
+<li>Official bank PDF or stamped branch letter — not app screenshots.</li>
+<li>Account holder name matching passport exactly.</li>
+<li>Balance shown on every month of the seasoning window.</li>
+<li>Investment-only or crypto-only proof — usually rejected for DTV.</li>
+</ul>
+<h2>Common rejection reasons</h2>
+<p><strong>Fresh lump sum.</strong> ฿500K deposited 2 weeks before application — refused even if balance is correct today.</p>
+<p><strong>Wrong account type.</strong> Business account without personal guarantee letter.</p>
+<p><strong>Currency conversion disputes.</strong> Embassy uses their FX rate — buffer 10% above ฿500K equivalent.</p>
+<h2>Pattaya after approval</h2>
+<p>Land with DTV, file TM30 within 24 hours, set 90-day reminder. First extension at Jomtien needs proof of address + TM7 — see <a href="/blog/dtv-180-day-extension-2026/">DTV 180-day extension guide</a>.</p>
+<p>Not sure which embassy fits your passport + bank? <a href="/contact/">Book a consult</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   '90-day-report-online-2026': {
     title: '90-Day Report Online in Thailand 2026 — TM47 Portal Guide',
     description:
