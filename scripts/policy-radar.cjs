@@ -18,6 +18,8 @@ const TOPICS = [
   { slug: 'privilege-elite-renewal-2026', keywords: ['privilege', 'elite', 'renewal'], priority: 'medium' },
   { slug: 're-entry-permit-pattaya-2026', keywords: ['re-entry', 'jomtien', 'tm8'], priority: 'medium' },
   { slug: 'ltr-boi-application-checklist-2026', keywords: ['ltr', 'boi', 'application'], priority: 'high' },
+  { slug: 'marriage-non-o-documents-2026', keywords: ['marriage', 'non-o', 'extension'], priority: 'medium' },
+  { slug: 'work-permit-renewal-pattaya-2026', keywords: ['work permit', 'renewal', 'pattaya'], priority: 'medium' },
 ];
 
 function daysSince(iso) {

@@ -241,6 +241,59 @@ const POSTS = {
 <p>Wrong category fit, crypto-only assets without bank trail, insurance policy not meeting BOI wording, incomplete employer letters for T category.</p>
 <p>Pre-check before BOI fees? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
   },
+  'marriage-non-o-documents-2026': {
+    title: 'Marriage Non-O Extension Documents 2026 — Pattaya Checklist',
+    description:
+      'Marriage Non-O visa extension documents 2026 in Pattaya — Thai spouse ID, house registration, income proof, TM30, and Jomtien rejection patterns.',
+    h1: 'Marriage Non-O extension: document checklist for 2026',
+    lede: 'Marriage Non-O extensions need Thai spouse present or documented — plus house book, marriage certificate, and financial proof. Pattaya immigration is strict on outdated marriage certs.',
+    tldr: 'Bring TM7, passport, marriage cert (original + copy), Thai spouse ID + tabien baan, ฿400K bank or ฿40K/month income proof, TM30, map. Thai spouse may need to attend. Apply 30 days before expiry.',
+    crumbs: 'Marriage Non-O Documents 2026',
+    readMin: '4',
+    date: '2026-06-06',
+    body: `<p><strong>Full guides:</strong> <a href="/visas/marriage-non-o/">Marriage Non-O</a> · <a href="/guides/foreign-marriage-legalisation/">Foreign marriage legalisation</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration</a></p>
+<h2>Core documents</h2>
+<ul>
+<li><strong>TM7</strong> + passport + visa page copies</li>
+<li><strong>Marriage certificate</strong> — Kor Ror / foreign cert legalised if married abroad</li>
+<li><strong>Thai spouse ID</strong> + copy + house registration (tabien baan)</li>
+<li><strong>Financial proof:</strong> ฿400,000 balance OR ฿40,000/month combined income</li>
+<li><strong>TM30</strong> + lease/map</li>
+<li><strong>2 photos</strong></li>
+</ul>
+<h2>Pattaya-specific issues</h2>
+<p><strong>Foreign marriage cert not legalised</strong> — must be translated + legalised at home country embassy before Thai MFA chain.</p>
+<p><strong>Spouse not on house book</strong> — immigration wants proof of shared address.</p>
+<p><strong>Using tourist entry to "switch"</strong> — marriage Non-O from TR needs consulate route first in most cases.</p>
+<h2>Path to PR</h2>
+<p>After years on Marriage Non-O, PR may be possible — see <a href="/guides/marriage-non-o-to-pr/">Marriage Non-O to PR guide</a>.</p>
+<p>Doc review before Jomtien? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'work-permit-renewal-pattaya-2026': {
+    title: 'Work Permit Renewal Pattaya 2026 — Docs & Timeline',
+    description:
+      'Work permit renewal in Pattaya/Chonburi 2026 — 90-day deadline, employer docs, visa sync, Department of Employment checklist, and common delays.',
+    h1: 'Work permit renewal in Pattaya: 2026 timeline and documents',
+    lede: 'Work permits expire independently of your visa — miss renewal by 90 days and you restart from scratch with a new Non-B. Pattaya employers often underestimate the lead time.',
+    tldr: 'Start 60–90 days before WP expiry. Employer submits to Department of Employment with company docs, your passport, medical cert, photos. Visa must remain valid — sync Non-B extension with WP renewal.',
+    crumbs: 'Work Permit Renewal Pattaya 2026',
+    readMin: '4',
+    date: '2026-06-06',
+    body: `<p><strong>Full guides:</strong> <a href="/work-permit/">Work permit overview</a> · <a href="/visas/business-non-b/">Non-B visa</a> · <a href="/guides/working-in-thailand/">Working in Thailand</a></p>
+<h2>Timeline</h2>
+<p>Renew within <strong>90 days before</strong> expiry — ideally 60 days. Late renewal within 90-day grace still possible with fines; after expiry + 90 days = new application.</p>
+<h2>Employer documents</h2>
+<ul>
+<li>Company affidavit + VAT + social security filings</li>
+<li>Thai staff ratio compliance (varies by business type)</li>
+<li>Letter confirming continued employment + salary</li>
+</ul>
+<h2>Your documents</h2>
+<p>Passport + valid Non-B, medical certificate (some offices), photos, TM30, previous work permit booklet.</p>
+<h2>Visa sync</h2>
+<p>Non-B extension and WP renewal should align — immigration and DOE do not auto-sync. We see Pattaya cases where WP renewed but visa expired first.</p>
+<p>Employer need a checklist? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:
