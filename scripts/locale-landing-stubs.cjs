@@ -92,6 +92,78 @@ const LANDINGS = {
       lede: 'Счёт, FET, DTV seasoning — отделения Pattaya.',
     },
   },
+  tax: {
+    de: {
+      title: 'Thailand Steuer für Ausländer 2026 — LTR & 180-Tage-Regel',
+      h1: 'Steuer in Thailand',
+      lede: 'Royal Decree 743, Remittance Tax seit 2024, 180-Tage-Residency — DTV vs LTR Steuerplanung.',
+    },
+    ru: {
+      title: 'Налоги Таиланд для иностранцев 2026',
+      h1: 'Налоги в Таиланде',
+      lede: 'Royal Decree 743, remittance tax, 180 дней — DTV vs LTR.',
+    },
+  },
+  coworking: {
+    de: {
+      title: 'Coworking Pattaya 2026 — Digital Nomad Spaces',
+      h1: 'Coworking Pattaya',
+      lede: 'Jomtien und Central Pattaya Coworking für DTV-Nomaden — Visa + Arbeitsplatz planen.',
+    },
+    ru: {
+      title: 'Coworking Pattaya 2026 — для digital nomad',
+      h1: 'Coworking Pattaya',
+      lede: 'Коворкинги Jomtien для DTV — виза и рабочее место.',
+    },
+  },
+  resources: {
+    de: {
+      title: 'Thailand Visum Ressourcen 2026 — Links & Tools auf Deutsch',
+      h1: 'Visum-Ressourcen',
+      lede: 'Offizielle Immigration-Links, Gazette, Tools, Glossar — kuratiert aus Pattaya.',
+    },
+    ru: {
+      title: 'Ресурсы по визам Таиланд 2026',
+      h1: 'Ресурсы по визам',
+      lede: 'Официальные ссылки immigration, инструменты, глоссарий.',
+    },
+  },
+  property: {
+    de: {
+      title: 'Immobilien Thailand 2026 — Ausländer & Visa auf Deutsch',
+      h1: 'Immobilien Thailand',
+      lede: 'Foreign Quota Condo, Lease, Visa — was Expats in Pattaya wissen müssen.',
+    },
+    ru: {
+      title: 'Недвижимость Таиланд 2026 — для иностранцев',
+      h1: 'Недвижимость Таиланд',
+      lede: 'Condo foreign quota, аренда, виза — Pattaya expat.',
+    },
+  },
+  services: {
+    de: {
+      title: 'Visum-Services Pattaya 2026 — Beratung auf Deutsch',
+      h1: 'Visum-Services',
+      lede: 'Unabhängige Beratung, Dokumenten-Check, Spezialisten-Vermittlung — keine Provisionen.',
+    },
+    ru: {
+      title: 'Visa services Pattaya 2026 — консультации',
+      h1: 'Visa services',
+      lede: 'Независимые консультации, проверка документов — без комиссий.',
+    },
+  },
+  faq: {
+    de: {
+      title: 'Thailand Visum FAQ 2026 — auf Deutsch',
+      h1: 'Visum FAQ',
+      lede: 'Häufige Fragen zu DTV, LTR, Non-O, TM30, 90-Tage — aus Pattaya beantwortet.',
+    },
+    ru: {
+      title: 'FAQ виз Таиланд 2026 — на русском',
+      h1: 'FAQ по визам',
+      lede: 'Частые вопросы DTV, LTR, Non-O, TM30, 90-day.',
+    },
+  },
 };
 
 let styles = '';

@@ -41,7 +41,27 @@ const PATCHES = [
   {
     repo: 'pattaya-vehicle-rentals',
     file: 'index.html',
-    insert: `<p class="visa-context">Long-stay in Pattaya? <a href="${VISA}visas/" target="_blank" rel="noopener noreferrer">All 12 Thailand visas</a> · <a href="${VISA}guides/driving-licence-thailand/" target="_blank" rel="noopener noreferrer">Thai driving licence guide</a></p>\n`,
+    insert: `<p class="visa-context">Long-stay in Pattaya? <a href="${VISA}visas/" target="_blank" rel="noopener noreferrer">All 12 Thailand visas</a> · <a href="${VISA}de/visas/dtv/" target="_blank" rel="noopener noreferrer">DTV auf Deutsch</a> · <a href="${VISA}guides/driving-licence-thailand/" target="_blank" rel="noopener noreferrer">Thai driving licence guide</a></p>\n`,
+  },
+  {
+    repo: 'pattayapersonaltrainer',
+    file: 'index.html',
+    insert: `<p class="visa-context">Training long-term in Pattaya? <a href="${VISA}visas/dtv/" target="_blank" rel="noopener noreferrer">DTV visa</a> · <a href="${VISA}glossary/soft-power/" target="_blank" rel="noopener noreferrer">Soft-power category</a> · <a href="https://pattaya-gym.com/guides/training-thailand-visa-pattaya/" target="_blank" rel="noopener">Muay Thai + visa guide</a></p>\n`,
+  },
+  {
+    repo: 'pattayavilla',
+    file: 'index.html',
+    insert: `<p class="visa-context">Renting long-term? <a href="${VISA}guides/tm30-reporting/" target="_blank" rel="noopener noreferrer">TM30 for tenants</a> · <a href="${VISA}guides/buying-property-thailand/" target="_blank" rel="noopener noreferrer">Buying property in Thailand</a> · <a href="${VISA}visas/retirement-non-o/" target="_blank" rel="noopener noreferrer">Retirement Non-O</a></p>\n`,
+  },
+  {
+    repo: 'pattayarestaurantguide',
+    file: 'index.html',
+    insert: `<p class="visa-context">Opening a restaurant in Pattaya? <a href="${VISA}visas/business-non-b/" target="_blank" rel="noopener noreferrer">Non-B visa</a> · <a href="${VISA}guides/setting-up-thai-company/" target="_blank" rel="noopener noreferrer">Thai company setup</a> · <a href="${VISA}work-permit/" target="_blank" rel="noopener noreferrer">Work permit hub</a></p>\n`,
+  },
+  {
+    repo: 'pattayastream',
+    file: 'index.html',
+    insert: `<p class="visa-context">Streaming from Thailand? <a href="${VISA}visas/dtv/" target="_blank" rel="noopener noreferrer">DTV for remote income</a> · <a href="${VISA}blog/dtv-tax-residency-2026/" target="_blank" rel="noopener noreferrer">DTV tax rules 2026</a> · <a href="${VISA}professions/content-creator/" target="_blank" rel="noopener noreferrer">Creator visa guide</a></p>\n`,
   },
 ];
 

@@ -26,6 +26,21 @@ const TOPICS = [
   { slug: 'smart-visa-application-2026', keywords: ['smart', 'boi', 'application'], priority: 'medium' },
   { slug: 'permanent-residency-eligibility-2026', keywords: ['pr', 'permanent residency'], priority: 'medium' },
   { slug: 'overstay-voluntary-surrender-2026', keywords: ['overstay', 'voluntary', 'blacklist'], priority: 'medium' },
+  { slug: 'extension-timeline-jomtien-2026', keywords: ['extension', 'timeline', 'jomtien'], priority: 'medium' },
+  { slug: 'boi-company-setup-visa-2026', keywords: ['boi', 'company', 'non-b'], priority: 'medium' },
+  { slug: 'visa-agent-red-flags-2026', keywords: ['visa agent', 'scam', 'pattaya'], priority: 'high' },
+];
+
+/** Simulated GSC query → blog slug mapping for topic discovery */
+const GSC_QUERY_SEEDS = [
+  { query: 'dtv visa thailand requirements 2026', slug: 'dtv-embassy-seasoning-2026' },
+  { query: '90 day report online thailand', slug: '90-day-report-online-2026' },
+  { query: 'tm30 landlord refuse', slug: 'tm30-landlord-refusal-2026' },
+  { query: 'thailand visa extension how long', slug: 'extension-timeline-jomtien-2026' },
+  { query: 'open company thailand visa', slug: 'boi-company-setup-visa-2026' },
+  { query: 'pattaya visa agent scam', slug: 'visa-agent-red-flags-2026' },
+  { query: 'ltr tax free foreign income', slug: 'ltr-royal-decree-743-2026' },
+  { query: 'non o extension documents', slug: 'non-o-extension-documents-2026' },
 ];
 
 function daysSince(iso) {
@@ -53,6 +68,10 @@ for (const d of fs.readdirSync(path.join(ROOT, 'blog'))) {
 for (const t of TOPICS) {
   if (!report.existingBlogs.includes(t.slug)) report.missingTopics.push(t);
 }
+
+report.gscSuggestions = GSC_QUERY_SEEDS.filter(
+  (s) => !report.existingBlogs.includes(s.slug) && TOPICS.some((t) => t.slug === s.slug)
+);
 
 const out = path.join(ROOT, '_policy-radar.json');
 fs.writeFileSync(out, JSON.stringify(report, null, 2));

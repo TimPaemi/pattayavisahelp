@@ -421,6 +421,69 @@ const POSTS = {
 <p>Use <a href="/tools/expiry-countdown/">expiry countdown</a>. Set 90-day and extension reminders. TM30 gaps block extensions — fix before expiry.</p>
 <p>Overstay now? <a href="/contact/">Urgent consult</a> · WhatsApp +66 96 728 6999</p>`,
   },
+  'extension-timeline-jomtien-2026': {
+    title: 'Visa Extension Timeline Jomtien 2026 — How Long Each Step Takes',
+    description:
+      'Thailand visa extension timeline at Jomtien Immigration 2026 — Non-O, DTV, ED processing days, queue vs same-day, and when to apply before expiry.',
+    h1: 'How long visa extensions take at Jomtien in 2026',
+    lede: 'Clients ask "same day or come back?" — most Pattaya extensions are same-day if documents are complete, but DTV 180-day and ED batches can add a return visit.',
+    tldr: 'Non-O/Marriage: usually same day, 1–3 hours queue. DTV 180-day extension: same day if TM30 + bank OK. ED: sometimes 2–5 business days if school docs forwarded. Apply 30 days before expiry — not last day.',
+    crumbs: 'Extension Timeline Jomtien 2026',
+    readMin: '4',
+    date: '2026-06-09',
+    body: `<p><strong>Guides:</strong> <a href="/guides/jomtien-immigration-office/">Jomtien office</a> · <a href="/blog/jomtien-immigration-2026/">Queue times</a> · <a href="/blog/non-o-extension-documents-2026/">Non-O docs</a></p>
+<h2>Same-day extensions (typical)</h2>
+<p><strong>Non-O retirement</strong> — stamp same visit if bank letter + TM30 clean.</p>
+<p><strong>Marriage Non-O</strong> — same day when spouse docs complete.</p>
+<p><strong>90-day report</strong> — walk-in Building A often under 30 minutes.</p>
+<h2>May require return visit</h2>
+<p><strong>ED extensions</strong> when MOE verification pending.</p>
+<p><strong>First DTV 180-day</strong> if bank seasoning questioned — officer may request additional proof and return next day.</p>
+<h2>Calendar planning</h2>
+<p>Earliest application: 30 days before expiry. Latest: before midnight on expiry date — never overstay. Use <a href="/tools/expiry-countdown/">expiry countdown</a>.</p>
+<p>Need timeline for your visa type? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'boi-company-setup-visa-2026': {
+    title: 'BOI Company Setup for Non-B Visa 2026 — Pattaya Checklist',
+    description:
+      'Thai company setup for Non-B visa 2026 — BOI vs regular Ltd, capital, Thai shareholder rules, work permit linkage, and Pattaya service company traps.',
+    h1: 'Setting up a Thai company for a Non-B visa in 2026',
+    lede: 'Shelf companies and nominee structures get rejected — and can trigger criminal exposure. Here is the 2026 BOI/Ltd path we pre-check before clients pay registration fees.',
+    tldr: 'Real business activity, Thai employees ratio, VAT filings, and physical office. Non-B tied to your role + work permit. BOI promotion optional — speeds some sectors but not required for every Non-B.',
+    crumbs: 'BOI Company Setup Visa 2026',
+    readMin: '5',
+    date: '2026-06-09',
+    body: `<p><strong>Guides:</strong> <a href="/guides/setting-up-thai-company/">Thai company guide</a> · <a href="/visas/business-non-b/">Non-B visa</a> · <a href="/work-permit/">Work permit hub</a></p>
+<h2>Ltd vs BOI</h2>
+<p>Most Pattaya small businesses start as Thai Ltd. BOI promotion helps tech/manufacturing — not every restaurant or agency qualifies.</p>
+<h2>Non-B linkage</h2>
+<p>Company registers → hires you → Non-B application → work permit at DOE. Timeline often 2–4 months first cycle.</p>
+<h2>Red flags</h2>
+<p>Nominee Thai shareholders, zero activity, visa-only companies — immigration and DOE audits increased 2025–2026.</p>
+<p>Company + visa mapping? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'visa-agent-red-flags-2026': {
+    title: 'Pattaya Visa Agent Red Flags 2026 — Scams to Avoid',
+    description:
+      'Pattaya visa agent scams 2026 — fake ED schools, illegal visa runs, overpriced "guaranteed" DTV, TM30 fraud, and how to verify legitimate help.',
+    h1: 'Pattaya visa agent red flags in 2026',
+    lede: 'Facebook groups sell illegal certainty — "no attendance ED", "permanent visa run", "guaranteed LTR in 2 weeks". Immigration enforcement in 2026 catches these patterns faster than agents adapt their ads.',
+    tldr: 'Walk away from: guaranteed approval, no MOE school visit, visa runs instead of extensions, cash-only no contract, agent files TM30 with fake address. Use independent advisors who cite Gazette/immigration sources.',
+    crumbs: 'Visa Agent Red Flags 2026',
+    readMin: '4',
+    date: '2026-06-09',
+    body: `<p><strong>Guides:</strong> <a href="/guides/visa-scams-pattaya/">Visa scams Pattaya</a> · <a href="/blog/ed-visa-moe-accreditation-2026/">Fake ED schools</a> · <a href="/methodology/">Our methodology</a></p>
+<h2>Top scams we see</h2>
+<ul>
+<li><strong>Fake ED packages</strong> — no real classes, school not MOE-listed</li>
+<li><strong>Illegal work on tourist</strong> — bar/agency "visa" that is just repeated TR entries</li>
+<li><strong>TM30 address fraud</strong> — agent registers you at address you never lived</li>
+<li><strong>Guaranteed LTR/DTV</strong> — no ethical advisor guarantees immigration outcomes</li>
+</ul>
+<h2>How to verify</h2>
+<p>Ask for written scope, primary source citations, and what happens if refused. Check school on MOE database yourself.</p>
+<p>Got a suspicious offer? <a href="/contact/">Send it to us</a> · WhatsApp +66 96 728 6999 — we review free</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:
