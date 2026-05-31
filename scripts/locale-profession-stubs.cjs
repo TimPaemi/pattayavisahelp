@@ -191,9 +191,10 @@ for (const slug of Object.keys(PROFESSIONS)) {
   let html = fs.readFileSync(enFile, 'utf8');
   const en = `${BASE}/professions/${slug}/`;
   const block = `<link rel="alternate" hreflang="en" href="${en}" />\n<link rel="alternate" hreflang="de" href="${BASE}/de/professions/${slug}/" />\n<link rel="alternate" hreflang="ru" href="${BASE}/ru/professions/${slug}/" />\n<link rel="alternate" hreflang="x-default" href="${en}" />\n`;
-  const re = /<link rel="alternate" hreflang="en"[^>]+>\s*\n<link rel="alternate" hreflang="x-default"[^>]+>\s*\n/;
-  if (re.test(html) && !html.includes('de/professions')) {
-    html = html.replace(re, block);
+  const hreflangBlock =
+    /<link rel="alternate" hreflang="en"[^>]+>\s*\n(?:<link rel="alternate" hreflang="(?:de|ru)"[^>]+>\s*\n)*<link rel="alternate" hreflang="x-default"[^>]+>\s*\n/;
+  if (hreflangBlock.test(html) && !html.includes(`/de/professions/${slug}/`)) {
+    html = html.replace(hreflangBlock, block);
     fs.writeFileSync(enFile, html);
   }
 }

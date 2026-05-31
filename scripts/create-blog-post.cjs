@@ -139,6 +139,36 @@ const POSTS = {
 <p>Photograph new stamp. Set reminder: next extension ~11 months, 90-day report separate cycle. Use <a href="/tools/expiry-countdown/">expiry countdown tool</a>.</p>
 <p>Need doc review before you queue? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
   },
+  'ed-visa-moe-accreditation-2026': {
+    title: 'ED Visa MOE Accreditation Check 2026 — Avoid Fake Schools',
+    description:
+      'Verify MOE-accredited ED visa schools in Thailand 2026 — moe.go.th check, Pattaya language schools, rejection patterns, and switching schools mid-study.',
+    h1: 'ED visa in 2026: how to verify MOE accreditation before you pay',
+    lede: 'Fake ED schools still sell ฿40K packages in Pattaya. Immigration cross-checks MOE lists — unaccredited schools mean refused extensions and overstay risk.',
+    tldr: 'Search school name on moe.go.th accredited list before enrolling. ED visa is for study only — working on ED is illegal. Switch schools only with proper transfer paperwork or you lose extension eligibility.',
+    crumbs: 'ED Visa MOE Accreditation 2026',
+    readMin: '4',
+    date: '2026-06-04',
+    body: `<p><strong>Full guides:</strong> <a href="/guides/verify-moe-accredited-school/">Verify MOE school</a> · <a href="/visas/education-ed/">ED visa 2026</a> · <a href="/guides/switch-ed-to-dtv/">Switch ED to DTV</a></p>
+<h2>Why accreditation matters</h2>
+<p>Thailand ED visas require enrollment at a <strong>Ministry of Education accredited institution</strong>. Immigration verifies against MOE records at extension time — not at first entry. Pattaya has legitimate language schools and operators selling packages with no real classes.</p>
+<h2>How to verify (5 minutes)</h2>
+<ol>
+<li>Get exact legal school name from contract — not marketing brand.</li>
+<li>Search <strong>moe.go.th</strong> accredited institution database (or our <a href="/guides/verify-moe-accredited-school/">step-by-step guide</a>).</li>
+<li>Confirm school address matches where you will attend classes.</li>
+<li>Ask for past immigration extension approval letters (redacted) from current students.</li>
+</ol>
+<h2>Red flags in Pattaya 2026</h2>
+<ul>
+<li>"No attendance required" — immigration audits increased in 2025–2026.</li>
+<li>Cash-only, no MOE registration number on contract.</li>
+<li>School cannot produce CM form or enrollment letter on official letterhead.</li>
+</ul>
+<h2>Switching schools</h2>
+<p>Mid-study transfers need MOE transfer approval + new enrollment docs before next extension. Many holders switch to <a href="/visas/dtv/">DTV</a> if they qualify — see <a href="/guides/switch-ed-to-dtv/">ED to DTV guide</a>.</p>
+<p>Need school vetting before you pay? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:

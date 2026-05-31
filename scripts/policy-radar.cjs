@@ -14,6 +14,7 @@ const TOPICS = [
   { slug: 'tm30-landlord-refusal-2026', keywords: ['tm30', 'landlord'], priority: 'medium' },
   { slug: 'dtv-embassy-seasoning-2026', keywords: ['seasoning', 'embassy', 'dtv'], priority: 'medium' },
   { slug: 'non-o-extension-documents-2026', keywords: ['non-o', 'extension', 'jomtien'], priority: 'low' },
+  { slug: 'ed-visa-moe-accreditation-2026', keywords: ['ed visa', 'moe', 'accreditation'], priority: 'medium' },
 ];
 
 function daysSince(iso) {
