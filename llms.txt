@@ -37,6 +37,13 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 - [Tourist TR e-Visa](https://pattayavisahelp.com/visas/tourist-tr-evisa/): 60-day stay, extendable 30 days.
 - [Media Non-M](https://pattayavisahelp.com/visas/media-non-m/): Accredited foreign correspondents.
 
+## Language hubs
+
+- [Deutsch — visa advice from Pattaya](https://pattayavisahelp.com/de/)
+- [Русский — консультации по визам](https://pattayavisahelp.com/ru/)
+- German visa overviews: `/de/visas/{slug}/` for all 12 pillars (e.g. [DTV auf Deutsch](https://pattayavisahelp.com/de/visas/dtv/))
+- Russian visa overviews: `/ru/visas/{slug}/` for all 12 pillars (e.g. [DTV на русском](https://pattayavisahelp.com/ru/visas/dtv/))
+
 ## Hub pages
 
 - [All visas](https://pattayavisahelp.com/visas/)

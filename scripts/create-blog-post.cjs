@@ -13,6 +13,37 @@ if (!slug) {
 }
 
 const POSTS = {
+  '90-day-report-online-2026': {
+    title: '90-Day Report Online in Thailand 2026 — TM47 Portal Guide',
+    description:
+      'Thailand 90-day report online 2026 — immigration.go.th TM47 portal, when to file, what if landlord TM30 is missing, and Pattaya in-person backup at Jomtien.',
+    h1: '90-day report online in 2026: TM47 portal, deadlines, and Pattaya backup',
+    lede: 'Most long-stay holders should file the 90-day report online — but the portal fails if TM30 was never filed. Here is the 2026 workflow from Pattaya.',
+    tldr: 'File at immigration.go.th within 15 days before or 7 days after your 90-day deadline. You need a valid TM30 on file. If online fails, Jomtien Immigration Building A handles walk-in TM47 — arrive before 08:30 on weekdays.',
+    crumbs: '90-Day Report Online 2026',
+    readMin: '4',
+    date: '2026-06-01',
+    body: `<p><strong>Full guide:</strong> <a href="/guides/90-day-reporting/">90-day reporting complete guide</a> · <a href="/guides/tm30-reporting/">TM30 reporting</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration office</a></p>
+<h2>Who must file</h2>
+<p>Anyone on a visa stay longer than 90 days — Non-O, DTV, ED, LTR, Marriage Non-O, etc. Tourist entries under 90 days do not trigger it until you accumulate 90 days in-country on long-stay visas.</p>
+<h2>Online filing (preferred)</h2>
+<ol>
+<li>Go to <strong>immigration.go.th</strong> → 90-day notification (TM47 online).</li>
+<li>Log in with passport details — MRZ scan on mobile saves time.</li>
+<li>Confirm address matches latest <strong>TM30</strong> on file. Mismatch = rejection.</li>
+<li>Submit within <strong>15 days before</strong> or <strong>7 days after</strong> your due date.</li>
+<li>Screenshot the confirmation — immigration may ask on next extension.</li>
+</ol>
+<h2>When online fails (common in Pattaya)</h2>
+<p><strong>No TM30.</strong> Landlord never filed? Fix at tm30.immigration.go.th first — or ask condo juristic person. Without TM30, online 90-day blocks.</p>
+<p><strong>Wrong address.</strong> Moved condos but old TM30 still active? File new TM30 before 90-day.</p>
+<p><strong>Portal timeout.</strong> Peak mornings (Mon/Tue) — try off-peak or walk in.</p>
+<h2>Jomtien in-person backup</h2>
+<p>Building A at Jomtien Immigration handles 90-day reports. Bring passport + TM30 copy + lease. Queue often 30–60 min Wed–Thu mid-morning. See our <a href="/blog/jomtien-immigration-2026/">Jomtien queue times update</a>.</p>
+<h2>Penalties</h2>
+<p>Overdue 90-day: ฿2,000 fine at immigration when you next report or extend. Chronic misses can flag your profile. Use our <a href="/tools/expiry-countdown/">expiry countdown</a> to track both visa expiry and 90-day dates.</p>
+<p>Questions? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:
