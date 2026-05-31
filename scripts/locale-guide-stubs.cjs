@@ -1,13 +1,14 @@
 /**
- * DE/RU guide overview stubs for top how-to guides.
+ * DE/RU guide overview stubs — manual copy for top guides + auto for rest.
  */
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://pattayavisahelp.com';
+const SKIP = new Set(['index', 'glossary']);
 
-const GUIDES = {
+const MANUAL = {
   '90-day-reporting': {
     de: {
       title: '90-Tage-Meldung Thailand 2026 — TM47 Leitfaden auf Deutsch',
@@ -78,6 +79,34 @@ try {
   styles = '<style>body{background:#000;color:#fafafa;font-family:Inter,sans-serif}a{color:#06b6d4}</style>';
 }
 
+function readEnMeta(dir) {
+  const html = fs.readFileSync(path.join(ROOT, 'guides', dir, 'index.html'), 'utf8');
+  const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.replace(/&amp;/g, '&') || dir;
+  const desc = html.match(/<meta name="description" content="([^"]+)"/)?.[1] || '';
+  return { title, desc };
+}
+
+function autoData(lang, slug, en) {
+  const base = en.title.replace(/\s*—.*$/, '').replace(/\s*2026.*$/i, '').trim();
+  if (lang === 'de') {
+    return {
+      title: `${base} 2026 — Leitfaden auf Deutsch`,
+      h1: base,
+      lede: `${en.desc.slice(0, 140)}${en.desc.length > 140 ? '…' : ''} Beratung aus Pattaya auf Deutsch.`,
+    };
+  }
+  return {
+    title: `${base} 2026 — гид на русском`,
+    h1: base,
+    lede: `${en.desc.slice(0, 140)}${en.desc.length > 140 ? '…' : ''} Консультации из Pattaya на русском.`,
+  };
+}
+
+function getGuideData(slug, lang) {
+  if (MANUAL[slug]?.[lang]) return MANUAL[slug][lang];
+  return autoData(lang, slug, readEnMeta(slug));
+}
+
 function build(lang, slug, data) {
   const en = `${BASE}/guides/${slug}/`;
   const loc = `${BASE}/${lang}/guides/${slug}/`;
@@ -115,24 +144,37 @@ ${styles}
 </html>`;
 }
 
-const report = [];
-for (const slug of Object.keys(GUIDES)) {
-  for (const lang of ['de', 'ru']) {
-    const dir = path.join(ROOT, lang, 'guides', slug);
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), build(lang, slug, GUIDES[slug][lang]));
-    report.push(`${lang}/guides/${slug}`);
-  }
+function patchEnHreflang(slug) {
   const enFile = path.join(ROOT, 'guides', slug, 'index.html');
-  if (!fs.existsSync(enFile)) continue;
+  if (!fs.existsSync(enFile)) return;
   let html = fs.readFileSync(enFile, 'utf8');
   const en = `${BASE}/guides/${slug}/`;
   const block = `<link rel="alternate" hreflang="en" href="${en}" />\n<link rel="alternate" hreflang="de" href="${BASE}/de/guides/${slug}/" />\n<link rel="alternate" hreflang="ru" href="${BASE}/ru/guides/${slug}/" />\n<link rel="alternate" hreflang="x-default" href="${en}" />\n`;
   const hreflangBlock =
     /<link rel="alternate" hreflang="en"[^>]+>\s*\n(?:<link rel="alternate" hreflang="(?:de|ru)"[^>]+>\s*\n)*<link rel="alternate" hreflang="x-default"[^>]+>\s*\n/;
-  if (hreflangBlock.test(html) && !html.includes(`/de/guides/${slug}/`)) {
+  if (html.includes(`/de/guides/${slug}/`)) return;
+  if (hreflangBlock.test(html)) {
     html = html.replace(hreflangBlock, block);
-    fs.writeFileSync(enFile, html);
+  } else {
+    html = html.replace(
+      `<link rel="canonical" href="${en}" />`,
+      `<link rel="canonical" href="${en}" />\n${block.trim()}`
+    );
   }
+  fs.writeFileSync(enFile, html);
 }
-console.log(JSON.stringify({ guides: report }, null, 2));
+
+const report = { guides: [], hreflang: [] };
+const slugs = fs.readdirSync(path.join(ROOT, 'guides')).filter((d) => !SKIP.has(d) && fs.existsSync(path.join(ROOT, 'guides', d, 'index.html')));
+
+for (const slug of slugs) {
+  for (const lang of ['de', 'ru']) {
+    const dir = path.join(ROOT, lang, 'guides', slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), build(lang, slug, getGuideData(slug, lang)));
+    report.guides.push(`${lang}/guides/${slug}`);
+  }
+  patchEnHreflang(slug);
+  report.hreflang.push(slug);
+}
+console.log(JSON.stringify(report, null, 2));

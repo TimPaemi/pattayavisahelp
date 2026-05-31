@@ -71,6 +71,7 @@ const VISAS = {
       h1: 'Thailand Privilege (Elite)',
       lede: 'Mitgliedschaftsvisum für Kapitalreiche ohne Einkommensdokumentation.',
       bullets: ['Bronze ฿650K bis Reserve ฿5M', 'Kein Einkommensnachweis', 'Keine RD-743-Befreiung'],
+      faq: [{ q: 'Kann ich Privilege Elite verlängern?', a: 'Ja — vor Ablauf mit Thailand Privilege kontaktieren. Downgrade/Upgrade je nach Tier möglich.' }],
     },
     ru: {
       title: 'Thailand Privilege Elite 2026 — на русском',
@@ -78,6 +79,7 @@ const VISAS = {
       h1: 'Thailand Privilege (Elite)',
       lede: 'Членская виза для тех, у кого есть капитал, но нет документов о доходе.',
       bullets: ['Bronze ฿650K до Reserve ฿5M', 'Без подтверждения дохода', 'Нет RD 743'],
+      faq: [{ q: 'Можно ли продлить Privilege Elite?', a: 'Да — до истечения через Thailand Privilege. Возможен upgrade/downgrade tier.' }],
     },
   },
   'retirement-non-o': {
@@ -109,6 +111,7 @@ const VISAS = {
       h1: 'O-A Retirement',
       lede: 'Visum vor Reiseantritt mit mandatory Thai health insurance.',
       bullets: ['Vor Reise in Botschaft', 'THB 3M Versicherung/Jahr', '50+ · ฿800K oder ฿65K/Monat'],
+      faq: [{ q: 'O-A vs Non-O in Thailand?', a: 'O-A vor Reise in Botschaft + 3M THB Versicherung. Non-O oft einfacher für Pattaya-Rentner mit lokaler Verlängerung.' }],
     },
     ru: {
       title: 'O-A пенсионная виза 2026 — на русском',
@@ -116,6 +119,7 @@ const VISAS = {
       h1: 'O-A Retirement',
       lede: 'Консульская виза с обязательной медстраховкой.',
       bullets: ['Оформление дома', 'Страховка THB 3M/год', '50+ · ฿800K или ฿65K/мес'],
+      faq: [{ q: 'O-A или Non-O в Таиланде?', a: 'O-A — консульство + страховка 3M THB. Non-O проще для пенсионеров в Pattaya с локальным продлением.' }],
     },
   },
   'retirement-o-x': {
@@ -125,6 +129,7 @@ const VISAS = {
       h1: 'O-X Retirement',
       lede: '5-Jahres-Rentenvisum für 14 berechtigte Nationalitäten.',
       bullets: ['5 Jahre', '฿3M Thai Bank', '14 Nationalitäten'],
+      faq: [{ q: 'Wer kann O-X beantragen?', a: 'Nur 14 berechtigte Nationalitäten laut Immigration — prüfen vor ฿3M Einzahlung.' }],
     },
     ru: {
       title: 'O-X пенсионная виза 2026 — на русском',
@@ -132,6 +137,7 @@ const VISAS = {
       h1: 'O-X Retirement',
       lede: '5-летняя пенсионная виза для 14 eligible гражданств.',
       bullets: ['5 лет', '฿3M в тайском банке', '14 гражданств'],
+      faq: [{ q: 'Кто может подать на O-X?', a: 'Только 14 eligible гражданств по списку immigration — проверьте до депозита ฿3M.' }],
     },
   },
   'marriage-non-o': {
@@ -141,6 +147,7 @@ const VISAS = {
       h1: 'Marriage Non-O',
       lede: 'Visum für Ausländer mit thailändischem Ehepartner.',
       bullets: ['Thai Ehepartner', '฿400.000 oder ฿40.000/Monat', 'Jährliche Verlängerung'],
+      faq: [{ q: 'Brauche ich Heiratsurkunde apostilliert?', a: 'Ja — ausländische Heiratsurkunde muss legalisiert/apostilliert sein. Thai Eheurkunde direkt verwendbar.' }],
     },
     ru: {
       title: 'Брачная Non-O виза 2026 — на русском',
@@ -148,6 +155,7 @@ const VISAS = {
       h1: 'Marriage Non-O',
       lede: 'Виза для иностранцев в браке с тайцем.',
       bullets: ['Тайский супруг', '฿400 000 или ฿40 000/мес', 'Ежегодное продление'],
+      faq: [{ q: 'Нужна ли апостиль на свидетельство о браке?', a: 'Да — иностранное свидетельство легализуют/апостилируют. Тайское — напрямую.' }],
     },
   },
   'education-ed': {
@@ -157,6 +165,7 @@ const VISAS = {
       h1: 'Education (ED)',
       lede: 'Für echte Studenten an akkreditierten Schulen — verschärfte Kontrollen seit 2025.',
       bullets: ['MOE-Akkreditierung Pflicht', 'Anwesenheit wird geprüft', 'DTV oft besser für Nomaden'],
+      faq: [{ q: 'Wie prüfe ich MOE-Akkreditierung?', a: 'Schulname auf moe.go.th — siehe unseren Leitfaden verify-moe-accredited-school.' }],
     },
     ru: {
       title: 'ED образовательная виза 2026 — на русском',
@@ -164,6 +173,7 @@ const VISAS = {
       h1: 'Education (ED)',
       lede: 'Для реальных студентов аккредитованных школ.',
       bullets: ['Аккредитация MOE', 'Контроль посещаемости', 'DTV часто лучше для номадов'],
+      faq: [{ q: 'Как проверить аккредитацию MOE?', a: 'Название школы на moe.go.th — см. наш гид verify-moe-accredited-school.' }],
     },
   },
   'business-non-b': {
@@ -173,6 +183,7 @@ const VISAS = {
       h1: 'Non-B + Work Permit',
       lede: 'Legale Route für Arbeit bei thailändischem Arbeitgeber.',
       bullets: ['Thai Sponsor', 'Work Permit Pflicht', 'Steuer auf Thai-Einkommen'],
+      faq: [{ q: 'Kann ich Remote auf Non-B arbeiten?', a: 'Nein — Non-B ist für Thai-Arbeitgeber. Remote für Ausland = DTV oder LTR.' }],
     },
     ru: {
       title: 'Non-B рабочая виза 2026 — на русском',
@@ -180,6 +191,7 @@ const VISAS = {
       h1: 'Non-B + Work Permit',
       lede: 'Легальный путь работы у тайского работодателя.',
       bullets: ['Тайский спонсор', 'Work permit обязателен', 'Налог в Таиланде'],
+      faq: [{ q: 'Можно ли удалённо на Non-B?', a: 'Нет — Non-B для тайского работодателя. Удалёнка = DTV или LTR.' }],
     },
   },
   smart: {
@@ -189,6 +201,7 @@ const VISAS = {
       h1: 'SMART Visa',
       lede: 'BOI-Programm für qualifizierte Tech-Profile — nicht für generische Nomaden.',
       bullets: ['BOI SMART Zertifizierung', '2–4 Jahre', 'Work Permit oft inkludiert'],
+      faq: [{ q: 'Ist SMART für Freelancer?', a: 'Nein — BOI-zertifizierter Thai-Arbeitgeber oder Startup erforderlich.' }],
     },
     ru: {
       title: 'SMART виза Таиланд 2026 — на русском',
@@ -196,6 +209,7 @@ const VISAS = {
       h1: 'SMART Visa',
       lede: 'Программа BOI для квалифицированных tech-специалистов.',
       bullets: ['Сертификация BOI', '2–4 года', 'Work permit часто включён'],
+      faq: [{ q: 'SMART для фрилансеров?', a: 'Нет — нужен сертифицированный BOI тайский работодатель или стартап.' }],
     },
   },
   'tourist-tr-evisa': {
@@ -205,6 +219,7 @@ const VISAS = {
       h1: 'Tourist TR / e-Visa',
       lede: 'Kurzaufenthalt — kein Ersatz für DTV oder Retirement.',
       bullets: ['60 Tage', '1× 30 Tage Verlängerung', 'TDAC vor Ankunft Pflicht'],
+      faq: [{ q: 'Reicht Tourist für Langzeit?', a: 'Nein — max ~90 Tage. Für 6+ Monate DTV, Non-O oder LTR planen.' }],
     },
     ru: {
       title: 'Туристическая TR e-Visa 2026 — на русском',
@@ -212,6 +227,7 @@ const VISAS = {
       h1: 'Tourist TR / e-Visa',
       lede: 'Краткий визит — не замена DTV.',
       bullets: ['60 дней', '1 продление 30 дней', 'TDAC перед прилётом'],
+      faq: [{ q: 'Хватит ли tourist для долгого stay?', a: 'Нет — макс ~90 дней. Для 6+ месяцев планируйте DTV, Non-O или LTR.' }],
     },
   },
   'media-non-m': {
@@ -221,6 +237,7 @@ const VISAS = {
       h1: 'Media Non-M',
       lede: 'Für akkreditierte Korrespondenten — nicht für Content Creator.',
       bullets: ['Presseakkreditierung', 'Nicht für YouTuber ohne Akkreditierung'],
+      faq: [{ q: 'Kann Content Creator Non-M bekommen?', a: 'Nein — ohne offizielle Presseakkreditierung. DTV für Remote-Creator.' }],
     },
     ru: {
       title: 'Media Non-M виза 2026 — на русском',
@@ -228,6 +245,7 @@ const VISAS = {
       h1: 'Media Non-M',
       lede: 'Для аккредитованных корреспондентов.',
       bullets: ['Пресс-аккредитация', 'Не для блогеров без статуса'],
+      faq: [{ q: 'Content creator может получить Non-M?', a: 'Нет — без пресс-аккредитации. DTV для remote creator.' }],
     },
   },
 };

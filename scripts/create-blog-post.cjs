@@ -169,6 +169,78 @@ const POSTS = {
 <p>Mid-study transfers need MOE transfer approval + new enrollment docs before next extension. Many holders switch to <a href="/visas/dtv/">DTV</a> if they qualify — see <a href="/guides/switch-ed-to-dtv/">ED to DTV guide</a>.</p>
 <p>Need school vetting before you pay? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
   },
+  'privilege-elite-renewal-2026': {
+    title: 'Thailand Privilege Elite Renewal 2026 — Upgrade, Downgrade, Timeline',
+    description:
+      'Privilege Elite renewal and tier changes in 2026 — when to apply, points transfer, downgrade to lower tier, and what happens if you let membership lapse.',
+    h1: 'Privilege Elite renewal in 2026: tiers, timing, and downgrade options',
+    lede: 'Elite members who miss the renewal window lose fast-track immigration perks and can face re-entry complications. Here is the 2026 renewal calendar we track for Pattaya clients.',
+    tldr: 'Contact Thailand Privilege 90 days before expiry. Upgrades require top-up payment; downgrades may forfeit unused years depending on contract. Keep re-entry permit valid if you travel — Elite does not replace immigration compliance.',
+    crumbs: 'Privilege Elite Renewal 2026',
+    readMin: '4',
+    date: '2026-06-05',
+    body: `<p><strong>Full guide:</strong> <a href="/visas/privilege-elite/">Privilege Elite 2026</a> · <a href="/de/visas/privilege-elite/">Privilege auf Deutsch</a> · <a href="/compare/privilege-vs-ltr/">Privilege vs LTR</a></p>
+<h2>When renewal starts</h2>
+<p>Thailand Privilege sends renewal notices ~90 days before membership end. Do not wait until last week — tier changes and payment clearance take 2–4 weeks.</p>
+<h2>Upgrade vs downgrade</h2>
+<p><strong>Upgrade</strong> (Bronze → Gold etc.): pay difference, new validity from approval date.</p>
+<p><strong>Downgrade</strong>: possible in some cases but you may lose unused premium years — read contract before signing original tier.</p>
+<h2>Immigration compliance still applies</h2>
+<p>Elite fast-track is not a visa by itself — you still need valid visa stamp, TM30, 90-day reports, and re-entry permit if leaving Thailand on long-stay visas. See <a href="/guides/re-entry-permits/">re-entry permit guide</a>.</p>
+<h2>Considering switch to LTR or DTV?</h2>
+<p>High-income retirees sometimes move Elite → LTR for Royal Decree 743 tax benefits. Nomads on Elite tourist-style stays often switch to DTV — run <a href="/tools/visa-finder/">visa finder</a>.</p>
+<p>Renewal questions? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  're-entry-permit-pattaya-2026': {
+    title: 'Re-Entry Permit Pattaya 2026 — Jomtien Single vs Multiple',
+    description:
+      'Re-entry permit Thailand 2026 at Jomtien Immigration — single ฿1,000 vs multiple ฿3,800, when you need it, and what happens if you leave without one.',
+    h1: 'Re-entry permits in Pattaya: single vs multiple before you fly',
+    lede: 'Leave Thailand on a valid extension without a re-entry permit and your stay is cancelled — even with 8 months left. Jomtien handles this daily for retirees and DTV holders.',
+    tldr: 'Apply before travel at Jomtien with TM8 form, passport, photo, cash. Single ฿1,000 for one trip; multiple ฿3,800 if you travel often. Must still be valid on return — check expiry date on permit sticker.',
+    crumbs: 'Re-Entry Permit Pattaya 2026',
+    readMin: '4',
+    date: '2026-06-05',
+    body: `<p><strong>Full guide:</strong> <a href="/guides/re-entry-permits/">Re-entry permits complete guide</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration</a> · <a href="/glossary/re-entry-permit/">Glossary</a></p>
+<h2>Who needs one</h2>
+<p>Anyone on a <strong>visa extension</strong> (Non-O, Marriage, ED, etc.) planning to leave and return before extension expiry. DTV multi-entry holders re-enter on DTV stamp — different rules; confirm your stamp type.</p>
+<h2>Single vs multiple</h2>
+<ul>
+<li><strong>Single (฿1,000):</strong> one exit and re-entry before permit expiry (usually 1 year).</li>
+<li><strong>Multiple (฿3,800):</strong> unlimited exits/re-entries until permit expiry — worth it if you fly quarterly.</li>
+</ul>
+<h2>Jomtien checklist</h2>
+<p>TM8 form, passport original + copy, 1 photo, cash. Same dress code as extensions — no shorts. Allow 30–60 minutes unless queue is heavy.</p>
+<h2>What if you forgot</h2>
+<p>Your extension is voided when you exit. Re-enter on tourist or new visa — expensive mistake. Some border runs do not fix cancelled extensions.</p>
+<p>Travel soon? <a href="/contact/">Book doc check</a> · WhatsApp +66 96 728 6999</p>`,
+  },
+  'ltr-boi-application-checklist-2026': {
+    title: 'LTR BOI Application Checklist 2026 — Documents & Timeline',
+    description:
+      'LTR visa BOI application checklist 2026 — Wealthy Pensioner, WGC, Work-from-Thailand categories, document list, processing time, and common BOI rejection reasons.',
+    h1: 'LTR BOI application in 2026: document checklist before you pay USD 50K insurance',
+    lede: 'BOI rejects incomplete LTR packages more often than immigration rejects the visa itself. Here is the 2026 document set we pre-check for Pattaya applicants.',
+    tldr: 'Category letter, passport, proof of income/assets per category, USD 50K health insurance, clean criminal record (some categories), BOI fee. Processing 1–3 months. Activate visa within 1 year of approval.',
+    crumbs: 'LTR BOI Checklist 2026',
+    readMin: '5',
+    date: '2026-06-05',
+    body: `<p><strong>Full guides:</strong> <a href="/visas/ltr/">LTR 2026</a> · <a href="/blog/ltr-royal-decree-743-2026/">Royal Decree 743</a> · <a href="/compare/dtv-vs-ltr/">DTV vs LTR</a></p>
+<h2>Pick your category first</h2>
+<ul>
+<li><strong>Wealthy Pensioner (W):</strong> 50+, passive income + insurance</li>
+<li><strong>Wealthy Global Citizen (WGC):</strong> USD 1M+ assets + USD 80K/year income</li>
+<li><strong>Work-from-Thailand Professional (T):</strong> remote employment, employer docs</li>
+<li><strong>Highly-Skilled Professional (H):</strong> Thai employer — 17% tax cap, no RD 743 foreign income</li>
+</ul>
+<h2>Universal documents</h2>
+<p>Passport (18+ months validity), photo, health insurance USD 50K+, BOI application form, category-specific financial proof, criminal record (category-dependent).</p>
+<h2>After BOI approval</h2>
+<p>Apply LTR visa at Thai consulate or immigration. Activate within 1 year. File Royal Decree 743 separately if W/WGC/T — not automatic. See <a href="/blog/ltr-royal-decree-743-2026/">RD 743 guide</a>.</p>
+<h2>Common rejections</h2>
+<p>Wrong category fit, crypto-only assets without bank trail, insurance policy not meeting BOI wording, incomplete employer letters for T category.</p>
+<p>Pre-check before BOI fees? <a href="/contact/">Contact us</a> · WhatsApp +66 96 728 6999</p>`,
+  },
   'ltr-royal-decree-743-2026': {
     title: 'LTR Royal Decree 743 in 2026 — Who Actually Gets 0% Tax on Foreign Income',
     description:

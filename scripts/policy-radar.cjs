@@ -15,6 +15,9 @@ const TOPICS = [
   { slug: 'dtv-embassy-seasoning-2026', keywords: ['seasoning', 'embassy', 'dtv'], priority: 'medium' },
   { slug: 'non-o-extension-documents-2026', keywords: ['non-o', 'extension', 'jomtien'], priority: 'low' },
   { slug: 'ed-visa-moe-accreditation-2026', keywords: ['ed visa', 'moe', 'accreditation'], priority: 'medium' },
+  { slug: 'privilege-elite-renewal-2026', keywords: ['privilege', 'elite', 'renewal'], priority: 'medium' },
+  { slug: 're-entry-permit-pattaya-2026', keywords: ['re-entry', 'jomtien', 'tm8'], priority: 'medium' },
+  { slug: 'ltr-boi-application-checklist-2026', keywords: ['ltr', 'boi', 'application'], priority: 'high' },
 ];
 
 function daysSince(iso) {
