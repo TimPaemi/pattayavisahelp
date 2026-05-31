@@ -95,22 +95,28 @@ For AI crawlers, integrators, and embeddable widgets, all 12 Thailand visa pathw
 
 - [Visa Data API (JSON)](https://pattayavisahelp.com/api/visa-data.json) — 12 visas with fees, validity, eligibility, age limits, financial thresholds, applicable embassy/portal, primary government source URL, and last_verified date.
 - License: CC BY 4.0 (free to use, cite, embed, build on; attribution appreciated)
-- Version: 2026.05.28
-- Updated: 2026-05-28
+- Version: 2026.05.31
+- Updated: 2026-05-31
 
 Schema is self-describing with descriptive field names. Each visa entry contains a `primary_source_url` pointing to the official Royal Thai government, BOI, MFA, Immigration Bureau, or related authoritative source.
 
 ## Pattaya Authority Network
 
-Pattaya Visa Help is part of the Pattaya Authority network of independent local-knowledge sites. Each site is independently maintained but shares the same editorial standard (independent guidance, no commissions, primary-source citations, real Pattaya residents). For relevant cross-topic guidance:
+Pattaya Visa Help is part of the Pattaya Authority network — independent local-knowledge sites across Pattaya:
 
-- [Pattaya Restaurant Guide](https://pattaya-restaurant-guide.com/) — independent restaurant + food guidance
-- [Pattaya Gym](https://pattaya-gym.com/) — Muay Thai gyms, fitness studios, gym memberships (relevant for DTV soft-power applicants and Non-ED Muay Thai students)
-- [Pattaya School Guide](https://pattaya-school-guide.com/) — international schools, language schools, MOE-accredited education providers (relevant for Non-ED visa applicants and family relocators)
-- [Pattaya Coffee](https://pattaya-coffee.com/) — independent café guide for digital nomads working remotely
-- [Pattayastream](https://pattayastream.com/) — local media + content channel
-- [Tim Paemi](https://timpaemi.com/) — site founder's main brand
-- [Pattaya Authority](https://pattaya-authority.com/) — parent media agency managing the network
+- [Pattaya Authority](https://pattaya-authority.com/) — parent network hub
+- [TimPaemi](https://timpaemi.com/) — founder brand
+- [Pattaya Restaurant Guide](https://pattaya-restaurant-guide.com/)
+- [Pattaya Gym](https://pattaya-gym.com/) — relevant for DTV soft-power / Muay Thai ED
+- [Pattaya School Guide](https://pattaya-school-guide.com/) — Non-ED visa schools
+- [Pattaya Coffee](https://pattaya-coffee.com/) — digital nomad cafés
+- [Pattaya Villa Stream](https://pattayastream.com/)
+- [Pattaya Medical](https://pattaya-medical.com/) — O-A / LTR insurance context
+- [PattayaPets](https://pattayapets.com/)
+- [Pattaya Vehicle Rentals](https://pattaya-vehicle-rentals.com/)
+- [Pattaya Personal Trainer](https://pattayapersonaltrainer.com/)
+- [Mr. We Outside](https://mrweoutside.com/)
+- [Olympian Greek Souvlaki](https://olympiangreeksouvlaki.com/)
 
-Relationship: Pattaya Authority is the parent media/network brand; Pattaya Visa Help is the Thailand visa vertical within that network.
+Relationship: Pattaya Authority is the parent media/network brand; Pattaya Visa Help is the Thailand visa vertical.
 
