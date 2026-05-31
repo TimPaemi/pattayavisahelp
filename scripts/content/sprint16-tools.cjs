@@ -10,7 +10,7 @@ module.exports = {
 <li><strong><a href="/tools/eligibility/">Eligibility Checker</a></strong> — maps your age, income, marital status, and activity to the visas you currently qualify for.</li>
 <li><strong><a href="/tools/income-test/">Income Test</a></strong> — checks whether your pension, salary, or investment income meets Non-O retirement and marriage thresholds.</li>
 <li><strong><a href="/tools/bank-checker/">Bank Balance Checker</a></strong> — models seasoning scenarios for the ฿800,000 and ฿400,000 deposit requirements.</li>
-<li><strong><a href="/tools/cost-calculator/">Cost Calculator</a></strong> — builds a realistic monthly budget for Pattaya life at the lifestyle level you choose.</li>
+<li><strong><a href="/tools/cost-calculator/">Cost Calculator</a></strong> — totals all-in visa cost over your chosen years — government fees, extensions, insurance, and amortised multi-year visas.</li>
 <li><strong><a href="/tools/document-checklist/">Document Checklist</a></strong> — generates a printable checklist for your specific visa type and situation.</li>
 <li><strong><a href="/tools/expiry-countdown/">Expiry Countdown</a></strong> — tracks your visa expiry and 90-day report deadline simultaneously.</li>
 <li><strong><a href="/tools/reminder/">Reminder</a></strong> — schedules email or browser alerts before your extension and 90-day deadlines.</li>
@@ -44,26 +44,22 @@ module.exports = {
 <p>Some people in Pattaya rely on repeated tourist entries or METV (Multiple Entry Tourist Visa) stamps, cycling in and out of Thailand rather than committing to a long-stay visa. This is legal in the short term but increasingly scrutinised. Jomtien officers flag passports showing multiple consecutive tourist stamps without a clear purpose of stay. If you plan to be in Pattaya for six months or more per year, the Finder will typically recommend a long-stay pathway over repeated tourist entries — both for compliance and for the practical benefits of a full annual extension stamp.</p>
 <p>Further reading: <a href="/visas/retirement-non-o/">Non-O retirement</a> · <a href="/visas/marriage-non-o/">Non-O marriage</a> · <a href="/visas/dtv/">DTV</a> · <a href="/visas/ltr/">LTR</a> · <a href="/visas/education-ed/">ED visa</a> · <a href="/guides/retiring-in-thailand/">Retiring in Thailand</a> · <a href="/guides/best-visa-retirees-over-50/">Best visa for retirees over 50</a> · <a href="/guides/visa-runs-vs-extensions/">Visa runs vs extensions</a></p>`,
 
-  '/tools/cost-calculator/': `<h2>Realistic monthly cost of living in Pattaya — 2026 figures</h2>
-<p>The Cost Calculator builds a monthly budget from the ground up based on your lifestyle choices: accommodation type and location, how often you eat out versus cook, transport preferences, health insurance tier, and discretionary spending. It outputs a total and breaks it into fixed and variable categories so you can see where to adjust.</p>
-<p>The figures use verified 2026 market data for Pattaya — not national Thai averages, which understate costs for expats in beach resort areas. A studio in Jomtien rents differently from a one-bedroom in Pratumnak or a house in East Pattaya. The calculator accounts for these location bands.</p>
-<h2>Key cost categories in Pattaya (2026)</h2>
+  '/tools/cost-calculator/': `<h2>All-in Thailand visa cost over multiple years</h2>
+<p>This calculator totals the real cost of holding a specific Thai visa — not monthly living expenses. Select a visa type and number of years; it returns government fees, annual extensions, mandatory insurance where applicable, and amortised multi-year visas (DTV, LTR, Privilege). Exchange rate baseline is ฿35/USD — adjust mentally if your currency moved.</p>
+<h2>What the calculator includes</h2>
 <ul>
-<li><strong>Accommodation:</strong> Studio condo ฿7,000–฿14,000/month unfurnished Jomtien; ฿12,000–฿25,000 Pratumnak/Naklua; houses from ฿15,000 outskirts. Includes utility estimates (฿1,500–฿4,000 electric depending on AC use).</li>
-<li><strong>Food:</strong> Thai street food budget ฿6,000–฿10,000/month; mixed Thai and Western dining ฿15,000–฿28,000; restaurant-heavy ฿30,000+.</li>
-<li><strong>Transport:</strong> Baht bus (songthaew) local ฿500–฿1,500; motorbike rental ฿3,000–฿5,000; car ownership ฿8,000–฿15,000 including fuel and parking.</li>
-<li><strong>Health insurance:</strong> International plan with inpatient/outpatient ฿5,000–฿15,000/month depending on age and coverage tier. Required for LTR; strongly recommended for Non-O retirement.</li>
-<li><strong>Visa fees:</strong> Non-O extension ฿1,900/year; re-entry permit ฿1,000 single/฿3,800 multiple; 90-day report free online.</li>
+<li><strong>Government fees:</strong> Embassy/consulate application fees, Jomtien extension stamps (฿1,900/year for most Non-O categories), re-entry permits if you travel</li>
+<li><strong>Insurance:</strong> Optional toggle — O-A and LTR tracks include mandatory health insurance bands; DTV has no mandated policy but we model recommended coverage</li>
+<li><strong>Amortisation:</strong> DTV ฿11,500 ÷ 5 years; LTR ฿50,000 ÷ 10 years; Privilege tiers spread across membership years</li>
+<li><strong>Excludes:</strong> Flights, agent fees, opportunity cost of seasoned bank deposits, living costs</li>
 </ul>
-<h2>How the calculator connects to visa thresholds</h2>
-<p>The Non-O retirement visa requires demonstrating ฿65,000/month income or ฿800,000 seasoned in a Thai bank. This tool shows whether your target monthly spend leaves sufficient margin above these thresholds — a key planning question when you're deciding between income method and deposit method. If your budget comes in at ฿55,000 and you want income method, you need income evidence of at least ฿65,000 with room for bank transfer fees and rate fluctuation.</p>
-<p>The LTR Wealthy Pensioner track requires ฿80,000/month passive income. The calculator shows what lifestyle that income supports in Pattaya — typically very comfortable, with health insurance, a decent condo, and regular travel.</p>
-<h2>When to validate results</h2>
-<p>Cost estimates are medians. Actual costs vary with negotiation skill, how long you've been in Pattaya (longer residents find better rental rates), health events, and baht/home-currency exchange rate movements. The calculator uses a baseline THB rate — if your currency has moved significantly, re-run with the <a href="/tools/currency-converter/">Currency Converter</a> output as your income figure.</p>
-<h2>How cost planning connects to visa choice</h2>
-<p>Your monthly budget directly influences which visa makes the most sense. A retiree spending ฿45,000 per month has no natural margin above the Non-O income threshold of ฿65,000 — which means the deposit method (฿800,000 seasoned) may be more stable than proving borderline income each year. A remote worker spending ฿60,000 per month and earning ฿120,000 is comfortably above DTV thresholds and may also qualify for the LTR Work-from-Thailand track. Running the cost calculator before the income test and eligibility checker gives you the full picture.</p>
-<p>One cost category that surprises new arrivals is the visa fee cadence. Annual extensions (฿1,900), re-entry permits (฿1,000–฿3,800 per trip), 90-day report (free online), and any agent fees all land at different points in the year. The calculator includes a visa overhead line item so these costs appear in your annual budget, not as unexpected cash draws against your immigration account balance.</p>
-<p>Further reading: <a href="/guides/cost-of-living-pattaya/">Full cost of living guide</a> · <a href="/guides/thai-bank-account-as-foreigner/">Opening a Thai bank account</a> · <a href="/visas/retirement-non-o/">Non-O retirement financial requirements</a> · <a href="/visas/ltr/">LTR income thresholds</a> · <a href="/guides/health-insurance/">Health insurance in Thailand</a></p>`,
+<h2>Why "visa cost" is not the sticker price</h2>
+<p>A retirement O-A "costs ฿5,000" online because bloggers count only the embassy fee. The mandatory THB-denominated health insurance adds ฿40,000–฿80,000/year for many 60+ applicants — that is the real budget line. This calculator surfaces those hidden lines so you can compare pathways honestly. Use alongside <a href="/best-visa/">budget tier pages</a> and the <a href="/tools/income-test/">Income Test</a>.</p>
+<h2>Pattaya extension cadence</h2>
+<p>Most long-stay holders extend annually at Jomtien Immigration, Soi 5 Jomtien Beach Road. Non-O retirement and marriage: ฿1,900 extension fee each year. DTV: one free 180-day extension per entry, then re-entry or new entry cycle. LTR: 10-year visa with less frequent renewal admin. The calculator models these cadences per visa type.</p>
+<h2>When to confirm totals with a professional</h2>
+<p>Insurance premiums vary sharply by age and pre-existing conditions. Privilege membership pricing changes by tier and promotion period. If you are comparing LTR versus Privilege at the ฿500k–1M/year spend level, book a <a href="/contact/">free consultation</a> — tax treatment under Royal Decree 743 can make LTR net-cheaper than the calculator shows.</p>
+<p>Further reading: <a href="/best-visa/">Best visa by budget</a> · <a href="/guides/cost-of-living-pattaya/">Cost of living in Pattaya</a> · <a href="/visas/dtv/">DTV guide</a> · <a href="/visas/retirement-o-a/">O-A retirement</a> · <a href="/visas/ltr/">LTR guide</a></p>`,
 
   '/tools/income-test/': `<h2>Does your income meet Thai visa financial thresholds?</h2>
 <p>The Income Test checks whether your monthly income — pension, salary, rental income, investment distributions, or a combination — meets the financial floors set by Thai Immigration for the major long-stay visas. Enter your income sources and currencies; the tool converts to Thai Baht at current rates and compares against each visa's requirement.</p>

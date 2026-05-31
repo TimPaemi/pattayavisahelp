@@ -475,12 +475,12 @@ module.exports = {
 <li><a href="/visas/">All visa types — overview</a></li>
 <li><a href="/visas/dtv/">Destination Thailand Visa (DTV)</a></li>
 <li><a href="/visas/ltr/">Long-Term Resident Visa (LTR)</a></li>
-<li><a href="/visas/smart-visa/">Smart Visa</a></li>
+<li><a href="/visas/smart/">Smart Visa</a></li>
 <li><a href="/visas/retirement-non-o/">Non-O Retirement Visa</a></li>
 <li><a href="/visas/marriage-non-o/">Non-O Marriage Visa</a></li>
-<li><a href="/visas/ed-visa/">ED (Education) Visa</a></li>
-<li><a href="/visas/non-b/">Non-B Work Visa</a></li>
-<li><a href="/visas/privilege-card/">Thailand Privilege Card (Elite Visa)</a></li>
+<li><a href="/visas/education-ed/">ED (Education) Visa</a></li>
+<li><a href="/visas/business-non-b/">Non-B Work Visa</a></li>
+<li><a href="/visas/privilege-elite/">Thailand Privilege Card (Elite Visa)</a></li>
 </ul>
 
 <h2>Guides</h2>
@@ -626,7 +626,7 @@ module.exports = {
 <h2>Governing law</h2>
 <p>These terms are governed by Thai law. Any disputes arising from the use of this website or our services are subject to the jurisdiction of Thai courts. We will always attempt to resolve disputes through direct communication before any formal legal process.</p>`,
 
-  '/visas/': `<p><strong>Quick navigation:</strong> <a href="/visas/dtv/">DTV</a> · <a href="/visas/ltr/">LTR</a> · <a href="/visas/smart-visa/">Smart Visa</a> · <a href="/visas/retirement-non-o/">Non-O Retirement</a> · <a href="/visas/marriage-non-o/">Non-O Marriage</a> · <a href="/visas/ed-visa/">ED</a> · <a href="/tools/visa-finder/">Visa finder tool</a></p>
+  '/visas/': `<p><strong>Quick navigation:</strong> <a href="/visas/dtv/">DTV</a> · <a href="/visas/ltr/">LTR</a> · <a href="/visas/smart/">Smart Visa</a> · <a href="/visas/retirement-non-o/">Non-O Retirement</a> · <a href="/visas/marriage-non-o/">Non-O Marriage</a> · <a href="/visas/education-ed/">ED</a> · <a href="/tools/visa-finder/">Visa finder tool</a></p>
 
 <h2>Thailand visa types for long-stay residents — 2026 overview</h2>
 <p>Thailand offers more long-stay visa options than at any previous point in its immigration history. The range of categories can be confusing — DTV, LTR, Smart Visa, Non-O retirement, Non-O marriage, Non-O-A, Non-O-X, ED, Non-B, and Privilege Card all exist simultaneously and are each appropriate for a specific income level, lifestyle, and legal situation. This hub explains each category concisely and links to the full guide for each type. For a personalised recommendation, use the <a href="/tools/visa-finder/">visa finder tool</a> or <a href="/contact/">book a free consultation</a>.</p>
@@ -638,7 +638,7 @@ module.exports = {
 <p>Introduced September 2022. 10-year validity (5+5 renewal). Four categories: Wealthy Global Citizen ($80,000/year income or $500,000 assets), Wealthy Pensioner ($80,000/year passive income or $250,000 assets + $40,000/year), Work-from-Thailand Professional ($40,000–$80,000/year from overseas employer), Highly-Skilled Professional (BOI industry employer). Work-from-Thailand category benefits from a 17% flat personal income tax rate. Administered by BOI. <a href="/visas/ltr/">Full LTR guide →</a></p>
 
 <h2>Smart Visa</h2>
-<p>BOI-administered since 2018. Up to 4 years. Four types: T (talent/expert), E (executive), S (startup), O (dependant). Requires ฿200,000/month salary from a BOI-promoted Thai employer (Types T and E). Full Thai work authorisation without a separate work permit. Suitable for senior executives and technical experts in BOI-targeted industries (electronics, automotive, digital economy). Most Pattaya digital nomads do not have the BOI employer connection needed. <a href="/visas/smart-visa/">Full Smart Visa guide →</a></p>
+<p>BOI-administered since 2018. Up to 4 years. Four types: T (talent/expert), E (executive), S (startup), O (dependant). Requires ฿200,000/month salary from a BOI-promoted Thai employer (Types T and E). Full Thai work authorisation without a separate work permit. Suitable for senior executives and technical experts in BOI-targeted industries (electronics, automotive, digital economy). Most Pattaya digital nomads do not have the BOI employer connection needed. <a href="/visas/smart/">Full Smart Visa guide →</a></p>
 
 <h2>Non-Immigrant O Retirement</h2>
 <p>The most widely used long-stay visa for Pattaya retirees. Annual extension at Jomtien Immigration. Age 50+ required. Financial requirement: ฿800,000 in a Thai bank account in your name, OR ฿65,000/month income, OR combination. Extension fee ฿1,900. Applied as Non-O-A (1 year, from Thai consulate abroad, health insurance required) for first entry, then extended annually at Jomtien. Premium Non-O-X variant: 5-year visa from selected consulates, requires ฿3,000,000 in Thai financial instruments. <a href="/visas/retirement-non-o/">Full Non-O retirement guide →</a></p>
@@ -647,13 +647,13 @@ module.exports = {
 <p>Annual extension for foreign nationals legally married to a Thai citizen. No age minimum. Financial requirement: ฿400,000 in a Thai bank account in your name, OR ฿40,000/month income. Documents include marriage certificate, Thai spouse's ID and house registration. Extensions at Jomtien — sometimes requires spouse attendance on first extension. Lower financial threshold than retirement Non-O makes this attractive for couples under 50 or with savings between ฿400,000–฿800,000. <a href="/visas/marriage-non-o/">Full Marriage Non-O guide →</a></p>
 
 <h2>Non-Immigrant ED (Education Visa)</h2>
-<p>Requires enrolment at a Thai-registered school, language centre, university, or approved training programme. Annual visa with quarterly extensions at Jomtien (฿1,900/quarter). Attendance verification required — Jomtien cross-checks with schools. Work prohibited. Pre-DTV, this was the main long-stay route for many Pattaya residents; post-DTV, it is best suited to people who genuinely want to study Muay Thai, Thai language, or another Thai programme. For remote workers using ED as a visa mechanism, DTV is the appropriate and cheaper alternative. <a href="/visas/ed-visa/">Full ED Visa guide →</a> · <a href="/guides/switch-ed-to-dtv/">ED to DTV switch guide →</a></p>
+<p>Requires enrolment at a Thai-registered school, language centre, university, or approved training programme. Annual visa with quarterly extensions at Jomtien (฿1,900/quarter). Attendance verification required — Jomtien cross-checks with schools. Work prohibited. Pre-DTV, this was the main long-stay route for many Pattaya residents; post-DTV, it is best suited to people who genuinely want to study Muay Thai, Thai language, or another Thai programme. For remote workers using ED as a visa mechanism, DTV is the appropriate and cheaper alternative. <a href="/visas/education-ed/">Full ED Visa guide →</a> · <a href="/guides/switch-ed-to-dtv/">ED to DTV switch guide →</a></p>
 
 <h2>Non-Immigrant B (Work Visa)</h2>
-<p>Required for foreign nationals employed by Thai companies with Thai work permits. Must be obtained from a Thai consulate before arrival; cannot convert from tourist entry. Annual renewal; tied to specific employer. Work permit and Non-B both expire if employment ends. Relevant for foreigners working in Pattaya's hospitality sector, EEC industrial zone (Laem Chabang, Map Ta Phut), teaching, and corporate roles. Some Non-B holders qualify to switch to LTR — see our <a href="/guides/switch-non-b-to-ltr/">Non-B to LTR guide</a>. <a href="/visas/non-b/">Full Non-B guide →</a></p>
+<p>Required for foreign nationals employed by Thai companies with Thai work permits. Must be obtained from a Thai consulate before arrival; cannot convert from tourist entry. Annual renewal; tied to specific employer. Work permit and Non-B both expire if employment ends. Relevant for foreigners working in Pattaya's hospitality sector, EEC industrial zone (Laem Chabang, Map Ta Phut), teaching, and corporate roles. Some Non-B holders qualify to switch to LTR — see our <a href="/guides/switch-non-b-to-ltr/">Non-B to LTR guide</a>. <a href="/visas/business-non-b/">Full Non-B guide →</a></p>
 
 <h2>Thailand Privilege Card (Elite Visa)</h2>
-<p>Premium long-stay programme administered by Thailand Privilege Card Co., Ltd. Membership packages from 5–30 years. Cost: ฿600,000–฿2,500,000 depending on package. Benefits include VIP airport service, annual health checks, golf course access, concierge, and multiple-entry long-stay permission without annual Jomtien extension visits. No income or financial evidence requirement — purely fee-based. Suitable for high-net-worth individuals who want long-term stay without the financial threshold management of Non-O, and can justify the upfront cost. <a href="/visas/privilege-card/">Full Privilege Card guide →</a></p>
+<p>Premium long-stay programme administered by Thailand Privilege Card Co., Ltd. Membership packages from 5–30 years. Cost: ฿600,000–฿2,500,000 depending on package. Benefits include VIP airport service, annual health checks, golf course access, concierge, and multiple-entry long-stay permission without annual Jomtien extension visits. No income or financial evidence requirement — purely fee-based. Suitable for high-net-worth individuals who want long-term stay without the financial threshold management of Non-O, and can justify the upfront cost. <a href="/visas/privilege-elite/">Full Privilege Card guide →</a></p>
 
 <h2>Choosing the right visa</h2>
 <p>The most common comparisons our clients need to make are: <a href="/compare/dtv-vs-smart/">DTV vs Smart Visa</a>, <a href="/compare/marriage-vs-retirement/">Marriage vs Retirement Non-O</a>, and <a href="/compare/ed-vs-dtv/">ED vs DTV</a>. The <a href="/tools/visa-finder/">visa finder tool</a> provides a personalised recommendation in under 3 minutes. For complex situations — multiple visa options, existing immigration history complications, or high-income professional categories — a <a href="/contact/">free 15-minute consultation</a> gives you a clear direction within one conversation.</p>`,

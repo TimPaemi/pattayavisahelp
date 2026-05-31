@@ -69,7 +69,7 @@ module.exports = {
 <li><strong>Outdated apostilles.</strong> Immigration may reject apostilled documents older than 6 months, particularly police clearances. Check current requirements for your specific visa category.</li>
 <li><strong>Missing translation.</strong> Apostilled non-English documents still require certified Thai translation by an authorised translator for some MOE and immigration applications.</li>
 </ul>
-<p>Related pathways where apostille documents are commonly required: <a href="/visas/ltr/">LTR Visa</a> · <a href="/visas/business-non-b/">Non-B + work permit</a> · <a href="/guides/work-permit/">Work permit guide</a>.</p>
+<p>Related pathways where apostille documents are commonly required: <a href="/visas/ltr/">LTR Visa</a> · <a href="/visas/business-non-b/">Non-B + work permit</a> · <a href="/work-permit/">Work permit guide</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/ltr/">LTR</a> · <a href="/glossary/moe/">MOE</a> · <a href="/glossary/fet/">FET</a> · <a href="/glossary/pr/">PR</a> · <a href="/glossary/non-oa/">Non-OA</a></p>`,
 
@@ -92,7 +92,7 @@ module.exports = {
 <li><strong>Assuming BOI exemption removes all work permit obligations.</strong> BOI promotion streamlines and in some SMART categories exempts the work permit requirement, but Non-B visa and other immigration obligations remain.</li>
 <li><strong>Missing the EEC zone advantage.</strong> Companies in Chonburi Province (Pattaya area) qualify for EEC incentives that exceed standard BOI — always check the EEC-specific packages if operating in the Pattaya region.</li>
 </ul>
-<p>Related pathways: <a href="/visas/smart-visa/">SMART Visa</a> · <a href="/visas/business-non-b/">Non-B Visa and work permit</a> · <a href="/visas/ltr/">LTR Visa</a>.</p>
+<p>Related pathways: <a href="/visas/smart/">SMART Visa</a> · <a href="/visas/business-non-b/">Non-B Visa and work permit</a> · <a href="/visas/ltr/">LTR Visa</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/smart-visa/">SMART Visa</a> · <a href="/glossary/ltr/">LTR</a> · <a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/wp10/">WP10</a> · <a href="/glossary/royal-decree-743/">Royal Decree 743</a></p>`,
 
@@ -160,7 +160,7 @@ module.exports = {
 <li><strong>Financial method confusion.</strong> ฿400,000 in a Thai bank account seasoned 2–3 months OR ฿40,000/month documented income — only one method applies at a time. Immigration does not accept a combined part-savings, part-income calculation.</li>
 <li><strong>Photo evidence missing.</strong> Recent dated photographs of both spouses together at your home, at Thai events, or during normal daily life are informally requested when officers want supplementary relationship confirmation.</li>
 </ul>
-<p>Full documentation checklist: <a href="/visas/non-o/">Non-O Marriage guide</a> · <a href="/glossary/tabien-baan/">Tabien baan</a> · <a href="/glossary/tm30/">TM30</a> · <a href="/glossary/extension/">Extension</a>.</p>
+<p>Full documentation checklist: <a href="/visas/marriage-non-o/">Non-O Marriage guide</a> · <a href="/glossary/tabien-baan/">Tabien baan</a> · <a href="/glossary/tm30/">TM30</a> · <a href="/glossary/extension/">Extension</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/non-o/">Non-O</a> · <a href="/glossary/tabien-baan/">Tabien baan</a> · <a href="/glossary/tm30/">TM30</a> · <a href="/glossary/extension/">Extension</a> · <a href="/glossary/re-entry-permit/">Re-entry permit</a></p>`,
 
@@ -182,7 +182,7 @@ module.exports = {
 <li><strong>Bank seasoning insufficient.</strong> The ฿500,000 must be demonstrably accessible — a lump sum deposited one week before application is routinely rejected. 3–6 months of consistent balance history is recommended.</li>
 <li><strong>Extending more than once per entry.</strong> The 180-day extension is available once per entry. After that extension expires, you must leave Thailand and re-enter on the DTV to start a new 180-day period.</li>
 </ul>
-<p>Full guide: <a href="/visas/dtv/">DTV 2026 Visa pillar</a> · <a href="/guides/dtv-application/">DTV application guide</a> · <a href="/tools/income-test/">Income test tool</a> · <a href="/blog/dtv-180-day-extension-2026/">DTV 180-day extension walkthrough</a>.</p>
+<p>Full guide: <a href="/visas/dtv/">DTV 2026 Visa pillar</a> · <a href="/guides/switch-ed-to-dtv/">Switch ED to DTV guide</a> · <a href="/tools/income-test/">Income test tool</a> · <a href="/blog/dtv-180-day-extension-2026/">DTV 180-day extension walkthrough</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/ltr/">LTR</a> · <a href="/glossary/soft-power/">Soft power</a> · <a href="/glossary/90-day-report/">90-day report</a> · <a href="/glossary/extension/">Extension</a> · <a href="/glossary/tm30/">TM30</a></p>`,
 
@@ -205,7 +205,7 @@ module.exports = {
 <li><strong>Unofficial portal confusion.</strong> Multiple unofficial "Thailand e-Visa" look-alike sites appear prominently in search results. Only thaievisa.go.th is the official Royal Thai Government portal.</li>
 <li><strong>Paying third-party fees for portal submission.</strong> The portal itself is free to use for document submission; the only legitimate fee is the official government visa fee.</li>
 </ul>
-<p>For DTV specifics: <a href="/visas/dtv/">DTV full guide</a>. For Non-B online application guidance: <a href="/visas/business-non-b/">Non-B guide</a>. For retirement visa: <a href="/visas/non-oa/">Non-OA guide</a>.</p>
+<p>For DTV specifics: <a href="/visas/dtv/">DTV full guide</a>. For Non-B online application guidance: <a href="/visas/business-non-b/">Non-B guide</a>. For retirement visa: <a href="/visas/retirement-o-a/">Non-OA guide</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/dtv/">DTV</a> · <a href="/glossary/non-oa/">Non-OA</a> · <a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/extension/">Extension</a></p>`,
 
@@ -363,7 +363,7 @@ module.exports = {
 <li><strong>Signing a lease on NS3 land thinking it has Chanote legal protection.</strong> A 30-year lease on NS3 land is not registerable at the Land Department and has no enforceable legal standing against third parties.</li>
 <li><strong>Confusing usufruct, habitation rights, and leasehold.</strong> These are different legal instruments — all require Chanote-grade land and Land Department registration to be valid against future land transfers.</li>
 </ul>
-<p>For broader property strategy: <a href="/guides/pattaya-property-foreigners/">Pattaya property guide</a>. For LTR Thai property investment: <a href="/visas/ltr/">LTR Visa</a>.</p>
+<p>For broader property strategy: <a href="/guides/buying-property-thailand/">Pattaya property guide</a>. For LTR Thai property investment: <a href="/visas/ltr/">LTR Visa</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/tabien-baan/">Tabien baan</a> · <a href="/glossary/ltr/">LTR</a> · <a href="/glossary/pr/">PR</a></p>`,
 
@@ -386,7 +386,7 @@ module.exports = {
 <li><strong>Applying for Non-B from inside Thailand.</strong> Non-B must generally be obtained at a Thai embassy abroad before entering for employment. Exceptions exist for BOI-promoted positions and some conversions — check with an agent.</li>
 <li><strong>Conflating Non-B with DTV for remote work.</strong> DTV suits foreign-income remote workers; Non-B is for Thai-employer employment. Using a DTV while receiving salary from a Thai company is illegal under both visa categories.</li>
 </ul>
-<p>Full guide: <a href="/visas/business-non-b/">Non-B Visa 2026</a> · <a href="/glossary/wp10/">WP10</a> · <a href="/glossary/boi/">BOI</a> · <a href="/guides/work-permit/">Work permit guide</a>.</p>
+<p>Full guide: <a href="/visas/business-non-b/">Non-B Visa 2026</a> · <a href="/glossary/wp10/">WP10</a> · <a href="/glossary/boi/">BOI</a> · <a href="/work-permit/">Work permit guide</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/wp10/">WP10</a> · <a href="/glossary/moe/">MOE</a> · <a href="/glossary/fet/">FET</a> · <a href="/glossary/boi/">BOI</a> · <a href="/glossary/smart-visa/">SMART Visa</a></p>`,
 
@@ -431,7 +431,7 @@ module.exports = {
 <li><strong>TM30 not on file or outdated.</strong> No extension of any kind is processed at Jomtien without current TM30 in the system.</li>
 <li><strong>Working on Non-O retirement or marriage.</strong> Neither category authorises employment. Tutoring, consulting, online sales, or any paid activity without a separate work permit violates the Alien Working Act.</li>
 </ul>
-<p>Full guides: <a href="/visas/non-o/">Non-O Visa guide</a> · <a href="/blog/non-o-extension-documents-2026/">Extension document checklist 2026</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration guide</a>.</p>
+<p>Full guides: <a href="/visas/retirement-non-o/">Non-O Visa guide</a> · <a href="/blog/non-o-extension-documents-2026/">Extension document checklist 2026</a> · <a href="/guides/jomtien-immigration-office/">Jomtien Immigration guide</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/non-oa/">Non-OA</a> · <a href="/glossary/non-ox/">Non-OX</a> · <a href="/glossary/extension/">Extension</a> · <a href="/glossary/pr/">PR</a> · <a href="/glossary/tabien-baan/">Tabien baan</a></p>`,
 
@@ -453,7 +453,7 @@ module.exports = {
 <li><strong>Confusing Non-OA with Non-OX.</strong> Non-OX (introduced 2021) offers up to 5-year multi-entry but requires Thai insurance from a Thai insurer. Non-OA accepts qualifying foreign insurance.</li>
 <li><strong>Leaving Thailand on the Non-OA without re-entry permit.</strong> The 1-year Non-OA grants the stay but after your first entry, subsequent re-entries require a <a href="/glossary/re-entry-permit/">re-entry permit</a> to preserve the existing extension of stay.</li>
 </ul>
-<p>Compare options: <a href="/visas/non-oa/">Non-OA full guide</a> · <a href="/glossary/non-ox/">Non-OX</a> · <a href="/glossary/non-o/">Non-O domestic extension</a> · <a href="/glossary/ltr/">LTR Visa (10-year option)</a>.</p>
+<p>Compare options: <a href="/visas/retirement-o-a/">Non-OA full guide</a> · <a href="/glossary/non-ox/">Non-OX</a> · <a href="/glossary/non-o/">Non-O domestic extension</a> · <a href="/glossary/ltr/">LTR Visa (10-year option)</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/non-o/">Non-O</a> · <a href="/glossary/non-ox/">Non-OX</a> · <a href="/glossary/extension/">Extension</a> · <a href="/glossary/ltr/">LTR</a></p>`,
 
@@ -474,7 +474,7 @@ module.exports = {
 <li><strong>Cancelling the Thai insurance after receiving the visa.</strong> The Non-OX stay is legally contingent on maintaining active qualifying Thai insurance. Cancelling the policy mid-period technically voids the basis of the visa — you would need to depart and reapply.</li>
 <li><strong>Not comparing with LTR.</strong> Retirees with ฿800,000 in assets and passive income should calculate whether the <a href="/glossary/ltr/">LTR Wealthy Pensioner</a> track's higher bar delivers better value than Non-OX's insurance overhead.</li>
 </ul>
-<p>Compare: <a href="/visas/non-oa/">Non-OA guide</a> · <a href="/glossary/non-o/">Non-O domestic extension</a> · <a href="/glossary/ltr/">LTR (10-year option)</a>.</p>
+<p>Compare: <a href="/visas/retirement-o-a/">Non-OA guide</a> · <a href="/glossary/non-o/">Non-O domestic extension</a> · <a href="/glossary/ltr/">LTR (10-year option)</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/non-oa/">Non-OA</a> · <a href="/glossary/non-o/">Non-O</a> · <a href="/glossary/ltr/">LTR</a> · <a href="/glossary/extension/">Extension</a></p>`,
 
@@ -518,7 +518,7 @@ module.exports = {
 <li><strong>Missing the annual application window.</strong> The October–November window is strict — applications received outside this period are returned. Missing it means waiting a full year.</li>
 <li><strong>Assuming PR automatically leads to citizenship.</strong> Naturalisation is a completely separate, multi-year process requiring PR for 5 years, language proficiency, and additional character and security vetting — the Thai government approves very few.</li>
 </ul>
-<p>Documentation base: <a href="/visas/non-o/">Non-O retirement and marriage</a> · <a href="/glossary/non-b/">Non-B employment base</a> · <a href="/glossary/tabien-baan/">Tabien baan</a> (required for PR file).</p>
+<p>Documentation base: <a href="/visas/retirement-non-o/">Non-O retirement</a> · <a href="/visas/marriage-non-o/">Non-O marriage</a> · <a href="/glossary/non-b/">Non-B employment base</a> · <a href="/glossary/tabien-baan/">Tabien baan</a> (required for PR file).</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/non-o/">Non-O</a> · <a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/tabien-baan/">Tabien baan</a> · <a href="/glossary/ltr/">LTR</a></p>`,
 
@@ -539,7 +539,7 @@ module.exports = {
 <li><strong>Assuming Privilege authorises work in Thailand.</strong> The Privilege Card visa does not authorise employment for any Thai-registered employer. A work permit is still required for any Thai-source income activity.</li>
 <li><strong>Not comparing total cost of alternatives.</strong> For income-earners spending 183+ days in Thailand, LTR's 17% flat tax and RD 743 foreign-income exemption may deliver annual savings that dwarf the Privilege membership cost difference.</li>
 </ul>
-<p>Compare: <a href="/visas/privilege/">Thailand Privilege Card guide</a> · <a href="/visas/ltr/">LTR Visa</a> · <a href="/glossary/dtv/">DTV</a> · <a href="/tools/income-test/">Income test tool</a>.</p>
+<p>Compare: <a href="/visas/privilege-elite/">Thailand Privilege Card guide</a> · <a href="/visas/ltr/">LTR Visa</a> · <a href="/glossary/dtv/">DTV</a> · <a href="/tools/income-test/">Income test tool</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/ltr/">LTR</a> · <a href="/glossary/dtv/">DTV</a> · <a href="/glossary/non-oa/">Non-OA</a> · <a href="/glossary/tat/">TAT</a></p>`,
 
@@ -581,7 +581,7 @@ module.exports = {
 <li><strong>Mixing Thai-source and foreign-source income treatment.</strong> RD 743 covers foreign-source remittances for WP, WGC, and Pensioner LTR holders. Thai-source employment income earned from a Thai employer is still taxed at the 17% flat LTR rate, not the RD 743 zero rate.</li>
 <li><strong>Using a general accountant unfamiliar with LTR structures.</strong> Thai tax filings for LTR holders under RD 743 require specific form elections and documentation. Engage a Thai certified public accountant with LTR client experience.</li>
 </ul>
-<p>Full context: <a href="/visas/ltr/">LTR Visa guide</a> · <a href="/glossary/ltr/">LTR glossary</a> · <a href="/guides/thai-tax-2026/">Thai tax 2026 guide</a>.</p>
+<p>Full context: <a href="/visas/ltr/">LTR Visa guide</a> · <a href="/glossary/ltr/">LTR glossary</a> · <a href="/guides/thai-tax-foreign-residents/">Thai tax for foreign residents</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/ltr/">LTR</a> · <a href="/glossary/royal-gazette/">Royal Gazette</a> · <a href="/glossary/boi/">BOI</a> · <a href="/glossary/smart-visa/">SMART Visa</a></p>`,
 
@@ -624,7 +624,7 @@ module.exports = {
 <li><strong>Assuming SMART work permit exemption is blanket.</strong> SMART-T and SMART-S work permit exemption applies within the qualifying role and employing entity. Secondary income activities or work for different entities still require standard work authorisation.</li>
 <li><strong>Not accounting for EEC zone incentives in the Pattaya area.</strong> Chonburi Province companies qualify for enhanced BOI EEC packages — always apply via the EEC-specific application route, not the standard Bangkok BOI route, for Pattaya-based operations.</li>
 </ul>
-<p>Full guide: <a href="/visas/smart-visa/">SMART Visa 2026</a> · <a href="/glossary/boi/">BOI</a> · <a href="/glossary/ltr/">LTR</a> · <a href="/guides/work-permit/">Work permit guide</a>.</p>
+<p>Full guide: <a href="/visas/smart/">SMART Visa 2026</a> · <a href="/glossary/boi/">BOI</a> · <a href="/glossary/ltr/">LTR</a> · <a href="/work-permit/">Work permit guide</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/boi/">BOI</a> · <a href="/glossary/ltr/">LTR</a> · <a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/royal-decree-743/">Royal Decree 743</a></p>`,
 
@@ -779,7 +779,7 @@ module.exports = {
 <li><strong>Not verifying current border crossing requirements.</strong> Border crossing hours, document requirements, COVID-era protocols, and administrative rules change with little notice. Confirm current status from recent visitor reports or the relevant border's official information before travelling.</li>
 <li><strong>Treating multiple consecutive tourist entries as risk-free.</strong> Thai Immigration Act gives officers discretion to deny entry to anyone who appears to be using tourist entries as a substitute for proper long-stay visa status. Repeated entries without credible tourism purpose are grounds for denial.</li>
 </ul>
-<p>Better alternatives for 2026: <a href="/visas/dtv/">DTV — 5-year solution</a> · <a href="/visas/non-o/">Non-O retirement or marriage</a> · <a href="/glossary/re-entry-permit/">Re-entry permit (for extension holders)</a>.</p>
+<p>Better alternatives for 2026: <a href="/visas/dtv/">DTV — 5-year solution</a> · <a href="/visas/retirement-non-o/">Non-O retirement</a> · <a href="/visas/marriage-non-o/">Non-O marriage</a> · <a href="/glossary/re-entry-permit/">Re-entry permit (for extension holders)</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/overstay/">Overstay</a> · <a href="/glossary/dtv/">DTV</a> · <a href="/glossary/extension/">Extension</a> · <a href="/glossary/re-entry-permit/">Re-entry permit</a></p>`,
 
@@ -801,7 +801,7 @@ module.exports = {
 <li><strong>Changing employers, roles, or premises without updating the WP10 first.</strong> All three parameters (employer, occupation, premises) are fixed in the permit. Any change requires an amendment or new WP10 before the change takes effect.</li>
 <li><strong>Assuming BOI status fully exempts you from WP10 requirements.</strong> BOI promotion streamlines and reduces time for WP10 processing and exempts specific SMART Visa categories — it does not broadly exempt all foreign workers at BOI-promoted companies from the Alien Working Act.</li>
 </ul>
-<p>Full guide: <a href="/guides/work-permit/">Work permit guide</a> · <a href="/visas/business-non-b/">Non-B Visa</a> · <a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/moe/">MOE</a> · <a href="/glossary/fet/">FET</a>.</p>
+<p>Full guide: <a href="/work-permit/">Work permit guide</a> · <a href="/visas/business-non-b/">Non-B Visa</a> · <a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/moe/">MOE</a> · <a href="/glossary/fet/">FET</a>.</p>
 <h2>Related terms</h2>
 <p><a href="/glossary/non-b/">Non-B</a> · <a href="/glossary/moe/">MOE</a> · <a href="/glossary/fet/">FET</a> · <a href="/glossary/boi/">BOI</a> · <a href="/glossary/smart-visa/">SMART Visa</a></p>`,
 
