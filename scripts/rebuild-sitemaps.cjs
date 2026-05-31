@@ -7,6 +7,14 @@ const TODAY = new Date().toISOString().slice(0, 10);
 
 const SKIP = new Set(['/v2-preview/', '/tools/ltr-eligibility/', '/professions/digital-nomad/']);
 
+/** Locale stubs are noindex until properly translated — exclude from sitemap except hubs. */
+function skipPage(p) {
+  if (SKIP.has(p)) return true;
+  if (p.startsWith('/de/') && p !== '/de/') return true;
+  if (p.startsWith('/ru/') && p !== '/ru/') return true;
+  return false;
+}
+
 const PRIORITY = {
   '/': { priority: '1.0', changefreq: 'weekly' },
   default: { priority: '0.6', changefreq: 'monthly' },
@@ -16,7 +24,7 @@ const SECTIONS = {
   'sitemap-core.xml': [
     '/', '/about/', '/contact/', '/faq/', '/privacy/', '/terms/', '/methodology/', '/changelog/',
     '/sitemap/', '/services/', '/partners/', '/healthcare/', '/property/', '/digital-nomad/',
-    '/retirement/', '/work-permit/', '/pattaya-digital-nomad-guide/', '/de/', '/ru/', '/de/sitemap/', '/ru/sitemap/',
+    '/retirement/', '/work-permit/', '/pattaya-digital-nomad-guide/', '/de/', '/ru/',
     '/banking/', '/case-studies/', '/coworking/', '/gyms/', '/resources/', '/tax/', '/glossary/',
   ],
 };
@@ -36,6 +44,12 @@ function pagePath(file) {
   const rel = path.relative(ROOT, file).replace(/\\/g, '/');
   if (rel === 'index.html') return '/';
   return '/' + rel.replace('/index.html', '') + '/';
+}
+
+function isNoindex(file) {
+  const html = fs.readFileSync(file, 'utf8');
+  const robots = html.match(/<meta name="robots" content="([^"]+)"/i)?.[1] || '';
+  return /noindex/i.test(robots);
 }
 
 function sectionFor(p) {
@@ -92,7 +106,10 @@ function writeUrlset(file, paths) {
 }
 
 const files = walk(ROOT);
-const allPages = files.map(pagePath).filter((p) => !SKIP.has(p));
+const allPages = files
+  .filter((f) => !isNoindex(f))
+  .map(pagePath)
+  .filter((p) => !skipPage(p));
 const bySection = new Map();
 
 for (const p of allPages) {

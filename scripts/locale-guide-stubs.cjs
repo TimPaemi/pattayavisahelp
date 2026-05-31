@@ -119,12 +119,11 @@ function build(lang, slug, data) {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,follow" />
 <title>${data.title}</title>
 <meta name="description" content="${data.lede}" />
 <link rel="canonical" href="${loc}" />
 <link rel="alternate" hreflang="en" href="${en}" />
-<link rel="alternate" hreflang="de" href="${BASE}/de/guides/${slug}/" />
-<link rel="alternate" hreflang="ru" href="${BASE}/ru/guides/${slug}/" />
 <link rel="alternate" hreflang="x-default" href="${en}" />
 ${styles}
 <script src="/analytics-events.js" defer></script>
@@ -136,6 +135,7 @@ ${styles}
 <p class="lede">${data.lede}</p>
 </header>
 <main class="article-body">
+<div class="locale-stub-banner" style="max-width:820px;margin:0 auto 2rem;padding:1.25rem 1.5rem;border:1px solid rgba(251,191,36,.35);background:rgba(251,191,36,.08);border-radius:8px;font-size:.95rem;line-height:1.55;color:#fafafa"><strong style="color:#fbbf24">Translation in progress.</strong> Full ${lang === 'de' ? 'German' : 'Russian'} guide coming soon — read the English version below.</div>
 <p><a href="/guides/${slug}/">${labels.full} →</a></p>
 <p><a href="/contact/">${labels.consult}</a></p>
 </main>
