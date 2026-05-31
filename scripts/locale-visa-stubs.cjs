@@ -17,9 +17,12 @@ const VISAS = {
       lede: 'Das DTV ist das wichtigste Visum für digitale Nomaden und Remote-Arbeiter mit ausländischem Einkommen.',
       bullets: [
         '5 Jahre Multi-Entry · 180 Tage pro Einreise (1× verlängerbar)',
-        '฿500.000 Bankguthaben — 3–6 Monate Seasoning je nach Botschaft',
         'Remote-Arbeit für ausländische Arbeitgeber erlaubt',
         'Keine Royal-Decree-743-Steuerbefreiung (nur LTR)',
+      ],
+      faq: [
+        { q: 'Kann ich auf DTV in Thailand arbeiten?', a: 'Remote für ausländische Arbeitgeber ja. Thai-Arbeitgeber oder Thai-Kunden nein — dafür Non-B + Work Permit.' },
+        { q: 'Wie viel Bankguthaben brauche ich?', a: '฿500.000 equivalent, 3–6 Monate Seasoning je nach Botschaft (Vientiane oft 3, Europa oft 6).' },
       ],
     },
     ru: {
@@ -30,9 +33,12 @@ const VISAS = {
       lede: 'DTV — главная виза для цифровых кочевников с иностранным доходом.',
       bullets: [
         '5 лет multi-entry · 180 дней за въезд',
-        '฿500 000 на счёте — seasoning 3–6 месяцев',
         'Удалённая работа на иностранного работодателя',
         'Нет освобождения RD 743 (только LTR)',
+      ],
+      faq: [
+        { q: 'Можно ли работать на DTV в Таиланде?', a: 'Удалённо на иностранного работодателя — да. Тайский работодатель или клиенты — нет, нужен Non-B.' },
+        { q: 'Сколько нужно на счёте?', a: 'Эквивалент ฿500 000, seasoning 3–6 месяцев в зависимости от консульства.' },
       ],
     },
   },
@@ -43,6 +49,9 @@ const VISAS = {
       h1: 'LTR — Long-Term Resident',
       lede: '10-Jahres-Visum mit BOI-Genehmigung — einzige gängige Route mit ausländischer Einkommensbefreiung.',
       bullets: ['10 Jahre (5+5) · USD 80.000/Jahr', 'Royal Decree 743 für W, P, T', 'USD 50.000 Krankenversicherung'],
+      faq: [
+        { q: 'Ist LTR automatisch steuerfrei?', a: 'Nein — Royal Decree 743 muss beim Revenue Department beantragt werden. Nur W, P, T Kategorien.' },
+      ],
     },
     ru: {
       title: 'LTR виза Таиланд 2026 — на русском',
@@ -50,6 +59,9 @@ const VISAS = {
       h1: 'LTR — Long-Term Resident',
       lede: '10-летняя виза с одобрением BOI — путь с налоговым освобождением иностранного дохода.',
       bullets: ['10 лет (5+5) · USD 80 000/год', 'Royal Decree 743 для W, P, T', 'Медстраховка USD 50 000'],
+      faq: [
+        { q: 'LTR автоматически освобождает от налога?', a: 'Нет — RD 743 подаётся в Revenue Department. Только категории W, P, T.' },
+      ],
     },
   },
   'privilege-elite': {
@@ -75,6 +87,9 @@ const VISAS = {
       h1: 'Non-O Retirement',
       lede: 'Standard für Rentner ab 50 in Pattaya — ohne 3M-THB-Versicherungspflicht wie O-A.',
       bullets: ['50+ · ฿800.000 oder ฿65.000/Monat', 'Jährliche Verlängerung Jomtien', '90-Tage-Meldung Pflicht'],
+      faq: [
+        { q: 'Brauche ich Krankenversicherung für Non-O?', a: 'Nicht gesetzlich Pflicht wie O-A — aber dringend empfohlen ab 50+.' },
+      ],
     },
     ru: {
       title: 'Non-O пенсионная виза 2026 — на русском',
@@ -82,6 +97,9 @@ const VISAS = {
       h1: 'Non-O Retirement',
       lede: 'Стандарт для пенсионеров 50+ — проще O-A.',
       bullets: ['50+ · ฿800 000 или ฿65 000/мес', 'Продление Jomtien Immigration', '90-day report'],
+      faq: [
+        { q: 'Нужна ли страховка для Non-O?', a: 'Не обязательна как для O-A — но настоятельно рекомендуется после 50.' },
+      ],
     },
   },
   'retirement-o-a': {
@@ -243,6 +261,22 @@ function buildStub(lang, slug, data) {
       ? { full: 'Vollständiger englischer Leitfaden', consult: 'Kostenlose Beratung auf Deutsch', home: 'Deutsch Startseite', en: 'English', other: 'Русский', otherHref: ruUrl }
       : { full: 'Полный гид на английском', consult: 'Бесплатная консультация на русском', home: 'Русская главная', en: 'English', other: 'Deutsch', otherHref: deUrl };
   const list = data.bullets.map((b) => `<li>${b}</li>`).join('\n');
+  const faqBlock =
+    data.faq && data.faq.length
+      ? `\n<h2>FAQ</h2>\n${data.faq.map((f) => `<details><summary>${f.q}</summary><p>${f.a}</p></details>`).join('\n')}\n`
+      : '';
+  const faqSchema =
+    data.faq && data.faq.length
+      ? `<script type="application/ld+json">\n${JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: data.faq.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        })}\n</script>\n`
+      : '';
 
   return `<!DOCTYPE html>
 <html lang="${lang}">
@@ -261,6 +295,7 @@ function buildStub(lang, slug, data) {
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","url":"${locUrl}","name":${JSON.stringify(data.title)},"inLanguage":"${lang}","isPartOf":{"@type":"WebSite","url":"${BASE}/","name":"Pattaya Visa Help"}}
 </script>
+${faqSchema}
 ${styles}
 <script src="/analytics-events.js" defer></script>
 </head>
@@ -281,6 +316,7 @@ ${styles}
 <main id="main" class="article-body">
 <p class="lang-switch">Language: <a href="${fullEn}">${labels.en}</a> · <a href="${labels.otherHref}">${labels.other}</a></p>
 <ul>${list}</ul>
+${faqBlock}
 <p><a href="${fullEn}"><strong>${labels.full} →</strong></a></p>
 <p><a href="/contact/">${labels.consult}</a> · WhatsApp +66 96 728 6999</p>
 </main>
