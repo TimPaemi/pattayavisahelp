@@ -45,6 +45,10 @@ const PATTERNS = [
   { id: 'broken_pillar_cards', re: /Read pillar →<\/a><a href="/ },
   { id: 'broken_prof_cards', re: /<a href="\/professions\/[^"]+">[^<]+<h3>/ },
   { id: 'text_before_h2_mashed', re: /[a-z]\d+[A-Z][a-z]+[^<]{0,40}<h2>/ },
+  { id: 'raw_hero_stats_in_main', re: /^\s*[^<]{0,80}\n\s*\d+\s*min read·Updated/m },
+  { id: 'raw_cta_in_main', re: /\n\s*Free 15-minute call\s*\n/ },
+  { id: 'author_block_in_main', re: /\n\s*PVH\s*\n\s*Written by/ },
+  { id: 'empty_h2_back_to_back', re: /<h2>[^<]+<\/h2>\s*(<\/div>\s*)?<h2>/ },
 ];
 
 const sitemap = parseSitemap();
