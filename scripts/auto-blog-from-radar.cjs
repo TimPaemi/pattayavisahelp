@@ -9,9 +9,7 @@ const { execSync } = require('child_process');
 const ROOT = path.join(__dirname, '..');
 const radarPath = path.join(ROOT, '_policy-radar.json');
 
-if (!fs.existsSync(radarPath)) {
-  execSync('node scripts/policy-radar.cjs', { cwd: ROOT, stdio: 'inherit' });
-}
+execSync('node scripts/policy-radar.cjs', { cwd: ROOT, stdio: 'inherit' });
 
 const radar = JSON.parse(fs.readFileSync(radarPath, 'utf8'));
 const createScript = fs.readFileSync(path.join(ROOT, 'scripts/create-blog-post.cjs'), 'utf8');
