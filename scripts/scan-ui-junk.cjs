@@ -45,9 +45,12 @@ for (const file of walk(ROOT)) {
   const head = main.slice(0, 800);
   const rawStats = /min read·Updated/.test(head) && !/<(?:span|p|div class="article-meta)[^>]*>[^<]*min read/i.test(head);
   const emptyH2 = /<h2>[^<]+<\/h2>\s*(<\/div>\s*)?<h2>/.test(main);
+  const articleWrap = /<article>/.test(main);
+  const rawCallout = /\n(?:Timing matters|Important|Note|Warning)\n[^<]/.test(main);
+  const emptyH3 = /<h3>[^<]+<\/h3>\s*\n\s*<h[23]>/.test(main);
   const ariaJunk = /<div aria-hidden="true">\s*\n\s*[^<]+\n\s*\d+ min read·Updated/.test(main);
-  if (rawStats || emptyH2 || ariaJunk) {
-    issues.push({ path: p, rawStats, emptyH2, ariaJunk });
+  if (rawStats || emptyH2 || ariaJunk || articleWrap || rawCallout || emptyH3) {
+    issues.push({ path: p, rawStats, emptyH2, ariaJunk, articleWrap, rawCallout, emptyH3 });
   }
 }
 
