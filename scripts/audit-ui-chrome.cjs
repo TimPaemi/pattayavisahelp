@@ -51,6 +51,8 @@ const PATTERNS = [
   { id: 'author_block_in_main', re: /\n\s*PVH\s*\n\s*Written by/ },
   { id: 'empty_h2_back_to_back', re: /<h2>[^<]+<\/h2>\s*(<\/div>\s*)?<h2>/ },
   { id: 'raw_quick_verdict', re: /\n\s*Quick verdict\s*\n\s*<h2>/ },
+  { id: 'broken_h3_link', re: /<a href="[^"]+">\s*<h3>/ },
+  { id: 'aria_deeper_junk', re: /<div aria-hidden="true">\s*\n\s*Deeper (analysis|detail)/ },
   { id: 'broken_visa_alt_card', re: /<a href="\/visas\/[^"]+">\s*<p>[^<]+<\/p>\s*<h3>/ },
   { id: 'raw_section_label', re: /\n\s*<p>0\d\s*\/\s*[^<]+<\/p>/ },
   { id: 'orphan_recommend_link', re: /Get our recommendation<\/a>\s*\n\s*<a href="#/ },
