@@ -50,6 +50,10 @@ const PATTERNS = [
   { id: 'raw_cta_in_main', re: /\n\s*Free 15-minute call\s*\n/ },
   { id: 'author_block_in_main', re: /\n\s*PVH\s*\n\s*Written by/ },
   { id: 'empty_h2_back_to_back', re: /<h2>[^<]+<\/h2>\s*(<\/div>\s*)?<h2>/ },
+  { id: 'raw_quick_verdict', re: /\n\s*Quick verdict\s*\n\s*<h2>/ },
+  { id: 'broken_visa_alt_card', re: /<a href="\/visas\/[^"]+">\s*<p>[^<]+<\/p>\s*<h3>/ },
+  { id: 'raw_section_label', re: /\n\s*<p>0\d\s*\/\s*[^<]+<\/p>/ },
+  { id: 'orphan_recommend_link', re: /Get our recommendation<\/a>\s*\n\s*<a href="#/ },
 ];
 
 const sitemap = parseSitemap();
