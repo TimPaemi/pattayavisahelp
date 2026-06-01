@@ -53,6 +53,7 @@ const PATTERNS = [
   { id: 'raw_quick_verdict', re: /\n\s*Quick verdict\s*\n\s*<h2>/ },
   { id: 'broken_h3_link', re: /<a href="[^"]+">\s*<h3>/ },
   { id: 'aria_deeper_junk', re: /<div aria-hidden="true">\s*\n\s*Deeper (analysis|detail)/ },
+  { id: 'aria_hidden_div_in_main', re: /<div aria-hidden="true">/ },
   { id: 'broken_visa_alt_card', re: /<a href="\/visas\/[^"]+">\s*<p>[^<]+<\/p>\s*<h3>/ },
   { id: 'raw_section_label', re: /\n\s*<p>0\d\s*\/\s*[^<]+<\/p>/ },
   { id: 'orphan_recommend_link', re: /Get our recommendation<\/a>\s*\n\s*<a href="#/ },
