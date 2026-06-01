@@ -40,6 +40,7 @@ desktop.ini
 
 # Generated audits (local runs)
 _audit-*.json
+_lighthouse-reports/
 _policy-radar.json
 
 # Note: _research/ stays in the repo (committed) — it's the source of truth.

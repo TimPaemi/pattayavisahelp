@@ -14,6 +14,11 @@
 <meta name="robots" content="noindex, follow" />
 <script>window.location.replace('/tools/eligibility/');</script>
 <style>
+/* FONT-FALLBACK-V1 — metric-matched fallbacks reduce CLS on web-font swap */
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107.4%;ascent-override:90%;descent-override:22.43%;line-gap-override:0%}
+@font-face{font-family:'Space Grotesk Fallback';src:local('Arial');size-adjust:98.5%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'JetBrains Mono Fallback';src:local('Courier New');size-adjust:96%;ascent-override:88%;descent-override:22%;line-gap-override:0%}
+
 :root{--cyan:#06b6d4}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#000;color:#fafafa;font-family:'Inter',system-ui,sans-serif;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;overflow-x:hidden}
@@ -78,8 +83,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
   ['pointerdown','keydown','scroll'].forEach(function(evt){
     w.addEventListener(evt,loadGtag,{once:true,passive:true});
   });
-  if('requestIdleCallback' in w){w.requestIdleCallback(loadGtag,{timeout:2000});}
-  else{w.setTimeout(loadGtag,2000);}
+  w.setTimeout(loadGtag,5000);
 })(window,document,'G-RSNN24M25C');
 </script>
 <script type="application/ld+json">

@@ -26,56 +26,61 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
 <style>
+/* FONT-FALLBACK-V1 — metric-matched fallbacks reduce CLS on web-font swap */
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107.4%;ascent-override:90%;descent-override:22.43%;line-gap-override:0%}
+@font-face{font-family:'Space Grotesk Fallback';src:local('Arial');size-adjust:98.5%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'JetBrains Mono Fallback';src:local('Courier New');size-adjust:96%;ascent-override:88%;descent-override:22%;line-gap-override:0%}
+
 :root{--bg:#000;--bg-1:#0a0a0a;--bg-2:#111;--bg-3:#161616;--border:rgba(255,255,255,.07);--border-2:rgba(255,255,255,.14);--t:#fafafa;--td:#71717a;--tl:#a1a1aa;--pink:#ec4899;--cyan:#06b6d4;--yel:#fbbf24;--pur:#a855f7;--grn:#10b981;--wa:#25d366}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--t);font:400 17px/1.6 Inter,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--t);font:400 17px/1.6 Inter,'Inter Fallback',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--cyan);text-decoration:none}a:hover{opacity:.78}
 ::selection{background:var(--pink);color:#fff}
 .mq{border-bottom:1px solid var(--border);background:#000;overflow:hidden;padding:.85rem 0}
 .mq-t{display:inline-flex;white-space:nowrap;animation:mq 80s linear infinite}
-.mq-i{padding:0 1.5rem;font:600 .7rem/1 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--tl);display:inline-flex;align-items:center;gap:.7rem}
+.mq-i{padding:0 1.5rem;font:600 .7rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--tl);display:inline-flex;align-items:center;gap:.7rem}
 .mq-i .s{color:var(--yel)}.mq-i .x{color:var(--pink);opacity:.7}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.brand{position:fixed;top:3.5rem;left:1.25rem;z-index:60;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--t);display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,0,0,.85);backdrop-filter:blur(14px);padding:.55rem .95rem;border:1px solid var(--border-2);border-radius:999px;text-decoration:none}
+.brand{position:fixed;top:3.5rem;left:1.25rem;z-index:60;font-family:'Space Grotesk','Space Grotesk Fallback',system-ui,sans-serif;font-weight:700;font-size:1.05rem;color:var(--t);display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,0,0,.85);backdrop-filter:blur(14px);padding:.55rem .95rem;border:1px solid var(--border-2);border-radius:999px;text-decoration:none}
 .brand .dot{width:.5rem;height:.5rem;background:var(--pink);border-radius:50%;box-shadow:0 0 14px var(--pink);animation:bp 2s ease-in-out infinite}
 @keyframes bp{0%,100%{opacity:1}50%{opacity:.4}}
 .brand .accent{color:var(--pink)}
 .nav{position:fixed;top:3.3rem;right:1rem;z-index:60;display:flex;gap:.1rem;padding:.35rem;background:rgba(15,15,15,.88);backdrop-filter:blur(18px);border:1px solid var(--border-2);border-radius:999px}
-.nav a{font:600 .68rem/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--td);padding:.6rem .95rem;border-radius:999px;transition:all .2s}
+.nav a{font:600 .68rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--td);padding:.6rem .95rem;border-radius:999px;transition:all .2s}
 .nav a:hover{color:var(--t)}.nav a.cta{background:var(--pink);color:#fff}
 .hero{max-width:780px;margin:0 auto;padding:8rem 1.5rem 1.5rem;text-align:center}
-.crumbs{font:600 .68rem/1.5 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--td);margin-bottom:1.5rem}
+.crumbs{font:600 .68rem/1.5 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--td);margin-bottom:1.5rem}
 .crumbs a{color:var(--cyan)}.crumbs .sep{color:var(--td);opacity:.4;margin:0 .5rem}
-.label{display:inline-flex;align-items:center;gap:.5rem;font:600 .7rem/1 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);padding:.55rem 1rem;border:1px solid rgba(6,182,212,.35);border-radius:4px;margin-bottom:1.5rem;background:rgba(6,182,212,.06)}
+.label{display:inline-flex;align-items:center;gap:.5rem;font:600 .7rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);padding:.55rem 1rem;border:1px solid rgba(6,182,212,.35);border-radius:4px;margin-bottom:1.5rem;background:rgba(6,182,212,.06)}
 .label::before{content:"";width:6px;height:6px;background:var(--cyan);border-radius:50%;box-shadow:0 0 8px var(--cyan)}
-h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.25rem,5.5vw,4rem);line-height:.92;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 1rem}
+h1{font-family:'Space Grotesk','Space Grotesk Fallback',system-ui,sans-serif;font-weight:700;font-size:clamp(2.25rem,5.5vw,4rem);line-height:.92;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 1rem}
 h1 .pk{color:var(--pink)}h1 .cy{color:var(--cyan)}
 .sub{font-size:1.1rem;line-height:1.55;color:var(--tl);max-width:600px;margin:0 auto}
 .calc{max-width:780px;margin:1.5rem auto 4rem;padding:0 1.5rem}
 .card{background:var(--bg-1);border:1px solid var(--border-2);border-radius:8px;padding:1.75rem;margin-bottom:1rem}
 .fld{margin-bottom:1.25rem}
 .fld:last-child{margin-bottom:0}
-.fld label{display:block;font:600 .7rem/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--td);margin-bottom:.5rem}
-.fld select,.fld input{width:100%;background:var(--bg-2);border:1px solid var(--border-2);border-radius:4px;padding:.85rem 1rem;color:var(--t);font:400 1rem/1.5 Inter,sans-serif;transition:all .2s;font-family:inherit}
+.fld label{display:block;font:600 .7rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--td);margin-bottom:.5rem}
+.fld select,.fld input{width:100%;background:var(--bg-2);border:1px solid var(--border-2);border-radius:4px;padding:.85rem 1rem;color:var(--t);font:400 1rem/1.5 Inter,'Inter Fallback',system-ui,sans-serif;transition:all .2s;font-family:inherit}
 .fld select:focus,.fld input:focus{outline:none;border-color:var(--cyan);background:var(--bg-3);box-shadow:0 0 0 3px rgba(6,182,212,.1)}
 .fld select option{background:var(--bg-2);color:var(--t)}
 .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 @media (max-width:640px){.fld-row{grid-template-columns:1fr}}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 1.6rem;font:600 .75rem/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;border-radius:4px;cursor:pointer;font-family:inherit;border:1px solid transparent;transition:all .2s;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 1.6rem;font:600 .75rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;border-radius:4px;cursor:pointer;font-family:inherit;border:1px solid transparent;transition:all .2s;text-decoration:none}
 .btn-primary{background:var(--pink);color:#fff;box-shadow:0 0 0 1px var(--pink),0 4px 14px rgba(236,72,153,.35);width:100%;justify-content:center}
 .btn-primary:hover{background:#f472b6;transform:translateY(-1px)}
 .btn-outline{background:transparent;border-color:var(--border-2);color:var(--t)}
 .btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
 .result-card{background:linear-gradient(135deg,rgba(236,72,153,.06),rgba(6,182,212,.05));border:1px solid var(--border-2);border-radius:8px;padding:1.75rem;margin-top:1rem;display:none}
 .result-card.show{display:block}
-.result-head{font:600 .68rem/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:.6rem}
-.result-total{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.5rem,6vw,4rem);line-height:1;letter-spacing:-.03em;color:var(--cyan);margin:0 0 .5rem}
-.result-sub{font:600 .72rem/1.4 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--td);margin-bottom:1.5rem}
+.result-head{font:600 .68rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:.6rem}
+.result-total{font-family:'Space Grotesk','Space Grotesk Fallback',system-ui,sans-serif;font-weight:700;font-size:clamp(2.5rem,6vw,4rem);line-height:1;letter-spacing:-.03em;color:var(--cyan);margin:0 0 .5rem}
+.result-sub{font:600 .72rem/1.4 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--td);margin-bottom:1.5rem}
 .breakdown{background:var(--bg-1);border:1px solid var(--border);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1rem}
 .bd-row{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.95rem}
 .bd-row:last-child{border-bottom:none}
 .bd-row .label-l{color:var(--tl)}
-.bd-row .v{color:var(--t);font-family:'JetBrains Mono',monospace;font-weight:600}
+.bd-row .v{color:var(--t);font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-weight:600}
 .bd-row.total{border-top:2px solid var(--cyan);border-bottom:none;padding-top:.75rem;margin-top:.5rem}
 .bd-row.total .label-l{color:var(--t);font-weight:600}
 .bd-row.total .v{color:var(--cyan);font-size:1.1rem}
@@ -84,26 +89,26 @@ h1 .pk{color:var(--pink)}h1 .cy{color:var(--cyan)}
 footer{border-top:1px solid var(--border);background:#000;padding:4rem 1.5rem 2rem;margin-top:4rem}
 .f-grid{max-width:1400px;margin:0 auto 2.5rem;display:grid;grid-template-columns:2fr repeat(4,1fr);gap:2rem}
 @media (max-width:768px){.f-grid{grid-template-columns:1fr 1fr}}
-.f-grid h2{font:600 .7rem/1 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin:0 0 1rem}
+.f-grid h2{font:600 .7rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin:0 0 1rem}
 .f-grid a{display:block;color:var(--td);font-size:.9rem;padding:.3rem 0;text-decoration:none}
 .f-grid a:hover{color:var(--t)}
-.f-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:-.02em;margin-bottom:.75rem;color:var(--t)}
+.f-brand{font-family:'Space Grotesk','Space Grotesk Fallback',system-ui,sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:-.02em;margin-bottom:.75rem;color:var(--t)}
 .f-brand .accent{color:var(--pink)}
 .f-tag{color:var(--tl);font-size:.9rem;line-height:1.55;max-width:320px;margin-bottom:1rem}
-.f-tag.mono{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--td)}
+.f-tag.mono{font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--td)}
 .f-tag.mono a.email{color:var(--cyan)}.f-tag.mono a.wa{color:var(--wa)}
 .f-credit{max-width:1400px;margin:0 auto;padding:1.5rem 0;display:flex;align-items:center;gap:1rem;justify-content:center}
 .f-credit-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--yel),transparent);max-width:180px}
-.f-credit-text{font:600 .7rem/1.4 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--tl);text-align:center}
+.f-credit-text{font:600 .7rem/1.4 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--tl);text-align:center}
 .f-credit-text a{color:var(--yel);border-bottom:1px solid rgba(251,191,36,.4)}
 .f-credit-text .star{color:var(--yel)}
-.f-bot{max-width:1400px;margin:0 auto;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font:600 .68rem/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--td);text-transform:uppercase}
-.f-disclaim{max-width:1400px;margin:2rem auto 0;padding-top:2rem;border-top:1px solid var(--border);font:400 .78rem/1.65 Inter,sans-serif;color:var(--td);text-align:center}
+.f-bot{max-width:1400px;margin:0 auto;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font:600 .68rem/1 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.14em;color:var(--td);text-transform:uppercase}
+.f-disclaim{max-width:1400px;margin:2rem auto 0;padding-top:2rem;border-top:1px solid var(--border);font:400 .78rem/1.65 Inter,'Inter Fallback',system-ui,sans-serif;color:var(--td);text-align:center}
 @media (max-width:1024px){.nav{top:auto;bottom:.5rem;right:.5rem;left:.5rem;justify-content:center;flex-wrap:wrap}.brand{top:1rem;left:1rem;font-size:.9rem;padding:.4rem .7rem}.hero{padding:6rem 1rem 1rem}.card{padding:1.25rem}}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 
 /* A11Y-V1 */
-.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
+.skipto{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#000;padding:10px 18px;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;border-radius:0 0 8px 0;z-index:9999}
 .skipto:focus{left:0;top:0}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
@@ -182,7 +187,7 @@ html{ scroll-padding-top: 96px }
 .mnav{display:none}
 @media (max-width:760px){
   .mnav{display:flex !important;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(0,0,0,.92);backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.1);padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px));justify-content:space-around;align-items:center;gap:2px}
-  .mnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;color:#a1a1aa;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;border-radius:10px;transition:color .15s,background .15s}
+  .mnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;color:#a1a1aa;text-decoration:none;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;border-radius:10px;transition:color .15s,background .15s}
   .mnav a:hover,.mnav a.active{color:#fafafa;background:rgba(255,255,255,.04)}
   .mnav a.cta{color:#ec4899}
   .mnav .ic{font-size:18px;line-height:1;font-weight:400}
@@ -211,7 +216,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 
 
 .tool-prose{max-width:780px;margin:0 auto 2rem;padding:0 1.5rem;font-size:1.05rem;line-height:1.7;color:var(--tl,#a1a1aa)}
-.tool-prose h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;color:var(--t,#fafafa);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:-.02em}
+.tool-prose h2{font-family:'Space Grotesk','Space Grotesk Fallback',system-ui,sans-serif;font-weight:700;font-size:1.5rem;color:var(--t,#fafafa);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:-.02em}
 .tool-prose p{margin:0 0 1rem}
 .tool-prose ul{margin:0 0 1.25rem;padding-left:1.25rem}
 .tool-prose a{color:var(--cyan,#06b6d4)}
@@ -259,8 +264,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
   ['pointerdown','keydown','scroll'].forEach(function(evt){
     w.addEventListener(evt,loadGtag,{once:true,passive:true});
   });
-  if('requestIdleCallback' in w){w.requestIdleCallback(loadGtag,{timeout:2000});}
-  else{w.setTimeout(loadGtag,2000);}
+  w.setTimeout(loadGtag,5000);
 })(window,document,'G-RSNN24M25C');
 </script>
 </head>
@@ -308,7 +312,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 <p>Further reading: <a href="/best-visa/">Best visa by budget</a> · <a href="/guides/cost-of-living-pattaya/">Cost of living in Pattaya</a> · <a href="/visas/dtv/">DTV guide</a> · <a href="/visas/retirement-o-a/">O-A retirement</a> · <a href="/visas/ltr/">LTR guide</a></p>
 </section>
 
-<noscript><div style="background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.4);border-radius:10px;padding:16px;margin:20px 0;color:#fbbf24;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.55">
+<noscript><div style="background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.4);border-radius:10px;padding:16px;margin:20px 0;color:#fbbf24;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:13px;line-height:1.55">
 <strong style="display:block;margin-bottom:8px;color:#fafafa">JavaScript required for this tool to run.</strong>
 This tool needs JavaScript enabled. Most browsers have it on by default — if yours doesn't, enable it in settings. Or contact us by email at <a href="mailto:info@pattayavisahelp.com" style="color:#06b6d4">info@pattayavisahelp.com</a> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" style="color:#06b6d4">+66 96 728 6999</a> for direct help.
 </div></noscript>
@@ -369,7 +373,7 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <div class="f-grid">
 <div>
 <div class="f-brand">PATTAYA<span class="accent">VISA</span>HELP</div>
-<p class="f-tagline" style="font:700 .92rem/1.3 'Space Grotesk',sans-serif;letter-spacing:-.005em;color:var(--t,#fafafa);margin:.5rem 0 1rem">Built in Pattaya. For Pattaya.</p>
+<p class="f-tagline" style="font:700 .92rem/1.3 'Space Grotesk','Space Grotesk Fallback',system-ui,sans-serif;letter-spacing:-.005em;color:var(--t,#fafafa);margin:.5rem 0 1rem">Built in Pattaya. For Pattaya.</p>
 <p class="f-tag">Independent Thailand visa guidance from Jomtien. 12 pathways mapped, real costs, no agent commissions.</p>
 <p class="f-tag mono"><a href="mailto:info@pattayavisahelp.com" class="email">info@pattayavisahelp.com</a><br><a href="https://api.whatsapp.com/send/?phone=66967286999&text=Hi%20from%20pattayavisahelp.com%20%E2%80%94%20I%20have%20a%20question%20about%20Thai%20visas" target="_blank" rel="noopener noreferrer" class="wa">WhatsApp: +66 96 728 6999</a><br><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="line">LINE: @timpaemi</a><br>Jomtien, Pattaya</p>
 </div>
@@ -386,14 +390,14 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
 <a href="/about/">Who we are</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://pattaya-authority.com/work/pattaya-visa-help/" target="_blank" rel="noopener noreferrer">Pattaya Authority ↗</a>
 </div>
 </div>
-<nav class="f-network" style="text-align:center;padding:1.5rem 1rem;border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:.5rem;font:500 .68rem/1.9 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tl,#a1a1aa)" aria-label="Pattaya Authority Network">
+<nav class="f-network" style="text-align:center;padding:1.5rem 1rem;border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:.5rem;font:500 .68rem/1.9 'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tl,#a1a1aa)" aria-label="Pattaya Authority Network">
 <span style="color:var(--pink,#ec4899);margin-right:.5rem">// Pattaya Authority Network ·</span>
 <a href="https://pattaya-authority.com/work/pattaya-visa-help/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a> · <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> · <a href="https://pattaya-gym.com/" target="_blank" rel="noopener noreferrer">Pattaya Gym</a> · <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> · <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> · <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a> · <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> · <a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a> · <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> · <a href="https://pattayapersonaltrainer.com/" target="_blank" rel="noopener noreferrer">Pattaya Personal Trainer</a> · <a href="https://mrweoutside.com/" target="_blank" rel="noopener noreferrer">Mr. We Outside</a> · <a href="https://olympiangreeksouvlaki.com/" target="_blank" rel="noopener noreferrer">Olympian Greek Souvlaki</a>
 </nav>
 <div class="f-credit"><span class="f-credit-line"></span><span class="f-credit-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/work/pattaya-visa-help/" target="_blank" rel="noopener noreferrer"><b>Pattaya Authority</b></a> · <b>Tim Paemi</b> <span class="star">★</span></span><span class="f-credit-line"></span></div>
 <div class="f-bot"><span>© 2026 Pattaya Visa Help</span><span>Built in Pattaya · 12.92°N 100.88°E</span></div>
 <p class="f-disclaim">Cost calculator gives estimates based on 2026 published government fees. Confirm exact costs with us before applying.</p>
-<div class="f-version" style="text-align:center;padding:0.75rem 0;font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tl,#a1a1aa);border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:1.25rem">// Last updated · 22 May 2026 · v2026.05.22 · <a href="/changelog/" style="color:var(--cyan,#06b6d4);text-decoration:none">See what changed →</a></div>
+<div class="f-version" style="text-align:center;padding:0.75rem 0;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tl,#a1a1aa);border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:1.25rem">// Last updated · 22 May 2026 · v2026.05.22 · <a href="/changelog/" style="color:var(--cyan,#06b6d4);text-decoration:none">See what changed →</a></div>
 </footer>
 
 <script>
