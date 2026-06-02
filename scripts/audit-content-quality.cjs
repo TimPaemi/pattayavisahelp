@@ -50,7 +50,7 @@ function analyze(file) {
     hasMq: /class="mq"/.test(html),
     hasFullFooter: /class="f-grid"/.test(html) || /f-disclaim/.test(html),
     hasOg: /<meta property="og:title"/.test(html),
-    hasFonts: /fonts\.googleapis\.com/.test(html),
+    hasFonts: /\/assets\/fonts\/fonts(-pilot)?\.css/.test(html) || /preload[^>]+\.woff2/i.test(html),
     hasMobileNav: /class="mnav"/.test(html) || /__mnavLoaded/.test(html),
   };
 
@@ -60,7 +60,7 @@ function analyze(file) {
     if (!design.hasMq && !isLocale) designFails.push('missing marquee');
     if (!design.hasFullFooter && !isLocale) designFails.push('missing full footer');
     if (!design.hasOg && !noindex) designFails.push('missing og:title');
-    if (!design.hasFonts && !isLocale) designFails.push('missing font preload');
+    if (!design.hasFonts && !isLocale) designFails.push('missing self-hosted fonts');
   }
   if (isLocale && !isLocaleHub) {
     if (!design.hasNav) designFails.push('stub: no nav');

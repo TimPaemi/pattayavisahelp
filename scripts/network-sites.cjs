@@ -22,6 +22,5 @@ module.exports = {
     { name: 'Pattaya Vehicle Rentals', url: 'https://pattaya-vehicle-rentals.com/', repo: 'pattaya-vehicle-rentals', anchor: 'Pattaya Vehicle Rentals' },
     { name: 'Pattaya Personal Trainer', url: 'https://pattayapersonaltrainer.com/', repo: 'pattayapersonaltrainer', anchor: 'Pattaya Personal Trainer' },
     { name: 'Mr. We Outside', url: 'https://mrweoutside.com/', repo: 'mrweoutside', anchor: 'Mr. We Outside' },
-    { name: 'Olympian Greek Souvlaki', url: 'https://olympiangreeksouvlaki.com/', repo: 'olympiangreeksouvlaki', anchor: 'Olympian Greek Souvlaki' },
   ],
 };

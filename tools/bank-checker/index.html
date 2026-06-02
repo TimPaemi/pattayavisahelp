@@ -197,7 +197,7 @@ html{ scroll-padding-top: 96px }
 .mnav{display:none}
 @media (max-width:760px){
   .mnav{display:flex !important;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(0,0,0,.92);backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.1);padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px));justify-content:space-around;align-items:center;gap:2px}
-  .mnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;color:#a1a1aa;text-decoration:none;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;border-radius:10px;transition:color .15s,background .15s}
+  .mnav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:44px;padding:10px 6px;color:#a1a1aa;text-decoration:none;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;border-radius:10px;transition:color .15s,background .15s}
   .mnav a:hover,.mnav a.active{color:#fafafa;background:rgba(255,255,255,.04)}
   .mnav a.cta{color:#ec4899}
   .mnav .ic{font-size:18px;line-height:1;font-weight:400}
@@ -230,6 +230,10 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 .tool-prose p{margin:0 0 1rem}
 .tool-prose ul{margin:0 0 1.25rem;padding-left:1.25rem}
 .tool-prose a{color:var(--cyan,#06b6d4)}
+
+/* TAP-TARGET-V34 */
+.mnav a{min-height:44px;padding:10px 6px;font-size:10.5px;letter-spacing:.06em}
+.f-network a{display:inline-block;padding:.4rem .55rem;min-height:44px;line-height:1.5;vertical-align:middle}
 
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

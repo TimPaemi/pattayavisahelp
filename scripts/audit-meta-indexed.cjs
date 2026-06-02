@@ -1,0 +1,36 @@
+const fs = require('fs');
+const path = require('path');
+const ROOT = path.join(__dirname, '..');
+const PILOT = new Set(['/de/visas/dtv/', '/ru/visas/dtv/']);
+function walk(d, a = []) {
+  for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+    const p = path.join(d, e.name);
+    if (e.isDirectory()) {
+      if (['node_modules', '.git', 'functions', '_lighthouse-reports', '_research'].includes(e.name) || e.name.startsWith('_')) continue;
+      walk(p, a);
+    } else if (e.name === 'index.html') a.push(p);
+  }
+  return a;
+}
+function pp(f) {
+  const r = path.relative(ROOT, f).replace(/\\/g, '/');
+  return r === 'index.html' ? '/' : '/' + r.replace('/index.html', '') + '/';
+}
+const meta = [];
+const h1 = [];
+const noSchema = [];
+for (const f of walk(ROOT)) {
+  const h = fs.readFileSync(f, 'utf8');
+  const p = pp(f);
+  const robots = (h.match(/<meta[^>]*name=["']robots["'][^>]*content=["']([^"']*)["']/i) || [])[1] || 'index,follow';
+  if (/noindex/i.test(robots)) continue;
+  if ((p.startsWith('/de/') || p.startsWith('/ru/')) && !PILOT.has(p)) continue;
+  const title = (h.match(/<title>([^<]*)<\/title>/i) || [])[1] || '';
+  const desc = (h.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i) || [])[1] || '';
+  if (title.length < 30 || title.length > 65) meta.push({ p, kind: 'title', len: title.length, val: title.slice(0, 50) });
+  if (desc.length < 120 || desc.length > 165) meta.push({ p, kind: 'desc', len: desc.length });
+  const h1c = (h.match(/<h1[^>]*>/gi) || []).length;
+  if (h1c !== 1) h1.push({ p, h1c });
+  if (!/application\/ld\+json/i.test(h)) noSchema.push(p);
+}
+console.log(JSON.stringify({ metaCount: meta.length, meta: meta.slice(0, 25), h1, noSchemaCount: noSchema.length }, null, 2));
