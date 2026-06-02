@@ -69,8 +69,11 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Profession affiliate marketer: [DE](https://pattayavisahelp.com/de/professions/affiliate-marketer/), [RU](https://pattayavisahelp.com/ru/professions/affiliate-marketer/)
   - Profession crypto trader: [DE](https://pattayavisahelp.com/de/professions/crypto-trader/), [RU](https://pattayavisahelp.com/ru/professions/crypto-trader/)
   - Profession AI engineer: [DE](https://pattayavisahelp.com/de/professions/ai-engineer/), [RU](https://pattayavisahelp.com/ru/professions/ai-engineer/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the fifty-four indexed pilots (12 visa types + 9 compares + 6 professions) above)
-- Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except content-creator, saas-founder, online-business-owner, affiliate-marketer, crypto-trader, ai-engineer (indexed above)
+  - Profession English teacher: [DE](https://pattayavisahelp.com/de/professions/english-teacher/), [RU](https://pattayavisahelp.com/ru/professions/english-teacher/)
+  - Profession fitness trainer: [DE](https://pattayavisahelp.com/de/professions/fitness-trainer/), [RU](https://pattayavisahelp.com/ru/professions/fitness-trainer/)
+  - Profession diving instructor: [DE](https://pattayavisahelp.com/de/professions/diving-instructor/), [RU](https://pattayavisahelp.com/ru/professions/diving-instructor/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the sixty indexed pilots (12 visa types + 9 compares + 9 professions) above)
+- Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except content-creator, saas-founder, online-business-owner, affiliate-marketer, crypto-trader, ai-engineer, english-teacher, fitness-trainer, diving-instructor (indexed above)
 
 ## Hub pages
 
