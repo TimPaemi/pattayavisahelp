@@ -1,7 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
-const PILOT = new Set(['/de/visas/dtv/', '/ru/visas/dtv/']);
+const PILOT = new Set([
+  '/de/visas/dtv/',
+  '/ru/visas/dtv/',
+  '/de/visas/ltr/',
+  '/ru/visas/ltr/',
+  '/de/visas/retirement-non-o/',
+  '/ru/visas/retirement-non-o/',
+]);
 function walk(d, a = []) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {
     const p = path.join(d, e.name);

@@ -41,7 +41,10 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 
 - [Deutsch — visa advice from Pattaya](https://pattayavisahelp.com/de/)
 - [Русский — консультации по визам](https://pattayavisahelp.com/ru/)
-- **Indexed locale pilots (full translation):** [DTV auf Deutsch](https://pattayavisahelp.com/de/visas/dtv/), [DTV на русском](https://pattayavisahelp.com/ru/visas/dtv/)
+- **Indexed locale pilots (full translation):**
+  - DTV: [DE](https://pattayavisahelp.com/de/visas/dtv/), [RU](https://pattayavisahelp.com/ru/visas/dtv/)
+  - LTR: [DE](https://pattayavisahelp.com/de/visas/ltr/), [RU](https://pattayavisahelp.com/ru/visas/ltr/)
+  - Non-O Retirement: [DE](https://pattayavisahelp.com/de/visas/retirement-non-o/), [RU](https://pattayavisahelp.com/ru/visas/retirement-non-o/)
 - **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the two DTV pilots)
 - Profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/`
 
