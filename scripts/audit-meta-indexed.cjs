@@ -44,6 +44,12 @@ const PILOT = new Set([
   '/ru/compare/marriage-vs-retirement/',
   '/de/compare/dtv-vs-elite/',
   '/ru/compare/dtv-vs-elite/',
+  '/de/professions/content-creator/',
+  '/ru/professions/content-creator/',
+  '/de/professions/saas-founder/',
+  '/ru/professions/saas-founder/',
+  '/de/professions/online-business-owner/',
+  '/ru/professions/online-business-owner/',
 ]);
 function walk(d, a = []) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {

@@ -63,8 +63,11 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Compare SMART vs LTR: [DE](https://pattayavisahelp.com/de/compare/smart-vs-ltr/), [RU](https://pattayavisahelp.com/ru/compare/smart-vs-ltr/)
   - Compare Marriage vs Retirement: [DE](https://pattayavisahelp.com/de/compare/marriage-vs-retirement/), [RU](https://pattayavisahelp.com/ru/compare/marriage-vs-retirement/)
   - Compare DTV vs Privilege: [DE](https://pattayavisahelp.com/de/compare/dtv-vs-elite/), [RU](https://pattayavisahelp.com/ru/compare/dtv-vs-elite/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the forty-two indexed pilots (12 visa types + 9 compares) above)
-- Profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/`
+  - Profession content creator: [DE](https://pattayavisahelp.com/de/professions/content-creator/), [RU](https://pattayavisahelp.com/ru/professions/content-creator/)
+  - Profession SaaS founder: [DE](https://pattayavisahelp.com/de/professions/saas-founder/), [RU](https://pattayavisahelp.com/ru/professions/saas-founder/)
+  - Profession online business owner: [DE](https://pattayavisahelp.com/de/professions/online-business-owner/), [RU](https://pattayavisahelp.com/ru/professions/online-business-owner/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the forty-eight indexed pilots (12 visa types + 9 compares + 3 professions) above)
+- Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except content-creator, saas-founder, online-business-owner (indexed above)
 
 ## Hub pages
 
