@@ -8,8 +8,11 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const SKIP = new Set(['/v2-preview/', '/tools/ltr-eligibility/', '/professions/digital-nomad/']);
 
 /** Locale pages (hubs + stubs) are noindex until properly translated — exclude from sitemap. */
+const LOCALE_INDEXED_PILOT = new Set(['/de/visas/dtv/']);
+
 function skipPage(p) {
   if (SKIP.has(p)) return true;
+  if (LOCALE_INDEXED_PILOT.has(p)) return false;
   if (p.startsWith('/de/')) return true;
   if (p.startsWith('/ru/')) return true;
   return false;
