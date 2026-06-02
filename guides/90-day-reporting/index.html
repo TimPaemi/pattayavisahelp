@@ -500,6 +500,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
     d.head.appendChild(s);
     w.gtag('config',id);
   }
+  if(navigator.doNotTrack==='1'||w.doNotTrack==='1'){return;}
   ['pointerdown','keydown','scroll'].forEach(function(evt){
     w.addEventListener(evt,loadGtag,{once:true,passive:true});
   });

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pattaya Visa Help auf Deutsch — Thailand-Visum-Beratung</title>
 <meta name="description" content="Unabhängige Thailand-Visum-Beratung aus Pattaya. DTV, LTR, Rente Non-O, Privilege, Education — alle Visa erklärt. Kostenlose Beratung auf Deutsch." />
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<meta name="robots" content="noindex,follow,max-image-preview:large,max-snippet:-1" />
 <meta name="author" content="Pattaya Visa Help" />
 <meta name="theme-color" content="#000000" />
 <link rel="canonical" href="https://pattayavisahelp.com/de/" />
@@ -461,6 +461,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
     d.head.appendChild(s);
     w.gtag('config',id);
   }
+  if(navigator.doNotTrack==='1'||w.doNotTrack==='1'){return;}
   ['pointerdown','keydown','scroll'].forEach(function(evt){
     w.addEventListener(evt,loadGtag,{once:true,passive:true});
   });

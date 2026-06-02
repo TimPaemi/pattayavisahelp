@@ -410,6 +410,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
     d.head.appendChild(s);
     w.gtag('config',id);
   }
+  if(navigator.doNotTrack==='1'||w.doNotTrack==='1'){return;}
   ['pointerdown','keydown','scroll'].forEach(function(evt){
     w.addEventListener(evt,loadGtag,{once:true,passive:true});
   });
@@ -492,6 +493,13 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 
 <main id="main" class="article-body">
 Site changelog
+
+ 2026-06-02
+ Recovery sprint 28
+
+ <h2>Sprint 28 — full-audit remediation (privacy, meta, locales)</h2>
+ <p>Aligned privacy policy with deferred Google Analytics 4 and DNT skip. Set /de/ and /ru/ hubs to noindex until full translations ship. Trimmed 27 EN meta titles/descriptions, fixed DE/RU Hua Hin duplicate titles, visa-finder quiz jump + aria-live, manifest theme_color, CSP cleanup, and README stack notes.</p>
+
 
  2026-05-28
  Recovery sprint 27

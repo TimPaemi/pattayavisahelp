@@ -7,11 +7,11 @@ const TODAY = new Date().toISOString().slice(0, 10);
 
 const SKIP = new Set(['/v2-preview/', '/tools/ltr-eligibility/', '/professions/digital-nomad/']);
 
-/** Locale stubs are noindex until properly translated — exclude from sitemap except hubs. */
+/** Locale pages (hubs + stubs) are noindex until properly translated — exclude from sitemap. */
 function skipPage(p) {
   if (SKIP.has(p)) return true;
-  if (p.startsWith('/de/') && p !== '/de/') return true;
-  if (p.startsWith('/ru/') && p !== '/ru/') return true;
+  if (p.startsWith('/de/')) return true;
+  if (p.startsWith('/ru/')) return true;
   return false;
 }
 
@@ -24,7 +24,7 @@ const SECTIONS = {
   'sitemap-core.xml': [
     '/', '/about/', '/contact/', '/faq/', '/privacy/', '/terms/', '/methodology/', '/changelog/',
     '/sitemap/', '/services/', '/partners/', '/healthcare/', '/property/', '/digital-nomad/',
-    '/retirement/', '/work-permit/', '/pattaya-digital-nomad-guide/', '/de/', '/ru/',
+    '/retirement/', '/work-permit/', '/pattaya-digital-nomad-guide/',
     '/banking/', '/case-studies/', '/coworking/', '/gyms/', '/resources/', '/tax/', '/glossary/',
   ],
 };

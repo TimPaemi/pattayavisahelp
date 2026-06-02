@@ -42,9 +42,12 @@ function normHref(h, from) {
 }
 
 function meta(html, name, attr = 'name') {
-  const re1 = new RegExp(`<meta[^>]+${attr}=["']${name}["'][^>]+content=["']([^"']*)["']`, 'i');
-  const re2 = new RegExp(`<meta[^>]+content=["']([^"']*)["'][^>]+${attr}=["']${name}["']`, 'i');
-  return (html.match(re1) || html.match(re2) || [])[1];
+  const m = html.match(new RegExp(`<meta[^>]*${attr}=["']${name}["'][^>]*>`, 'i'));
+  if (!m) return undefined;
+  const c = m[0].match(/content=(["'])((?:\\.|(?!\1).)*)\1/i);
+  return c
+    ? c[2].replace(/&quot;/g, '"').replace(/&#x27;|&apos;|&#39;/gi, "'")
+    : undefined;
 }
 
 function linkRel(html, rel) {

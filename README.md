@@ -8,7 +8,7 @@ Trusted Thailand visa guidance from Pattaya. Lead-generation site that connects 
 
 ## Stack
 
-- Plain HTML + Tailwind CSS (CDN)
+- Plain HTML with per-page inline CSS (dark premium design system)
 - Vanilla JavaScript (tools, nav, forms)
 - Cloudflare Pages Functions (`functions/api/`) for lead/subscribe endpoints
 - No build step — files in repo are what gets deployed
@@ -45,7 +45,7 @@ Custom domain and SSL are managed in Cloudflare. HTML cache TTL is 5 minutes (`_
 ├── functions/api/          # Cloudflare Pages Functions (lead, subscribe)
 ├── _headers                # Security headers + CSP
 ├── _redirects              # Legacy URL 301 rules
-├── sitemap.xml             # Monolithic sitemap (182 URLs)
+├── sitemap.xml             # Monolithic sitemap (204 indexed EN URLs)
 ├── sitemap_index.xml       # Split sitemap index for crawlers
 └── robots.txt
 ```
