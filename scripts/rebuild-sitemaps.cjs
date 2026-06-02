@@ -8,7 +8,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const SKIP = new Set(['/v2-preview/', '/tools/ltr-eligibility/', '/professions/digital-nomad/']);
 
 /** Locale pages (hubs + stubs) are noindex until properly translated — exclude from sitemap. */
-const LOCALE_INDEXED_PILOT = new Set(["/de/visas/dtv/","/ru/visas/dtv/","/de/visas/ltr/","/ru/visas/ltr/","/de/visas/retirement-non-o/","/ru/visas/retirement-non-o/"]);
+const LOCALE_INDEXED_PILOT = new Set(["/de/visas/dtv/","/ru/visas/dtv/","/de/visas/ltr/","/ru/visas/ltr/","/de/visas/retirement-non-o/","/ru/visas/retirement-non-o/","/de/visas/privilege-elite/","/ru/visas/privilege-elite/","/de/visas/marriage-non-o/","/ru/visas/marriage-non-o/"]);
 
 function skipPage(p) {
   if (SKIP.has(p)) return true;
