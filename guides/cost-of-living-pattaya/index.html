@@ -61,6 +61,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" /></noscript>
 <style>
+.network-context{max-width:820px;margin:0 auto 1.5rem;padding:1rem 1.25rem;border:1px solid rgba(6,182,212,.25);background:rgba(6,182,212,.06);border-radius:8px;font-size:.9rem;line-height:1.55;color:var(--tl,#a1a1aa)}.network-context a{color:var(--cyan,#06b6d4)}
+
 /* FONT-FALLBACK-V1 — metric-matched fallbacks reduce CLS on web-font swap */
 @font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107.4%;ascent-override:90%;descent-override:22.43%;line-gap-override:0%}
 @font-face{font-family:'Space Grotesk Fallback';src:local('Arial');size-adjust:98.5%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
@@ -423,6 +425,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 </style>
 <script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
+<script src="/cookie-consent.js" defer></script>
 <!-- Google tag (gtag.js) - delayed for LCP -->
 <script>
 (function(w,d,id){
@@ -438,11 +441,18 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
     d.head.appendChild(s);
     w.gtag('config',id);
   }
-  if(navigator.doNotTrack==='1'||w.doNotTrack==='1'){return;}
-  ['pointerdown','keydown','scroll'].forEach(function(evt){
-    w.addEventListener(evt,loadGtag,{once:true,passive:true});
-  });
-  w.setTimeout(loadGtag,5000);
+  w.__pvhLoadGtag=loadGtag;
+  function armGtag(){
+    if(navigator.doNotTrack==='1'||w.doNotTrack==='1')return;
+    if(localStorage.getItem('pvh_cookie_consent')==='declined')return;
+    if(localStorage.getItem('pvh_cookie_consent')!=='accepted')return;
+    ['pointerdown','keydown','scroll'].forEach(function(evt){
+      w.addEventListener(evt,loadGtag,{once:true,passive:true});
+    });
+    w.setTimeout(loadGtag,5000);
+  }
+  armGtag();
+  w.addEventListener('pvh-consent-accepted',armGtag);
 })(window,document,'G-RSNN24M25C');
 </script>
 </head>
@@ -491,20 +501,11 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 <p class="tldr-text">GP visit private hospital (Bangkok Hospital Pattaya, Pattaya International): ฿800–฿1,500. Public hospital (Banglamung): ฿100–฿300 with longer waits. Dental cleaning: ฿800–฿1,500. Health insurance ranges from ฿15,000/yr…</p>
 </div>
 
+<p class="network-context">Daily life costs: <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> · <a href="https://pattaya-gym.com/" target="_blank" rel="noopener noreferrer">Pattaya Gym</a> · Neighbourhoods: <a href="/pattaya/living-in-pattaya/">Living in Pattaya</a></p>
 <main id="main" class="article-body">
 <p><strong>Related:</strong> <a href="/guides/retiring-in-thailand/">Retiring in Thailand</a> · <a href="/tools/cost-calculator/">Visa cost calculator</a> · <a href="/pattaya/living-in-pattaya/">Living in Pattaya</a> · <a href="/guides/health-insurance/">Health insurance</a> · <a href="/contact/">Free consultation</a></p>
 
 <p><strong>The 30-second answer:</strong> A frugal retiree can live on ฿32,000/month in Jomtien. A comfortable couple on ฿65,000. A premium couple on ฿140,000. Rent is the biggest variable — everything else scales predictably once you pick a neighbourhood.</p>
-
-<h2>Three sample monthly budgets</h2>
-<table tabindex="0">
-<thead><tr><th scope="col">Profile</th><th scope="col">Monthly total</th><th scope="col">USD approx.</th><th scope="col">Key line items</th></tr></thead>
-<tbody>
-<tr><td><strong>Frugal retiree</strong></td><td>฿32,000</td><td>≈ $920</td><td>Studio Jomtien ฿8k · Thai food ฿8k · utilities ฿2.5k · motorbike ฿2.5k · basic insurance ฿4k · misc ฿4k · visa amortized ฿3k</td></tr>
-<tr><td><strong>Comfortable expat</strong></td><td>฿65,000</td><td>≈ $1,870</td><td>1BR Pratumnak/Jomtien ฿18k · mixed food ฿15k · utilities ฿3.5k · Grab+bike ฿4k · mid insurance ฿7k · gym/social ฿10k · visa ฿3.5k · buffer ฿4k</td></tr>
-<tr><td><strong>Premium couple</strong></td><td>฿140,000</td><td>≈ $4,030</td><td>2BR Wongamat sea view ฿45k · restaurants ฿30k · utilities ฿5k · car+Grab ฿15k · premium insurance ×2 ฿18k · entertainment ฿20k · Privilege/LTR visa ฿7k</td></tr>
-</tbody>
-</table>
 
 <h2>Three sample monthly budgets</h2>
 <table tabindex="0">

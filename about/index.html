@@ -419,6 +419,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 </style>
 <script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
+<script src="/cookie-consent.js" defer></script>
 <!-- Google tag (gtag.js) - delayed for LCP -->
 <script>
 (function(w,d,id){
@@ -434,11 +435,18 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
     d.head.appendChild(s);
     w.gtag('config',id);
   }
-  if(navigator.doNotTrack==='1'||w.doNotTrack==='1'){return;}
-  ['pointerdown','keydown','scroll'].forEach(function(evt){
-    w.addEventListener(evt,loadGtag,{once:true,passive:true});
-  });
-  w.setTimeout(loadGtag,5000);
+  w.__pvhLoadGtag=loadGtag;
+  function armGtag(){
+    if(navigator.doNotTrack==='1'||w.doNotTrack==='1')return;
+    if(localStorage.getItem('pvh_cookie_consent')==='declined')return;
+    if(localStorage.getItem('pvh_cookie_consent')!=='accepted')return;
+    ['pointerdown','keydown','scroll'].forEach(function(evt){
+      w.addEventListener(evt,loadGtag,{once:true,passive:true});
+    });
+    w.setTimeout(loadGtag,5000);
+  }
+  armGtag();
+  w.addEventListener('pvh-consent-accepted',armGtag);
 })(window,document,'G-RSNN24M25C');
 </script>
 </head>
@@ -477,7 +485,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 <span class="article-label">// PATTAYA VISA HELP</span>
 <h1>About Pattaya Visa Help</h1>
 <p class="lede">Why we build this way — and how it shapes every page on the site.</p>
-<div class="article-meta"><span class="live">UPDATED 18 MAY 2026</span><span class="sep">·</span><span class="read">1 MIN READ</span><span class="sep">·</span><span>INDEPENDENT · NO COMMISSIONS</span></div>
+<div class="article-meta"><span class="live">UPDATED 18 MAY 2026</span><span class="sep">·</span><span class="read">5 MIN READ</span><span class="sep">·</span><span>INDEPENDENT · NO COMMISSIONS</span></div>
 </header>
 
 
