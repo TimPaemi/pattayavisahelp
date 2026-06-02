@@ -349,7 +349,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/de/compare/dtv-vs-smart/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/de/compare/ed-vs-dtv/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/de/compare/non-o-vs-o-a/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/de/compare/o-a-vs-o-x/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1141,7 +1159,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/ru/compare/dtv-vs-smart/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/ru/compare/ed-vs-dtv/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/ru/compare/non-o-vs-o-a/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/ru/compare/o-a-vs-o-x/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
