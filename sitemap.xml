@@ -355,6 +355,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/de/visas/education-ed/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/de/visas/ltr/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -380,6 +386,12 @@
   </url>
   <url>
     <loc>https://pattayavisahelp.com/de/visas/smart/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/de/visas/tourist-tr-evisa/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1099,6 +1111,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/ru/visas/education-ed/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/ru/visas/ltr/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -1124,6 +1142,12 @@
   </url>
   <url>
     <loc>https://pattayavisahelp.com/ru/visas/smart/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/ru/visas/tourist-tr-evisa/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
