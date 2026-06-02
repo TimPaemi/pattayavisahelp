@@ -47,7 +47,9 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Non-O Retirement: [DE](https://pattayavisahelp.com/de/visas/retirement-non-o/), [RU](https://pattayavisahelp.com/ru/visas/retirement-non-o/)
   - Privilege Elite: [DE](https://pattayavisahelp.com/de/visas/privilege-elite/), [RU](https://pattayavisahelp.com/ru/visas/privilege-elite/)
   - Marriage Non-O: [DE](https://pattayavisahelp.com/de/visas/marriage-non-o/), [RU](https://pattayavisahelp.com/ru/visas/marriage-non-o/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the ten indexed pilots above)
+  - Non-B Business: [DE](https://pattayavisahelp.com/de/visas/business-non-b/), [RU](https://pattayavisahelp.com/ru/visas/business-non-b/)
+  - SMART Visa: [DE](https://pattayavisahelp.com/de/visas/smart/), [RU](https://pattayavisahelp.com/ru/visas/smart/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the fourteen indexed pilots above)
 - Profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/`
 
 ## Hub pages

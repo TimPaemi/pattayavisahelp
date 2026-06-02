@@ -12,6 +12,10 @@ const PILOT = new Set([
   '/ru/visas/privilege-elite/',
   '/de/visas/marriage-non-o/',
   '/ru/visas/marriage-non-o/',
+  '/de/visas/business-non-b/',
+  '/ru/visas/business-non-b/',
+  '/de/visas/smart/',
+  '/ru/visas/smart/',
 ]);
 function walk(d, a = []) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {
