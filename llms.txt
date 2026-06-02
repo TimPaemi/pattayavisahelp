@@ -54,7 +54,10 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - O-A Retirement: [DE](https://pattayavisahelp.com/de/visas/retirement-o-a/), [RU](https://pattayavisahelp.com/ru/visas/retirement-o-a/)
   - O-X Retirement: [DE](https://pattayavisahelp.com/de/visas/retirement-o-x/), [RU](https://pattayavisahelp.com/ru/visas/retirement-o-x/)
   - Media Non-M: [DE](https://pattayavisahelp.com/de/visas/media-non-m/), [RU](https://pattayavisahelp.com/ru/visas/media-non-m/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the twenty-four indexed pilots (all 12 visa types) above)
+  - Compare DTV vs LTR: [DE](https://pattayavisahelp.com/de/compare/dtv-vs-ltr/), [RU](https://pattayavisahelp.com/ru/compare/dtv-vs-ltr/)
+  - Compare ED vs DTV: [DE](https://pattayavisahelp.com/de/compare/ed-vs-dtv/), [RU](https://pattayavisahelp.com/ru/compare/ed-vs-dtv/)
+  - Compare Privilege vs LTR: [DE](https://pattayavisahelp.com/de/compare/privilege-vs-ltr/), [RU](https://pattayavisahelp.com/ru/compare/privilege-vs-ltr/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the thirty indexed pilots (12 visa types + 3 compares) above)
 - Profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/`
 
 ## Hub pages

@@ -26,6 +26,12 @@ const PILOT = new Set([
   '/ru/visas/retirement-o-x/',
   '/de/visas/media-non-m/',
   '/ru/visas/media-non-m/',
+  '/de/compare/dtv-vs-ltr/',
+  '/ru/compare/dtv-vs-ltr/',
+  '/de/compare/ed-vs-dtv/',
+  '/ru/compare/ed-vs-dtv/',
+  '/de/compare/privilege-vs-ltr/',
+  '/ru/compare/privilege-vs-ltr/',
 ]);
 function walk(d, a = []) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {
