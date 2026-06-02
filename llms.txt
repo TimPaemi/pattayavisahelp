@@ -51,7 +51,10 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - SMART Visa: [DE](https://pattayavisahelp.com/de/visas/smart/), [RU](https://pattayavisahelp.com/ru/visas/smart/)
   - Education ED: [DE](https://pattayavisahelp.com/de/visas/education-ed/), [RU](https://pattayavisahelp.com/ru/visas/education-ed/)
   - Tourist TR: [DE](https://pattayavisahelp.com/de/visas/tourist-tr-evisa/), [RU](https://pattayavisahelp.com/ru/visas/tourist-tr-evisa/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the eighteen indexed pilots above)
+  - O-A Retirement: [DE](https://pattayavisahelp.com/de/visas/retirement-o-a/), [RU](https://pattayavisahelp.com/ru/visas/retirement-o-a/)
+  - O-X Retirement: [DE](https://pattayavisahelp.com/de/visas/retirement-o-x/), [RU](https://pattayavisahelp.com/ru/visas/retirement-o-x/)
+  - Media Non-M: [DE](https://pattayavisahelp.com/de/visas/media-non-m/), [RU](https://pattayavisahelp.com/ru/visas/media-non-m/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the twenty-four indexed pilots (all 12 visa types) above)
 - Profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/`
 
 ## Hub pages

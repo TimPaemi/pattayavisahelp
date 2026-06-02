@@ -73,6 +73,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/de/visas/media-non-m/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/de/visas/privilege-elite/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -80,6 +86,18 @@
   </url>
   <url>
     <loc>https://pattayavisahelp.com/de/visas/retirement-non-o/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/de/visas/retirement-o-a/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/de/visas/retirement-o-x/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -193,6 +211,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pattayavisahelp.com/ru/visas/media-non-m/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pattayavisahelp.com/ru/visas/privilege-elite/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -200,6 +224,18 @@
   </url>
   <url>
     <loc>https://pattayavisahelp.com/ru/visas/retirement-non-o/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/ru/visas/retirement-o-a/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pattayavisahelp.com/ru/visas/retirement-o-x/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

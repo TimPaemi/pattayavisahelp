@@ -8,7 +8,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const SKIP = new Set(['/v2-preview/', '/tools/ltr-eligibility/', '/professions/digital-nomad/']);
 
 /** Locale pages (hubs + stubs) are noindex until properly translated — exclude from sitemap. */
-const LOCALE_INDEXED_PILOT = new Set(["/de/visas/dtv/","/ru/visas/dtv/","/de/visas/ltr/","/ru/visas/ltr/","/de/visas/retirement-non-o/","/ru/visas/retirement-non-o/","/de/visas/privilege-elite/","/ru/visas/privilege-elite/","/de/visas/marriage-non-o/","/ru/visas/marriage-non-o/","/de/visas/business-non-b/","/ru/visas/business-non-b/","/de/visas/smart/","/ru/visas/smart/","/de/visas/education-ed/","/ru/visas/education-ed/","/de/visas/tourist-tr-evisa/","/ru/visas/tourist-tr-evisa/"]);
+const LOCALE_INDEXED_PILOT = new Set(["/de/visas/dtv/","/ru/visas/dtv/","/de/visas/ltr/","/ru/visas/ltr/","/de/visas/retirement-non-o/","/ru/visas/retirement-non-o/","/de/visas/privilege-elite/","/ru/visas/privilege-elite/","/de/visas/marriage-non-o/","/ru/visas/marriage-non-o/","/de/visas/business-non-b/","/ru/visas/business-non-b/","/de/visas/smart/","/ru/visas/smart/","/de/visas/education-ed/","/ru/visas/education-ed/","/de/visas/tourist-tr-evisa/","/ru/visas/tourist-tr-evisa/","/de/visas/retirement-o-a/","/ru/visas/retirement-o-a/","/de/visas/retirement-o-x/","/ru/visas/retirement-o-x/","/de/visas/media-non-m/","/ru/visas/media-non-m/"]);
 
 function skipPage(p) {
   if (SKIP.has(p)) return true;
