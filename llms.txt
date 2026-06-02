@@ -60,7 +60,10 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Compare Non-O vs O-A: [DE](https://pattayavisahelp.com/de/compare/non-o-vs-o-a/), [RU](https://pattayavisahelp.com/ru/compare/non-o-vs-o-a/)
   - Compare O-A vs O-X: [DE](https://pattayavisahelp.com/de/compare/o-a-vs-o-x/), [RU](https://pattayavisahelp.com/ru/compare/o-a-vs-o-x/)
   - Compare DTV vs SMART: [DE](https://pattayavisahelp.com/de/compare/dtv-vs-smart/), [RU](https://pattayavisahelp.com/ru/compare/dtv-vs-smart/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the thirty-six indexed pilots (12 visa types + 6 compares) above)
+  - Compare SMART vs LTR: [DE](https://pattayavisahelp.com/de/compare/smart-vs-ltr/), [RU](https://pattayavisahelp.com/ru/compare/smart-vs-ltr/)
+  - Compare Marriage vs Retirement: [DE](https://pattayavisahelp.com/de/compare/marriage-vs-retirement/), [RU](https://pattayavisahelp.com/ru/compare/marriage-vs-retirement/)
+  - Compare DTV vs Privilege: [DE](https://pattayavisahelp.com/de/compare/dtv-vs-elite/), [RU](https://pattayavisahelp.com/ru/compare/dtv-vs-elite/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the forty-two indexed pilots (12 visa types + 9 compares) above)
 - Profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/`
 
 ## Hub pages
