@@ -66,6 +66,9 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Compare Pattaya vs Bangkok: [DE](https://pattayavisahelp.com/de/compare/pattaya-vs-bangkok/), [RU](https://pattayavisahelp.com/ru/compare/pattaya-vs-bangkok/)
   - Compare Pattaya vs Chiang Mai: [DE](https://pattayavisahelp.com/de/compare/pattaya-vs-chiang-mai/), [RU](https://pattayavisahelp.com/ru/compare/pattaya-vs-chiang-mai/)
   - Compare Pattaya vs Phuket: [DE](https://pattayavisahelp.com/de/compare/pattaya-vs-phuket/), [RU](https://pattayavisahelp.com/ru/compare/pattaya-vs-phuket/)
+  - Compare Pattaya vs Hua Hin: [DE](https://pattayavisahelp.com/de/compare/pattaya-vs-hua-hin/), [RU](https://pattayavisahelp.com/ru/compare/pattaya-vs-hua-hin/)
+  - Compare Pattaya vs Hua Hin (deep): [DE](https://pattayavisahelp.com/de/compare/pattaya-vs-hua-hin-deep/), [RU](https://pattayavisahelp.com/ru/compare/pattaya-vs-hua-hin-deep/)
+  - Compare visa matrix: [DE](https://pattayavisahelp.com/de/compare/visa-comparison-matrix/), [RU](https://pattayavisahelp.com/ru/compare/visa-comparison-matrix/)
   - Profession content creator: [DE](https://pattayavisahelp.com/de/professions/content-creator/), [RU](https://pattayavisahelp.com/ru/professions/content-creator/)
   - Profession SaaS founder: [DE](https://pattayavisahelp.com/de/professions/saas-founder/), [RU](https://pattayavisahelp.com/ru/professions/saas-founder/)
   - Profession online business owner: [DE](https://pattayavisahelp.com/de/professions/online-business-owner/), [RU](https://pattayavisahelp.com/ru/professions/online-business-owner/)
@@ -81,7 +84,7 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Profession chef: [DE](https://pattayavisahelp.com/de/professions/chef/), [RU](https://pattayavisahelp.com/ru/professions/chef/)
   - Profession DJ: [DE](https://pattayavisahelp.com/de/professions/dj/), [RU](https://pattayavisahelp.com/ru/professions/dj/)
   - Profession hairdresser: [DE](https://pattayavisahelp.com/de/professions/hairdresser/), [RU](https://pattayavisahelp.com/ru/professions/hairdresser/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the seventy-eight indexed pilots (12 visa types + 12 compares + 15 professions) above)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the eighty-four indexed pilots (12 visa types + 15 compares + 15 professions) above)
 - Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except all fifteen profession slugs listed above (full DE/RU profession set indexed)
 
 ## Hub pages
