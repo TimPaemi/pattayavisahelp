@@ -4,6 +4,12 @@ const ROOT = path.join(__dirname, '..');
 const PILOT = new Set([
   '/de/',
   '/ru/',
+  '/de/visas/',
+  '/ru/visas/',
+  '/de/compare/',
+  '/ru/compare/',
+  '/de/professions/',
+  '/ru/professions/',
   '/de/visas/dtv/',
   '/ru/visas/dtv/',
   '/de/visas/ltr/',
