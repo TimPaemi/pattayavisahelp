@@ -75,8 +75,11 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Profession yoga teacher: [DE](https://pattayavisahelp.com/de/professions/yoga-teacher/), [RU](https://pattayavisahelp.com/ru/professions/yoga-teacher/)
   - Profession photographer: [DE](https://pattayavisahelp.com/de/professions/photographer/), [RU](https://pattayavisahelp.com/ru/professions/photographer/)
   - Profession real estate agent: [DE](https://pattayavisahelp.com/de/professions/real-estate-agent/), [RU](https://pattayavisahelp.com/ru/professions/real-estate-agent/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the sixty-six indexed pilots (12 visa types + 9 compares + 12 professions) above)
-- Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except content-creator, saas-founder, online-business-owner, affiliate-marketer, crypto-trader, ai-engineer, english-teacher, fitness-trainer, diving-instructor, yoga-teacher, photographer, real-estate-agent (indexed above)
+  - Profession chef: [DE](https://pattayavisahelp.com/de/professions/chef/), [RU](https://pattayavisahelp.com/ru/professions/chef/)
+  - Profession DJ: [DE](https://pattayavisahelp.com/de/professions/dj/), [RU](https://pattayavisahelp.com/ru/professions/dj/)
+  - Profession hairdresser: [DE](https://pattayavisahelp.com/de/professions/hairdresser/), [RU](https://pattayavisahelp.com/ru/professions/hairdresser/)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the seventy-two indexed pilots (12 visa types + 9 compares + 15 professions) above)
+- Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except all fifteen profession slugs listed above (full DE/RU profession set indexed)
 
 ## Hub pages
 
