@@ -86,6 +86,8 @@ const PILOT = new Set([
   '/ru/professions/dj/',
   '/de/professions/hairdresser/',
   '/ru/professions/hairdresser/',
+  '/de/professions/tattoo-artist/',
+  '/ru/professions/tattoo-artist/',
 ]);
 function walk(d, a = []) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {
