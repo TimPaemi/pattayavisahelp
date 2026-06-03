@@ -10,6 +10,8 @@ const PILOT = new Set([
   '/ru/compare/',
   '/de/professions/',
   '/ru/professions/',
+  '/de/guides/',
+  '/ru/guides/',
   '/de/visas/dtv/',
   '/ru/visas/dtv/',
   '/de/visas/ltr/',
