@@ -40,7 +40,7 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 ## Language hubs
 
 - [Deutsch — visa advice from Pattaya](https://pattayavisahelp.com/de/) — **indexed locale hub** (12 visa + 15 compare + 16 profession DE pilots)
-- [Русский — консультации по визам](https://pattayavisahelp.com/ru/)
+- [Русский — консультации по визам](https://pattayavisahelp.com/ru/) — **indexed locale hub** (full RU pilot set)
 - **Indexed locale pilots (full translation):**
   - DTV: [DE](https://pattayavisahelp.com/de/visas/dtv/), [RU](https://pattayavisahelp.com/ru/visas/dtv/)
   - LTR: [DE](https://pattayavisahelp.com/de/visas/ltr/), [RU](https://pattayavisahelp.com/ru/visas/ltr/)
