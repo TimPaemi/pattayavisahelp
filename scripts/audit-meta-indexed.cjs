@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const PILOT = new Set([
+  '/de/',
+  '/ru/',
   '/de/visas/dtv/',
   '/ru/visas/dtv/',
   '/de/visas/ltr/',

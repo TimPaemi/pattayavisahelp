@@ -39,7 +39,7 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
 
 ## Language hubs
 
-- [Deutsch — visa advice from Pattaya](https://pattayavisahelp.com/de/)
+- [Deutsch — visa advice from Pattaya](https://pattayavisahelp.com/de/) — **indexed locale hub** (12 visa + 15 compare + 16 profession DE pilots)
 - [Русский — консультации по визам](https://pattayavisahelp.com/ru/)
 - **Indexed locale pilots (full translation):**
   - DTV: [DE](https://pattayavisahelp.com/de/visas/dtv/), [RU](https://pattayavisahelp.com/ru/visas/dtv/)
@@ -85,7 +85,7 @@ We are not a law firm. Visa decisions are made by the Royal Thai Immigration Bur
   - Profession DJ: [DE](https://pattayavisahelp.com/de/professions/dj/), [RU](https://pattayavisahelp.com/ru/professions/dj/)
   - Profession hairdresser: [DE](https://pattayavisahelp.com/de/professions/hairdresser/), [RU](https://pattayavisahelp.com/ru/professions/hairdresser/)
   - Profession tattoo artist: [DE](https://pattayavisahelp.com/de/professions/tattoo-artist/), [RU](https://pattayavisahelp.com/ru/professions/tattoo-artist/)
-- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the eighty-six indexed pilots (12 visa types + 15 compares + 16 professions) above)
+- **Other `/de/` and `/ru/` URLs:** English mirror with “translation in progress” banner — `noindex` until properly translated (not in sitemap except the eighty-eight indexed pilots (2 locale hubs + 12 visa + 15 compares + 16 professions) above)
 - Other profession pages (DE/RU, noindex stubs): `/de/professions/{slug}/`, `/ru/professions/{slug}/` — except all sixteen profession slugs listed above (full DE/RU profession set indexed)
 
 ## Hub pages
