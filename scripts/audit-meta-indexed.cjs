@@ -20,6 +20,8 @@ const PILOT = new Set([
   '/ru/best-visa/',
   '/de/pattaya/',
   '/ru/pattaya/',
+  '/de/guides/jomtien-immigration-office/',
+  '/ru/guides/jomtien-immigration-office/',
   '/de/visas/dtv/',
   '/ru/visas/dtv/',
   '/de/visas/ltr/',
