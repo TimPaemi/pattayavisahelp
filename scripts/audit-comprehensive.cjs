@@ -7,8 +7,17 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const SKIP = new Set(['/v2-preview/', '/tools/ltr-eligibility/', '/professions/digital-nomad/']);
-const LOCALE_HUBS = new Set(['/de/', '/ru/']);
-const MIN = { index: 400, blog: 500, article: 600 };
+const LOCALE_HUBS = new Set([
+  '/de/',
+  '/ru/',
+  '/de/guides/',
+  '/ru/guides/',
+  '/de/visas/',
+  '/ru/visas/',
+  '/de/compare/',
+  '/ru/compare/',
+]);
+const MIN = { index: 400, blog: 500, article: 600, localeGuide: 220, localeHub: 280, localePilot: 400 };
 
 function walk(dir, acc = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -34,8 +43,18 @@ function wordCount(html) {
 }
 
 function minWords(p) {
+  const isLocale = p.startsWith('/de/') || p.startsWith('/ru/');
   if (p.startsWith('/blog/')) return MIN.blog;
-  if (p.startsWith('/visas/') || p.startsWith('/guides/') || p.startsWith('/compare/')) return MIN.article;
+  if (/\/(guides|visas|compare)\//.test(p)) {
+    if (isLocale) {
+      if (LOCALE_HUBS.has(p)) return MIN.localeHub;
+      if (/^\/(de|ru)\/guides\/[^/]+\/$/.test(p)) return MIN.localeGuide;
+      return MIN.localePilot;
+    }
+    return MIN.article;
+  }
+  if (isLocale && LOCALE_HUBS.has(p)) return MIN.localeHub;
+  if (isLocale) return MIN.localePilot;
   return MIN.index;
 }
 

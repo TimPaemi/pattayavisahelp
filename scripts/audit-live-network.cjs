@@ -11,7 +11,7 @@ const BASE = 'https://pattayavisahelp.com';
 const CONCURRENCY = 15;
 const TIMEOUT_MS = 20000;
 
-async function fetchStatus(url) {
+async function fetchStatus(url, attempt = 0) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
@@ -36,6 +36,7 @@ async function fetchStatus(url) {
     };
   } catch (e) {
     clearTimeout(t);
+    if (attempt < 1) return fetchStatus(url, attempt + 1);
     return { url, status: 0, ok: false, finalUrl: url, title: null, error: e.message };
   }
 }
@@ -82,6 +83,10 @@ function checkHreflangTriangle(html, pageUrl) {
     `${BASE}/blog/visa-agent-red-flags-2026/`,
     `${BASE}/tools/visa-finder/`,
     `${BASE}/de/tools/visa-finder/`,
+    `${BASE}/guides/thailand-digital-arrival-card/`,
+    `${BASE}/guides/non-o-extension-pattaya/`,
+    `${BASE}/guides/driving-licence-thailand/`,
+    `${BASE}/de/guides/driving-licence-thailand/`,
     `${BASE}/sitemap.xml`,
     `${BASE}/feed.xml`,
   ];
