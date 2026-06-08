@@ -1,5 +1,5 @@
 /**
- * Detect UI chrome corruption on indexed EN pages.
+ * Detect UI chrome corruption on indexed pages (EN + DE/RU pilots).
  * Exit 1 if any indexed page fails.
  */
 const fs = require('fs');
@@ -72,7 +72,6 @@ const fails = [];
 for (const file of walk(ROOT)) {
   const p = pagePath(file);
   if (!sitemap.has(p)) continue;
-  if (p.startsWith('/de/') || p.startsWith('/ru/')) continue;
   const html = fs.readFileSync(file, 'utf8');
   const main = html.match(/<main id="main"[^>]*>([\s\S]*?)<\/main>/i)?.[1] || '';
   if (!main) continue;
@@ -86,7 +85,9 @@ for (const file of walk(ROOT)) {
 
 const report = {
   generated: new Date().toISOString(),
+  indexedChecked: sitemap.size,
   indexedEnChecked: [...sitemap].filter((u) => !u.startsWith('/de/') && !u.startsWith('/ru/')).length,
+  indexedLocaleChecked: [...sitemap].filter((u) => u.startsWith('/de/') || u.startsWith('/ru/')).length,
   failCount: fails.length,
   fails,
 };

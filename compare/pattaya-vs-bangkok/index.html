@@ -457,7 +457,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 .f-network a{display:inline-block;padding:.4rem .55rem;min-height:44px;line-height:1.5;vertical-align:middle}
 
 </style>
-<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<script src="/assets/mnav.js" defer></script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
 <script src="/cookie-consent.js" defer></script>
 <!-- Google tag (gtag.js) - delayed for LCP -->
@@ -489,6 +489,8 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
   w.addEventListener('pvh-consent-accepted',armGtag);
 })(window,document,'G-RSNN24M25C');
 </script>
+<link rel="stylesheet" href="/assets/ux-enhancements.css" />
+<!-- pvh-ux-sprint65 -->
 </head>
 <body id="top">
 <a href="#main" class="skipto">Skip to content</a>
@@ -735,5 +737,6 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 </script>
 
 <script src="/analytics-events.js" defer></script>
+<script src="/assets/ux-enhancements.js" defer></script>
 </body>
 </html>

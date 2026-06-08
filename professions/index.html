@@ -422,7 +422,7 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 .f-network a{display:inline-block;padding:.4rem .55rem;min-height:44px;line-height:1.5;vertical-align:middle}
 
 </style>
-<script defer>(function(){if(window.__mnavLoaded)return;window.__mnavLoaded=1;function init(){if(document.querySelector('.mnav'))return;var n=document.createElement('nav');n.className='mnav';n.setAttribute('aria-label','Mobile navigation');var p=location.pathname;function a(href,ic,label){var c=p.indexOf(href)===0&&href!=='/'||(href==='/'&&p==='/')?' active':'';var cta=href==='/contact/'?' cta':'';return '<a href="'+href+'" class="'+(c+cta).trim()+'"><span class="ic">'+ic+'</span>'+label+'</a>'}n.innerHTML=a('/','\u2302','Home')+a('/visas/','\u29C9','Visas')+a('/tools/','\u25C8','Tools')+a('/blog/','\u00B6','Blog')+a('/contact/','\u2709','Contact');document.body.appendChild(n)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}})();</script>
+<script src="/assets/mnav.js" defer></script>
 <link rel="alternate" type="application/rss+xml" title="Pattaya Visa Help" href="https://pattayavisahelp.com/feed.xml" />
 <script src="/cookie-consent.js" defer></script>
 <!-- Google tag (gtag.js) - delayed for LCP -->
@@ -454,6 +454,8 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
   w.addEventListener('pvh-consent-accepted',armGtag);
 })(window,document,'G-RSNN24M25C');
 </script>
+<link rel="stylesheet" href="/assets/ux-enhancements.css" />
+<!-- pvh-ux-sprint65 -->
 </head>
 <body id="top">
 <a href="#main" class="skipto">Skip to content</a>
@@ -502,6 +504,8 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 
 <p class="network-context">Also: <a href="/de/best-visa/">Budget (DE)</a> · <a href="/de/pattaya/">Pattaya (DE)</a> · Pathway: <a href="/tools/visa-finder/">Visa Finder</a> · <a href="/professions/">All professions</a> · DTV: <a href="/visas/dtv/">DTV</a></p>
 <p class="network-context">Hubs: <a href="/de/professions/">Professions hub (DE)</a> · <a href="/ru/professions/">Professions hub (RU)</a></p>
+<p><a href="/professions/digital-nomad/">Digital nomad (EN)</a> · <a href="/de/digital-nomad/">Nomad (DE)</a> · <a href="/ru/digital-nomad/">Nomad (RU)</a></p>
+<!-- sprint64-inbound -->
 <main id="main" class="article-body">
 <p><strong>New guides:</strong> <a href="/professions/affiliate-marketer/">Affiliate marketers</a> · <a href="/professions/ai-engineer/">AI engineers</a> · <a href="/professions/crypto-trader/">Crypto traders</a> · <a href="/professions/saas-founder/">SaaS founders</a> · <a href="/work-permit/">Work permit hub</a></p>
 
@@ -593,5 +597,6 @@ footer a:not(.btn),footer a:not(.btn) *{color:var(--tl)!important;opacity:1!impo
 <div class="f-version" style="text-align:center;padding:0.75rem 0;font-family:'JetBrains Mono','JetBrains Mono Fallback',ui-monospace,monospace;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tl,#a1a1aa);border-top:1px solid var(--border,rgba(255,255,255,.07));margin-top:1.25rem">// Last updated · 22 May 2026 · v2026.05.22 · <a href="/changelog/" style="color:var(--cyan,#06b6d4);text-decoration:none">See what changed →</a></div>
 </footer>
 <script src="/analytics-events.js" defer></script>
+<script src="/assets/ux-enhancements.js" defer></script>
 </body>
 </html>

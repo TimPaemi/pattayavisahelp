@@ -3,6 +3,41 @@
   var KEY = 'pvh_cookie_consent';
   var privacyUrl = '/privacy/';
 
+  function cookieCopy() {
+    var p = location.pathname;
+    if (p.indexOf('/de/') === 0) {
+      return {
+        aria: 'Cookie-Einstellungen',
+        text:
+          'Optional nutzen wir <strong style="color:#fafafa">Google Analytics</strong> für aggregierte Besucherzahlen (erst nach Zustimmung). Kein Werbe-Tracking. <a href="' +
+          privacyUrl +
+          '">Datenschutz</a>.',
+        decline: 'Nur essenziell',
+        accept: 'Analytics erlauben',
+      };
+    }
+    if (p.indexOf('/ru/') === 0) {
+      return {
+        aria: 'Настройки cookie',
+        text:
+          'По желанию мы используем <strong style="color:#fafafa">Google Analytics</strong> для обобщённой статистики (только после согласия). Без рекламного трекинга. <a href="' +
+          privacyUrl +
+          '">Политика конфиденциальности</a>.',
+        decline: 'Только необходимое',
+        accept: 'Разрешить аналитику',
+      };
+    }
+    return {
+      aria: 'Cookie preferences',
+      text:
+        'We use optional <strong style="color:#fafafa">Google Analytics</strong> to see aggregate traffic (deferred until you accept). No ad tracking. <a href="' +
+        privacyUrl +
+        '">Privacy policy</a>.',
+      decline: 'Essential only',
+      accept: 'Accept analytics',
+    };
+  }
+
   function getConsent() {
     try {
       return localStorage.getItem(KEY);
@@ -35,7 +70,9 @@
       '#pvh-cookie-actions{display:flex;flex-wrap:wrap;gap:.5rem}' +
       '#pvh-cookie-banner button{font:600 .68rem/1 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;padding:.65rem 1rem;border-radius:6px;cursor:pointer;border:1px solid rgba(255,255,255,.14);background:transparent;color:#fafafa}' +
       '#pvh-cookie-banner button.pvh-accept{background:#06b6d4;color:#000;border-color:#06b6d4}' +
-      '@media(max-width:760px){body.pvh-cookie-open{padding-bottom:7rem}}';
+      '@media(max-width:760px){body.pvh-cookie-open{padding-bottom:7rem}}' +
+      '@media(max-width:760px){body.pvh-cookie-open:has(.mnav){padding-bottom:calc(7rem + 72px + env(safe-area-inset-bottom,0px))}}' +
+      '@media(max-width:760px){body.pvh-cookie-open:has(.mnav) #pvh-cookie-banner{bottom:calc(56px + env(safe-area-inset-bottom,0px))}}';
     document.head.appendChild(s);
   }
 
@@ -43,18 +80,23 @@
     if (document.getElementById('pvh-cookie-banner')) return;
     injectStyles();
     document.body.classList.add('pvh-cookie-open');
+    var c = cookieCopy();
     var el = document.createElement('div');
     el.id = 'pvh-cookie-banner';
     el.setAttribute('role', 'dialog');
-    el.setAttribute('aria-label', 'Cookie preferences');
+    el.setAttribute('aria-label', c.aria);
     el.innerHTML =
       '<div class="pvh-cookie-inner">' +
-      '<p>We use optional <strong style="color:#fafafa">Google Analytics</strong> to see aggregate traffic (deferred until you accept). No ad tracking. <a href="' +
-      privacyUrl +
-      '">Privacy policy</a>.</p>' +
+      '<p>' +
+      c.text +
+      '</p>' +
       '<div id="pvh-cookie-actions">' +
-      '<button type="button" class="pvh-decline">Essential only</button>' +
-      '<button type="button" class="pvh-accept">Accept analytics</button>' +
+      '<button type="button" class="pvh-decline">' +
+      c.decline +
+      '</button>' +
+      '<button type="button" class="pvh-accept">' +
+      c.accept +
+      '</button>' +
       '</div></div>';
     document.body.appendChild(el);
     el.querySelector('.pvh-accept').addEventListener('click', function () {

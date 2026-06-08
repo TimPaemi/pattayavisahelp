@@ -9,7 +9,19 @@ const ROOT = path.join(__dirname, '..');
 const MIN_WORDS_INDEX = 400;
 const MIN_WORDS_ARTICLE = 600;
 const MIN_WORDS_BLOG = 500;
-const LOCALE_HUBS = new Set(['/de/', '/ru/']);
+const MIN_WORDS_LOCALE_GUIDE = 220;
+const MIN_WORDS_LOCALE_HUB = 280;
+const MIN_WORDS_LOCALE_PILOT = 400;
+const LOCALE_HUBS = new Set([
+  '/de/',
+  '/ru/',
+  '/de/guides/',
+  '/ru/guides/',
+  '/de/visas/',
+  '/ru/visas/',
+  '/de/compare/',
+  '/ru/compare/',
+]);
 
 function walk(dir, acc = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -70,7 +82,15 @@ function analyze(file) {
 
   let minWords = MIN_WORDS_INDEX;
   if (isBlog) minWords = MIN_WORDS_BLOG;
-  else if (p.startsWith('/visas/') || p.startsWith('/guides/') || p.startsWith('/compare/')) minWords = MIN_WORDS_ARTICLE;
+  else if (/\/(guides|visas|compare)\//.test(p)) {
+    if (isLocale) {
+      if (LOCALE_HUBS.has(p)) minWords = MIN_WORDS_LOCALE_HUB;
+      else if (/^\/(de|ru)\/guides\/[^/]+\/$/.test(p)) minWords = MIN_WORDS_LOCALE_GUIDE;
+      else minWords = MIN_WORDS_LOCALE_PILOT;
+    } else {
+      minWords = MIN_WORDS_ARTICLE;
+    }
+  }
 
   const contentFails = [];
   if (!noindex && words < minWords) contentFails.push(`thin content (${words}w, need ${minWords})`);

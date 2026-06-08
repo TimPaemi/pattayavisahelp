@@ -10,7 +10,10 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const LOCALE_HUBS = new Set(['de/index.html', 'ru/index.html']);
 const NOINDEX = '<meta name="robots" content="noindex,follow" />';
-const STUB_BANNER = `<div class="locale-stub-banner" style="max-width:820px;margin:0 auto 2rem;padding:1.25rem 1.5rem;border:1px solid rgba(251,191,36,.35);background:rgba(251,191,36,.08);border-radius:8px;font-size:.95rem;line-height:1.55;color:#fafafa"><strong style="color:#fbbf24">Translation in progress.</strong> This page is not yet available in your language. Please use the English guide below — we are rewriting locale pages properly, not publishing empty placeholders.</div>`;
+const STUB_BANNER = {
+  de: `<div class="locale-stub-banner" style="max-width:820px;margin:0 auto 2rem;padding:1.25rem 1.5rem;border:1px solid rgba(251,191,36,.35);background:rgba(251,191,36,.08);border-radius:8px;font-size:.95rem;line-height:1.55;color:#fafafa"><strong style="color:#fbbf24">Übersetzung läuft.</strong> Diese Seite ist auf Deutsch noch nicht fertig. Nutzen Sie vorerst den englischen Leitfaden unten — wir veröffentlichen keine leeren Platzhalter.</div>`,
+  ru: `<div class="locale-stub-banner" style="max-width:820px;margin:0 auto 2rem;padding:1.25rem 1.5rem;border:1px solid rgba(251,191,36,.35);background:rgba(251,191,36,.08);border-radius:8px;font-size:.95rem;line-height:1.55;color:#fafafa"><strong style="color:#fbbf24">Перевод в работе.</strong> Полная русская версия скоро — пока используйте английскую страницу ниже. Мы не публикуем пустые заглушки.</div>`,
+};
 
 function walkLocale(dir, acc = []) {
   if (!fs.existsSync(dir)) return acc;
@@ -39,13 +42,14 @@ function stripHreflangDeRu(html) {
     .replace(/<link rel="alternate" hreflang="ru"[^>]+\/?>\s*\n?/gi, '');
 }
 
-function addStubBanner(html) {
+function addStubBanner(html, lang) {
   if (html.includes('locale-stub-banner')) return html;
+  const banner = STUB_BANNER[lang] || STUB_BANNER.de;
   if (/<main[^>]*class="article-body"/.test(html)) {
-    return html.replace(/(<main[^>]*class="article-body"[^>]*>)/i, `$1\n${STUB_BANNER}\n`);
+    return html.replace(/(<main[^>]*class="article-body"[^>]*>)/i, `$1\n${banner}\n`);
   }
   if (/<main id="main"/.test(html)) {
-    return html.replace(/(<main id="main"[^>]*>)/i, `$1\n${STUB_BANNER}\n`);
+    return html.replace(/(<main id="main"[^>]*>)/i, `$1\n${banner}\n`);
   }
   return html;
 }
@@ -58,7 +62,7 @@ for (const lang of ['de', 'ru']) {
     if (LOCALE_HUBS.has(r)) continue;
     let html = fs.readFileSync(file, 'utf8');
     html = ensureNoindex(html);
-    html = addStubBanner(html);
+    html = addStubBanner(html, lang);
     fs.writeFileSync(file, html);
     report.noindexed.push('/' + r.replace('/index.html', '/'));
     if (html.includes('locale-stub-banner')) report.banners.push('/' + r.replace('/index.html', '/'));
