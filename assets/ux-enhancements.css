@@ -115,6 +115,28 @@ body:has(.locale-stub-banner) .locale-stub-banner {
   }
 }
 
+/* In-prose links must not rely on color alone (WCAG 1.4.1 / Lighthouse
+   link-in-text-block). Nav, cards, buttons, and link strips stay clean. */
+main p:not(.network-context) a:not([class]),
+main li a:not([class]),
+.article-body p a:not([class]),
+.article-body li a:not([class]),
+.tool-prose p a:not([class]),
+.tool-prose li a:not([class]) {
+  text-decoration: underline;
+  text-decoration-color: rgba(6, 182, 212, 0.45);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+main p:not(.network-context) a:not([class]):hover,
+main li a:not([class]):hover,
+.article-body p a:not([class]):hover,
+.article-body li a:not([class]):hover,
+.tool-prose p a:not([class]):hover,
+.tool-prose li a:not([class]):hover {
+  text-decoration-color: currentColor;
+}
+
 /* Mobile section jump when side TOC is hidden (<1400px) */
 @media (max-width: 1399px) {
   details.pvh-section-jump {

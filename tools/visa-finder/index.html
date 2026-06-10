@@ -562,14 +562,18 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
     'tourist-tr-evisa': {name: 'Tourist TR (60-day)', stats: [['60D','INITIAL'],['+30D','EXTENDABLE'],['FREE-฿2K','COST'],['NO','WORK']], desc: '60-day entry + 30-day extension · visa-exempt 60 days for 93 countries', url: '/visas/tourist-tr-evisa/'},
   };
 
-  function renderQuestion() {
+  function renderQuestion(scroll) {
     var q = QUESTIONS[state.step];
     var selectedVal = state.answers[q.key];
-    // scroll quiz area into view on each step (mobile UX)
-    try {
-      var offset = quizArea.getBoundingClientRect().top + window.pageYOffset - 90;
-      window.scrollTo({top: Math.max(0, offset), behavior:'smooth'});
-    } catch(e){}
+    // scroll quiz area into view when changing steps (mobile UX) — never on
+    // initial load: auto-scroll on load yanks users past the hero and stops
+    // the browser from reporting LCP for this page
+    if (scroll !== false) {
+      try {
+        var offset = quizArea.getBoundingClientRect().top + window.pageYOffset - 90;
+        window.scrollTo({top: Math.max(0, offset), behavior:'smooth'});
+      } catch(e){}
+    }
     var optionsHtml = q.options.map(function(o){
       var sel = (selectedVal === o.v) ? ' selected' : '';
       return '<button class="opt'+sel+'" data-key="'+q.key+'" data-val="'+o.v+'" type="button">'+o.t+'</button>';
@@ -671,7 +675,7 @@ This tool needs JavaScript enabled. Most browsers have it on by default — if y
     }
   });
 
-  renderQuestion();
+  renderQuestion(false);
 })();
 </script>
 
