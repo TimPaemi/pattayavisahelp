@@ -72,6 +72,14 @@ body:has(.locale-stub-banner) .locale-stub-banner {
   }
 }
 
+/* Fixed bottom nav must never cover tappable content: per-page 72px pads
+   undershoot once safe-area inset applies (nav ≈ 60px + inset). */
+@media (max-width: 760px) {
+  body:has(.mnav):not(.pvh-cookie-open) {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
 /* Read-next cards: single column + tap-friendly on phones */
 @media (max-width: 760px) {
   .rn-grid {
@@ -94,6 +102,16 @@ body:has(.locale-stub-banner) .locale-stub-banner {
     min-height: 44px;
     line-height: 1.5;
     vertical-align: middle;
+  }
+}
+
+/* Header brand + CTA tap area (mobile): WCAG 2.5.8 44px minimum */
+@media (max-width: 760px) {
+  a.brand,
+  .nav a.cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
 }
 
