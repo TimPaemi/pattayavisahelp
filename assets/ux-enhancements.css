@@ -224,3 +224,14 @@ main li a:not([class]):hover,
     animation: none !important;
   }
 }
+
+/* Named-author byline in article meta rows (E-E-A-T) */
+.article-meta .byline a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(6, 182, 212, 0.45);
+  text-underline-offset: 0.16em;
+}
+.article-meta .byline a:hover {
+  color: var(--cyan, #06b6d4);
+}
